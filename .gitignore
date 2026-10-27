@@ -1,0 +1,16 @@
+# macOS, Windows and editor clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Dependencies (none today, but keep them out if added later)
+node_modules/
+
+# Personal practice data: History → Export files hold your own answers and scores
+exam-trainer-history-*.json
+
+# Local secrets and logs
+.env
+*.log

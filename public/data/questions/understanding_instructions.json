@@ -1,0 +1,1285 @@
+[
+  {
+    "id": "UI-001",
+    "module": "understanding_instructions",
+    "difficulty": 1,
+    "format": "rule_scenario",
+    "pattern_tag": "boundary_inclusive",
+    "question_ka": "კომპანიაში ხარჯებს ასე ამტკიცებენ:\n• 200 ლარამდე (ჩათვლით) — გუნდის ხელმძღვანელი;\n• 200 ლარზე მეტს, მაგრამ არაუმეტეს 1000 ლარისა — დეპარტამენტის ხელმძღვანელი;\n• 1000 ლარზე მეტს — ფინანსური დირექტორი.\n\nნინომ 1000 ლარის ხარჯი წარადგინა. ვინ უნდა დაამტკიცოს ის?",
+    "question_en": "Expenses in the company are approved as follows:\n• up to 200 GEL (inclusive) — the team lead;\n• more than 200 GEL but not more than 1000 GEL — the department head;\n• more than 1000 GEL — the finance director.\n\nNino submits an expense of 1000 GEL. Who must approve it?",
+    "options": [
+      {
+        "ka": "გუნდის ხელმძღვანელი",
+        "en": "The team lead"
+      },
+      {
+        "ka": "დეპარტამენტის ხელმძღვანელი",
+        "en": "The department head"
+      },
+      {
+        "ka": "ფინანსური დირექტორი",
+        "en": "The finance director"
+      },
+      {
+        "ka": "დეპარტამენტის ხელმძღვანელი და ფინანსური დირექტორი ერთად",
+        "en": "The department head and the finance director together"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "1000 ლარი 1000 ლარზე მეტი არ არის, ამიტომ შუა დიაპაზონში ხვდება: ხარჯს დეპარტამენტის ხელმძღვანელი ამტკიცებს. ხაფანგი: ზღვრულ 1000 ლარს „1000 ლარზე მეტად“ თვლით.",
+    "explanation_en": "1000 GEL is not more than 1000 GEL, so it falls in the middle band: the department head approves. The trap is treating the boundary value 1000 as 'more than 1000'.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const amount = 1000; if (amount <= 200) return 'The team lead'; if (amount <= 1000) return 'The department head'; return 'The finance director'; }"
+    }
+  },
+  {
+    "id": "UI-002",
+    "module": "understanding_instructions",
+    "difficulty": 1,
+    "format": "step_sequence",
+    "pattern_tag": "step_order",
+    "question_ka": "კოდზე `B7K4M2` შეასრულეთ შემდეგი ნაბიჯები მოცემული რიგით:\n1. სიმბოლოების რიგი შეაბრუნეთ (ბოლო სიმბოლო პირველი გახდება).\n2. ყოველი ციფრი 1-ით გაზარდეთ.\n3. წაშალეთ პირველი სიმბოლო.\n\nრა მიიღება?",
+    "question_en": "Apply these steps to the code `B7K4M2`, in the order given:\n1. Reverse the order of the characters (the last character becomes the first).\n2. Increase every digit by 1.\n3. Delete the first character.\n\nWhat is the result?",
+    "options": [
+      "3M5K8",
+      "8K5M3",
+      "M5K8B",
+      "M4K7B"
+    ],
+    "correct": 2,
+    "explanation_ka": "შებრუნების შემდეგ: 2M4K7B. ციფრების 1-ით გაზრდის შემდეგ: 3M5K8B. პირველი სიმბოლოს წაშლის შემდეგ: M5K8B. ხაფანგი: მე-3 ნაბიჯს 1-ელ ნაბიჯზე ადრე ასრულებთ — მაშინ სხვა სიმბოლო იშლება და გამოდის 3M5K8.",
+    "explanation_en": "Reversed: 2M4K7B; digits +1: 3M5K8B; first character deleted: M5K8B. Doing step 3 before step 1 deletes a different character and gives 3M5K8.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { let s = 'B7K4M2'.split('').reverse(); s = s.map(c => /[0-9]/.test(c) ? String((Number(c) + 1) % 10) : c); s.shift(); return s.join(''); }"
+    }
+  },
+  {
+    "id": "UI-003",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "rule_scenario",
+    "pattern_tag": "and_vs_or",
+    "question_ka": "ონლაინმაღაზიის მიწოდების წესები:\n• სტანდარტული მიწოდება (ჩვეულებრივი ფასი — 7 ლარი) უფასოა, თუ შეკვეთა 80 ლარს აღემატება **ან** მყიდველს ლოიალობის ბარათი აქვს.\n• ექსპრეს-მიწოდება (ჩვეულებრივი ფასი — 15 ლარი) უფასოა მხოლოდ მაშინ, თუ შეკვეთა 150 ლარს აღემატება **და** მყიდველს ლოიალობის ბარათი აქვს.\n\nმარიამს ლოიალობის ბარათი არ აქვს. მისი შეკვეთა 170 ლარია. მარიამი ექსპრეს-მიწოდებას ირჩევს. რამდენს გადაიხდის ის მიწოდებისთვის?",
+    "question_en": "Delivery rules of an online shop:\n• Standard delivery (normally 7 GEL) is free if the order is over 80 GEL **or** the customer has a loyalty card.\n• Express delivery (normally 15 GEL) is free only if the order is over 150 GEL **and** the customer has a loyalty card.\n\nMariam has no loyalty card. Her order is 170 GEL and she chooses express delivery. How much does she pay for delivery?",
+    "options": [
+      {
+        "ka": "0 ლარი",
+        "en": "0 GEL"
+      },
+      {
+        "ka": "7 ლარი",
+        "en": "7 GEL"
+      },
+      {
+        "ka": "15 ლარი",
+        "en": "15 GEL"
+      },
+      {
+        "ka": "8 ლარი",
+        "en": "8 GEL"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "უფასო ექსპრეს-მიწოდებას ორივე პირობა სჭირდება: 150 ლარზე მეტი შეკვეთა **და** ლოიალობის ბარათი. მარიამი მხოლოდ პირველ პირობას აკმაყოფილებს, ამიტომ სრულ 15 ლარს იხდის. ხაფანგი: ექსპრეს-მიწოდების წესსაც „ან“-ით კითხულობთ, როგორც სტანდარტული მიწოდებისას.",
+    "explanation_en": "Free express delivery needs both conditions: an order over 150 GEL **and** a loyalty card. Mariam meets only the first, so she pays the full 15 GEL. The trap is reading the express rule with 'or', like the standard one.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const card = false, total = 170, express = true; if (express) return (total > 150 && card) ? 0 : 15; return (total > 80 || card) ? 0 : 7; }"
+    }
+  },
+  {
+    "id": "UI-004",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "step_sequence",
+    "pattern_tag": "position_counting",
+    "question_ka": "საწყისი რიგი: 4, 9, 2, 7, 5, 8, 3.\n1. წაშალეთ მარჯვნიდან მე-2 რიცხვი.\n2. პირველი რიცხვი რიგის ბოლოში გადაიტანეთ.\n3. მარცხნიდან მე-3 და მარჯვნიდან მე-2 რიცხვებს ადგილები გაუცვალეთ.\n\nროგორ გამოიყურება რიგი ახლა?",
+    "question_en": "Start with the row: 4, 9, 2, 7, 5, 8, 3.\n1. Delete the 2nd number from the right.\n2. Move the first number to the end of the row.\n3. Swap the 3rd number from the left with the 2nd number from the right.\n\nWhat does the row look like now?",
+    "options": [
+      "9, 2, 3, 5, 7, 4",
+      "2, 7, 3, 8, 5, 4",
+      "9, 7, 3, 8, 5, 4",
+      "9, 2, 4, 5, 3, 7"
+    ],
+    "correct": 0,
+    "explanation_ka": "1-ლი ნაბიჯის შემდეგ: 4, 9, 2, 7, 5, 3. მე-2 ნაბიჯის შემდეგ: 9, 2, 7, 5, 3, 4. მე-3 ნაბიჯში 7 და 3 ადგილს იცვლის: 9, 2, 3, 5, 7, 4. ხაფანგი: მარჯვნიდან მე-2 რიცხვის ნაცვლად თავად რიცხვ 2-ს შლით და იღებთ 9, 7, 3, 8, 5, 4-ს.",
+    "explanation_en": "After step 1: 4, 9, 2, 7, 5, 3. After step 2: 9, 2, 7, 5, 3, 4. Step 3 swaps 7 and 3: 9, 2, 3, 5, 7, 4. Deleting the number 2 itself instead of the 2nd number from the right gives 9, 7, 3, 8, 5, 4.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const a = [4, 9, 2, 7, 5, 8, 3]; a.splice(a.length - 2, 1); a.push(a.shift()); const i = 2, j = a.length - 2; [a[i], a[j]] = [a[j], a[i]]; return a.join(', '); }"
+    }
+  },
+  {
+    "id": "UI-005",
+    "module": "understanding_instructions",
+    "difficulty": 1,
+    "format": "rule_scenario",
+    "pattern_tag": "hidden_rule_override",
+    "question_ka": "შეხვედრების ოთახების წესები:\n• ოთახი A 4 ადამიანზეა გათვლილი, ოთახი B — 8-ზე, ოთახი C — 12-ზე.\n• დაჯავშნეთ ყველაზე პატარა ოთახი, რომელშიც ყველა მონაწილე დაეტევა.\n• გარე სტუმრებთან შეხვედრები ყოველთვის ოთახ C-ში იმართება.\n\nლევანი ხვდება 6 კოლეგას და სხვა კომპანიის 1 კლიენტს. რომელი ოთახი უნდა დაჯავშნოს?",
+    "question_en": "Meeting room rules:\n• Room A seats 4 people, Room B seats 8, Room C seats 12.\n• Book the smallest room that fits all participants.\n• Meetings with external guests are always held in Room C.\n\nLevani is meeting 6 colleagues and 1 client from another company. Which room must he book?",
+    "options": [
+      {
+        "ka": "ოთახი B",
+        "en": "Room B"
+      },
+      {
+        "ka": "ოთახი C",
+        "en": "Room C"
+      },
+      {
+        "ka": "ოთახი A",
+        "en": "Room A"
+      },
+      {
+        "ka": "ნებისმიერი თავისუფალი ოთახი",
+        "en": "Any free room"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "8 ადამიანი (ლევანი, 6 კოლეგა და 1 კლიენტი) ოთახ B-ში დაეტეოდა. მაგრამ ბოლო წესი ზომის წესს აუქმებს: გარე სტუმართან ნებისმიერი შეხვედრა ოთახ C-ში იმართება. ხაფანგი: ოთახს მხოლოდ ზომით ირჩევთ და ბოლო წესი გამოგრჩებათ.",
+    "explanation_en": "8 people (Levani, 6 colleagues and 1 client) would fit in Room B, but the last rule overrides the size rule: any meeting with an external guest goes to Room C.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const people = 1 + 6 + 1, external = true; if (external) return 'Room C'; if (people <= 4) return 'Room A'; if (people <= 8) return 'Room B'; return 'Room C'; }"
+    }
+  },
+  {
+    "id": "UI-006",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "tfc_passage",
+    "pattern_tag": "cannot_say_vs_false",
+    "question_ka": "შვებულების წესი:\nყოველწლიური შვებულება სულ მცირე 10 სამუშაო დღით ადრე უნდა მოითხოვოთ. ზედიზედ 5 ან მეტი დღის მოთხოვნა დეპარტამენტის ხელმძღვანელმაც უნდა დაამტკიცოს. ავადმყოფობის გამო გაცდენაზე წინასწარ მოთხოვნა საჭირო არ არის.\n\nმხოლოდ ზემოთ მოცემული წესების მიხედვით, შემდეგი დებულება მართალია, მცდარია თუ ვერ ვიტყვით?\n**ყოველწლიური შვებულების ყველა მოთხოვნას დეპარტამენტის ხელმძღვანელი ამტკიცებს.**",
+    "question_en": "Leave policy:\nAnnual leave must be requested at least 10 working days in advance. A request for 5 or more consecutive days must also be approved by the department head. Sick leave needs no advance request.\n\nBased only on the rules above, is the following statement True, False, or Cannot say?\n**The department head approves every annual leave request.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "წესი მხოლოდ იმას ამბობს, რომ 5 ან მეტი დღის მოთხოვნას დეპარტამენტის ხელმძღვანელიც ამტკიცებს. ვინ ამტკიცებს უფრო მოკლე მოთხოვნებს, არ წერია. ამიტომ ტექსტი დებულებას ვერც ადასტურებს და ვერც უარყოფს. ხაფანგი: „მცდარია“-ს ირჩევთ, თუმცა ტექსტში არ წერია, რომ მოკლე მოთხოვნებს ხელმძღვანელი არ ამტკიცებს.",
+    "explanation_en": "The policy only says that requests of 5 or more days need the department head's approval. It doesn't say who approves shorter requests, so the statement can be neither confirmed nor ruled out. 'False' is the trap: the text never says the head does not approve short requests.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "Long",
+        "Head"
+      ],
+      "premises": [
+        "imp(Long, Head)",
+        "!Long"
+      ],
+      "conclusion": "Head"
+    }
+  },
+  {
+    "id": "UI-007",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "step_sequence",
+    "pattern_tag": "track_state",
+    "question_ka": "საწყობში დღის დასაწყისში 40 ერთეული საქონელია. მოვლენები ამ რიგით ხდება: შეკვეთა 30, შეკვეთა 15, მიწოდება, შეკვეთა 20, შეკვეთა 30, მიწოდება.\n\nწესები:\n• მიწოდება მარაგს 25 ერთეულით ზრდის.\n• შეკვეთა მარაგს იმდენი ერთეულით ამცირებს, რამდენიც შეკვეთილია. თუ მარაგი შეკვეთაზე ნაკლებია, შეკვეთა მეორე დღისთვის გადაიდება და მარაგი არ იცვლება.\n\nრამდენი ერთეული დარჩება საწყობში დღის ბოლოს?",
+    "question_en": "A warehouse starts the day with 40 units. Events are handled in this order: order 30, order 15, delivery, order 20, order 30, delivery.\n\nRules:\n• A delivery adds 25 units to the stock.\n• An order reduces the stock by its quantity. If the stock is smaller than the order, the order is postponed to the next day and the stock does not change.\n\nHow many units are in stock at the end of the day?",
+    "options": [
+      "40",
+      "25",
+      "15",
+      "-5"
+    ],
+    "correct": 0,
+    "explanation_ka": "40 − 30 = 10; 15 ერთეულის შეკვეთა გადაიდება (10 < 15); +25 = 35; − 20 = 15; 30 ერთეულის შეკვეთა გადაიდება (15 < 30); +25 = 40. ხაფანგი: გადადებულ შეკვეთებს მიწოდების შემდეგ ასრულებთ, თუმცა წესით ისინი მეორე დღემდე ელოდება.",
+    "explanation_en": "40 − 30 = 10; the order of 15 is postponed (10 < 15); +25 = 35; − 20 = 15; the order of 30 is postponed (15 < 30); +25 = 40. The trap is filling postponed orders after a delivery — the rule says they wait until the next day.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { let s = 40; for (const e of [30, 15, 'D', 20, 30, 'D']) { if (e === 'D') s += 25; else if (s >= e) s -= e; } return s; }"
+    }
+  },
+  {
+    "id": "UI-008",
+    "module": "understanding_instructions",
+    "difficulty": 3,
+    "format": "rule_scenario",
+    "pattern_tag": "priority_rules",
+    "question_ka": "მხარდაჭერის მოთხოვნის პრიორიტეტი (P1 — ყველაზე მაღალი, P4 — ყველაზე დაბალი):\n1. საბაზისო პრიორიტეტი: სისტემა სრულად გათიშულია → P1; პრობლემა 10-ზე მეტ მომხმარებელს ეხება → P2; 2–10 მომხმარებელს (ჩათვლით) → P3; 1 მომხმარებელს → P4.\n2. პრემიუმ-კლიენტის მოთხოვნას პრიორიტეტი ერთი დონით აუწიეთ (P1 რჩება P1).\n3. შაბათ-კვირას გახსნილ მოთხოვნას პრიორიტეტი ერთი დონით ჩამოუწიეთ, გარდა იმ შემთხვევისა, როცა საბაზისო პრიორიტეტი P1 იყო.\n\nპრემიუმ-კლიენტმა მოთხოვნა შაბათს გახსნა. სისტემა მუშაობს, მაგრამ პრობლემა 10 მომხმარებელს ეხება. როგორია საბოლოო პრიორიტეტი?",
+    "question_en": "Support ticket priority (P1 is the highest, P4 the lowest):\n1. Base priority: system completely down → P1; more than 10 users affected → P2; 2–10 users (inclusive) → P3; 1 user → P4.\n2. Premium client: raise the priority by one level (P1 stays P1).\n3. Ticket opened on a weekend: lower the priority by one level, unless the base priority was P1.\n\nA Premium client opens a ticket on Saturday. The system works, but 10 users are affected. What is the final priority?",
+    "options": [
+      "P1",
+      "P2",
+      "P3",
+      "P4"
+    ],
+    "correct": 2,
+    "explanation_ka": "10 მომხმარებელი „10-ზე მეტი“ არ არის, ამიტომ საბაზისო პრიორიტეტია P3. პრემიუმ-კლიენტის წესი მას P2-მდე აწევს. შაბათ-კვირის წესი ისევ P3-მდე ჩამოწევს, რადგან საბაზისო პრიორიტეტი P1 არ იყო. ხაფანგი: 10-ს „10-ზე მეტად“ თვლით — მაშინ საბაზისო P2 გამოდის და შეცდომით იღებთ P2-ს ან P1-ს; პრემიუმის დავიწყება კი P4-ს იძლევა.",
+    "explanation_en": "10 users is not 'more than 10', so the base priority is P3. Premium raises it to P2, and the weekend rule lowers it back to P3 because the base was not P1. Reading 10 as 'more than 10' makes the base P2 and leads to P2 or P1; forgetting Premium gives P4.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const users = 10, down = false, premium = true, weekend = true; const base = down ? 1 : users > 10 ? 2 : users >= 2 ? 3 : 4; let p = base; if (premium) p = Math.max(1, p - 1); if (weekend && base !== 1) p = Math.min(4, p + 1); return 'P' + p; }"
+    },
+    "fixed_order": true
+  },
+  {
+    "id": "UI-009",
+    "module": "understanding_instructions",
+    "difficulty": 1,
+    "format": "step_sequence",
+    "pattern_tag": "literal_instructions",
+    "question_ka": "კოდზე `8351` შეასრულეთ ეს ნაბიჯები:\n1. ყოველ ციფრს დაუმატეთ 2. თუ შედეგი 10 ან მეტია, დატოვეთ მხოლოდ მისი ბოლო ციფრი.\n2. ციფრები შებრუნებული რიგით ჩაწერეთ.\n\nრა არის ახალი კოდი?",
+    "question_en": "Apply to the code `8351`:\n1. Add 2 to every digit. If the result is 10 or more, keep only its last digit.\n2. Write the digits in reverse order.\n\nWhat is the new code?",
+    "options": [
+      "0573",
+      "37501",
+      "3751",
+      "3750"
+    ],
+    "correct": 3,
+    "explanation_ka": "8 + 2 = 10 → რჩება 0; 3 → 5; 5 → 7; 1 → 3. მიიღება 0573. შებრუნების შემდეგ: 3750. ხაფანგი: 10-ს მთლიანად წერთ და იღებთ 37501-ს, ან მე-2 ნაბიჯს გამოტოვებთ და იღებთ 0573-ს.",
+    "explanation_en": "8 + 2 = 10 → keep 0; 3 → 5; 5 → 7; 1 → 3, giving 0573. Reversed: 3750. Keeping the whole 10 gives 37501; skipping step 2 gives 0573.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => '8351'.split('').map(d => String((Number(d) + 2) % 10)).reverse().join('')"
+    }
+  },
+  {
+    "id": "UI-010",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "rule_scenario",
+    "pattern_tag": "boundary_inclusive",
+    "question_ka": "სისტემა ახალ პაროლს იღებს, თუ **ყველა** პირობა სრულდება. თუ ერთი მაინც არ სრულდება, პაროლს უარყოფს.\nპირობები:\n• სულ მცირე 10 სიმბოლო;\n• სულ მცირე 2 ციფრი;\n• სიმბოლოებიდან ! # $ ერთი მაინც;\n• არ შეიცავს მომხმარებლის სახელს.\n\nმომხმარებლის სახელი: `nika`. რომელ პაროლს მიიღებს სისტემა?",
+    "question_en": "A new password is accepted if **all** of these hold. If even one fails, it is rejected.\nConditions:\n• at least 10 characters;\n• at least 2 digits;\n• at least one of the symbols ! # $;\n• it does not contain the username.\n\nUsername: `nika`. Which password is accepted?",
+    "options": [
+      "blue#river7",
+      "Gr8!night9",
+      "tea$cup42",
+      "9nika$star2"
+    ],
+    "correct": 1,
+    "explanation_ka": "Gr8!night9-ში ზუსტად 10 სიმბოლოა, 2 ციფრი და „!“, მომხმარებლის სახელი კი არ არის. tea$cup42-ში მხოლოდ 9 სიმბოლოა, blue#river7-ში მხოლოდ 1 ციფრი, 9nika$star2 კი მომხმარებლის სახელს შეიცავს. ხაფანგი: ზღვარზე მდგომ პაროლს უარყოფთ, თუმცა „სულ მცირე 10“ 10-საც მოიცავს.",
+    "explanation_en": "Gr8!night9 has exactly 10 characters, 2 digits and '!', and no username — 'at least 10' includes 10. tea$cup42 has only 9 characters, blue#river7 only 1 digit, and 9nika$star2 contains the username.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => q.options.find(p => p.length >= 10 && (p.match(/[0-9]/g) || []).length >= 2 && /[!#$]/.test(p) && !p.toLowerCase().includes('nika'))"
+    }
+  },
+  {
+    "id": "UI-011",
+    "module": "understanding_instructions",
+    "difficulty": 1,
+    "format": "rule_scenario",
+    "pattern_tag": "apply_to_every_item",
+    "question_ka": "მაღაზიის წესი: 50 ლარზე ძვირი ყოველი ნივთის ფასი 10%-ით მცირდება; 50 ლარის ან უფრო იაფი ნივთები სრულ ფასად იყიდება.\n\nანა სამ ნივთს ყიდულობს. მათი ფასებია 70, 50 და 120 ლარი. ჯამში რამდენს გადაიხდის?",
+    "question_en": "Store rule: every item priced over 50 GEL gets a 10% discount; items priced 50 GEL or less are sold at full price.\n\nAna buys three items priced 70, 50 and 120 GEL. How much does she pay in total?",
+    "options": [
+      {
+        "ka": "216 ლარი",
+        "en": "216 GEL"
+      },
+      {
+        "ka": "233 ლარი",
+        "en": "233 GEL"
+      },
+      {
+        "ka": "240 ლარი",
+        "en": "240 GEL"
+      },
+      {
+        "ka": "221 ლარი",
+        "en": "221 GEL"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "50 ლარზე ძვირია მხოლოდ 70 და 120 ლარის ნივთები: 63 + 50 + 108 = 221 ლარი. ხაფანგი: ფასს მთელ კალათაზე ამცირებთ (216) ან მხოლოდ პირველ ნივთზე (233).",
+    "explanation_en": "Only the 70 GEL and 120 GEL items cost over 50 GEL: 63 + 50 + 108 = 221 GEL. Discounting the whole basket gives 216; discounting only the first item gives 233.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => [70, 50, 120].reduce((s, p) => s + (p > 50 ? p * 0.9 : p), 0)"
+    }
+  },
+  {
+    "id": "UI-012",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "ordering_puzzle",
+    "pattern_tag": "priority_rules",
+    "question_ka": "პრინტერი დავალებებს ასე ბეჭდავს:\n1. ჯერ იბეჭდება „სასწრაფოდ“ მონიშნული დავალებები.\n2. დანარჩენები იბეჭდება გვერდების რაოდენობის მიხედვით — ნაკლებიდან მეტისკენ.\n3. თუ ორ დავალებას გვერდების ერთნაირი რაოდენობა აქვს, ჯერ ის იბეჭდება, რომელიც უფრო ადრე გაიგზავნა.\n\nდავალებები: ნინო — 12 გვერდი, გაგზავნილია 09:05-ზე; გიორგი — 4 გვერდი, 09:10; ანა — 12 გვერდი, სასწრაფო, 09:20; ლუკა — 4 გვერდი, 09:02; საბა — 7 გვერდი, 09:00.\n\nვისი დავალება დაიბეჭდება რიგით მე-3?",
+    "question_en": "A printer handles jobs by these rules:\n1. Jobs marked URGENT are printed first.\n2. The other jobs are printed by number of pages, from fewest to most.\n3. If two jobs have the same number of pages, the one sent earlier is printed first.\n\nJobs: Nino — 12 pages, sent at 09:05; Giorgi — 4 pages, 09:10; Ana — 12 pages, URGENT, 09:20; Luka — 4 pages, 09:02; Saba — 7 pages, 09:00.\n\nWhose job is printed 3rd?",
+    "options": [
+      {
+        "ka": "გიორგი",
+        "en": "Giorgi"
+      },
+      {
+        "ka": "ლუკა",
+        "en": "Luka"
+      },
+      {
+        "ka": "საბა",
+        "en": "Saba"
+      },
+      {
+        "ka": "ნინო",
+        "en": "Nino"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "ბეჭდვის რიგი: ანა (სასწრაფო), ლუკა (4 გვერდი, 09:02), გიორგი (4 გვერდი, 09:10), საბა (7), ნინო (12). ხაფანგი: „სასწრაფოს“ წესს ივიწყებთ (მაშინ მე-3 საბა გამოდის) ან დავალებებს მხოლოდ დროით ალაგებთ (მაშინ მე-3 ნინოა).",
+    "explanation_en": "Order: Ana (URGENT), Luka (4 pages, 09:02), Giorgi (4 pages, 09:10), Saba (7), Nino (12). Forgetting the URGENT rule puts Saba 3rd; sorting by time alone puts Nino 3rd.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const jobs = [['Nino', 12, '09:05', 0], ['Giorgi', 4, '09:10', 0], ['Ana', 12, '09:20', 1], ['Luka', 4, '09:02', 0], ['Saba', 7, '09:00', 0]]; jobs.sort((a, b) => (b[3] - a[3]) || (a[1] - b[1]) || a[2].localeCompare(b[2])); return jobs[2][0]; }"
+    }
+  },
+  {
+    "id": "UI-013",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "tfc_passage",
+    "pattern_tag": "qualifier_words",
+    "question_ka": "ბიბლიოთეკის წესები:\nმკითხველს ერთდროულად არაუმეტეს 5 წიგნის გატანა შეუძლია. წიგნი 21 დღეში უნდა დააბრუნოს. წიგნის ვადა შეიძლება ერთხელ გაგრძელდეს კიდევ 14 დღით, გარდა იმ შემთხვევისა, როცა წიგნი სხვა მკითხველს აქვს დაჯავშნილი. საცნობარო წიგნების გატანა არ შეიძლება.\n\nმხოლოდ ზემოთ მოცემული წესების მიხედვით, შემდეგი დებულება მართალია, მცდარია თუ ვერ ვიტყვით?\n**მკითხველს ყოველთვის შეუძლია გატანილი წიგნის ვადა ერთხელ გააგრძელოს.**",
+    "question_en": "Library rules:\nMembers may borrow up to 5 books at a time. A book must be returned within 21 days. A book can be renewed once, for another 14 days, unless another member has reserved it. Reference books cannot be borrowed.\n\nBased only on the rules above, is the following statement True, False, or Cannot say?\n**A member can always renew a borrowed book once.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "ვადის გაგრძელებას გამონაკლისი აქვს: თუ წიგნი სხვა მკითხველს აქვს დაჯავშნილი, ვადა არ გრძელდება. „ყოველთვის“ ამ გამონაკლისს არ ითვალისწინებს, ამიტომ ტექსტი დებულებას ეწინააღმდეგება. ხაფანგი: სიტყვა „ყოველთვის“ გამოგრჩებათ და ირჩევთ „მართალია“-ს.",
+    "explanation_en": "The renewal rule has an exception: not if another member has reserved the book. 'Always' ignores that exception, so the text contradicts the statement.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const canRenew = reserved => !reserved; return [false, true].every(canRenew) ? 'True' : 'False'; }"
+    }
+  },
+  {
+    "id": "UI-014",
+    "module": "understanding_instructions",
+    "difficulty": 3,
+    "format": "step_sequence",
+    "pattern_tag": "position_counting",
+    "question_ka": "კოდზე `QW7RT4YP` შეასრულეთ ნაბიჯები მოცემული რიგით:\n1. წაშალეთ მარჯვნიდან მე-3 სიმბოლო.\n2. პირველ და ბოლო სიმბოლოებს ადგილები გაუცვალეთ.\n3. მე-4 სიმბოლოს შემდეგ ჩასვით ციფრი 5.\n\nრა მიიღება?",
+    "question_en": "Apply the steps to the code `QW7RT4YP`, in the order given:\n1. Delete the 3rd character from the right.\n2. Swap the first and the last characters.\n3. Insert the digit 5 right after the 4th character.\n\nWhat is the result?",
+    "options": [
+      "PWRT54YQ",
+      "PW7R5TYQ",
+      "PW75RTYQ",
+      "PW7R54YQ"
+    ],
+    "correct": 1,
+    "explanation_ka": "მარჯვნიდან ითვლით: P, Y, 4 — ანუ იშლება 4: QW7RTYP. გაცვლის შემდეგ: PW7RTYQ. მე-4 სიმბოლოს (R) შემდეგ ჩაისმება 5: PW7R5TYQ. ხაფანგი: მე-3 სიმბოლოს მარცხნიდან ითვლით, შლით 7-ს და იღებთ PWRT54YQ-ს.",
+    "explanation_en": "Counting from the right: P, Y, 4 — so the 4 is deleted: QW7RTYP. After the swap: PW7RTYQ. Insert 5 after the 4th character (R): PW7R5TYQ. Counting the 3rd character from the left deletes the 7 instead and gives PWRT54YQ.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const a = 'QW7RT4YP'.split(''); a.splice(a.length - 3, 1); [a[0], a[a.length - 1]] = [a[a.length - 1], a[0]]; a.splice(4, 0, '5'); return a.join(''); }"
+    }
+  },
+  {
+    "id": "UI-015",
+    "module": "understanding_instructions",
+    "difficulty": 3,
+    "format": "rule_scenario",
+    "pattern_tag": "rounding_rule",
+    "question_ka": "ავტოსადგომის საფასური:\n• პირველი 30 წუთი უფასოა.\n• ამის შემდეგ ყოველი დაწყებული საათი 3 ლარი ღირს.\n• ერთი ვიზიტის საფასური 10 ლარს არასოდეს აღემატება.\n\nდავითის მანქანა ავტოსადგომზე 10:40-დან 14:00-მდე იდგა. რამდენს გადაიხდის ის?",
+    "question_en": "Parking fees:\n• The first 30 minutes are free.\n• After that, every started hour costs 3 GEL.\n• The fee for one visit is never more than 10 GEL.\n\nDavit parks from 10:40 to 14:00. How much does he pay?",
+    "options": [
+      {
+        "ka": "6 ლარი",
+        "en": "6 GEL"
+      },
+      {
+        "ka": "10 ლარი",
+        "en": "10 GEL"
+      },
+      {
+        "ka": "12 ლარი",
+        "en": "12 GEL"
+      },
+      {
+        "ka": "9 ლარი",
+        "en": "9 GEL"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "მანქანა 200 წუთი იდგა. უფასო 30 წუთის შემდეგ რჩება 170 წუთი, ანუ 3 დაწყებული საათი: 3 × 3 = 9 ლარი. ეს 10-ლარიან ზღვარზე ნაკლებია. ხაფანგი: უფასო 30 წუთს ივიწყებთ და ითვლით 4 დაწყებულ საათს (12 ლარი, ზღვრით — 10); მხოლოდ სრული საათების დათვლა კი 6-ს იძლევა.",
+    "explanation_en": "The car stays 200 minutes; minus the free 30 leaves 170 minutes, which is 3 started hours: 3 × 3 = 9 GEL, below the 10 GEL cap. Forgetting the free 30 minutes gives 4 started hours (12 GEL, capped to 10); counting only full hours gives 6.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const minutes = 14 * 60 - (10 * 60 + 40); const paid = Math.max(0, minutes - 30); return Math.min(10, Math.ceil(paid / 60) * 3); }"
+    }
+  },
+  {
+    "id": "UI-016",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "rule_scenario",
+    "pattern_tag": "and_vs_or",
+    "question_ka": "ფინანსურ საქაღალდეზე წვდომა:\n• ეძლევა თანამშრომელს, რომელიც ფინანსების განყოფილებაში მუშაობს **და** უსაფრთხოების ტრენინგი გავლილი აქვს;\n• ასევე ეძლევა ნებისმიერ დირექტორს;\n• კონტრაქტორს არასოდეს ეძლევა, სხვა პირობების მიუხედავად.\n\nთანამშრომლები:\n• ნინო — ფინანსები, ტრენინგი გავლილი, შტატიანი\n• გიორგი — დირექტორი, ტრენინგი არ გაუვლია, შტატიანი\n• ანა — ფინანსები, ტრენინგი არ გაუვლია, შტატიანი\n• ლუკა — გაყიდვები, ტრენინგი გავლილი, შტატიანი\n• საბა — ფინანსები, ტრენინგი გავლილი, კონტრაქტორი\n\nმათგან რამდენს მიეცემა წვდომა?",
+    "question_en": "Access to the finance folder:\n• is given to an employee who works in Finance **and** has completed the security training;\n• is also given to any director;\n• is never given to a contractor, whatever else applies.\n\nEmployees:\n• Nino — Finance, trained, staff\n• Giorgi — director, not trained, staff\n• Ana — Finance, not trained, staff\n• Luka — Sales, trained, staff\n• Saba — Finance, trained, contractor\n\nHow many of them get access?",
+    "options": [
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "correct": 2,
+    "explanation_ka": "წვდომა ეძლევა ნინოს (ფინანსები და ტრენინგი) და გიორგის (დირექტორი). ანას ტრენინგი არ გაუვლია, ლუკა ფინანსებში არ მუშაობს, საბა კი კონტრაქტორია — სულ 2 ადამიანი. ხაფანგი: „და“-ს „ან“-ად კითხულობთ (ემატებიან ანა და ლუკა) ან კონტრაქტორის წესს ივიწყებთ (ემატება საბა).",
+    "explanation_en": "Nino (Finance and trained) and Giorgi (director) get access. Ana lacks the training, Luka is not in Finance, and Saba is a contractor — 2 people. Reading 'and' as 'or' adds Ana and Luka; forgetting the contractor rule adds Saba.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const staff = [['Finance', true, false, false], ['Director', false, true, false], ['Finance', false, false, false], ['Sales', true, false, false], ['Finance', true, false, true]]; return staff.filter(([dept, trained, director, contractor]) => !contractor && ((dept === 'Finance' && trained) || director)).length; }"
+    }
+  },
+  {
+    "id": "UI-017",
+    "module": "understanding_instructions",
+    "difficulty": 1,
+    "format": "step_sequence",
+    "pattern_tag": "conditional_branch",
+    "question_ka": "პროგრამა რიცხვ N-ს ასე ამუშავებს:\n1. თუ N 50-ზე მეტია, მას 20 გამოაკელით; წინააღმდეგ შემთხვევაში გააორმაგეთ.\n2. თუ 1-ლი ნაბიჯის შედეგი 3-ზე უნაშთოდ იყოფა, მას 4 დაუმატეთ; წინააღმდეგ შემთხვევაში 4 გამოაკელით.\n\nრა იქნება შედეგი, თუ N = 51?",
+    "question_en": "A program processes a number N:\n1. If N is greater than 50, subtract 20 from it; otherwise, double it.\n2. If the result of step 1 is divisible by 3, add 4 to it; otherwise, subtract 4.\n\nWhat is the output for N = 51?",
+    "options": [
+      "35",
+      "98",
+      "106",
+      "27"
+    ],
+    "correct": 3,
+    "explanation_ka": "51 > 50, ამიტომ 51 − 20 = 31. 31 არ იყოფა 3-ზე, ამიტომ 31 − 4 = 27. ხაფანგი: მე-2 ნაბიჯის პირობას საწყის 51-ზე ამოწმებთ (ის იყოფა 3-ზე) და იღებთ 35-ს.",
+    "explanation_en": "51 > 50, so 51 − 20 = 31. 31 is not divisible by 3, so 31 − 4 = 27. The trap is testing the step 2 condition on the original 51 (which is divisible by 3) and getting 35.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const n = 51; const r = n > 50 ? n - 20 : n * 2; return r % 3 === 0 ? r + 4 : r - 4; }"
+    }
+  },
+  {
+    "id": "UI-018",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "rule_scenario",
+    "pattern_tag": "hidden_rule_override",
+    "question_ka": "საარქივო კოდი = განყოფილების ასო + წლის ბოლო ორი ციფრი + დოკუმენტის ტიპის ნომერი.\nგანყოფილებები: ფინანსები — F, HR — H, იურიდიული — L.\nტიპები: ხელშეკრულება — 1, ინვოისი — 2, ანგარიში — 3.\nკონფიდენციალური დოკუმენტი განყოფილების ასოს ნაცვლად X-ს იღებს.\n2020 წლამდე შექმნილი დოკუმენტი, ტიპის მიუხედავად, ტიპის ნომრად 0-ს იღებს.\n\nიურიდიული განყოფილების კონფიდენციალური ხელშეკრულება 2018 წელს შეიქმნა. რა კოდი ექნება მას?",
+    "question_en": "Archive code = department letter + last two digits of the year + document type number.\nDepartments: Finance — F, HR — H, Legal — L.\nTypes: contract — 1, invoice — 2, report — 3.\nA confidential document gets X instead of the department letter.\nA document created before 2020 gets the type number 0, whatever its type.\n\nWhat is the code of a confidential Legal contract created in 2018?",
+    "options": [
+      "X180",
+      "L181",
+      "X181",
+      "L180"
+    ],
+    "correct": 0,
+    "explanation_ka": "ორივე სპეციალური წესი მოქმედებს: დოკუმენტი კონფიდენციალურია → L-ის ნაცვლად X; ის 2020 წლამდე შეიქმნა → ტიპის ნომერი 0. კოდი: X + 18 + 0 = X180. ხაფანგი: მხოლოდ ერთ გამონაკლისს ითვალისწინებთ და იღებთ X181-ს ან L180-ს.",
+    "explanation_en": "Both special rules apply: the document is confidential → X instead of L; it is from before 2020 → type number 0. Code: X + 18 + 0 = X180. Applying only one of the exceptions gives X181 or L180.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const dept = 'L', year = 2018, type = 1, confidential = true; return (confidential ? 'X' : dept) + String(year).slice(-2) + (year < 2020 ? 0 : type); }"
+    }
+  },
+  {
+    "id": "UI-019",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "tfc_passage",
+    "pattern_tag": "cannot_say_vs_false",
+    "question_ka": "IT-აღჭურვილობის წესი:\nყოველი ახალი თანამშრომელი ლეპტოპს პირველივე სამუშაო დღეს იღებს. დიზაინის გუნდის თანამშრომლები მეორე მონიტორსაც იღებენ. კომპანიიდან წასვლის შემდეგ თანამშრომელმა ლეპტოპი IT-განყოფილებას 5 სამუშაო დღეში უნდა დაუბრუნოს. დაკარგული აღჭურვილობის შესახებ IT-განყოფილებას იმავე დღეს უნდა შეატყობინონ.\n\nმხოლოდ ზემოთ მოცემული წესების მიხედვით, შემდეგი დებულება მართალია, მცდარია თუ ვერ ვიტყვით?\n**ქეთევანს, რომელიც გაყიდვების გუნდში მუშაობს, მეორე მონიტორი აქვს.**",
+    "question_en": "IT equipment policy:\nEvery new employee gets a laptop on their first working day. Employees in the design team also get a second monitor. When an employee leaves the company, the laptop must be returned to IT within 5 working days. Lost equipment must be reported to IT on the same day.\n\nBased only on the rules above, is the following statement True, False, or Cannot say?\n**Ketevan, who works in the sales team, has a second monitor.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "წესის მიხედვით, მეორე მონიტორს დიზაინის გუნდი იღებს. მაგრამ არსად წერია, რომ სხვა თანამშრომლებს ის არ შეიძლება ჰქონდეთ. ამიტომ ტექსტი ქეთევანის მონიტორს ვერც ადასტურებს და ვერც გამორიცხავს: პასუხია „ვერ ვიტყვით“. ხაფანგი: ფიქრობთ, რომ მეორე მონიტორი მხოლოდ დიზაინის გუნდს აქვს, და ირჩევთ „მცდარია“-ს.",
+    "explanation_en": "The policy guarantees a second monitor to the design team but never says other employees can't have one. The text neither confirms nor rules out Ketevan's monitor, so the answer is Cannot say, not False.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "Design",
+        "Monitor"
+      ],
+      "premises": [
+        "imp(Design, Monitor)",
+        "!Design"
+      ],
+      "conclusion": "Monitor"
+    }
+  },
+  {
+    "id": "UI-020",
+    "module": "understanding_instructions",
+    "difficulty": 3,
+    "format": "step_sequence",
+    "pattern_tag": "track_state",
+    "question_ka": "ავტობუსში მაქსიმუმ 20 მგზავრი ეტევა. მარშრუტს ის ცარიელი იწყებს. ყოველ გაჩერებაზე ჯერ მგზავრები ჩამოდიან, შემდეგ ადიან. თუ ავტობუსი გაივსო, დანარჩენები გაჩერებაზე რჩებიან.\n• 1-ლი გაჩერება: 9 ადის.\n• მე-2 გაჩერება: 2 ჩამოდის, 10 ადის.\n• მე-3 გაჩერება: 4 ჩამოდის, 9 ცდილობს ასვლას.\n• მე-4 გაჩერება: 6 ჩამოდის, 3 ადის.\n\nრამდენი მგზავრია ავტობუსში მე-4 გაჩერების შემდეგ?",
+    "question_en": "A bus can carry at most 20 passengers and starts its route empty. At every stop, passengers first get off and then get on. If the bus becomes full, the remaining people stay at the stop.\n• Stop 1: 9 get on.\n• Stop 2: 2 get off, 10 get on.\n• Stop 3: 4 get off, 9 try to get on.\n• Stop 4: 6 get off, 3 get on.\n\nHow many passengers are on the bus after stop 4?",
+    "options": [
+      "20",
+      "17",
+      "19",
+      "13"
+    ],
+    "correct": 1,
+    "explanation_ka": "9 → 7 + 10 = 17 → 13 + 9 = 22, მაგრამ მხოლოდ 20 ეტევა → 20 − 6 + 3 = 17. ხაფანგი: 20 მგზავრის ზღვარს ივიწყებთ (19) ან ჯერ ასვლას ითვლით და მერე ჩამოსვლას (13).",
+    "explanation_en": "9 → 7 + 10 = 17 → 13 + 9 = 22, but only 20 fit → 20 − 6 + 3 = 17. Ignoring the 20-passenger limit gives 19; letting people get on before others get off gives 13.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const cap = 20; let n = 0; for (const [off, on] of [[0, 9], [2, 10], [4, 9], [6, 3]]) { n -= off; n = Math.min(cap, n + on); } return n; }"
+    }
+  },
+  {
+    "id": "UI-021",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "rule_scenario",
+    "pattern_tag": "rounding_rule",
+    "question_ka": "კურიერის მიწოდების საფასური:\n• 5 ლარი — საბაზისო საფასური;\n• პირველი 3 კმ-ის შემდეგ — დამატებით 1.5 ლარი ყოველ დაწყებულ კილომეტრზე;\n• თუ შეკვეთა 100 ლარზე მეტი ღირს, საბაზისო საფასური არ ირიცხება.\n\nმიწოდების მანძილი 7.2 კმ-ია, შეკვეთა კი 60 ლარი ღირს. რამდენია მიწოდების საფასური?",
+    "question_en": "Courier delivery fee:\n• 5 GEL base fee;\n• plus 1.5 GEL for every started kilometre beyond the first 3 km;\n• the base fee is waived for orders over 100 GEL.\n\nThe delivery distance is 7.2 km and the order costs 60 GEL. What is the delivery fee?",
+    "options": [
+      {
+        "ka": "11.3 ლარი",
+        "en": "11.3 GEL"
+      },
+      {
+        "ka": "11 ლარი",
+        "en": "11 GEL"
+      },
+      {
+        "ka": "17 ლარი",
+        "en": "17 GEL"
+      },
+      {
+        "ka": "12.5 ლარი",
+        "en": "12.5 GEL"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "პირველი 3 კმ-ის შემდეგ რჩება 4.2 კმ, ანუ 5 დაწყებული კილომეტრი: 5 × 1.5 = 7.5 ლარი. შეკვეთა 100 ლარზე მეტი არ ღირს, ამიტომ ემატება საბაზისო 5 ლარი: სულ 12.5 ლარი. ხაფანგი: ზუსტად 4.2 კმ-ს ითვლით (11.3) ან მხოლოდ სრულ კილომეტრებს (11).",
+    "explanation_en": "Beyond the first 3 km there are 4.2 km, i.e. 5 started kilometres: 5 × 1.5 = 7.5 GEL, plus the 5 GEL base fee (the order is not over 100 GEL) = 12.5 GEL. Paying for exactly 4.2 km gives 11.3; counting only full kilometres gives 11.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const km = 7.2, order = 60; const extra = Math.ceil(Math.max(0, km - 3)) * 1.5; return (order > 100 ? 0 : 5) + extra; }"
+    }
+  },
+  {
+    "id": "UI-022",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "ordering_puzzle",
+    "pattern_tag": "literal_instructions",
+    "question_ka": "საწყობის მუშა ნივთებს ამ მარშრუტით აგროვებს:\n1. 1-ელ დერეფანში თაროებს ნომრების ზრდის მიხედვით გადის.\n2. მე-2 დერეფანში — ნომრების კლების მიხედვით.\n3. მე-3 დერეფანში — ისევ ზრდის მიხედვით.\n\nშეკვეთა: K — დერეფანი 2, თარო 5; M — დერეფანი 1, თარო 7; P — დერეფანი 3, თარო 2; R — დერეფანი 2, თარო 9; T — დერეფანი 1, თარო 3; W — დერეფანი 3, თარო 8.\n\nრომელ ნივთს აიღებს ის რიგით მე-4?",
+    "question_en": "A warehouse picker collects items along this route:\n1. In aisle 1, shelves are visited in increasing order of shelf number.\n2. In aisle 2, in decreasing order.\n3. In aisle 3, in increasing order again.\n\nOrder: K — aisle 2, shelf 5; M — aisle 1, shelf 7; P — aisle 3, shelf 2; R — aisle 2, shelf 9; T — aisle 1, shelf 3; W — aisle 3, shelf 8.\n\nWhich item is picked 4th?",
+    "options": [
+      "R",
+      "M",
+      "K",
+      "P"
+    ],
+    "correct": 2,
+    "explanation_ka": "1-ლი დერეფანი, ზრდით: T (3), M (7). მე-2 დერეფანი, კლებით: R (9), K (5). მე-3 დერეფანი, ზრდით: P (2), W (8). მე-4 ნივთი K-ია. ხაფანგი: მე-2 დერეფანსაც ზრდით გადიხართ და მე-4 R გამოდის.",
+    "explanation_en": "Aisle 1 upward: T (3), M (7). Aisle 2 downward: R (9), K (5). Aisle 3 upward: P (2), W (8). The 4th item is K. Walking aisle 2 upward like the others makes R the 4th.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const items = [['K', 2, 5], ['M', 1, 7], ['P', 3, 2], ['R', 2, 9], ['T', 1, 3], ['W', 3, 8]]; items.sort((a, b) => (a[1] - b[1]) || (a[1] === 2 ? b[2] - a[2] : a[2] - b[2])); return items[3][0]; }"
+    }
+  },
+  {
+    "id": "UI-023",
+    "module": "understanding_instructions",
+    "difficulty": 1,
+    "format": "rule_scenario",
+    "pattern_tag": "boundary_inclusive",
+    "question_ka": "მუზეუმის ბილეთების ფასები:\n• 6 წელზე უმცროსი — უფასო;\n• 6–17 წელი (ჩათვლით) — 4 ლარი;\n• 18–65 წელი (ჩათვლით) — 12 ლარი;\n• 65 წელზე უფროსი — 6 ლარი.\n\nელენე სამ ბილეთს ყიდულობს: ვაჟისთვის (6 წლის), ქალიშვილისთვის (17 წლის) და დედისთვის (65 წლის). რამდენს გადაიხდის?",
+    "question_en": "Museum ticket prices:\n• under 6 years old — free;\n• 6–17 years old (inclusive) — 4 GEL;\n• 18–65 years old (inclusive) — 12 GEL;\n• over 65 — 6 GEL.\n\nElene buys three tickets: for her son (6 years old), her daughter (17) and her mother (65). How much does she pay?",
+    "options": [
+      {
+        "ka": "20 ლარი",
+        "en": "20 GEL"
+      },
+      {
+        "ka": "16 ლარი",
+        "en": "16 GEL"
+      },
+      {
+        "ka": "14 ლარი",
+        "en": "14 GEL"
+      },
+      {
+        "ka": "10 ლარი",
+        "en": "10 GEL"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "ვაჟი 6 წლისაა → 4 ლარი (6 წლის ბავშვი „6 წელზე უმცროსი“ არ არის). ქალიშვილი 17 წლისაა → 4 ლარი. დედა 65 წლისაა → 12 ლარი (65 წლის ადამიანი „65 წელზე უფროსი“ არ არის). სულ 20 ლარი. ხაფანგი: 6 წლის ვაჟს უფასო ჯგუფში ათავსებთ (16) ან დედას „65 წელზე უფროსების“ ჯგუფში (14).",
+    "explanation_en": "Son 6 → 4 GEL (6 is not 'under 6'); daughter 17 → 4 GEL; mother 65 → 12 GEL (65 is not 'over 65'). Total 20 GEL. Putting the 6-year-old in the free group gives 16; putting the mother in the 'over 65' group gives 14.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => [6, 17, 65].map(a => (a < 6 ? 0 : a <= 17 ? 4 : a <= 65 ? 12 : 6)).reduce((s, x) => s + x, 0)"
+    }
+  },
+  {
+    "id": "UI-024",
+    "module": "understanding_instructions",
+    "difficulty": 3,
+    "format": "step_sequence",
+    "pattern_tag": "step_order",
+    "question_ka": "კოდზე `4KD72PX1` შეასრულეთ ნაბიჯები მოცემული რიგით:\n1. ბოლო 3 სიმბოლო დასაწყისში გადაიტანეთ; მათი რიგი არ შეცვალოთ.\n2. ყოველი ციფრი d შეცვალეთ რიცხვით 9 − d.\n3. მე-2 და მე-5 პოზიციებზე მდგომ სიმბოლოებს ადგილები გაუცვალეთ.\n4. წაშალეთ ყველა სიმბოლო, რომელიც ლუწ პოზიციაზე დგას (მე-2, მე-4, მე-6, …).\n\nრა მიიღება?",
+    "question_en": "Apply the steps to the code `4KD72PX1`, in the order given:\n1. Move the last 3 characters to the front, keeping their order.\n2. Replace every digit d with 9 − d.\n3. Swap the characters in the 2nd and 5th positions.\n4. Delete every character in an even position (2nd, 4th, 6th, …).\n\nWhat is the result?",
+    "options": [
+      "P872",
+      "K5D7",
+      "P1X7",
+      "P8X2"
+    ],
+    "correct": 3,
+    "explanation_ka": "PX14KD72 → PX85KD27 → X და K ადგილს იცვლის: PK85XD27 → რჩება 1-ლი, მე-3, მე-5 და მე-7 სიმბოლოები: P8X2. ხაფანგი: გაცვლას ყველაზე ადრე, საწყის კოდზე ასრულებთ (P872) ან მე-2 ნაბიჯს გამოტოვებთ (P1X7).",
+    "explanation_en": "PX14KD72 → PX85KD27 → swap X and K: PK85XD27 → keep the 1st, 3rd, 5th and 7th characters: P8X2. Doing the swap first (on the original code) gives P872; skipping step 2 gives P1X7.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { let a = '4KD72PX1'.split(''); a = a.slice(-3).concat(a.slice(0, -3)); a = a.map(c => /[0-9]/.test(c) ? String(9 - Number(c)) : c); [a[1], a[4]] = [a[4], a[1]]; return a.filter((c, i) => i % 2 === 0).join(''); }"
+    }
+  },
+  {
+    "id": "UI-025",
+    "module": "understanding_instructions",
+    "difficulty": 3,
+    "format": "rule_scenario",
+    "pattern_tag": "priority_rules",
+    "question_ka": "ფასდაკლების წესები წიგნის მაღაზიაში:\n• სტუდენტური ფასდაკლება 15%-ია. ლოიალობის ბარათით ფასი 20 ლარით მცირდება, თუ შესყიდვა 100 ლარი ან მეტია. ერთ შესყიდვაზე ამ ორიდან მხოლოდ ერთი მოქმედებს — ის, რომელიც მეტს ზოგავს.\n• შაბათ-კვირას ამ ფასდაკლების შემდეგ მიღებული ფასი დამატებით 10%-ით მცირდება.\n\nთამარი სტუდენტია და ლოიალობის ბარათი აქვს. შაბათს ის 120 ლარის წიგნებს ყიდულობს. რამდენს გადაიხდის?",
+    "question_en": "Discount rules in a bookshop:\n• Only one of these two discounts can be used per purchase, and the customer gets the one that saves more: student discount — 15%, or loyalty card — 20 GEL off purchases of 100 GEL or more.\n• On weekends there is an extra 10% off the price after that discount.\n\nTamar is a student and has a loyalty card. On Saturday she buys books worth 120 GEL. How much does she pay?",
+    "options": [
+      {
+        "ka": "91.8 ლარი",
+        "en": "91.8 GEL"
+      },
+      {
+        "ka": "90 ლარი",
+        "en": "90 GEL"
+      },
+      {
+        "ka": "100 ლარი",
+        "en": "100 GEL"
+      },
+      {
+        "ka": "73.8 ლარი",
+        "en": "73.8 GEL"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "სტუდენტური: 120-ის 15% = 18 ლარი. ბარათით: 20 ლარი — ეს მეტს ზოგავს: 120 − 20 = 100. შაბათ-კვირის 10%: 100 × 0.9 = 90 ლარი. ხაფანგი: ფიქრობთ, რომ პროცენტი ყოველთვის უკეთესია (91.8), ან ორივე ფასდაკლებას იყენებთ (73.8).",
+    "explanation_en": "Student: 15% of 120 = 18 GEL; loyalty card = 20 GEL, which saves more: 120 − 20 = 100. Weekend 10%: 100 × 0.9 = 90 GEL. Assuming the percentage is always better gives 91.8; using both discounts gives 73.8.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const price = 120; const student = price * 0.15; const loyalty = price >= 100 ? 20 : 0; const after = price - Math.max(student, loyalty); return Math.round(after * 0.9 * 100) / 100; }"
+    }
+  },
+  {
+    "id": "UI-026",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "step_sequence",
+    "pattern_tag": "conditional_branch",
+    "question_ka": "კოდზე `K7M2P9R4S` შეასრულეთ ნაბიჯები მოცემული რიგით:\n1. 4-ზე მეტი ყოველი ციფრი შეცვალეთ რიცხვით „9 − ეს ციფრი“.\n2. წაშალეთ ყოველი ასო, რომელიც უშუალოდ კენტი ციფრის შემდეგ დგას.\n\nრა მიიღება?",
+    "question_en": "Apply the steps to the code `K7M2P9R4S`, in the order given:\n1. Replace every digit greater than 4 with '9 − that digit'.\n2. Delete every letter that comes directly after an odd digit.\n\nWhat is the result?",
+    "options": [
+      "K22P04S",
+      "K2M2P94S",
+      "K2M2P0R4S",
+      "K2M2P0R5"
+    ],
+    "correct": 2,
+    "explanation_ka": "1-ლი ნაბიჯი: 7 → 2 და 9 → 0. მიიღება K2M2P0R4S. ახლა კოდში კენტი ციფრი აღარ არის, ამიტომ მე-2 ნაბიჯი არაფერს შლის. ხაფანგი: მე-2 ნაბიჯის პირობას საწყის 7-სა და 9-ზე ამოწმებთ და შეცდომით შლით M-სა და R-ს (K22P04S).",
+    "explanation_en": "Step 1: 7 → 2 and 9 → 0, giving K2M2P0R4S. Now there are no odd digits, so step 2 deletes nothing. Testing the step 2 condition on the original digits 7 and 9 wrongly deletes M and R (K22P04S).",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { let a = 'K7M2P9R4S'.split('').map(c => /[0-9]/.test(c) && Number(c) > 4 ? String(9 - Number(c)) : c); a = a.filter((c, i) => !(/[A-Z]/.test(c) && i > 0 && /[0-9]/.test(a[i - 1]) && Number(a[i - 1]) % 2 === 1)); return a.join(''); }"
+    }
+  },
+  {
+    "id": "UI-027",
+    "module": "understanding_instructions",
+    "difficulty": 3,
+    "format": "rule_scenario",
+    "pattern_tag": "qualifier_words",
+    "question_ka": "კანდიდატს გასაუბრებაზე იწვევენ, თუ ის ამ 3 კრიტერიუმიდან **სულ მცირე 2**-ს აკმაყოფილებს:\n(a) 3 ან მეტი წლის გამოცდილება;\n(b) უნივერსიტეტის ხარისხი IT-ში;\n(c) ონლაინტესტში 80 ან მეტი ქულა.\nთუ კანდიდატმა ტესტში 50-ზე ნაკლები ქულა მიიღო, მას არასოდეს იწვევენ.\n\nნიკა: 5 წელი, ხარისხი არ აქვს, ტესტი — 78.\nქეთევანი: 2 წელი, ხარისხი IT-ში, ტესტი — 80.\nდავითი: 3 წელი, ხარისხი IT-ში, ტესტი — 45.\nელენე: 4 წელი, ხარისხი არ აქვს, ტესტი — 92.\n\nვის მიიწვევენ გასაუბრებაზე?",
+    "question_en": "An applicant is invited to an interview if they meet **at least 2** of these 3 criteria:\n(a) 3 or more years of experience;\n(b) a university degree in IT;\n(c) a score of 80 or more on the online test.\nAn applicant who scores below 50 on the test is never invited.\n\nNika: 5 years, no degree, test — 78.\nKetevan: 2 years, IT degree, test — 80.\nDavit: 3 years, IT degree, test — 45.\nElene: 4 years, no degree, test — 92.\n\nWho is invited to an interview?",
+    "options": [
+      {
+        "ka": "ქეთევანი და ელენე",
+        "en": "Ketevan and Elene"
+      },
+      {
+        "ka": "ქეთევანი, დავითი და ელენე",
+        "en": "Ketevan, Davit and Elene"
+      },
+      {
+        "ka": "მხოლოდ ელენე",
+        "en": "Only Elene"
+      },
+      {
+        "ka": "ნიკა, ქეთევანი და ელენე",
+        "en": "Nika, Ketevan and Elene"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "ნიკა მხოლოდ (a)-ს აკმაყოფილებს. ქეთევანი — (b)-სა და (c)-ს: 80 „80 ან მეტში“ შედის. დავითი (a)-სა და (b)-ს აკმაყოფილებს, მაგრამ მისი ქულა 50-ზე ნაკლებია, ამიტომ მას არ იწვევენ. ელენე — (a)-სა და (c)-ს. იწვევენ ქეთევანსა და ელენეს. ხაფანგი: დავითსაც იწვევთ, რადგან დაბალი ქულის წესი გამოგრჩებათ.",
+    "explanation_en": "Nika meets only (a). Ketevan meets (b) and (c) — 80 counts as '80 or more'. Davit meets (a) and (b), but his score is below 50, so he is not invited. Elene meets (a) and (c). Invited: Ketevan and Elene.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const c = [['Nika', 5, false, 78], ['Ketevan', 2, true, 80], ['Davit', 3, true, 45], ['Elene', 4, false, 92]]; const inv = c.filter(([, y, deg, t]) => t >= 50 && [y >= 3, deg, t >= 80].filter(Boolean).length >= 2).map(x => x[0]); return inv.length === 1 ? 'Only ' + inv[0] : inv.slice(0, -1).join(', ') + ' and ' + inv[inv.length - 1]; }"
+    }
+  },
+  {
+    "id": "UI-028",
+    "module": "understanding_instructions",
+    "difficulty": 1,
+    "format": "tfc_passage",
+    "pattern_tag": "hidden_rule_override",
+    "question_ka": "ოფისის სამზარეულოს წესები:\nმაცივარი ყოველ პარასკევს, 17:00-ზე, იწმინდება და შიგნით დარჩენილი ყველაფერი გადაიყრება. თუ საკვებს სახელი და თარიღი აწერია, ის ეტიკეტზე მითითებულ თარიღამდე ინახება, პარასკევსაც. სასმელები არასოდეს გადაიყრება.\n\nმხოლოდ ზემოთ მოცემული წესების მიხედვით, შემდეგი დებულება მართალია, მცდარია თუ ვერ ვიტყვით?\n**სენდვიჩი, რომელსაც სახელი და ამ პარასკევის მომდევნო სამშაბათის თარიღი აწერია, ამ პარასკევს 17:00-ზე გადაიყრება.**",
+    "question_en": "Office kitchen rules:\nThe fridge is cleaned every Friday at 17:00, and everything left inside is thrown away. Food labelled with a name and a date is kept until the date on the label, even on Fridays. Drinks are never thrown away.\n\nBased only on the rules above, is the following statement True, False, or Cannot say?\n**A sandwich labelled with a name and the date of the Tuesday after this Friday will be thrown away this Friday at 17:00.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "ზოგადი წესით პარასკევს ყველაფერი გადაიყრება. მაგრამ შემდეგი წინადადება გამონაკლისს ადგენს: ეტიკეტიანი საკვები თარიღამდე ინახება. ეტიკეტზე მითითებული სამშაბათი ამ პარასკევის შემდეგაა, ამიტომ სენდვიჩი რჩება. ტექსტი დებულებას ეწინააღმდეგება. ხაფანგი: მხოლოდ ზოგად წესს ითვალისწინებთ და გამონაკლისი გამოგრჩებათ.",
+    "explanation_en": "The general rule says everything is thrown away on Friday, but the next sentence makes an exception: labelled food is kept until its date. The labelled Tuesday comes after this Friday, so the sandwich stays — the text contradicts the statement.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const labelled = true, dateAfterFriday = true; const thrownAway = !(labelled && dateAfterFriday); return thrownAway ? 'True' : 'False'; }"
+    }
+  },
+  {
+    "id": "UI-029",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "step_sequence",
+    "pattern_tag": "position_counting",
+    "question_ka": "რიგში დგანან: ანა, ლუკა, მარიამი, საბა, ნინო, დავითი, ელენე (ანა რიგის თავშია).\n1. რიგის ბოლოდან მე-2 ადამიანი რიგს ტოვებს.\n2. საბა 2 ადგილით წინ გადაინაცვლებს.\n3. ვინც ახლა ბოლოდან მე-3 ადგილზე დგას, რიგის თავში მდგომს ადგილს უცვლის.\n\nვინ დგას ახლა რიგის თავიდან მე-4 ადგილზე?",
+    "question_en": "People stand in a queue: Ana, Luka, Mariam, Saba, Nino, Davit, Elene (Ana is at the front).\n1. The 2nd person from the back leaves the queue.\n2. Saba moves 2 places forward.\n3. Whoever is now 3rd from the back swaps places with the person at the front.\n\nWho is now 4th from the front?",
+    "options": [
+      {
+        "ka": "საბა",
+        "en": "Saba"
+      },
+      {
+        "ka": "მარიამი",
+        "en": "Mariam"
+      },
+      {
+        "ka": "ლუკა",
+        "en": "Luka"
+      },
+      {
+        "ka": "ანა",
+        "en": "Ana"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "რიგს დავითი ტოვებს: ანა, ლუკა, მარიამი, საბა, ნინო, ელენე. საბა 2 ადგილით წინ: ანა, საბა, ლუკა, მარიამი, ნინო, ელენე. ბოლოდან მე-3 მარიამია; ის ანას ადგილს უცვლის: მარიამი, საბა, ლუკა, ანა, ნინო, ელენე. მე-4 ანაა. ხაფანგი: 1-ელ ნაბიჯში რიგის თავიდან ითვლით — მაშინ ლუკა გადის და მე-4 საბა გამოდის.",
+    "explanation_en": "Davit leaves: Ana, Luka, Mariam, Saba, Nino, Elene. Saba moves forward 2: Ana, Saba, Luka, Mariam, Nino, Elene. 3rd from the back is Mariam; she swaps with Ana: Mariam, Saba, Luka, Ana, Nino, Elene. 4th is Ana. Counting step 1 from the front removes Luka instead and makes Saba 4th.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const a = ['Ana', 'Luka', 'Mariam', 'Saba', 'Nino', 'Davit', 'Elene']; a.splice(a.length - 2, 1); const i = a.indexOf('Saba'); a.splice(i, 1); a.splice(i - 2, 0, 'Saba'); const j = a.length - 3; [a[0], a[j]] = [a[j], a[0]]; return a[3]; }"
+    }
+  },
+  {
+    "id": "UI-030",
+    "module": "understanding_instructions",
+    "difficulty": 1,
+    "format": "step_sequence",
+    "pattern_tag": "literal_instructions",
+    "question_ka": "დაწყებამდე ყველა ნაბიჯი ბოლომდე წაიკითხეთ.\n1. ჩაწერეთ რიცხვი 5.\n2. გაამრავლეთ ის 4-ზე.\n3. შედეგს გამოაკელით 6.\n4. მე-2 და მე-3 ნაბიჯები არ შეასრულოთ; სანაცვლოდ, 1-ელ ნაბიჯში ჩაწერილ რიცხვს დაუმატეთ 10.\n\nრა რიცხვს მიიღებთ ბოლოს?",
+    "question_en": "Read all the steps before you start.\n1. Write down the number 5.\n2. Multiply it by 4.\n3. Subtract 6 from the result.\n4. Do not carry out steps 2 and 3; instead, add 10 to the number from step 1.\n\nWhat number do you end up with?",
+    "options": [
+      "24",
+      "15",
+      "14",
+      "30"
+    ],
+    "correct": 1,
+    "explanation_ka": "მე-4 ნაბიჯი მე-2 და მე-3 ნაბიჯებს აუქმებს, ამიტომ რჩება მხოლოდ 5 + 10 = 15. ხაფანგი: ყველა ნაბიჯს რიგრიგობით ასრულებთ და იღებთ 5 × 4 − 6 + 10 = 24-ს.",
+    "explanation_en": "Step 4 cancels steps 2 and 3, so you only do 5 + 10 = 15. Carrying out every step in order gives 5 × 4 − 6 + 10 = 24.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const start = 5; const skip23 = true; const n = skip23 ? start : start * 4 - 6; return n + 10; }"
+    }
+  },
+  {
+    "id": "UI-031",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "rule_scenario",
+    "pattern_tag": "and_vs_or",
+    "question_ka": "თანხის დაბრუნების წესები:\n• თანხა სრულად ბრუნდება, თუ ორივე პირობა სრულდება:\n  – ნივთი შეძენიდან არაუგვიანეს 14 დღისა დაბრუნდა;\n  – მყიდველს ქვითარი აქვს **ან** ბარათით გადაიხადა (ერთ-ერთიც საკმარისია).\n• ფასდაკლებით ნაყიდი ნივთი მხოლოდ იცვლება — თანხა არასოდეს ბრუნდება.\n\nვის დაუბრუნდება თანხა სრულად?\n• ნინო — ნივთს შეძენიდან 10 დღის შემდეგ აბრუნებს, ქვითარი არ აქვს, ნაღდი ფულით გადაიხადა, ჩვეულებრივი ნივთი\n• გიორგი — შეძენიდან 15 დღის შემდეგ, ქვითარი აქვს, ბარათით გადაიხადა, ჩვეულებრივი ნივთი\n• ანა — შეძენიდან 14 დღის შემდეგ, ქვითარი არ აქვს, ბარათით გადაიხადა, ჩვეულებრივი ნივთი\n• ლუკა — შეძენიდან 5 დღის შემდეგ, ქვითარი აქვს, ნაღდი ფულით გადაიხადა, ფასდაკლებული ნივთი",
+    "question_en": "Refund rules:\n• A full refund is given if both conditions hold:\n  – the item is returned no later than 14 days after purchase;\n  – the customer has the receipt **or** paid by card (either one is enough).\n• Items bought on sale can only be exchanged — never refunded.\n\nWho gets a full refund?\n• Nino — returns the item 10 days after purchase, no receipt, paid in cash, regular item\n• Giorgi — 15 days after purchase, has the receipt, paid by card, regular item\n• Ana — 14 days after purchase, no receipt, paid by card, regular item\n• Luka — 5 days after purchase, has the receipt, paid in cash, sale item",
+    "options": [
+      {
+        "ka": "გიორგი",
+        "en": "Giorgi"
+      },
+      {
+        "ka": "ანა",
+        "en": "Ana"
+      },
+      {
+        "ka": "ლუკა",
+        "en": "Luka"
+      },
+      {
+        "ka": "ნინო",
+        "en": "Nino"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "ანა ნივთს შეძენიდან 14 დღის შემდეგ აბრუნებს — ეს ჯერ კიდევ „არაუგვიანეს 14 დღისა“. თან ბარათით გადაიხადა, ანუ ორივე პირობა სრულდება. გიორგი ერთი დღით აგვიანებს. ნინოს არც ქვითარი აქვს და არც ბარათით გადაუხდია. ლუკას ნივთი კი ფასდაკლებით იყო ნაყიდი. ხაფანგი: ერთ პირობას საკმარისად თვლით და ნინოს ირჩევთ, რადგან ის ვადაში დაბრუნდა.",
+    "explanation_en": "Ana returns the item 14 days after purchase — still 'no later than 14 days' — and paid by card, so both conditions hold. Giorgi is one day late, Nino has neither a receipt nor a card payment, and Luka's item was bought on sale.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const c = [['Nino', 10, false, false, false], ['Giorgi', 15, true, true, false], ['Ana', 14, false, true, false], ['Luka', 5, true, false, true]]; return c.filter(([, day, receipt, card, sale]) => !sale && day <= 14 && (receipt || card)).map(x => x[0]).join(', '); }"
+    }
+  },
+  {
+    "id": "UI-032",
+    "module": "understanding_instructions",
+    "difficulty": 3,
+    "format": "step_sequence",
+    "pattern_tag": "track_state",
+    "question_ka": "ფიგურა დაფაზე მოძრაობს. დაფის უჯრები 1-დან 12-მდეა დანომრილი. თავიდან ფიგურა 1-ელ უჯრაზე დგას.\nწესები:\n• ფიგურა წინ იმდენი უჯრით მიდის, რამდენიც კამათელზე მოვიდა.\n• თუ ფიგურა მე-6 უჯრაზე დადგა, მაშინვე მე-2 უჯრაზე ბრუნდება.\n• თუ სვლისას ფიგურა მე-12 უჯრას გასცდებოდა, ის 12-მდე მიდის და დარჩენილი ნაბიჯების რაოდენობით უკან იხევს.\n\nკამათელზე რიგრიგობით მოვიდა: 5, 3, 6, 4. რომელ უჯრაზე აღმოჩნდება ფიგურა ბოლოს?",
+    "question_en": "A token moves on a board with squares numbered 1 to 12. It starts on square 1.\nRules:\n• The token moves forward by the number rolled.\n• If the token lands on square 6, it immediately goes back to square 2.\n• If a move would go past square 12, the token goes to 12 and moves back for the remaining steps.\n\nThe rolls, in order, are 5, 3, 6, 4. On which square does the token end?",
+    "options": [
+      "9",
+      "11",
+      "12",
+      "10"
+    ],
+    "correct": 0,
+    "explanation_ka": "1 + 5 = 6 → ფიგურა 2-ზე ბრუნდება; 2 + 3 = 5; 5 + 6 = 11; 11 + 4 უკვე 12-ს სცდება: 1 ნაბიჯი 12-მდე, შემდეგ 3 ნაბიჯი უკან — 9. ხაფანგი: მე-6 უჯრის წესს ივიწყებთ (11) ან 12-ზე ჩერდებით (12).",
+    "explanation_en": "1 + 5 = 6 → back to 2; 2 + 3 = 5; 5 + 6 = 11; 11 + 4 goes past 12: 1 step to 12, then 3 steps back to 9. Forgetting the square-6 rule gives 11; stopping at 12 gives 12.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { let s = 1; for (const r of [5, 3, 6, 4]) { s += r; if (s > 12) s = 12 - (s - 12); if (s === 6) s = 2; } return s; }"
+    }
+  },
+  {
+    "id": "UI-033",
+    "module": "understanding_instructions",
+    "difficulty": 1,
+    "format": "rule_scenario",
+    "pattern_tag": "apply_to_every_item",
+    "question_ka": "ავიაკომპანიის წესი: 20 კგ-ზე მძიმე ყოველ ჩაბარებულ ჩანთაში მგზავრი დამატებით 10 ლარს იხდის.\n\nსაბა 4 ჩანთას აბარებს. მათი წონაა 23 კგ, 18 კგ, 21 კგ და 20 კგ. რამდენს გადაიხდის ის დამატებით?",
+    "question_en": "Airline rule: every checked bag heavier than 20 kg costs an extra 10 GEL.\n\nSaba checks in 4 bags weighing 23 kg, 18 kg, 21 kg and 20 kg. How much extra does he pay?",
+    "options": [
+      {
+        "ka": "30 ლარი",
+        "en": "30 GEL"
+      },
+      {
+        "ka": "10 ლარი",
+        "en": "10 GEL"
+      },
+      {
+        "ka": "20 ლარი",
+        "en": "20 GEL"
+      },
+      {
+        "ka": "40 ლარი",
+        "en": "40 GEL"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "20 კგ-ზე მძიმეა მხოლოდ 23 კგ-იანი და 21 კგ-იანი ჩანთები: 2 × 10 = 20 ლარი. 20 კგ-იანი ჩანთა 20 კგ-ზე მძიმე არ არის. ხაფანგი: ზღვარზე მდგომ ჩანთასაც ითვლით, ან საფასურს ერთხელ არიცხავთ მთელ ბარგზე და არა თითო ჩანთაზე.",
+    "explanation_en": "Only the 23 kg and 21 kg bags are heavier than 20 kg: 2 × 10 = 20 GEL. A 20 kg bag is not heavier than 20 kg, and the charge is per bag, not once for all the luggage.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => [23, 18, 21, 20].filter(w => w > 20).length * 10"
+    }
+  },
+  {
+    "id": "UI-034",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "step_sequence",
+    "pattern_tag": "step_order",
+    "question_ka": "საწყისი რიცხვები: 8, 3, 6, 1, 9, 4.\n1. დაალაგეთ რიცხვები ზრდადობით.\n2. წაშალეთ კენტ პოზიციებზე მდგომი რიცხვები (1-ლი, მე-3, მე-5).\n3. დარჩენილი რიცხვები გააორმაგეთ.\n\nრისი ტოლია მიღებული რიცხვების ჯამი?",
+    "question_en": "Start with: 8, 3, 6, 1, 9, 4.\n1. Sort the numbers from smallest to largest.\n2. Delete the numbers in odd positions (1st, 3rd, 5th).\n3. Double each remaining number.\n\nWhat is the sum of the numbers you end up with?",
+    "options": [
+      "16",
+      "26",
+      "18",
+      "36"
+    ],
+    "correct": 3,
+    "explanation_ka": "დალაგებით: 1, 3, 4, 6, 8, 9. 1-ლი, მე-3 და მე-5 რიცხვი იშლება, რჩება 3, 6, 9. გაორმაგებით: 6, 12, 18 — ჯამი 36. ხაფანგი: პოზიციებს დალაგებამდე შლით (8, 3, 6, 1, 9, 4-დან), რჩება 3, 1, 4 და იღებთ 16-ს.",
+    "explanation_en": "Sorted: 1, 3, 4, 6, 8, 9. Delete the 1st, 3rd and 5th: 3, 6, 9 remain. Doubled: 6, 12, 18 — sum 36. Deleting positions before sorting (from 8, 3, 6, 1, 9, 4) leaves 3, 1, 4 and gives 16.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => [8, 3, 6, 1, 9, 4].sort((a, b) => a - b).filter((x, i) => i % 2 === 1).map(x => x * 2).reduce((s, x) => s + x, 0)"
+    }
+  },
+  {
+    "id": "UI-035",
+    "module": "understanding_instructions",
+    "difficulty": 3,
+    "format": "rule_scenario",
+    "pattern_tag": "hidden_rule_override",
+    "question_ka": "ზეგანაკვეთური ანაზღაურების წესები:\n• კვირაში 40 საათს ზემოთ ნამუშევარი საათები ჩვეულებრივი საათობრივი განაკვეთის 1.5-ჯერადად ანაზღაურდება.\n• უქმე დღეს ნამუშევარი საათები ყოველთვის ჩვეულებრივი განაკვეთის 2-ჯერადად ანაზღაურდება. ეს საათები 40 საათში არ ითვლება.\n\nლევანის ჩვეულებრივი განაკვეთი საათში 10 ლარია. ამ კვირაში მან 44 საათი იმუშავა, მათგან 8 — უქმე დღეს. რამდენს გამოიმუშავებს ის ამ კვირაში?",
+    "question_en": "Overtime pay rules:\n• Hours worked beyond 40 in a week are paid at 1.5 times the normal hourly rate.\n• Hours worked on a public holiday are always paid at 2 times the normal rate and do not count toward the 40 hours.\n\nLevani's normal rate is 10 GEL per hour. This week he worked 44 hours, 8 of them on a public holiday. How much does he earn this week?",
+    "options": [
+      {
+        "ka": "520 ლარი",
+        "en": "520 GEL"
+      },
+      {
+        "ka": "540 ლარი",
+        "en": "540 GEL"
+      },
+      {
+        "ka": "460 ლარი",
+        "en": "460 GEL"
+      },
+      {
+        "ka": "580 ლარი",
+        "en": "580 GEL"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "უქმე დღის 8 საათი 8 × 20 = 160 ლარს იძლევა და 40 საათში არ ითვლება. დანარჩენი 36 საათი 40-ს არ აღემატება, ამიტომ ყველა ჩვეულებრივად ანაზღაურდება: 36 × 10 = 360. სულ 520 ლარი. ხაფანგი: უქმე დღის საათებს 40-ში ითვლით — ასე ჩნდება 4 ზედმეტი ზეგანაკვეთური საათი და იღებთ 540-ს.",
+    "explanation_en": "The 8 holiday hours earn 8 × 20 = 160 GEL and are left out of the 40-hour count. The other 36 hours do not exceed 40, so they are all normal: 36 × 10 = 360. Total 520 GEL. Counting the holiday hours toward the 40 creates 4 false overtime hours and gives 540.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const rate = 10, total = 44, holiday = 8; const regular = total - holiday; const normal = Math.min(regular, 40), over = Math.max(0, regular - 40); return normal * rate + over * rate * 1.5 + holiday * rate * 2; }"
+    }
+  },
+  {
+    "id": "UI-036",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "tfc_passage",
+    "pattern_tag": "cannot_say_vs_false",
+    "question_ka": "წესები მონაცემთა ცენტრის სტუმრებისთვის:\nსტუმარმა შესასვლელში პირადობის მოწმობა უნდა წარადგინოს. სტუმარი შენობაში მხოლოდ IT-განყოფილების თანამშრომელთან ერთად შედის. სერვერების დარბაზში ფოტოგადაღება აკრძალულია. 18:00-ის შემდეგ მოსულმა სტუმარმა გვიან შესვლის ჟურნალშიც უნდა მოაწეროს ხელი.\n\nმხოლოდ ზემოთ მოცემული წესების მიხედვით, შემდეგი დებულება მართალია, მცდარია თუ ვერ ვიტყვით?\n**სტუმრებს შესასვლელ ჰოლში ფოტოს გადაღება შეუძლიათ.**",
+    "question_en": "Visitor rules for the data centre:\nVisitors must show an ID card at the entrance. Visitors may enter only together with an employee of the IT department. Taking photos is forbidden in the server hall. Visitors who arrive after 18:00 must also sign the late-entry log.\n\nBased only on the rules above, is the following statement True, False, or Cannot say?\n**Visitors may take photos in the entrance hall.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "წესები ფოტოგადაღებას მხოლოდ სერვერების დარბაზში კრძალავს. შესასვლელ ჰოლზე კი წესებში არაფერი წერია — არც ნებართვა და არც აკრძალვა. ამიტომ ტექსტი დებულებას ვერც ადასტურებს და ვერც უარყოფს: „ვერ ვიტყვით“. ხაფანგი: ფიქრობთ, რომ თუ ფოტო მხოლოდ დარბაზშია აკრძალული, ჰოლში ის ნებადართულია.",
+    "explanation_en": "The rules forbid photos only in the server hall and say nothing about the entrance hall — neither permission nor a ban. So the statement can be neither confirmed nor contradicted: Cannot say.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "ServerHall",
+        "Forbidden"
+      ],
+      "premises": [
+        "imp(ServerHall, Forbidden)",
+        "!ServerHall"
+      ],
+      "conclusion": "!Forbidden"
+    }
+  },
+  {
+    "id": "UI-037",
+    "module": "understanding_instructions",
+    "difficulty": 3,
+    "format": "ordering_puzzle",
+    "pattern_tag": "priority_rules",
+    "question_ka": "კლინიკა პაციენტებს ამ რიგით იღებს:\n1. ჯერ — გადაუდებელი შემთხვევები.\n2. შემდეგ — 12 წელზე უმცროსი ბავშვები, მოსვლის რიგით.\n3. შემდეგ — წინასწარ ჩაწერილი პაციენტები, ჩაწერის დროის მიხედვით.\n4. ბოლოს — დანარჩენები, მოსვლის რიგით.\n\nპაციენტები (ლუკას გარდა ყველა ზრდასრულია): ნინო — ჩაწერილი არ არის, მოვიდა 09:10-ზე; გიორგი — ჩაწერილია 09:30-ზე, მოვიდა 09:20-ზე; ლუკა (8 წლის) — ჩაწერილი არ არის, მოვიდა 09:25-ზე; მარიამი — გადაუდებელი შემთხვევა, მოვიდა 09:40-ზე; დავითი — ჩაწერილია 09:15-ზე, მოვიდა 09:05-ზე; ელენე — ჩაწერილი არ არის, მოვიდა 09:00-ზე.\n\nვინ იქნება რიგით მე-5?",
+    "question_en": "A clinic sees patients in this order:\n1. Emergencies first.\n2. Then children under 12, in order of arrival.\n3. Then patients with an appointment, by appointment time.\n4. Then everyone else, in order of arrival.\n\nPatients (all adults except Luka): Nino — no appointment, arrived 09:10; Giorgi — appointment at 09:30, arrived 09:20; Luka (8 years old) — no appointment, arrived 09:25; Mariam — emergency, arrived 09:40; Davit — appointment at 09:15, arrived 09:05; Elene — no appointment, arrived 09:00.\n\nWho is seen 5th?",
+    "options": [
+      {
+        "ka": "ნინო",
+        "en": "Nino"
+      },
+      {
+        "ka": "ლუკა",
+        "en": "Luka"
+      },
+      {
+        "ka": "ელენე",
+        "en": "Elene"
+      },
+      {
+        "ka": "გიორგი",
+        "en": "Giorgi"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "მიღების რიგი: მარიამი (გადაუდებელი), ლუკა (ბავშვი), დავითი (ჩაწერა 09:15), გიორგი (ჩაწერა 09:30), ელენე (09:00), ნინო (09:10). მე-5 ელენეა. ხაფანგი: ბავშვების წესს ივიწყებთ — მაშინ ლუკა ბოლოში ხვდება და მე-5 ნინო გამოდის.",
+    "explanation_en": "Order: Mariam (emergency), Luka (child), Davit (09:15 appointment), Giorgi (09:30 appointment), Elene (09:00), Nino (09:10). 5th is Elene. Forgetting the children rule sends Luka to the end and makes Nino 5th.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const p = [['Nino', 'walk', '', '09:10', false], ['Giorgi', 'appt', '09:30', '09:20', false], ['Luka', 'walk', '', '09:25', true], ['Mariam', 'emerg', '', '09:40', false], ['Davit', 'appt', '09:15', '09:05', false], ['Elene', 'walk', '', '09:00', false]]; const group = x => (x[1] === 'emerg' ? 0 : x[4] ? 1 : x[1] === 'appt' ? 2 : 3); const key = x => (group(x) === 2 ? x[2] : x[3]); p.sort((a, b) => (group(a) - group(b)) || key(a).localeCompare(key(b))); return p[4][0]; }"
+    }
+  },
+  {
+    "id": "UI-038",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "rule_scenario",
+    "pattern_tag": "boundary_inclusive",
+    "question_ka": "შეფასების წესები:\n• 90 ქულა ან მეტი — A;\n• 75-დან 89 ქულამდე (ჩათვლით) — B;\n• 60-ზე მეტი, მაგრამ 75-ზე ნაკლები — C;\n• 60 ქულა ან ნაკლები — F.\nთუ სტუდენტის დასწრება 70%-ზე ნაკლებია, მისი შეფასება ერთი საფეხურით მცირდება (A → B, B → C, C → F).\n\nნიკა: 75 ქულა, დასწრება 70%. თამარი: 60 ქულა, დასწრება 90%. რა შეფასებებს მიიღებენ ისინი?",
+    "question_en": "Grading rules:\n• 90 points or more — A;\n• 75 to 89 points — B;\n• more than 60 but less than 75 — C;\n• 60 points or less — F.\nA student whose attendance is below 70% drops one grade (A → B, B → C, C → F).\n\nNika: 75 points, attendance 70%. Tamar: 60 points, attendance 90%. What grades do they get?",
+    "options": [
+      {
+        "ka": "ნიკა — C, თამარი — C",
+        "en": "Nika — C, Tamar — C"
+      },
+      {
+        "ka": "ნიკა — B, თამარი — F",
+        "en": "Nika — B, Tamar — F"
+      },
+      {
+        "ka": "ნიკა — B, თამარი — C",
+        "en": "Nika — B, Tamar — C"
+      },
+      {
+        "ka": "ნიკა — C, თამარი — F",
+        "en": "Nika — C, Tamar — F"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "ნიკა: 75 ხვდება 75–89 დიაპაზონში → B. მისი დასწრება 70%-ია, რაც 70%-ზე ნაკლები არ არის, ამიტომ შეფასება არ მცირდება. თამარი: 60 არის „60 ან ნაკლები“ → F. ხაფანგი: 75-ს C-დ თვლით ან 70%-ს — 70%-ზე ნაკლებად, და ნიკა C-ს იღებს.",
+    "explanation_en": "Nika: 75 is in the 75–89 band → B, and 70% attendance is not below 70%, so there is no drop. Tamar: 60 is '60 or less' → F. Treating 75 as a C, or 70% as below 70%, makes Nika's grade C.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const grade = (pts, att) => { const g = ['A', 'B', 'C', 'F']; let i = pts >= 90 ? 0 : pts >= 75 ? 1 : pts > 60 ? 2 : 3; if (att < 70) i = Math.min(3, i + 1); return g[i]; }; return 'Nika — ' + grade(75, 70) + ', Tamar — ' + grade(60, 90); }"
+    }
+  },
+  {
+    "id": "UI-039",
+    "module": "understanding_instructions",
+    "difficulty": 3,
+    "format": "rule_scenario",
+    "pattern_tag": "and_vs_or",
+    "question_ka": "სესხის განაცხადი ხელით შემოწმებაზე იგზავნება, თუ:\n• თანხა 5000 ლარს აღემატება, **ან**\n• განმცხადებელს 1 წელზე ნაკლები სამუშაო სტაჟი აქვს **და** თავდები არ ჰყავს.\n\nგანაცხადები:\n• ნინო — 4000 ლარი, 2 წლის სტაჟი, თავდები არ ჰყავს\n• გიორგი — 6000 ლარი, 3 წელი, თავდები ჰყავს\n• ანა — 3000 ლარი, 0.5 წელი, თავდები არ ჰყავს\n• ლუკა — 5000 ლარი, 0.5 წელი, თავდები ჰყავს\n• მარიამი — 2000 ლარი, 1 წელი, თავდები არ ჰყავს\n\nრამდენი განაცხადი გაიგზავნება ხელით შემოწმებაზე?",
+    "question_en": "A loan application goes to manual review if:\n• the amount is over 5000 GEL, **or**\n• the applicant has worked less than 1 year **and** has no guarantor.\n\nApplications:\n• Nino — 4000 GEL, 2 years of work, no guarantor\n• Giorgi — 6000 GEL, 3 years, has a guarantor\n• Ana — 3000 GEL, 0.5 years, no guarantor\n• Luka — 5000 GEL, 0.5 years, has a guarantor\n• Mariam — 2000 GEL, 1 year, no guarantor\n\nHow many applications go to manual review?",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "2"
+    ],
+    "correct": 3,
+    "explanation_ka": "ხელით შემოწმებაზე იგზავნება გიორგის (6000 > 5000) და ანას (სტაჟი 1 წელზე ნაკლებია და თავდები არ ჰყავს) განაცხადები — სულ 2. ლუკა ითხოვს 5000 ლარს, ეს 5000-ზე მეტი არ არის; თან თავდებიც ჰყავს. მარიამის 1 წელი 1 წელზე ნაკლები არ არის. ნინოს 2 წლის სტაჟი აქვს. ხაფანგი: „და“-ს „ან“-ად კითხულობთ და ხელით შემოწმებაზე 5-ვე განაცხადს გზავნით.",
+    "explanation_en": "Giorgi (6000 > 5000) and Ana (under 1 year and no guarantor) go to review — 2 applications. Luka's 5000 is not over 5000 and he has a guarantor; Mariam's 1 year is not less than 1 year; Nino has worked 2 years. Reading the 'and' as 'or' sends all 5 applications.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => [[4000, 2, false], [6000, 3, true], [3000, 0.5, false], [5000, 0.5, true], [2000, 1, false]].filter(([amt, yrs, guar]) => amt > 5000 || (yrs < 1 && !guar)).length"
+    }
+  },
+  {
+    "id": "UI-040",
+    "module": "understanding_instructions",
+    "difficulty": 1,
+    "format": "step_sequence",
+    "pattern_tag": "position_counting",
+    "question_ka": "საწყისი კოდი: `7140865`.\n1. წაშალეთ მარჯვნიდან მე-2 ციფრი.\n2. მიღებულ კოდში წაშალეთ მარჯვნიდან მე-3 ციფრი.\n\nრა მიიღება?",
+    "question_en": "Start with the code `7140865`.\n1. Delete the 2nd digit from the right.\n2. In the new code, delete the 3rd digit from the right.\n\nWhat is the result?",
+    "options": [
+      "71485",
+      "74865",
+      "71405",
+      "71065"
+    ],
+    "correct": 0,
+    "explanation_ka": "1-ლი ნაბიჯი შლის 6-ს: 714085. ახლა მარჯვნიდან ხელახლა ითვლით (5, 8, 0), ამიტომ მე-2 ნაბიჯი შლის 0-ს: 71485. ხაფანგი: ორივე პოზიციას საწყის კოდში ერთდროულად შლით და იღებთ 71405-ს.",
+    "explanation_en": "Step 1 removes the 6: 714085. Counting again from the right (5, 8, 0), step 2 removes the 0: 71485. Deleting both positions in the original code at once gives 71405.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const a = '7140865'.split(''); a.splice(a.length - 2, 1); a.splice(a.length - 3, 1); return a.join(''); }"
+    }
+  },
+  {
+    "id": "UI-041",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "rule_scenario",
+    "pattern_tag": "apply_to_every_item",
+    "question_ka": "შეფუთვის საფასური ონლაინმაღაზიაში:\n• 2 ლარი ყოველ ნივთზე, რომელიც 1 კგ-ზე მეტს იწონის;\n• 3 ლარი ყოველ მსხვრევად ნივთზე, წონის მიუხედავად.\n\nშეკვეთაშია: ლარნაკი (0.8 კგ, მსხვრევადი), წიგნი (1.2 კგ), ლამპა (2 კგ, მსხვრევადი) და ჭიქა (0.4 კგ, მსხვრევადი). რამდენია შეფუთვის საფასური ჯამში?",
+    "question_en": "Packaging fees in an online shop:\n• 2 GEL for each item that weighs more than 1 kg;\n• 3 GEL for each fragile item, whatever its weight.\n\nThe order contains a vase (0.8 kg, fragile), a book (1.2 kg), a lamp (2 kg, fragile) and a mug (0.4 kg, fragile). What is the total packaging fee?",
+    "options": [
+      {
+        "ka": "11 ლარი",
+        "en": "11 GEL"
+      },
+      {
+        "ka": "5 ლარი",
+        "en": "5 GEL"
+      },
+      {
+        "ka": "13 ლარი",
+        "en": "13 GEL"
+      },
+      {
+        "ka": "17 ლარი",
+        "en": "17 GEL"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "ლარნაკი 3, წიგნი 2, ლამპა 2 + 3 = 5 (ორივე წესი მოქმედებს), ჭიქა 3: სულ 13 ლარი. ხაფანგი: ლამპას მხოლოდ ერთ საფასურს არიცხავთ (11) ან თითო სახის საფასურს მთელ შეკვეთაზე მხოლოდ ერთხელ ითვლით (5).",
+    "explanation_en": "Vase 3, book 2, lamp 2 + 3 = 5 (both rules apply), mug 3: total 13 GEL. Charging the lamp only one fee gives 11; charging each kind of fee only once gives 5.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => [[0.8, true], [1.2, false], [2, true], [0.4, true]].reduce((s, [kg, fragile]) => s + (kg > 1 ? 2 : 0) + (fragile ? 3 : 0), 0)"
+    }
+  },
+  {
+    "id": "UI-042",
+    "module": "understanding_instructions",
+    "difficulty": 1,
+    "format": "rule_scenario",
+    "pattern_tag": "qualifier_words",
+    "question_ka": "გუნდის გადაწყვეტილება ძალაშია, თუ ხმას აძლევს 5 წევრიდან **სულ მცირე 3** და მათ შორის **აუცილებლად** არის გუნდის ხელმძღვანელი. სხვა შემთხვევაში გადაწყვეტილება ძალაში არ არის.\n\nრომელ შემთხვევაშია გადაწყვეტილება ძალაში?",
+    "question_en": "A team decision is valid if **at least 3** of the 5 team members vote, and the team lead **must** be one of the voters. Otherwise the decision is not valid.\n\nIn which case is the decision valid?",
+    "options": [
+      {
+        "ka": "ხმა მისცა 3 წევრმა, მათ შორის გუნდის ხელმძღვანელმა",
+        "en": "3 members voted, including the team lead"
+      },
+      {
+        "ka": "ხმა მისცა 4 წევრმა, გუნდის ხელმძღვანელის გარეშე",
+        "en": "4 members voted, without the team lead"
+      },
+      {
+        "ka": "ხმა მხოლოდ გუნდის ხელმძღვანელმა მისცა",
+        "en": "Only the team lead voted"
+      },
+      {
+        "ka": "ხმა მისცეს 2 რიგითმა წევრმა და ხელმძღვანელის მოადგილემ",
+        "en": "2 regular members and the deputy lead voted"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "საჭიროა ორივე პირობა: სულ მცირე 3 ხმის მიმცემი **და** მათ შორის ხელმძღვანელი. 3 წევრი ხელმძღვანელით ორივე პირობას აკმაყოფილებს: „სულ მცირე 3“ 3-საც მოიცავს. ხაფანგი: ირჩევთ 4 წევრს, თუმცა მათ შორის ხელმძღვანელი არ არის, ან მოადგილეს ხელმძღვანელად თვლით.",
+    "explanation_en": "Both conditions are needed: at least 3 voters **and** the team lead among them. 3 members including the lead meets both ('at least 3' includes 3). The 4 members lack the lead, and a deputy does not replace the lead.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const cases = [[3, true], [4, false], [1, true], [3, false]]; return q.options[cases.findIndex(([n, lead]) => n >= 3 && lead)].en; }"
+    }
+  },
+  {
+    "id": "UI-043",
+    "module": "understanding_instructions",
+    "difficulty": 3,
+    "format": "rule_scenario",
+    "pattern_tag": "rounding_rule",
+    "question_ka": "სატელეფონო ზარების ტარიფი:\n• ყოველი ზარი ცალკე ითვლება: ყოველი დაწყებული წუთი 0.20 ლარი ღირს.\n• 10 წამზე მოკლე ზარი უფასოა.\n\nდღეს ნიკამ რამდენჯერმე დარეკა. ზარების ხანგრძლივობა: 2 წთ 05 წმ, 0 წთ 08 წმ, 0 წთ 59 წმ, 3 წთ 00 წმ და 1 წთ 10 წმ. რამდენს გადაიხდის?",
+    "question_en": "Phone call billing:\n• Each call is billed separately: every started minute costs 0.20 GEL.\n• Calls shorter than 10 seconds are free.\n\nToday Nika made calls lasting 2 min 05 s, 0 min 08 s, 0 min 59 s, 3 min 00 s and 1 min 10 s. How much does he pay?",
+    "options": [
+      {
+        "ka": "1.6 ლარი",
+        "en": "1.6 GEL"
+      },
+      {
+        "ka": "1.8 ლარი",
+        "en": "1.8 GEL"
+      },
+      {
+        "ka": "2 ლარი",
+        "en": "2 GEL"
+      },
+      {
+        "ka": "2.2 ლარი",
+        "en": "2.2 GEL"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "თითო ზარზე: 3 + 0 + 1 + 3 + 2 = 9 დაწყებული წუთი; 9 × 0.20 = 1.8 ლარი. ზუსტად 3 წთ 00 წმ არის 3 წუთი და არა 4. ხაფანგი: ჯერ ყველა ზარის დროს კრებთ (7 წთ 22 წმ → 8 წუთი) და იღებთ 1.6-ს, თუმცა ყოველი ზარი ცალკე ითვლება.",
+    "explanation_en": "Per call: 3 + 0 + 1 + 3 + 2 = 9 started minutes; 9 × 0.20 = 1.8 GEL. Exactly 3 min 00 s is 3 minutes, not 4. Adding up the times first (7 min 22 s → 8 minutes) gives 1.6 — but every call is billed separately.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const mins = [125, 8, 59, 180, 70].map(s => (s < 10 ? 0 : Math.ceil(s / 60))).reduce((a, b) => a + b, 0); return Math.round(mins * 0.2 * 100) / 100; }"
+    }
+  },
+  {
+    "id": "UI-044",
+    "module": "understanding_instructions",
+    "difficulty": 3,
+    "format": "step_sequence",
+    "pattern_tag": "conditional_branch",
+    "question_ka": "აიღეთ რიცხვი 4 და ეს წესი 5-ჯერ გამოიყენეთ, ყოველ ჯერზე — ბოლოს მიღებულ რიცხვზე:\n• თუ რიცხვი 3-ზე უნაშთოდ იყოფა, გაყავით ის 3-ზე.\n• წინააღმდეგ შემთხვევაში, თუ რიცხვი ლუწია, დაუმატეთ 5.\n• თუ არც ერთი პირობა არ სრულდება, გაამრავლეთ 2-ზე.\n\nრა რიცხვს მიიღებთ ბოლოს?",
+    "question_en": "Take the number 4 and apply this rule 5 times, each time to the latest result:\n• If the number is divisible by 3, divide it by 3.\n• Otherwise, if the number is even, add 5.\n• Otherwise, multiply it by 2.\n\nWhat number do you end up with?",
+    "options": [
+      "51",
+      "2",
+      "14",
+      "7"
+    ],
+    "correct": 3,
+    "explanation_ka": "4 → 9 (ლუწი: +5) → 3 (იყოფა 3-ზე) → 1 → 2 (კენტი: × 2) → 7. ხაფანგი: ჯერ ლუწობას ამოწმებთ და მერე — იყოფა თუ არა რიცხვი 3-ზე; ასე იღებთ 4 → 9 → 18 → 23 → 46 → 51-ს.",
+    "explanation_en": "4 → 9 (even: +5) → 3 (divisible by 3) → 1 → 2 (odd: × 2) → 7. Checking 'even or odd' before 'divisible by 3' gives 4 → 9 → 18 → 23 → 46 → 51.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { let n = 4; for (let i = 0; i < 5; i++) n = n % 3 === 0 ? n / 3 : n % 2 === 0 ? n + 5 : n * 2; return n; }"
+    }
+  },
+  {
+    "id": "UI-045",
+    "module": "understanding_instructions",
+    "difficulty": 2,
+    "format": "rule_scenario",
+    "pattern_tag": "track_state",
+    "question_ka": "შვებულების ბალანსის წესები:\n• დავითს წლის დასაწყისში 24 დღე შვებულება აქვს.\n• დამტკიცებული მოთხოვნა ბალანსს იმდენი დღით ამცირებს, რამდენიც მოითხოვეს. თუ მოთხოვნა 5 ან მეტ დღეზეა, ბალანსს დამატებით 1 დღე აკლდება.\n• თუ ბალანსი მოთხოვნას სრულად ვერ ფარავს (დამატებითი დღის ჩათვლით), მოთხოვნა უარყოფილია. უარყოფილი მოთხოვნა არაფერს ცვლის.\n\nდავითის მოთხოვნები, რიგის მიხედვით: 10 დღე, 8 დღე, 7 დღე, 3 დღე. რამდენი დღე დარჩება ბალანსზე ბოლოს?",
+    "question_en": "Leave balance rules:\n• Davit starts the year with 24 days of leave.\n• An approved request reduces the balance by the number of days requested; a request of 5 days or more also costs 1 extra day.\n• A request is rejected if the balance cannot cover its full cost (including the extra day); a rejected request changes nothing.\n\nDavit's requests, in order: 10 days, 8 days, 7 days, 3 days. What is his balance at the end?",
+    "options": [
+      "3",
+      "4",
+      "1",
+      "-7"
+    ],
+    "correct": 2,
+    "explanation_ka": "24 − 11 = 13; 13 − 9 = 4; 7-დღიანი მოთხოვნა 8 დღე დაჯდებოდა, ეს 4-ზე მეტია, ამიტომ უარყოფილია; 4 − 3 = 1. ხაფანგი: დამატებით დღეს ივიწყებთ (3) ან უარყოფილ მოთხოვნაზე ჩერდებით (4).",
+    "explanation_en": "24 − 11 = 13; 13 − 9 = 4; the 7-day request would cost 8, more than 4, so it is rejected; 4 − 3 = 1. Forgetting the extra day gives 3; stopping at the rejected request gives 4.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { let b = 24; for (const d of [10, 8, 7, 3]) { const cost = d + (d >= 5 ? 1 : 0); if (cost <= b) b -= cost; } return b; }"
+    }
+  }
+]

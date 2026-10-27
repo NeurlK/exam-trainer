@@ -1,0 +1,1599 @@
+[
+  {
+    "id": "AD-001",
+    "module": "attention_to_detail",
+    "difficulty": 1,
+    "format": "string_compare",
+    "pattern_tag": "transposed_characters",
+    "question_ka": "ბუღალტერმა ინვოისების ნომრები ქაღალდიდან ელექტრონულ ცხრილში გადაიტანა. თითოეულ წყვილში ჯერ ორიგინალია, შემდეგ — ასლი. რამდენი წყვილია ზუსტად ერთნაირი?",
+    "question_en": "An accountant copied invoice numbers from paper into a spreadsheet. Each pair shows the original first, then the copy. How many pairs are exactly identical?",
+    "visual": {
+      "type": "pairs",
+      "pairs": [
+        ["INV-2026-0583", "INV-2026-0583"],
+        ["INV-2026-1172", "INV-2026-1127"],
+        ["INV-2025-4409", "INV-2025-4409"],
+        ["INV-2026-3816", "INV-2062-3816"],
+        ["INV-2026-7250", "INV-2026-7250"],
+        ["INV-2026-5094", "INV-2026-5049"]
+      ]
+    },
+    "options": ["2", "3", "4", "5"],
+    "correct": 1,
+    "verify": { "type": "visual", "check": "identical_pairs_count" },
+    "explanation_ka": "1-ლი, მე-3 და მე-5 წყვილი იდენტურია. მე-2 წყვილში 1172 → 1127, მე-4-ში 2026 → 2062, მე-6-ში 5094 → 5049 — ორმა მეზობელმა ციფრმა ადგილი გაცვალა. ციფრები იგივეა, მხოლოდ მათი რიგი შეიცვალა, ამიტომ სწრაფი გადახედვისას ასეთი შეცდომა ადვილად გამოგრჩება.",
+    "explanation_en": "Pairs 1, 3 and 5 match. Pair 2 has 1172 → 1127, pair 4 has 2026 → 2062, pair 6 has 5094 → 5049: two neighbouring digits swapped places. The digits themselves stay the same, so a quick glance misses the swap."
+  },
+  {
+    "id": "AD-002",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "string_compare",
+    "pattern_tag": "lookalike_characters",
+    "question_ka": "ბანკს კლიენტების ელფოსტის მისამართები ახალ მონაცემთა ბაზაში გადააქვს. ქვემოთ მოცემული წყვილებიდან მხოლოდ ერთში არ ემთხვევა ერთმანეთს ორიგინალი და ასლი. რომელია ეს წყვილი?",
+    "question_en": "A bank is moving client e-mail addresses to a new database. In exactly one of the pairs below the original and the copy do not match. Which pair is it?",
+    "visual": {
+      "type": "pairs",
+      "pairs": [
+        ["ketevan.amirejibi@gmail.com", "ketevan.amirejibi@gmail.com"],
+        ["g.kapanadze@tbc.ge", "g.kapanadze@tbc.ge"],
+        ["saba.gelashvili@yahoo.com", "saba.gelashvili@yahoo.com"],
+        ["l.mamaladze@bog.ge", "l.rnamaladze@bog.ge"]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 3,
+    "verify": { "type": "visual", "check": "odd_pair", "which": "different" },
+    "explanation_ka": "მე-4 წყვილის ასლში ასო m ორი ასოთი — r-ითა და n-ით — არის შეცვლილი (l.rnamaladze). გვერდიგვერდ დაწერილი rn თითქმის ზუსტად ჰგავს m-ს, ამიტომ, თუ სიტყვა ოდნავ განიერი გეჩვენება, ასო-ასო შეამოწმე.",
+    "explanation_en": "In the copy of pair 4 the letter m has been replaced by r + n (l.rnamaladze). Written side by side, rn looks almost exactly like m, so when a word looks slightly wide, check it letter by letter."
+  },
+  {
+    "id": "AD-003",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "string_compare",
+    "pattern_tag": "lookalike_characters",
+    "question_ka": "საწყობის თანამშრომელმა თაროების ეტიკეტებიდან პროდუქციის კოდები ხელახლა აკრიფა. რამდენ წყვილშია ერთი განსხვავება მაინც?",
+    "question_en": "A warehouse clerk retyped product codes from shelf labels. How many pairs contain at least one difference?",
+    "visual": {
+      "type": "pairs",
+      "pairs": [
+        ["SKU-7014-B", "SKU-7O14-B"],
+        ["PRD-5531-K", "PRD-5531-K"],
+        ["ART-8182-Z", "ART-81B2-Z"],
+        ["MDL-1905-Q", "MDL-I905-Q"],
+        ["KTG-3S70-A", "KTG-3S70-A"],
+        ["BOX-6610-M", "BOX-6610-M"]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 2,
+    "verify": { "type": "visual", "check": "differing_pairs_count" },
+    "explanation_ka": "განსხვავება 1-ელ, მე-3 და მე-4 წყვილშია: 0 → ასო O, 8 → ასო B, 1 → დიდი I. მე-5 წყვილი იდენტურია — S ორივე კოდშია. შეადარე სიმბოლო-სიმბოლო და არა საერთო მოხაზულობის მიხედვით.",
+    "explanation_en": "Pairs 1, 3 and 4 differ: 0 → letter O, 8 → letter B, 1 → capital I. Pair 5 is identical — the S is in both codes. Compare character by character, not by the overall shape."
+  },
+  {
+    "id": "AD-004",
+    "module": "attention_to_detail",
+    "difficulty": 3,
+    "format": "string_compare",
+    "pattern_tag": "lookalike_characters",
+    "question_ka": "რომელი პასუხია ნაჩვენები IBAN-ის (საბანკო ანგარიშის ნომრის) ზუსტი ასლი?",
+    "question_en": "Which option is an exact copy of the IBAN (bank account number) shown?",
+    "visual": { "type": "text", "text": "GE29TB7319584216003671" },
+    "options": ["GE29TB73I9584216003671", "GE29T87319584216003671", "GE29TB7319584216O03671", "GE29TB7319584216003671"],
+    "correct": 3,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const t = q.visual.text; const hits = q.options.filter(o => o === t); return hits.length === 1 ? hits[0] : 'no unique exact copy'; }"
+    },
+    "explanation_ka": "შეადარე ჯგუფებად, თითოეულში 4 სიმბოლო: GE29 TB73 1958 4216 0036 71. ყოველ არასწორ ვარიანტში ერთი მსგავსი სიმბოლოა ჩანაცვლებული: 1-ის ნაცვლად დიდი I (73I9), B-ს ნაცვლად 8 (T873), ნულის ნაცვლად ასო O (6O03).",
+    "explanation_en": "Compare in blocks of 4 characters: GE29 TB73 1958 4216 0036 71. Each wrong option hides one lookalike: capital I instead of 1 (73I9), 8 instead of B (T873), letter O instead of zero (6O03)."
+  },
+  {
+    "id": "AD-005",
+    "module": "attention_to_detail",
+    "difficulty": 1,
+    "format": "string_compare",
+    "pattern_tag": "missing_or_extra_character",
+    "question_ka": "ქოლ-ცენტრის ოპერატორმა მომხმარებლების ტელეფონის ნომრები კლიენტთა ბაზაში გადაიტანა. რამდენი წყვილი არ ემთხვევა ერთმანეთს?",
+    "question_en": "A call-centre operator copied customers' phone numbers into the client database. How many pairs do NOT match?",
+    "visual": {
+      "type": "pairs",
+      "pairs": [
+        ["+995 555 12 34 56", "+995 555 12 34 56"],
+        ["+995 599 87 65 43", "+995 599 87 65 433"],
+        ["+995 577 40 18 92", "+995 577 40 18 92"],
+        ["+995 551 33 09 71", "+995 551 3 09 71"],
+        ["+995 593 26 54 10", "+995 593 26 54 10"]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 1,
+    "verify": { "type": "visual", "check": "differing_pairs_count" },
+    "explanation_ka": "განსხვავდება მე-2 და მე-4 წყვილი: მე-2 წყვილის ასლს ბოლოში ზედმეტი 3 აქვს (65 433), მე-4 წყვილში კი ერთი 3 დაიკარგა (33 → 3). გამოტოვებული ან ზედმეტი ციფრი ჯგუფის სიგრძეს ცვლის — შეადარე თითოეული ჯგუფის სიგრძე.",
+    "explanation_en": "Pairs 2 and 4 differ: the copy in pair 2 has an extra 3 at the end (65 433), and pair 4 lost a 3 (33 → 3). A missing or extra digit changes the length of a block, so compare the length of each block."
+  },
+  {
+    "id": "AD-006",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "string_compare",
+    "pattern_tag": "spacing_punctuation",
+    "question_ka": "საკურიერო კომპანიამ იმპორტის შემდეგ მიწოდების მისამართები შეამოწმა. რამდენი წყვილია ზუსტად ერთნაირი, ჰარებისა და სასვენი ნიშნების ჩათვლით?",
+    "question_en": "A courier company checked delivery addresses after an import. How many pairs are exactly identical, including spaces and punctuation?",
+    "visual": {
+      "type": "pairs",
+      "pairs": [
+        ["12 Rustaveli Ave., Tbilisi 0108", "12 Rustaveli Ave, Tbilisi 0108"],
+        ["45 Chavchavadze Ave., Tbilisi 0179", "45 Chavchavadze Ave., Tbilisi 0179"],
+        ["7 Gorgasali St., Batumi 6000", "7 Gorgasali St.,Batumi 6000"],
+        ["3 Tamar Mepe St., Kutaisi 4600", "3 Tamar Mepe St., Kutaisi 4600"],
+        ["29 Kazbegi Ave., Tbilisi 0160", "29 Kazbegi Ave. Tbilisi 0160"],
+        ["18 Pekini Ave., Tbilisi 0160", "18 Pekini Ave., Tbilisi 0160"]
+      ]
+    },
+    "options": ["3", "4", "5", "6"],
+    "correct": 0,
+    "verify": { "type": "visual", "check": "identical_pairs_count" },
+    "explanation_ka": "იდენტურია მე-2, მე-4 და მე-6 წყვილი. 1-ელ წყვილში Ave-ს შემდეგ წერტილი აკლია, მე-3-ში — ჰარი მძიმის შემდეგ, მე-5-ში — მძიმე. სიტყვების შემოწმების შემდეგ ცალკე გადახედე მხოლოდ სასვენ ნიშნებსა და ჰარებს.",
+    "explanation_en": "Pairs 2, 4 and 6 match. Pair 1 lost the full stop after Ave, pair 3 lost the space after the comma, pair 5 lost the comma. After checking the words, do a separate pass over punctuation and spaces only."
+  },
+  {
+    "id": "AD-007",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "string_compare",
+    "pattern_tag": "transposed_characters",
+    "question_ka": "ფოსტა ქართულად დაწერილ მისამართებს ამოწმებს. მხოლოდ ერთ წყვილში არ ემთხვევა ერთმანეთს ორიგინალი და ასლი. რომელ წყვილში?",
+    "question_en": "A post office is checking addresses written in Georgian. In only one pair do the original and the copy differ. Which pair?",
+    "visual": {
+      "type": "pairs",
+      "pairs": [
+        ["თბილისი, ვაჟა-ფშაველას გამზ. 71", "თბილისი, ვაჟა-ფშაველას გამზ. 71"],
+        ["ბათუმი, ჭავჭავაძის ქ. 52", "ბათუმი, ჭავჭაავძის ქ. 52"],
+        ["ქუთაისი, წერეთლის ქ. 34", "ქუთაისი, წერეთლის ქ. 34"],
+        ["რუსთავი, მეგობრობის გამზ. 9", "რუსთავი, მეგობრობის გამზ. 9"]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 1,
+    "verify": { "type": "visual", "check": "odd_pair", "which": "different" },
+    "explanation_ka": "მე-2 წყვილის ასლში ორმა მეზობელმა ასომ ადგილი გაცვალა: ჭავჭავაძის → ჭავჭაავძის. განმეორებადი მარცვლებით სავსე გრძელ სიტყვაში თვალი მოსალოდნელ ფორმას „ხედავს“, ამიტომ ასეთი სიტყვა მარცვალ-მარცვალ წაიკითხე.",
+    "explanation_en": "In the copy of pair 2 two neighbouring letters swapped places: ჭავჭავაძის → ჭავჭაავძის. In a long word full of repeating syllables the eye \"sees\" the expected form, so read such a word syllable by syllable."
+  },
+  {
+    "id": "AD-008",
+    "module": "attention_to_detail",
+    "difficulty": 3,
+    "format": "table_compare",
+    "pattern_tag": "table_cross_check",
+    "question_ka": "შეადარე ინვოისების რეესტრის ასლი ორიგინალს. ასლის რამდენი უჯრა შეიცავს შეცდომას?",
+    "question_en": "Compare the copy of the invoice register with the original. How many cells of the copy contain an error?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        { "ka": "ინვოისი", "en": "Invoice" },
+        { "ka": "კლიენტი", "en": "Client" },
+        { "ka": "თარიღი", "en": "Date" },
+        { "ka": "თანხა (ლარი)", "en": "Amount (GEL)" }
+      ],
+      "rows": [
+        ["INV-0412", "Alfa Trade LLC", "03.09.2026", "1250.00"],
+        ["INV-0413", "Kavkasia Group", "05.09.2026", "875.50"],
+        ["INV-0414", "Tbilisi Print", "05.09.2026", "2310.00"],
+        ["INV-0415", "Rioni Logistics", "08.09.2026", "1640.75"],
+        ["INV-0416", "Mtatsminda Cafe", "09.09.2026", "412.20"],
+        ["INV-0417", "Gelashvili IE", "10.09.2026", "98.40"]
+      ],
+      "compare_rows": [
+        ["INV-0412", "Alfa Trade LLC", "03.09.2026", "1250.00"],
+        ["INV-0413", "Kavkasia Group", "05.09.2026", "857.50"],
+        ["INV-0414", "Tbilisi Print", "05.09.2026", "2310.00"],
+        ["INV-0415", "Rioni Logistcs", "08.09.2026", "1640.57"],
+        ["INV-0416", "Mtatsminda Cafe", "09.06.2026", "412.20"],
+        ["INV-0417", "Gelashvili IE", "10.09.2026", "98.40"]
+      ]
+    },
+    "options": ["2", "3", "4", "5"],
+    "correct": 2,
+    "verify": { "type": "visual", "check": "table_diff_cells" },
+    "explanation_ka": "შეცდომებია: მე-2 სტრიქონში თანხა 875.50 → 857.50; მე-4 სტრიქონში კლიენტი Logistics → Logistcs და თანხა 1640.75 → 1640.57; მე-5 სტრიქონში თარიღი 09.09 → 09.06. სულ 4 უჯრა 3 სტრიქონში — ხაფანგია უჯრების ნაცვლად სტრიქონების დათვლა ან მე-4 სტრიქონში პირველი შეცდომის პოვნისთანავე შეჩერება.",
+    "explanation_en": "Errors: row 2 amount 875.50 → 857.50; row 4 client Logistics → Logistcs and amount 1640.75 → 1640.57; row 5 date 09.09 → 09.06. That is 4 cells in 3 rows — the trap is counting rows instead of cells, or stopping at the first error in row 4."
+  },
+  {
+    "id": "AD-009",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "table_compare",
+    "pattern_tag": "table_cross_check",
+    "question_ka": "ონლაინ მაღაზიამ შეკვეთების სია სხვა სისტემაში გადაიტანა. შეადარე ასლი ორიგინალს. ასლის რამდენ სტრიქონშია ერთი შეცდომა მაინც?",
+    "question_en": "An online shop moved its order list to another system. Compare the copy with the original. How many rows of the copy contain at least one error?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        { "ka": "შეკვეთა", "en": "Order" },
+        { "ka": "პროდუქტის კოდი", "en": "Product code" },
+        { "ka": "რაოდ.", "en": "Qty" },
+        { "ka": "ქალაქი", "en": "City" }
+      ],
+      "rows": [
+        ["ORD-58201", "TV-4410", "2", "Tbilisi"],
+        ["ORD-58202", "PH-1207", "1", "Batumi"],
+        ["ORD-58203", "LP-3390", "3", "Kutaisi"],
+        ["ORD-58204", "HD-0712", "5", "Rustavi"],
+        ["ORD-58205", "TV-4401", "1", "Gori"],
+        ["ORD-58206", "PH-1270", "4", "Zugdidi"]
+      ],
+      "compare_rows": [
+        ["ORD-58201", "TV-4410", "2", "Tbilisi"],
+        ["ORD-58202", "PH-1207", "7", "Batumi"],
+        ["ORD-58203", "LP-3390", "3", "Kutaisi"],
+        ["ORD-58204", "HD-0172", "6", "Rustavi"],
+        ["ORD-58205", "TV-4401", "1", "Gori"],
+        ["ORD-58260", "PH-1270", "4", "Zugdidi"]
+      ]
+    },
+    "options": ["3", "4", "5", "6"],
+    "correct": 0,
+    "verify": { "type": "visual", "check": "table_diff_rows" },
+    "explanation_ka": "შეცდომები მე-2, მე-4 და მე-6 სტრიქონშია: რაოდენობა 1 → 7; კოდი HD-0712 → HD-0172 და რაოდენობა 5 → 6; შეკვეთა ORD-58206 → ORD-58260. მე-4 სტრიქონში ორი შეცდომაა, მაგრამ ის ერთ სტრიქონად ითვლება, ამიტომ პასუხია 3 და არა 4. TV-4401 და PH-1270 სწორია — სტრიქონი მხოლოდ ორიგინალის იმავე სტრიქონს შეადარე.",
+    "explanation_en": "Rows 2, 4 and 6 have errors: quantity 1 → 7; code HD-0712 → HD-0172 and quantity 5 → 6; order ORD-58206 → ORD-58260. Row 4 has two errors but is still one row, so the answer is 3, not 4. TV-4401 and PH-1270 are correct — compare each row only with the same row of the original."
+  },
+  {
+    "id": "AD-010",
+    "module": "attention_to_detail",
+    "difficulty": 1,
+    "format": "counting",
+    "pattern_tag": "count_occurrences",
+    "question_ka": "რამდენჯერ გვხვდება ქვემოთ მოცემულ სტრიქონში კოდი GE-4471?",
+    "question_en": "How many times does the code GE-4471 appear in the line below?",
+    "visual": { "type": "text", "text": "GE-4471 KA-4471 GE-4417 GE-4471 GE-4741 GE-4471 GE-4471 KA-4417" },
+    "options": ["4", "5", "6", "7"],
+    "correct": 0,
+    "verify": { "type": "visual", "check": "count_substring", "needle": "GE-4471" },
+    "explanation_ka": "GE-4471 4-ჯერ გვხვდება (1-ლი, მე-4, მე-6 და მე-7 კოდი). KA-4471-ს სწორი ციფრები, მაგრამ სხვა პრეფიქსი აქვს, GE-4417-სა და GE-4741-ს კი — სწორი პრეფიქსი, მაგრამ გადასმული ციფრები. დათვალე მხოლოდ სრული დამთხვევები.",
+    "explanation_en": "GE-4471 appears 4 times (the 1st, 4th, 6th and 7th code). KA-4471 has the right digits but the wrong prefix, while GE-4417 and GE-4741 have the right prefix but swapped digits. Count only full matches."
+  },
+  {
+    "id": "AD-011",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "counting",
+    "pattern_tag": "count_occurrences",
+    "question_ka": "რამდენჯერ გვხვდება ციფრი 7 ქვემოთ მოცემულ სერიულ ნომერში?",
+    "question_en": "How many times does the digit 7 appear in the serial number below?",
+    "visual": { "type": "text", "text": "7071-1777-0717-7107-1170" },
+    "options": ["8", "9", "10", "11"],
+    "correct": 2,
+    "verify": { "type": "visual", "check": "count_substring", "needle": "7" },
+    "explanation_ka": "დათვალე ჯგუფ-ჯგუფად: 7071 → 2, 1777 → 3, 0717 → 2, 7107 → 2, 1170 → 1; სულ 10. მთელი სტრიქონის ერთბაშად დათვლისას ადვილია 1-ის გვერდით მდგომი 7-ის გამოტოვება, რადგან 1 და 7 ერთმანეთს ჰგავს.",
+    "explanation_en": "Count block by block: 7071 → 2, 1777 → 3, 0717 → 2, 7107 → 2, 1170 → 1; total 10. Counting the whole string at once, it is easy to skip a 7 next to a 1, because 1 and 7 look alike."
+  },
+  {
+    "id": "AD-012",
+    "module": "attention_to_detail",
+    "difficulty": 3,
+    "format": "counting",
+    "pattern_tag": "multi_condition_filter",
+    "question_ka": "სიიდან რამდენი კოდი იწყება ასო K-თი და ამავდროულად მთავრდება ლუწი ციფრით?",
+    "question_en": "How many codes in the list start with the letter K and also end with an even digit?",
+    "visual": {
+      "type": "text",
+      "text": "KT-4812, RK-3306, KA-7710, KT-5523, KZ-9014, LK-2208, KA-6637, KT-1150, MK-4402, KZ-3389, KT-7716, KA-2045"
+    },
+    "options": ["3", "5", "6", "8"],
+    "correct": 1,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => q.visual.text.split(/[,\\s]+/).filter(c => c.startsWith('K') && Number(c.slice(-1)) % 2 === 0).length"
+    },
+    "explanation_ka": "K-თი 9 კოდი იწყება; მათგან ლუწი ციფრით 5 მთავრდება: KT-4812, KA-7710, KZ-9014, KT-1150, KT-7716. ხაფანგები: 0 ლუწი ციფრია, ხოლო RK-3306, LK-2208 და MK-4402 K-ს შეიცავს, მაგრამ მისით არ იწყება.",
+    "explanation_en": "9 codes start with K; 5 of them end in an even digit: KT-4812, KA-7710, KZ-9014, KT-1150, KT-7716. Traps: 0 is an even digit, and RK-3306, LK-2208 and MK-4402 contain K but do not start with it."
+  },
+  {
+    "id": "AD-013",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "string_compare",
+    "pattern_tag": "transposed_characters",
+    "question_ka": "რომელი პასუხია ამანათის თრექინგ-ნომრის ზუსტი ასლი?",
+    "question_en": "Which option is an exact copy of the parcel tracking number?",
+    "visual": { "type": "text", "text": "RB482915736GE" },
+    "options": ["RB482951736GE", "RB428915736GE", "RB482915736GE", "RB482915763GE"],
+    "correct": 2,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const t = q.visual.text; const hits = q.options.filter(o => o === t); return hits.length === 1 ? hits[0] : 'no unique exact copy'; }"
+    },
+    "explanation_ka": "დაყავი ჯგუფებად: RB 482 915 736 GE. თითოეულ არასწორ ვარიანტში ორმა მეზობელმა ციფრმა ადგილი გაცვალა: 915 → 951, 482 → 428, 736 → 763. ციფრები იგივე რჩება, ამიტომ თითოეულ ჯგუფში მათი რიგი შეამოწმე.",
+    "explanation_en": "Split it into blocks: RB 482 915 736 GE. Each wrong option swaps two neighbouring digits: 915 → 951, 482 → 428, 736 → 763. The digits stay the same, so check their order inside each block."
+  },
+  {
+    "id": "AD-014",
+    "module": "attention_to_detail",
+    "difficulty": 3,
+    "format": "string_compare",
+    "pattern_tag": "spacing_punctuation",
+    "question_ka": "გადახდების სისტემის ჟურნალი ანგარიშში გადაიტანეს. 8 წყვილიდან რამდენია ზუსტად ერთნაირი?",
+    "question_en": "A payment system log was copied into a report. Of the 8 pairs, how many are exactly identical?",
+    "visual": {
+      "type": "pairs",
+      "pairs": [
+        ["12.03.2026 14:30 | 1250.50 GEL", "12.03.2026 14:30 | 1250.50 GEL"],
+        ["15.03.2026 09:05 | 87.20 GEL", "15.03.2026 09.05 | 87.20 GEL"],
+        ["18.03.2026 17:45 | 312.00 GEL", "18.03.2026 17:45 | 312.00 GEL"],
+        ["21.03.2026 11:10 | 46.75 GEL", "21.03.2026 11:10 | 46,75 GEL"],
+        ["22.03.2026 08:55 | 1999.99 GEL", "22.03.2026 08:55 | 1999.99 GEL"],
+        ["25.03.2026 16:20 | 530.00 GEL", "25.03.2026 16:20 | 530.00GEL"],
+        ["27.03.2026 13:40 | 64.10 GEL", "27.03.2026 13:40 | 64.10 GEL"],
+        ["30.03.2026 19:15 | 210.30 GEL", "30.03 2026 19:15 | 210.30 GEL"]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 3,
+    "verify": { "type": "visual", "check": "identical_pairs_count" },
+    "explanation_ka": "იდენტურია 1-ლი, მე-3, მე-5 და მე-7 წყვილი. დანარჩენებში მხოლოდ სასვენი ნიშანი ან ჰარია განსხვავებული: 09:05 → 09.05, 46.75 → 46,75, 530.00GEL-ში ჰარი აკლია, 30.03 2026-ში კი — წერტილი. ციფრები ყველგან სწორია, ამიტომ მხოლოდ ციფრების შემოწმებისას ყველა წყვილი ერთნაირი ჩანს.",
+    "explanation_en": "Pairs 1, 3, 5 and 7 match. The others differ only in punctuation or spacing: 09:05 → 09.05, 46.75 → 46,75, a missing space in 530.00GEL and a missing dot in 30.03 2026. All digits are correct, so checking only the digits makes every pair look identical."
+  },
+  {
+    "id": "AD-015",
+    "module": "attention_to_detail",
+    "difficulty": 1,
+    "format": "string_compare",
+    "pattern_tag": "missing_or_extra_character",
+    "question_ka": "რომელი პასუხია ნაჩვენები ელფოსტის მისამართის ზუსტი ასლი?",
+    "question_en": "Which option is an exact copy of the e-mail address shown?",
+    "visual": { "type": "text", "text": "levan.tsiklauri@gmail.com" },
+    "options": ["levan.tsiklauri@gmail.com", "levan.tsikklauri@gmail.com", "levan.tsiklaui@gmail.com", "levan.tsiklauri@gmal.com"],
+    "correct": 0,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const t = q.visual.text; const hits = q.options.filter(o => o === t); return hits.length === 1 ? hits[0] : 'no unique exact copy'; }"
+    },
+    "explanation_ka": "ზუსტად ემთხვევა მხოლოდ levan.tsiklauri@gmail.com. დანარჩენებში k გაორმაგებულია (tsikklauri), r აკლია (tsiklaui) ან i აკლია (gmal). შეამოწმე დომენიც და არა მხოლოდ სახელი.",
+    "explanation_en": "Only levan.tsiklauri@gmail.com matches. The others have a doubled k (tsikklauri), a missing r (tsiklaui) or a missing i (gmal). Check the domain too, not just the name."
+  },
+  {
+    "id": "AD-016",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "table_compare",
+    "pattern_tag": "lookalike_characters",
+    "question_ka": "კომპანიამ თანამშრომლების საკონტაქტო სია ახალ აპლიკაციაში გადაიტანა. ასლის რამდენი სტრიქონია სრულიად სწორი?",
+    "question_en": "A company copied its staff contact list into a new app. How many rows of the copy are completely correct?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        { "ka": "სახელი", "en": "Name" },
+        { "ka": "ტელეფონი", "en": "Phone" },
+        { "ka": "ელფოსტა", "en": "E-mail" }
+      ],
+      "rows": [
+        ["Nino Beridze", "+995 555 10 20 30", "n.beridze@mail.ge"],
+        ["Giorgi Kapanadze", "+995 599 41 18 07", "g.kapanadze@mail.ge"],
+        ["Mariam Japaridze", "+995 577 63 05 81", "m.japaridze@mail.ge"],
+        ["Luka Lomidze", "+995 551 90 12 44", "l.lomidze@mail.ge"],
+        ["Elene Maisuradze", "+995 593 27 80 16", "e.maisuradze@mail.ge"],
+        ["Davit Chkheidze", "+995 568 33 71 09", "d.chkheidze@mail.ge"]
+      ],
+      "compare_rows": [
+        ["Nino Beridze", "+995 555 10 20 30", "n.beridze@mail.ge"],
+        ["Giorgi Kapanadze", "+995 599 41 18 07", "g.kapanadze@rnail.ge"],
+        ["Mariam Japaridze", "+995 577 63 O5 81", "m.japaridze@mail.ge"],
+        ["Luka Lornidze", "+995 551 90 12 44", "l.lomidze@mail.ge"],
+        ["Elene Maisuradze", "+995 593 27 80 16", "e.maisuradze@mail.ge"],
+        ["Davit Chkheidze", "+995 568 33 71 09", "d.chkheidze@mai1.ge"]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 1,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => q.visual.rows.filter((r, i) => r.every((c, j) => c === q.visual.compare_rows[i][j])).length"
+    },
+    "explanation_ka": "შეცდომის გარეშეა მხოლოდ 1-ლი და მე-5 სტრიქონი. მე-2 სტრიქონში mail-ის ნაცვლად rnail წერია, მე-3-ში ნულის ნაცვლად ასო O (63 O5), მე-4-ში Lomidze-ს ნაცვლად Lornidze, მე-6-ში კი mail-ის ნაცვლად mai1 (ციფრი 1). კითხვა სწორ სტრიქონებს ეხება, ამიტომ 4 (შეცდომიანი სტრიქონები) ხაფანგია.",
+    "explanation_en": "Only rows 1 and 5 are error-free. Row 2 has rnail instead of mail, row 3 has the letter O instead of zero (63 O5), row 4 has Lornidze instead of Lomidze, and row 6 has mai1 (digit 1) instead of mail. The question asks for correct rows, so 4 (the rows with errors) is the trap."
+  },
+  {
+    "id": "AD-017",
+    "module": "attention_to_detail",
+    "difficulty": 3,
+    "format": "table_compare",
+    "pattern_tag": "table_cross_check",
+    "question_ka": "საკანცელარიო მაღაზიამ ფასების სია ხელახლა აკრიფა. ასლის რამდენი სტრიქონი განსხვავდება ორიგინალისგან?",
+    "question_en": "A stationery shop retyped its price list. How many rows of the copy differ from the original?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        { "ka": "კოდი", "en": "Code" },
+        { "ka": "დასახელება", "en": "Item" },
+        { "ka": "ფასი (ლარი)", "en": "Price (GEL)" }
+      ],
+      "rows": [
+        ["A-1047", "საბეჭდი ქაღალდი A4", "14.90"],
+        ["A-1074", "საბეჭდი ქაღალდი A3", "24.50"],
+        ["B-2210", "ტონერის კარტრიჯი", "89.00"],
+        ["B-2201", "მელნის კარტრიჯი", "45.80"],
+        ["C-3315", "USB კაბელი 2 მ", "12.60"],
+        ["C-3351", "HDMI კაბელი 2 მ", "18.40"],
+        ["D-4120", "მაგიდის ლამპა", "63.25"]
+      ],
+      "compare_rows": [
+        ["A-1047", "საბეჭდი ქაღალდი A4", "14.90"],
+        ["A-1074", "საბეჭდი ქაღალდი A3", "42.50"],
+        ["B-2210", "ტონერის კარტრიჯი", "89.00"],
+        ["B-2210", "მელნის კარტრიჯი", "45.80"],
+        ["C-3315", "USB კაბლეი 2 მ", "12.60"],
+        ["C-3351", "HDMI კაბელი 2 მ", "18.40"],
+        ["D-4120", "მაგიდის ლამპა", "63.52"]
+      ]
+    },
+    "options": ["2", "3", "4", "5"],
+    "correct": 2,
+    "verify": { "type": "visual", "check": "table_diff_rows" },
+    "explanation_ka": "განსხვავდება მე-2, მე-4, მე-5 და მე-7 სტრიქონი: 24.50 → 42.50, B-2201 → B-2210, კაბელი → კაბლეი, 63.25 → 63.52 — ყველგან ორმა მეზობელმა სიმბოლომ ადგილი გაცვალა. ყველაზე რთული მე-4 სტრიქონია: B-2210 ნამდვილი კოდია მე-3 სტრიქონიდან, ამიტომ შეცდომა მხოლოდ ორიგინალის იმავე სტრიქონთან შედარებისას ჩანს.",
+    "explanation_en": "Rows 2, 4, 5 and 7 differ: 24.50 → 42.50, B-2201 → B-2210, კაბელი → კაბლეი, 63.25 → 63.52 — each time two neighbouring characters swapped. Row 4 is the hardest: B-2210 is a real code from row 3, so the error only shows when you compare with the same row of the original."
+  },
+  {
+    "id": "AD-018",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "counting",
+    "pattern_tag": "multi_condition_filter",
+    "question_ka": "სიაში მობილური ტელეფონების ნომრებია +995-ის გარეშე. რამდენი მათგანი იწყება 59-ით და მთავრდება კენტი ციფრით?",
+    "question_en": "The list shows mobile numbers without the +995 prefix. How many of them start with 59 and end with an odd digit?",
+    "visual": {
+      "type": "text",
+      "text": "599 12 34 57; 595 80 11 22; 577 31 90 05; 591 44 08 13; 593 70 26 48; 558 19 59 01; 597 63 82 39; 590 25 17 60; 551 59 33 71; 592 06 44 85"
+    },
+    "options": ["3", "4", "5", "6"],
+    "correct": 1,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => q.visual.text.split('; ').filter(n => n.startsWith('59') && Number(n.slice(-1)) % 2 === 1).length"
+    },
+    "explanation_ka": "59-ით 7 ნომერი იწყება, მათგან 4 კენტი ციფრით მთავრდება: …57, …13, …39, …85. 558 19 59 01 და 551 59 33 71 59-ს მხოლოდ შუაში შეიცავს, 590 25 17 60 კი 0-ით მთავრდება, რომელიც ლუწია.",
+    "explanation_en": "7 numbers start with 59, and 4 of them end in an odd digit: …57, …13, …39, …85. 558 19 59 01 and 551 59 33 71 contain 59 only in the middle, and 590 25 17 60 ends in 0, which is even."
+  },
+  {
+    "id": "AD-019",
+    "module": "attention_to_detail",
+    "difficulty": 3,
+    "format": "counting",
+    "pattern_tag": "multi_condition_filter",
+    "question_ka": "ბანკი გადარიცხვას ხელით მხოლოდ მაშინ ამოწმებს, თუ მიმღების IBAN იწყება GE-თი, ბანკის კოდი (მე-5–მე-6 სიმბოლო) არის TB და თანხა 1000 ლარზე მეტია. სიაში თითოეული IBAN-ის პირველი 6 სიმბოლო და თანხაა მოცემული. რამდენი გადარიცხვა შემოწმდება?",
+    "question_en": "A bank manually reviews a transfer only if the recipient's IBAN starts with GE, its bank code (characters 5–6) is TB, and the amount is more than 1000 GEL. The list shows the first 6 characters of each IBAN and the amount. How many transfers will be reviewed?",
+    "visual": {
+      "type": "text",
+      "text": "GE29TB 1450 GEL; GE11BG 2300 GEL; GE52TB 980 GEL; DE89TB 1700 GEL; GE07TB 1000 GEL; GE63TB 1001 GEL; GE40LB 5200 GEL; GE18TB 3075 GEL; GE95TB 999 GEL; GE33BG 1210 GEL"
+    },
+    "options": ["3", "4", "5", "6"],
+    "correct": 0,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => q.visual.text.split('; ').map(s => s.split(' ')).filter(([iban, amt]) => iban.startsWith('GE') && iban.slice(4, 6) === 'TB' && Number(amt) > 1000).length"
+    },
+    "explanation_ka": "სამივე პირობას მხოლოდ 3 გადარიცხვა აკმაყოფილებს: GE29TB 1450, GE63TB 1001 და GE18TB 3075. GE07TB 1000 არ აღემატება 1000-ს, DE89TB-ს ბანკის კოდი TB აქვს, მაგრამ DE-თი იწყება, GE52TB 980 და GE95TB 999 კი ზღვარს ქვემოთაა.",
+    "explanation_en": "Only 3 transfers meet all three conditions: GE29TB 1450, GE63TB 1001 and GE18TB 3075. GE07TB 1000 is not more than 1000, DE89TB has bank code TB but starts with DE, and GE52TB 980 and GE95TB 999 are below the limit."
+  },
+  {
+    "id": "AD-020",
+    "module": "attention_to_detail",
+    "difficulty": 1,
+    "format": "counting",
+    "pattern_tag": "count_occurrences",
+    "question_ka": "რამდენი მძიმეა ქვემოთ მოცემულ მისამართში?",
+    "question_en": "How many commas are in the address below?",
+    "visual": { "type": "text", "text": "საქართველო, თბილისი, 0179, ვაკის რ-ნი, ი. ჭავჭავაძის გამზ. 37, ბ. 12" },
+    "options": ["2", "3", "4", "5"],
+    "correct": 3,
+    "verify": { "type": "visual", "check": "count_substring", "needle": "," },
+    "explanation_ka": "მძიმე 5-ია: საქართველოს, თბილისის, 0179-ის, რ-ნის და 37-ის შემდეგ. 3 წერტილი (ი. გამზ. ბ.) შემოკლებას აღნიშნავს და არა მძიმეს, ამიტომ ისინი არ ითვლება.",
+    "explanation_en": "There are 5 commas: after საქართველო, თბილისი, 0179, რ-ნი and 37. The 3 full stops (ი. გამზ. ბ.) mark abbreviations, not commas, so they do not count."
+  },
+  {
+    "id": "AD-021",
+    "module": "attention_to_detail",
+    "difficulty": 1,
+    "format": "string_compare",
+    "pattern_tag": "missing_or_extra_character",
+    "question_ka": "კადრების სამსახურის ასისტენტმა თანამშრომლების სახელები და გვარები სახელფასო სისტემაში აკრიფა. რამდენი წყვილი განსხვავდება?",
+    "question_en": "A human-resources assistant typed employee names into the payroll system. How many pairs differ?",
+    "visual": {
+      "type": "pairs",
+      "pairs": [
+        ["ქეთევან ხარაიშვილი", "ქეთევან ხარაიშვილი"],
+        ["ლევან ჯანელიძე", "ლევან ჯანნელიძე"],
+        ["თამარ ჩიქოვანი", "თამარ ჩიქოვანი"],
+        ["დავით გოგიჩაიშვილი", "დავით გოგიჩაშვილი"],
+        ["ელენე სულაბერიძე", "ელენე სულაბერიძე"]
+      ]
+    },
+    "options": ["2", "3", "4", "5"],
+    "correct": 0,
+    "verify": { "type": "visual", "check": "differing_pairs_count" },
+    "explanation_ka": "განსხვავდება მე-2 და მე-4 წყვილი: ჯანელიძე ჯანნელიძე გახდა (ნ გაორმაგდა), გოგიჩაიშვილს კი ი დააკლდა (გოგიჩაშვილი). ნაცნობ გვარს ერთიანად ვკითხულობთ, ამიტომ თვალი გაორმაგებულ ან გამოტოვებულ ასოს ვერ ამჩნევს.",
+    "explanation_en": "Pairs 2 and 4 differ: ჯანელიძე became ჯანნელიძე (a doubled ნ), and გოგიჩაიშვილი lost an ი (გოგიჩაშვილი). Familiar surnames are read as a whole, so the eye misses a doubled or dropped letter."
+  },
+  {
+    "id": "AD-022",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "string_compare",
+    "pattern_tag": "spacing_punctuation",
+    "question_ka": "რომელი პასუხია ნაჩვენები მიწოდების მისამართის ზუსტი ასლი, სასვენი ნიშნებისა და ჰარების ჩათვლით?",
+    "question_en": "Which option is an exact copy of the delivery address shown, including punctuation and spaces?",
+    "visual": { "type": "text", "text": "Tbilisi, Kostava St. 14, apt. 5" },
+    "options": ["Tbilisi, Kostava St 14, apt. 5", "Tbilisi Kostava St. 14, apt. 5", "Tbilisi, Kostava St. 14, apt.5", "Tbilisi, Kostava St. 14, apt. 5"],
+    "correct": 3,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const t = q.visual.text; const hits = q.options.filter(o => o === t); return hits.length === 1 ? hits[0] : 'no unique exact copy'; }"
+    },
+    "explanation_ka": "ზუსტად ემთხვევა მხოლოდ Tbilisi, Kostava St. 14, apt. 5. დანარჩენებს აკლია წერტილი St-ის შემდეგ, მძიმე Tbilisi-ს შემდეგ ან ჰარი apt. 5-ში. ასოები და ციფრები ყველა ვარიანტში სწორია, ამიტომ არჩევანს მხოლოდ სასვენი ნიშნები და ჰარები განსაზღვრავს.",
+    "explanation_en": "Only Tbilisi, Kostava St. 14, apt. 5 matches. The others lack the dot after St, the comma after Tbilisi, or the space in apt. 5. Letters and digits are correct in every option, so only punctuation and spaces decide."
+  },
+  {
+    "id": "AD-023",
+    "module": "attention_to_detail",
+    "difficulty": 1,
+    "format": "visual_grid",
+    "pattern_tag": "grid_odd_one_out",
+    "question_ka": "ქვემოთ მოცემული ბადეებიდან სამი ერთნაირია, ერთი კი განსხვავდება. რომელია განსხვავებული ბადე?",
+    "question_en": "Three of the grids below are identical and one is different. Which grid is different?",
+    "visual": {
+      "type": "grids",
+      "grids": [
+        [
+          [1, 0, 2],
+          [0, 3, 0],
+          [2, 0, 1]
+        ],
+        [
+          [1, 0, 2],
+          [0, 3, 0],
+          [2, 0, 1]
+        ],
+        [
+          [1, 0, 2],
+          [0, 4, 0],
+          [2, 0, 1]
+        ],
+        [
+          [1, 0, 2],
+          [0, 3, 0],
+          [2, 0, 1]
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 2,
+    "verify": { "type": "visual", "check": "odd_one_out" },
+    "explanation_ka": "1-ლი, მე-2 და მე-4 ბადე ერთნაირია. მე-3 ბადის ცენტრალურ უჯრაში ჯვრის ნაცვლად რომბია.",
+    "explanation_en": "Grids 1, 2 and 4 are identical. In grid 3 the centre cell holds a diamond instead of a cross."
+  },
+  {
+    "id": "AD-024",
+    "module": "attention_to_detail",
+    "difficulty": 1,
+    "format": "visual_grid",
+    "pattern_tag": "grid_rotation",
+    "question_ka": "ნიმუშის ბადე 180°-ით (ნახევარი ბრუნით) მოაბრუნეს. რომელ ბადეზეა შედეგი?",
+    "question_en": "The reference grid is rotated by 180° (half a turn). Which grid shows the result?",
+    "visual": {
+      "type": "grids",
+      "reference": [
+        [1, 2, 0],
+        [0, 3, 0],
+        [0, 0, 4]
+      ],
+      "grids": [
+        [
+          [0, 0, 4],
+          [0, 3, 0],
+          [1, 2, 0]
+        ],
+        [
+          [4, 0, 0],
+          [0, 3, 0],
+          [0, 2, 1]
+        ],
+        [
+          [0, 0, 1],
+          [0, 3, 2],
+          [4, 0, 0]
+        ],
+        [
+          [0, 2, 1],
+          [0, 3, 0],
+          [4, 0, 0]
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 1,
+    "verify": { "type": "visual", "check": "transform", "transform": "rot180" },
+    "explanation_ka": "ნახევარი ბრუნისას ზედა მარცხენა კვადრატი ქვედა მარჯვენა კუთხეში გადადის, ქვედა მარჯვენა რომბი კი — ზედა მარცხენაში; ეს მე-2 ბადეა. 1-ლი ბადე მხოლოდ ზედა↔ქვედა მიმართულებითაა ასახული, მე-4 — მხოლოდ მარცხენა↔მარჯვენა მიმართულებით, მე-3 კი მხოლოდ მეოთხედი ბრუნითაა მობრუნებული.",
+    "explanation_en": "A half turn sends the top-left square to the bottom-right corner and the bottom-right diamond to the top-left — that is grid 2. Grid 1 is only mirrored top↔bottom, grid 4 only left↔right, and grid 3 is turned just a quarter turn."
+  },
+  {
+    "id": "AD-025",
+    "module": "attention_to_detail",
+    "difficulty": 1,
+    "format": "visual_grid",
+    "pattern_tag": "grid_cell_diff",
+    "question_ka": "რამდენი უჯრით განსხვავდება 1-ლი და მე-2 ბადე ერთმანეთისგან?",
+    "question_en": "In how many cells do grid 1 and grid 2 differ?",
+    "visual": {
+      "type": "grids",
+      "grids": [
+        [
+          [1, 0, 2, 0],
+          [0, 3, 0, 1],
+          [2, 0, 0, 4],
+          [0, 1, 3, 0]
+        ],
+        [
+          [1, 0, 0, 0],
+          [0, 3, 0, 1],
+          [2, 0, 0, 1],
+          [0, 0, 3, 0]
+        ]
+      ]
+    },
+    "options": ["2", "3", "4", "5"],
+    "correct": 1,
+    "verify": { "type": "visual", "check": "diff_count", "a": 0, "b": 1 },
+    "explanation_ka": "განსხვავდება 3 უჯრა: 1-ლი სტრიქონის მე-3 სვეტი (წრე → ცარიელი), მე-3 სტრიქონის მე-4 სვეტი (რომბი → კვადრატი) და მე-4 სტრიქონის მე-2 სვეტი (კვადრატი → ცარიელი). რომბის კვადრატად შეცვლა ადვილად შეუმჩნეველი რჩება: უჯრა ორივე ბადეში შევსებულია, მაგრამ სიმბოლო სხვაა.",
+    "explanation_en": "3 cells differ: row 1 column 3 (circle → empty), row 3 column 4 (diamond → square) and row 4 column 2 (square → empty). The diamond-to-square change is easy to miss: the cell is filled in both grids, but the symbol is different."
+  },
+  {
+    "id": "AD-026",
+    "module": "attention_to_detail",
+    "difficulty": 1,
+    "format": "visual_grid",
+    "pattern_tag": "symbol_count",
+    "question_ka": "რამდენი წრეა ბადეში?",
+    "question_en": "How many circles are there in the grid?",
+    "visual": {
+      "type": "grids",
+      "grids": [
+        [
+          [2, 0, 1, 2],
+          [0, 2, 3, 0],
+          [4, 0, 2, 1],
+          [2, 3, 0, 2]
+        ]
+      ]
+    },
+    "options": ["4", "5", "6", "7"],
+    "correct": 2,
+    "verify": { "type": "visual", "check": "count_value", "grid": 0, "value": 2 },
+    "explanation_ka": "სტრიქონ-სტრიქონ: 2 + 1 + 1 + 2 = 6 წრე. მხოლოდ წრეები დათვალე — კვადრატები, ჯვრები და რომბი არ ითვლება.",
+    "explanation_en": "Row by row: 2 + 1 + 1 + 2 = 6 circles. Count only circles — squares, crosses and the diamond do not count."
+  },
+  {
+    "id": "AD-027",
+    "module": "attention_to_detail",
+    "difficulty": 1,
+    "format": "visual_shapes",
+    "pattern_tag": "shape_attributes",
+    "question_ka": "ფიგურების ოთხი მწკრივიდან სამი ერთნაირია. რომელი მწკრივია განსხვავებული?",
+    "question_en": "Of the four rows of shapes, three are identical. Which row is different?",
+    "visual": {
+      "type": "shapes",
+      "rows": [
+        [
+          { "shape": "circle", "color": "blue" },
+          { "shape": "square", "color": "orange" },
+          { "shape": "triangle", "color": "green" },
+          { "shape": "star", "color": "red" },
+          { "shape": "diamond", "color": "gray" }
+        ],
+        [
+          { "shape": "circle", "color": "blue" },
+          { "shape": "square", "color": "orange" },
+          { "shape": "triangle", "color": "green" },
+          { "shape": "star", "color": "red" },
+          { "shape": "diamond", "color": "gray" }
+        ],
+        [
+          { "shape": "circle", "color": "blue" },
+          { "shape": "square", "color": "orange" },
+          { "shape": "triangle", "color": "green" },
+          { "shape": "star", "color": "red" },
+          { "shape": "diamond", "color": "gray" }
+        ],
+        [
+          { "shape": "circle", "color": "blue" },
+          { "shape": "square", "color": "orange" },
+          { "shape": "triangle", "color": "red" },
+          { "shape": "star", "color": "red" },
+          { "shape": "diamond", "color": "gray" }
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 3,
+    "verify": { "type": "visual", "check": "odd_one_out" },
+    "explanation_ka": "1-ლი, მე-2 და მე-3 მწკრივი ერთნაირია. მე-4 მწკრივში სამკუთხედი მწვანის ნაცვლად წითელია — ფიგურები და მათი რიგი იგივეა, მხოლოდ ფერია სხვა.",
+    "explanation_en": "Rows 1, 2 and 3 are identical. In row 4 the triangle is red instead of green — the shapes and their order are the same, only the colour changed."
+  },
+  {
+    "id": "AD-028",
+    "module": "attention_to_detail",
+    "difficulty": 1,
+    "format": "visual_shapes",
+    "pattern_tag": "shape_sequence",
+    "question_ka": "რომელ მწკრივშია ზუსტად იგივე ფიგურები იმავე რიგით, რაც ნიმუშის მწკრივში?",
+    "question_en": "Which row shows exactly the same shapes, in the same order, as the reference row?",
+    "visual": {
+      "type": "shapes",
+      "reference": [
+        { "shape": "square", "color": "blue" },
+        { "shape": "circle", "color": "orange" },
+        { "shape": "triangle", "color": "black" },
+        { "shape": "star", "color": "green" },
+        { "shape": "arrow", "color": "red" }
+      ],
+      "rows": [
+        [
+          { "shape": "square", "color": "blue" },
+          { "shape": "triangle", "color": "black" },
+          { "shape": "circle", "color": "orange" },
+          { "shape": "star", "color": "green" },
+          { "shape": "arrow", "color": "red" }
+        ],
+        [
+          { "shape": "square", "color": "blue" },
+          { "shape": "circle", "color": "orange" },
+          { "shape": "triangle", "color": "black" },
+          { "shape": "arrow", "color": "red" },
+          { "shape": "star", "color": "green" }
+        ],
+        [
+          { "shape": "square", "color": "blue" },
+          { "shape": "circle", "color": "orange" },
+          { "shape": "triangle", "color": "black" },
+          { "shape": "star", "color": "green" },
+          { "shape": "arrow", "color": "red" }
+        ],
+        [
+          { "shape": "circle", "color": "orange" },
+          { "shape": "square", "color": "blue" },
+          { "shape": "triangle", "color": "black" },
+          { "shape": "star", "color": "green" },
+          { "shape": "arrow", "color": "red" }
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 2,
+    "verify": { "type": "visual", "check": "match_reference" },
+    "explanation_ka": "მხოლოდ მე-3 მწკრივში რჩება რიგი: კვადრატი, წრე, სამკუთხედი, ვარსკვლავი, ისარი. ყველა სხვა მწკრივში ორი მეზობელი ფიგურაა გადასმული: 1-ელში — წრე და სამკუთხედი, მე-2-ში — ვარსკვლავი და ისარი, მე-4-ში — კვადრატი და წრე.",
+    "explanation_en": "Only row 3 keeps the order square, circle, triangle, star, arrow. Every other row swaps two neighbours: row 1 the circle and triangle, row 2 the star and arrow, row 4 the square and circle."
+  },
+  {
+    "id": "AD-029",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "visual_grid",
+    "pattern_tag": "grid_odd_one_out",
+    "question_ka": "4 ბადიდან ერთი დანარჩენებისგან მხოლოდ ერთი დეტალით განსხვავდება. რომელი?",
+    "question_en": "One of the 4 grids differs from the others in just one detail. Which one?",
+    "visual": {
+      "type": "grids",
+      "grids": [
+        [
+          [1, 0, 2, 3],
+          [0, 4, 1, 0],
+          [3, 1, 0, 4],
+          [2, 0, 4, 1]
+        ],
+        [
+          [1, 0, 2, 3],
+          [0, 4, 1, 0],
+          [3, 1, 0, 2],
+          [2, 0, 4, 1]
+        ],
+        [
+          [1, 0, 2, 3],
+          [0, 4, 1, 0],
+          [3, 1, 0, 2],
+          [2, 0, 4, 1]
+        ],
+        [
+          [1, 0, 2, 3],
+          [0, 4, 1, 0],
+          [3, 1, 0, 2],
+          [2, 0, 4, 1]
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 0,
+    "verify": { "type": "visual", "check": "odd_one_out" },
+    "explanation_ka": "მე-2, მე-3 და მე-4 ბადე ერთნაირია. 1-ლი ბადე ერთი უჯრით განსხვავდება: მე-3 სტრიქონის მე-4 სვეტში წრის ნაცვლად რომბია.",
+    "explanation_en": "Grids 2, 3 and 4 are identical. Grid 1 differs in one cell: row 3, column 4 holds a diamond instead of a circle."
+  },
+  {
+    "id": "AD-030",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "visual_grid",
+    "pattern_tag": "grid_rotation",
+    "question_ka": "რომელ ბადეზეა ნიმუშის ბადე საათის ისრის მიმართულებით 90°-ით (მეოთხედი ბრუნით მარჯვნივ) მობრუნებული?",
+    "question_en": "Which grid shows the reference grid rotated 90° clockwise (a quarter turn to the right)?",
+    "visual": {
+      "type": "grids",
+      "reference": [
+        [1, 0, 0, 2],
+        [0, 3, 0, 0],
+        [4, 0, 1, 0],
+        [0, 0, 2, 3]
+      ],
+      "grids": [
+        [
+          [0, 4, 0, 1],
+          [0, 0, 3, 0],
+          [2, 1, 0, 0],
+          [3, 0, 0, 2]
+        ],
+        [
+          [2, 0, 0, 3],
+          [0, 0, 1, 2],
+          [0, 3, 0, 0],
+          [1, 0, 4, 0]
+        ],
+        [
+          [1, 0, 4, 0],
+          [0, 3, 0, 0],
+          [0, 0, 1, 2],
+          [2, 0, 0, 3]
+        ],
+        [
+          [2, 0, 0, 1],
+          [0, 0, 3, 0],
+          [0, 1, 0, 4],
+          [3, 2, 0, 0]
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 0,
+    "verify": { "type": "visual", "check": "transform", "transform": "rot90" },
+    "explanation_ka": "საათის ისრის მიმართულებით 90°-ით მობრუნებისას ზედა სტრიქონი (კვადრატი, ცარიელი, ცარიელი, წრე) მარჯვენა სვეტად იქცევა ზემოდან ქვემოთ — ეს 1-ლი ბადეა. მე-2 ბადე საათის ისრის საწინააღმდეგოდაა მობრუნებული, მე-3-ში სტრიქონები და სვეტები უბრალოდ ადგილს ცვლის (დიაგონალური ასახვა), მე-4 კი მარცხენა↔მარჯვენა სარკისებური ასახვაა.",
+    "explanation_en": "Turning 90° clockwise makes the top row (square, empty, empty, circle) the right column, read top to bottom — that is grid 1. Grid 2 is turned counter-clockwise, grid 3 swaps rows and columns without turning (a diagonal mirror), and grid 4 is a left↔right mirror."
+  },
+  {
+    "id": "AD-031",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "visual_grid",
+    "pattern_tag": "grid_rotation",
+    "question_ka": "რომელ ბადეზეა ნიმუშის ბადე საათის ისრის საწინააღმდეგო მიმართულებით 90°-ით (მეოთხედი ბრუნით მარცხნივ) მობრუნებული?",
+    "question_en": "Which grid shows the reference grid rotated 90° counter-clockwise (a quarter turn to the left)?",
+    "visual": {
+      "type": "grids",
+      "reference": [
+        [2, 0, 1, 0],
+        [0, 0, 3, 0],
+        [4, 0, 0, 0],
+        [0, 1, 0, 2]
+      ],
+      "grids": [
+        [
+          [0, 4, 0, 2],
+          [1, 0, 0, 0],
+          [0, 0, 3, 1],
+          [2, 0, 0, 0]
+        ],
+        [
+          [0, 1, 0, 2],
+          [4, 0, 0, 0],
+          [0, 0, 3, 0],
+          [2, 0, 1, 0]
+        ],
+        [
+          [2, 0, 4, 0],
+          [0, 0, 0, 1],
+          [1, 3, 0, 0],
+          [0, 0, 0, 2]
+        ],
+        [
+          [0, 0, 0, 2],
+          [1, 3, 0, 0],
+          [0, 0, 0, 1],
+          [2, 0, 4, 0]
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 3,
+    "verify": { "type": "visual", "check": "transform", "transform": "rot270" },
+    "explanation_ka": "მარცხნივ მეოთხედი ბრუნისას ზედა სტრიქონი (წრე, ცარიელი, კვადრატი, ცარიელი) მარცხენა სვეტად იქცევა, ქვემოდან ზემოთ წაკითხული: ზედა მარცხენა წრე ქვედა მარცხენა კუთხეში ხვდება — ეს მე-4 ბადეა. 1-ლი ბადე საპირისპირო მიმართულებით (საათის ისრის მიმართულებით) არის მობრუნებული, მე-2 მხოლოდ ზედა↔ქვედა მიმართულებითაა ასახული, მე-3-ში კი სტრიქონები და სვეტები ბრუნვის გარეშე ცვლის ადგილს.",
+    "explanation_en": "A quarter turn to the left makes the top row (circle, empty, square, empty) the left column, read from bottom to top: the circle from the top-left corner lands in the bottom-left corner — that is grid 4. Grid 1 is turned the wrong way (clockwise), grid 2 is only mirrored top↔bottom, and grid 3 swaps rows and columns without turning."
+  },
+  {
+    "id": "AD-032",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "visual_grid",
+    "pattern_tag": "grid_mirror",
+    "question_ka": "რომელ ბადეზეა ნიმუში სარკისებურად ასახული მარცხენა↔მარჯვენა მიმართულებით (როგორც მის გვერდით მდგარ სარკეში: მარცხენა და მარჯვენა მხარე ადგილს ცვლის, ზედა და ქვედა კი თავის ადგილზე რჩება)?",
+    "question_en": "Which grid shows the reference mirrored left↔right (as in a mirror standing beside it: left and right swap, top and bottom stay in place)?",
+    "visual": {
+      "type": "grids",
+      "reference": [
+        [1, 2, 0, 0],
+        [0, 0, 0, 3],
+        [4, 0, 1, 0],
+        [0, 3, 0, 0]
+      ],
+      "grids": [
+        [
+          [0, 4, 0, 1],
+          [3, 0, 0, 2],
+          [0, 1, 0, 0],
+          [0, 0, 3, 0]
+        ],
+        [
+          [0, 0, 2, 1],
+          [3, 0, 0, 0],
+          [0, 1, 0, 4],
+          [0, 0, 3, 0]
+        ],
+        [
+          [0, 3, 0, 0],
+          [4, 0, 1, 0],
+          [0, 0, 0, 3],
+          [1, 2, 0, 0]
+        ],
+        [
+          [0, 0, 3, 0],
+          [0, 1, 0, 4],
+          [3, 0, 0, 0],
+          [0, 0, 2, 1]
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 1,
+    "verify": { "type": "visual", "check": "transform", "transform": "flip_h" },
+    "explanation_ka": "ასეთი ასახვისას ყოველი სტრიქონი თავის ადგილზე რჩება და უკუღმა იკითხება: ზედა სტრიქონი „კვადრატი, წრე, ცარიელი, ცარიელი“ ხდება „ცარიელი, ცარიელი, წრე, კვადრატი“ — ეს მე-2 ბადეა. მე-3 ბადე ზედა↔ქვედა მიმართულებითაა ასახული, მე-4 180°-ითაა მობრუნებული, 1-ლი კი — 90°-ით.",
+    "explanation_en": "In this mirror every row stays in place and reads backwards: the top row \"square, circle, empty, empty\" becomes \"empty, empty, circle, square\" — that is grid 2. Grid 3 is mirrored top↔bottom, grid 4 is turned 180°, and grid 1 is turned 90°."
+  },
+  {
+    "id": "AD-033",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "visual_grid",
+    "pattern_tag": "grid_mirror",
+    "question_ka": "რომელ ბადეზეა ნიმუში სარკისებურად ასახული ზედა↔ქვედა მიმართულებით (როგორც ანარეკლი წყალში: ზედა და ქვედა მხარე ადგილს ცვლის, მარცხენა და მარჯვენა კი თავის ადგილზე რჩება)?",
+    "question_en": "Which grid shows the reference mirrored top↔bottom (like a reflection in water: top and bottom swap, left and right stay in place)?",
+    "visual": {
+      "type": "grids",
+      "reference": [
+        [0, 1, 0, 4],
+        [2, 0, 0, 0],
+        [0, 3, 1, 0],
+        [0, 0, 0, 2]
+      ],
+      "grids": [
+        [
+          [4, 0, 1, 0],
+          [0, 0, 0, 2],
+          [0, 1, 3, 0],
+          [2, 0, 0, 0]
+        ],
+        [
+          [2, 0, 0, 0],
+          [0, 1, 3, 0],
+          [0, 0, 0, 2],
+          [4, 0, 1, 0]
+        ],
+        [
+          [0, 0, 2, 0],
+          [0, 3, 0, 1],
+          [0, 1, 0, 0],
+          [2, 0, 0, 4]
+        ],
+        [
+          [0, 0, 0, 2],
+          [0, 3, 1, 0],
+          [2, 0, 0, 0],
+          [0, 1, 0, 4]
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 3,
+    "verify": { "type": "visual", "check": "transform", "transform": "flip_v" },
+    "explanation_ka": "ზედა↔ქვედა ასახვისას სტრიქონების რიგი შებრუნდება, მაგრამ თითოეული სტრიქონი მარცხნიდან მარჯვნივ უცვლელი რჩება: ქვედა სტრიქონი (ცარიელი, ცარიელი, ცარიელი, წრე) ზედა ხდება — ეს მე-4 ბადეა. 1-ლი ბადე მარცხენა↔მარჯვენა მიმართულებითაა ასახული, მე-2 180°-ითაა მობრუნებული (სტრიქონებიც შებრუნებულია), მე-3 კი — 90°-ით.",
+    "explanation_en": "In a top↔bottom mirror the rows swap order, but each row keeps its left-to-right order: the bottom row (empty, empty, empty, circle) becomes the top row — that is grid 4. Grid 1 is mirrored left↔right, grid 2 is turned 180° (each row is reversed too), and grid 3 is turned 90°."
+  },
+  {
+    "id": "AD-034",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "visual_grid",
+    "pattern_tag": "grid_cell_diff",
+    "question_ka": "რომელი ბადეა ნიმუშის ბადის იდენტური?",
+    "question_en": "Which grid is identical to the reference grid?",
+    "visual": {
+      "type": "grids",
+      "reference": [
+        [1, 0, 2, 0, 3],
+        [0, 4, 0, 1, 0],
+        [2, 0, 3, 0, 2],
+        [0, 1, 0, 4, 0],
+        [3, 0, 2, 0, 1]
+      ],
+      "grids": [
+        [
+          [1, 0, 2, 0, 3],
+          [0, 4, 0, 4, 0],
+          [2, 0, 3, 0, 2],
+          [0, 1, 0, 4, 0],
+          [3, 0, 2, 0, 1]
+        ],
+        [
+          [1, 0, 2, 0, 3],
+          [0, 4, 0, 1, 0],
+          [2, 0, 3, 0, 0],
+          [0, 1, 0, 4, 0],
+          [3, 0, 2, 0, 1]
+        ],
+        [
+          [1, 0, 2, 0, 3],
+          [0, 4, 0, 1, 0],
+          [2, 0, 3, 0, 2],
+          [0, 1, 0, 4, 0],
+          [3, 0, 2, 0, 1]
+        ],
+        [
+          [1, 0, 4, 0, 3],
+          [0, 4, 0, 1, 0],
+          [2, 0, 3, 0, 2],
+          [0, 1, 0, 4, 0],
+          [3, 0, 2, 0, 1]
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 2,
+    "verify": { "type": "visual", "check": "match_reference" },
+    "explanation_ka": "მე-3 ბადე უჯრა-უჯრა ემთხვევა ნიმუშს. დანარჩენები ზუსტად ერთი უჯრით განსხვავდება: 1-ელ ბადეში მე-2 სტრიქონის მე-4 სვეტში კვადრატის ნაცვლად რომბია, მე-2 ბადეს მე-3 სტრიქონის მე-5 სვეტში წრე აკლია, მე-4 ბადეში კი 1-ლი სტრიქონის მე-3 სვეტში წრის ნაცვლად რომბია.",
+    "explanation_en": "Grid 3 matches cell for cell. Each other grid differs in exactly one cell: grid 1 has a diamond instead of a square in row 2, column 4; grid 2 is missing the circle in row 3, column 5; grid 4 has a diamond instead of a circle in row 1, column 3."
+  },
+  {
+    "id": "AD-035",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "visual_grid",
+    "pattern_tag": "symbol_count",
+    "question_ka": "რამდენი ჯვარია ბადეში?",
+    "question_en": "How many crosses are there in the grid?",
+    "visual": {
+      "type": "grids",
+      "grids": [
+        [
+          [3, 0, 1, 3, 0],
+          [0, 4, 0, 0, 3],
+          [3, 0, 2, 4, 0],
+          [0, 3, 0, 0, 1],
+          [4, 0, 3, 2, 3]
+        ]
+      ]
+    },
+    "options": ["7", "8", "9", "10"],
+    "correct": 0,
+    "verify": { "type": "visual", "check": "count_value", "grid": 0, "value": 3 },
+    "explanation_ka": "სტრიქონ-სტრიქონ: 2 + 1 + 1 + 1 + 2 = 7 ჯვარი. 3 რომბი სხვა სიმბოლოა — თუ მათაც დაუმატებ, ხაფანგ-პასუხს, 10-ს, მიიღებ.",
+    "explanation_en": "Row by row: 2 + 1 + 1 + 1 + 2 = 7 crosses. The 3 diamonds are a different symbol — adding them gives the trap answer 10."
+  },
+  {
+    "id": "AD-036",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "visual_grid",
+    "pattern_tag": "symbol_count",
+    "question_ka": "რამდენი რომბია მე-2 ბადეში?",
+    "question_en": "How many diamonds are there in grid 2?",
+    "visual": {
+      "type": "grids",
+      "grids": [
+        [
+          [4, 0, 1, 0, 4],
+          [0, 2, 0, 4, 0],
+          [1, 0, 4, 0, 2],
+          [0, 4, 0, 3, 0],
+          [4, 0, 2, 0, 1]
+        ],
+        [
+          [0, 4, 0, 4, 1],
+          [4, 0, 1, 0, 4],
+          [0, 2, 4, 0, 0],
+          [1, 4, 0, 3, 4],
+          [0, 0, 4, 1, 0]
+        ]
+      ]
+    },
+    "options": ["5", "6", "7", "8"],
+    "correct": 3,
+    "verify": { "type": "visual", "check": "count_value", "grid": 1, "value": 4 },
+    "explanation_ka": "მე-2 ბადე, სტრიქონ-სტრიქონ: 2 + 2 + 1 + 2 + 1 = 8 რომბი. 1-ელ ბადეში 6 რომბია — ეს ხაფანგია, თუ სხვა ბადეში დათვლი, — ხოლო მე-2 ბადის 4 შევსებული კვადრატი რომბი არ არის.",
+    "explanation_en": "Grid 2, row by row: 2 + 2 + 1 + 2 + 1 = 8 diamonds. Grid 1 has 6 diamonds — the trap if you count in the wrong grid — and the 4 filled squares in grid 2 are not diamonds."
+  },
+  {
+    "id": "AD-037",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "visual_shapes",
+    "pattern_tag": "shape_attributes",
+    "question_ka": "რომელი მწკრივია ნიმუშის იდენტური ყველა დეტალით — ფორმით, ფერით, შევსებითა და მიმართულებით?",
+    "question_en": "Which row is identical to the reference row in every detail: shape, colour, fill and direction?",
+    "visual": {
+      "type": "shapes",
+      "reference": [
+        { "shape": "arrow", "color": "blue", "rotate": 0 },
+        { "shape": "square", "color": "orange" },
+        { "shape": "circle", "color": "green", "fill": "outline" },
+        { "shape": "triangle", "color": "black" },
+        { "shape": "star", "color": "blue" },
+        { "shape": "diamond", "color": "red", "fill": "outline" }
+      ],
+      "rows": [
+        [
+          { "shape": "arrow", "color": "blue", "rotate": 0 },
+          { "shape": "square", "color": "orange", "fill": "outline" },
+          { "shape": "circle", "color": "green", "fill": "outline" },
+          { "shape": "triangle", "color": "black" },
+          { "shape": "star", "color": "blue" },
+          { "shape": "diamond", "color": "red", "fill": "outline" }
+        ],
+        [
+          { "shape": "arrow", "color": "blue", "rotate": 0 },
+          { "shape": "square", "color": "orange" },
+          { "shape": "circle", "color": "green", "fill": "outline" },
+          { "shape": "triangle", "color": "black" },
+          { "shape": "star", "color": "blue" },
+          { "shape": "diamond", "color": "red", "fill": "outline" }
+        ],
+        [
+          { "shape": "arrow", "color": "blue", "rotate": 180 },
+          { "shape": "square", "color": "orange" },
+          { "shape": "circle", "color": "green", "fill": "outline" },
+          { "shape": "triangle", "color": "black" },
+          { "shape": "star", "color": "blue" },
+          { "shape": "diamond", "color": "red", "fill": "outline" }
+        ],
+        [
+          { "shape": "arrow", "color": "blue", "rotate": 0 },
+          { "shape": "square", "color": "orange" },
+          { "shape": "circle", "color": "green", "fill": "outline" },
+          { "shape": "triangle", "color": "black" },
+          { "shape": "star", "color": "blue" },
+          { "shape": "diamond", "color": "orange", "fill": "outline" }
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 1,
+    "verify": { "type": "visual", "check": "match_reference" },
+    "explanation_ka": "ემთხვევა მე-2 მწკრივი. 1-ელ მწკრივში ნარინჯისფერი კვადრატი შევსებულის ნაცვლად კონტურულია, მე-3-ში ისარი მარჯვნივ კი არა, მარცხნივაა მიმართული, მე-4-ში კი კონტურული რომბი წითლის ნაცვლად ნარინჯისფერია.",
+    "explanation_en": "Row 2 matches. In row 1 the orange square is outlined instead of filled, in row 3 the arrow points left instead of right, and in row 4 the outlined diamond is orange instead of red."
+  },
+  {
+    "id": "AD-038",
+    "module": "attention_to_detail",
+    "difficulty": 2,
+    "format": "visual_shapes",
+    "pattern_tag": "shape_sequence",
+    "question_ka": "სამ მწკრივში ერთი და იგივე ფიგურები ერთი და იმავე რიგითაა განლაგებული. რომელ მწკრივშია რიგი დარღვეული?",
+    "question_en": "Three rows contain the same shapes in the same order. In which row is the order broken?",
+    "visual": {
+      "type": "shapes",
+      "rows": [
+        [
+          { "shape": "star", "color": "blue" },
+          { "shape": "circle", "color": "black" },
+          { "shape": "diamond", "color": "orange" },
+          { "shape": "square", "color": "green" },
+          { "shape": "triangle", "color": "red" },
+          { "shape": "circle", "color": "blue", "fill": "outline" }
+        ],
+        [
+          { "shape": "star", "color": "blue" },
+          { "shape": "circle", "color": "black" },
+          { "shape": "diamond", "color": "orange" },
+          { "shape": "square", "color": "green" },
+          { "shape": "triangle", "color": "red" },
+          { "shape": "circle", "color": "blue", "fill": "outline" }
+        ],
+        [
+          { "shape": "star", "color": "blue" },
+          { "shape": "circle", "color": "black" },
+          { "shape": "diamond", "color": "orange" },
+          { "shape": "square", "color": "green" },
+          { "shape": "triangle", "color": "red" },
+          { "shape": "circle", "color": "blue", "fill": "outline" }
+        ],
+        [
+          { "shape": "star", "color": "blue" },
+          { "shape": "circle", "color": "black" },
+          { "shape": "diamond", "color": "orange" },
+          { "shape": "square", "color": "green" },
+          { "shape": "circle", "color": "blue", "fill": "outline" },
+          { "shape": "triangle", "color": "red" }
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 3,
+    "verify": { "type": "visual", "check": "odd_one_out" },
+    "explanation_ka": "1-ლი, მე-2 და მე-3 მწკრივი ერთნაირია. მე-4 მწკრივში ბოლო ორმა ფიგურამ ადგილი გაცვალა: ლურჯი კონტურული წრე წითელ სამკუთხედზე ადრე დგას. ფიგურები და ფერები იგივეა, ამიტომ მხოლოდ პოზიციების შედარება ავლენს განსხვავებას.",
+    "explanation_en": "Rows 1, 2 and 3 are identical. In row 4 the last two shapes have swapped places: the outlined blue circle comes before the red triangle. The shapes and colours are the same, so only a position-by-position comparison reveals it."
+  },
+  {
+    "id": "AD-039",
+    "module": "attention_to_detail",
+    "difficulty": 3,
+    "format": "visual_grid",
+    "pattern_tag": "grid_odd_one_out",
+    "question_ka": "ერთის გარდა ყველა ბადე ერთნაირია. რომელია გამონაკლისი?",
+    "question_en": "All grids but one are identical. Which grid is the exception?",
+    "visual": {
+      "type": "grids",
+      "grids": [
+        [
+          [2, 1, 0, 0, 4],
+          [0, 3, 4, 0, 1],
+          [1, 0, 2, 3, 0],
+          [0, 4, 0, 1, 2],
+          [3, 0, 1, 0, 4]
+        ],
+        [
+          [2, 1, 0, 0, 4],
+          [0, 3, 4, 0, 1],
+          [1, 0, 2, 3, 0],
+          [0, 4, 0, 1, 2],
+          [3, 0, 1, 0, 4]
+        ],
+        [
+          [2, 1, 0, 0, 4],
+          [0, 3, 4, 0, 1],
+          [1, 0, 3, 2, 0],
+          [0, 4, 0, 1, 2],
+          [3, 0, 1, 0, 4]
+        ],
+        [
+          [2, 1, 0, 0, 4],
+          [0, 3, 4, 0, 1],
+          [1, 0, 2, 3, 0],
+          [0, 4, 0, 1, 2],
+          [3, 0, 1, 0, 4]
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 2,
+    "verify": { "type": "visual", "check": "odd_one_out" },
+    "explanation_ka": "1-ლი, მე-2 და მე-4 ბადე ერთნაირია. მე-3 ბადის მე-3 სტრიქონში ორმა მეზობელმა უჯრამ (მე-3 და მე-4 სვეტი) ადგილი გაცვალა: „წრე, ჯვარი“-ს ნაცვლად „ჯვარი, წრე“ დგას. ყველა სიმბოლო ადგილზეა, ამიტომ სიმბოლოების დათვლა ამას ვერ აჩვენებს — შეადარე პოზიციები.",
+    "explanation_en": "Grids 1, 2 and 4 are identical. In row 3 of grid 3 two neighbouring cells (columns 3 and 4) swapped: \"cross, circle\" instead of \"circle, cross\". Every symbol is still there, so counting symbols will not reveal it — compare positions."
+  },
+  {
+    "id": "AD-040",
+    "module": "attention_to_detail",
+    "difficulty": 3,
+    "format": "visual_grid",
+    "pattern_tag": "grid_odd_one_out",
+    "question_ka": "იპოვე ბადე, რომელიც დანარჩენი სამის იდენტური არ არის.",
+    "question_en": "Find the grid that is not identical to the other three.",
+    "visual": {
+      "type": "grids",
+      "grids": [
+        [
+          [1, 0, 2, 0, 0, 3],
+          [0, 4, 0, 1, 2, 0],
+          [2, 0, 0, 3, 0, 1],
+          [0, 1, 1, 0, 2, 0],
+          [3, 0, 0, 2, 0, 4],
+          [0, 2, 1, 0, 3, 0]
+        ],
+        [
+          [1, 0, 2, 0, 0, 3],
+          [0, 4, 0, 1, 2, 0],
+          [2, 0, 0, 3, 0, 1],
+          [0, 1, 4, 0, 2, 0],
+          [3, 0, 0, 2, 0, 4],
+          [0, 2, 1, 0, 3, 0]
+        ],
+        [
+          [1, 0, 2, 0, 0, 3],
+          [0, 4, 0, 1, 2, 0],
+          [2, 0, 0, 3, 0, 1],
+          [0, 1, 4, 0, 2, 0],
+          [3, 0, 0, 2, 0, 4],
+          [0, 2, 1, 0, 3, 0]
+        ],
+        [
+          [1, 0, 2, 0, 0, 3],
+          [0, 4, 0, 1, 2, 0],
+          [2, 0, 0, 3, 0, 1],
+          [0, 1, 4, 0, 2, 0],
+          [3, 0, 0, 2, 0, 4],
+          [0, 2, 1, 0, 3, 0]
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 0,
+    "verify": { "type": "visual", "check": "odd_one_out" },
+    "explanation_ka": "მე-2, მე-3 და მე-4 ბადე ერთნაირია. 1-ელ ბადეში მე-4 სტრიქონის მე-3 სვეტში რომბის ნაცვლად შევსებული კვადრატია. ორივე შევსებული, თითქმის ერთი ზომის ფიგურაა, ამიტომ განსხვავება მხოლოდ უჯრა-უჯრა შედარებისას ჩანს.",
+    "explanation_en": "Grids 2, 3 and 4 are identical. In grid 1, row 4, column 3 holds a filled square instead of a diamond. Both are filled shapes of almost the same size, so the difference only shows in a cell-by-cell comparison."
+  },
+  {
+    "id": "AD-041",
+    "module": "attention_to_detail",
+    "difficulty": 3,
+    "format": "visual_grid",
+    "pattern_tag": "grid_rotation",
+    "question_ka": "ნიმუშის ბადე საათის ისრის მიმართულებით 90°-ით მოაბრუნეს. რომელ ბადეზეა შედეგი ზუსტად ნაჩვენები?",
+    "question_en": "The reference grid is turned 90° clockwise. Which grid shows the result exactly?",
+    "visual": {
+      "type": "grids",
+      "reference": [
+        [1, 0, 0, 2, 0],
+        [0, 3, 0, 0, 4],
+        [0, 0, 2, 0, 0],
+        [4, 0, 0, 1, 0],
+        [0, 2, 0, 0, 3]
+      ],
+      "grids": [
+        [
+          [0, 4, 0, 0, 3],
+          [2, 0, 0, 1, 0],
+          [0, 0, 2, 0, 0],
+          [0, 3, 0, 0, 2],
+          [1, 0, 0, 4, 0]
+        ],
+        [
+          [0, 4, 0, 0, 1],
+          [2, 0, 0, 3, 0],
+          [0, 0, 2, 0, 0],
+          [0, 1, 0, 0, 2],
+          [3, 0, 0, 4, 0]
+        ],
+        [
+          [0, 4, 0, 0, 1],
+          [2, 0, 0, 3, 0],
+          [0, 0, 2, 0, 0],
+          [0, 4, 0, 0, 2],
+          [3, 0, 0, 4, 0]
+        ],
+        [
+          [1, 0, 0, 4, 0],
+          [0, 3, 0, 0, 2],
+          [0, 0, 2, 0, 0],
+          [2, 0, 0, 1, 0],
+          [0, 4, 0, 0, 3]
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 1,
+    "verify": { "type": "visual", "check": "transform", "transform": "rot90" },
+    "explanation_ka": "მე-2 ბადე ზუსტი მეოთხედი ბრუნია მარჯვნივ: ზედა სტრიქონი (კვადრატი, ცარიელი, ცარიელი, წრე, ცარიელი) მარჯვენა სვეტად იქცევა ზემოდან ქვემოთ. მე-3 ბადე თითქმის იგივეა, მაგრამ მე-4 სტრიქონის მე-2 სვეტში კვადრატის ნაცვლად რომბია. 1-ლი ბადე საპირისპირო მიმართულებითაა მობრუნებული, მე-4-ში კი სტრიქონები და სვეტები ბრუნვის გარეშე ცვლის ადგილს.",
+    "explanation_en": "Grid 2 is the exact quarter turn to the right: the top row (square, empty, empty, circle, empty) becomes the right column, read top to bottom. Grid 3 looks the same but has a diamond instead of a square in row 4, column 2. Grid 1 is turned the wrong way, and grid 4 swaps rows and columns without turning."
+  },
+  {
+    "id": "AD-042",
+    "module": "attention_to_detail",
+    "difficulty": 3,
+    "format": "visual_grid",
+    "pattern_tag": "grid_mirror",
+    "question_ka": "რომელი ბადეა ნიმუშის ზუსტი სარკისებური ანარეკლი მარცხენა↔მარჯვენა მიმართულებით (ყოველი სტრიქონი შებრუნებულია, სტრიქონების რიგი კი იგივე რჩება)?",
+    "question_en": "Which grid is an exact left↔right mirror image of the reference (each row reversed, the rows themselves stay in the same order)?",
+    "visual": {
+      "type": "grids",
+      "reference": [
+        [2, 1, 0, 0, 0],
+        [0, 0, 3, 0, 4],
+        [1, 0, 0, 2, 0],
+        [0, 4, 0, 0, 1],
+        [3, 0, 2, 0, 0]
+      ],
+      "grids": [
+        [
+          [0, 0, 2, 0, 3],
+          [1, 0, 0, 4, 0],
+          [0, 2, 0, 0, 1],
+          [4, 0, 3, 0, 0],
+          [0, 0, 0, 1, 2]
+        ],
+        [
+          [3, 0, 2, 0, 0],
+          [0, 4, 0, 0, 1],
+          [1, 0, 0, 2, 0],
+          [0, 0, 3, 0, 4],
+          [2, 1, 0, 0, 0]
+        ],
+        [
+          [0, 0, 0, 1, 2],
+          [4, 0, 3, 0, 0],
+          [0, 2, 0, 0, 1],
+          [1, 0, 0, 4, 0],
+          [0, 0, 2, 0, 3]
+        ],
+        [
+          [0, 0, 0, 1, 2],
+          [4, 0, 3, 0, 0],
+          [0, 4, 0, 0, 1],
+          [1, 0, 0, 4, 0],
+          [0, 0, 2, 0, 3]
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 2,
+    "verify": { "type": "visual", "check": "transform", "transform": "flip_h" },
+    "explanation_ka": "მე-3 ბადეში ყოველი სტრიქონი შებრუნებულია და სტრიქონების რიგი შენარჩუნებულია: ზედა სტრიქონი „წრე, კვადრატი, ცარიელი, ცარიელი, ცარიელი“ ხდება „ცარიელი, ცარიელი, ცარიელი, კვადრატი, წრე“. მე-4 ბადე იგივეა, ოღონდ მე-3 სტრიქონის მე-2 სვეტში წრის ნაცვლად რომბია. 1-ლი ბადე 180°-იანი მობრუნებაა (სტრიქონების რიგიც შებრუნებულია), მე-2 კი ზედა↔ქვედა ასახვაა.",
+    "explanation_en": "Grid 3 reverses every row and keeps the rows in order: the top row \"circle, square, empty, empty, empty\" becomes \"empty, empty, empty, square, circle\". Grid 4 is the same except for a diamond instead of a circle in row 3, column 2. Grid 1 is a 180° turn (the row order is flipped too), and grid 2 is a top↔bottom mirror."
+  },
+  {
+    "id": "AD-043",
+    "module": "attention_to_detail",
+    "difficulty": 3,
+    "format": "visual_grid",
+    "pattern_tag": "grid_cell_diff",
+    "question_ka": "შეადარე 1-ლი ბადე მე-2-ს უჯრა-უჯრა. რამდენი უჯრაა განსხვავებული?",
+    "question_en": "Compare grid 1 with grid 2 cell by cell. How many cells are different?",
+    "visual": {
+      "type": "grids",
+      "grids": [
+        [
+          [1, 0, 2, 0, 4, 0],
+          [0, 3, 0, 1, 0, 2],
+          [2, 0, 4, 0, 3, 0],
+          [0, 1, 0, 2, 0, 4],
+          [4, 0, 3, 0, 1, 0],
+          [0, 2, 0, 4, 0, 3]
+        ],
+        [
+          [1, 0, 4, 0, 4, 0],
+          [0, 3, 0, 4, 0, 2],
+          [0, 0, 4, 0, 3, 0],
+          [0, 1, 0, 2, 0, 1],
+          [4, 0, 0, 0, 1, 0],
+          [0, 2, 0, 4, 2, 3]
+        ]
+      ]
+    },
+    "options": ["3", "4", "5", "6"],
+    "correct": 3,
+    "verify": { "type": "visual", "check": "diff_count", "a": 0, "b": 1 },
+    "explanation_ka": "განსხვავდება 6 უჯრა: 1-ლი სტრიქონის მე-3 სვეტი (წრე → რომბი), მე-2 სტრიქონის მე-4 სვეტი (კვადრატი → რომბი), მე-3 სტრიქონის 1-ლი სვეტი (წრე → ცარიელი), მე-4 სტრიქონის მე-6 სვეტი (რომბი → კვადრატი), მე-5 სტრიქონის მე-3 სვეტი (ჯვარი → ცარიელი) და მე-6 სტრიქონის მე-5 სვეტი (ცარიელი → წრე). ყველაზე ადვილად კვადრატისა და რომბის ურთიერთჩანაცვლება გამოგრჩება.",
+    "explanation_en": "6 cells differ: row 1 column 3 (circle → diamond), row 2 column 4 (square → diamond), row 3 column 1 (circle → empty), row 4 column 6 (diamond → square), row 5 column 3 (cross → empty) and row 6 column 5 (empty → circle). The square↔diamond swaps are the easiest to miss."
+  },
+  {
+    "id": "AD-044",
+    "module": "attention_to_detail",
+    "difficulty": 3,
+    "format": "visual_shapes",
+    "pattern_tag": "shape_attributes",
+    "question_ka": "ფიგურების ამ მწკრივებიდან ზუსტად ერთი განსხვავდება დანარჩენებისგან. რომელი?",
+    "question_en": "Exactly one of these rows of shapes differs from the others. Which row?",
+    "visual": {
+      "type": "shapes",
+      "rows": [
+        [
+          { "shape": "triangle", "color": "green" },
+          { "shape": "arrow", "rotate": 90 },
+          { "shape": "triangle", "color": "green", "rotate": 180 },
+          { "shape": "circle", "color": "blue", "fill": "outline" },
+          { "shape": "square", "color": "gray" },
+          { "shape": "arrow", "rotate": 90 },
+          { "shape": "star", "color": "orange", "fill": "outline" }
+        ],
+        [
+          { "shape": "triangle", "color": "green" },
+          { "shape": "arrow", "rotate": 90 },
+          { "shape": "triangle", "color": "green", "rotate": 180 },
+          { "shape": "circle", "color": "blue", "fill": "outline" },
+          { "shape": "square", "color": "gray" },
+          { "shape": "arrow", "rotate": 270 },
+          { "shape": "star", "color": "orange", "fill": "outline" }
+        ],
+        [
+          { "shape": "triangle", "color": "green" },
+          { "shape": "arrow", "rotate": 90 },
+          { "shape": "triangle", "color": "green", "rotate": 180 },
+          { "shape": "circle", "color": "blue", "fill": "outline" },
+          { "shape": "square", "color": "gray" },
+          { "shape": "arrow", "rotate": 270 },
+          { "shape": "star", "color": "orange", "fill": "outline" }
+        ],
+        [
+          { "shape": "triangle", "color": "green" },
+          { "shape": "arrow", "rotate": 90 },
+          { "shape": "triangle", "color": "green", "rotate": 180 },
+          { "shape": "circle", "color": "blue", "fill": "outline" },
+          { "shape": "square", "color": "gray" },
+          { "shape": "arrow", "rotate": 270 },
+          { "shape": "star", "color": "orange", "fill": "outline" }
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 0,
+    "verify": { "type": "visual", "check": "odd_one_out" },
+    "explanation_ka": "მე-2, მე-3 და მე-4 მწკრივი ერთნაირია. 1-ელ მწკრივში მეორე ისარი (მე-6 ფიგურა) ზემოთ კი არა, ქვემოთაა მიმართული. ფიგურები, ფერები და რიგი იგივეა, ამიტომ განსხვავებას მხოლოდ მიმართულება ავლენს.",
+    "explanation_en": "Rows 2, 3 and 4 are identical. In row 1 the second arrow (the 6th shape) points down instead of up. Shapes, colours and order are all the same, so only the direction gives it away."
+  },
+  {
+    "id": "AD-045",
+    "module": "attention_to_detail",
+    "difficulty": 3,
+    "format": "visual_shapes",
+    "pattern_tag": "shape_sequence",
+    "question_ka": "შეადარე თითოეული მწკრივი ნიმუშს პოზიცია-პოზიციით. რომელი მწკრივია მისი ზუსტი ასლი?",
+    "question_en": "Compare each row with the reference row position by position. Which row is an exact copy?",
+    "visual": {
+      "type": "shapes",
+      "reference": [
+        { "shape": "triangle", "color": "blue" },
+        { "shape": "circle", "color": "orange" },
+        { "shape": "square", "color": "green" },
+        { "shape": "arrow", "rotate": 90 },
+        { "shape": "star", "color": "red" },
+        { "shape": "diamond", "color": "blue" },
+        { "shape": "circle", "color": "gray" }
+      ],
+      "rows": [
+        [
+          { "shape": "triangle", "color": "blue" },
+          { "shape": "circle", "color": "orange" },
+          { "shape": "square", "color": "green" },
+          { "shape": "star", "color": "red" },
+          { "shape": "arrow", "rotate": 90 },
+          { "shape": "diamond", "color": "blue" },
+          { "shape": "circle", "color": "gray" }
+        ],
+        [
+          { "shape": "triangle", "color": "blue" },
+          { "shape": "circle", "color": "gray" },
+          { "shape": "square", "color": "green" },
+          { "shape": "arrow", "rotate": 90 },
+          { "shape": "star", "color": "red" },
+          { "shape": "diamond", "color": "blue" },
+          { "shape": "circle", "color": "orange" }
+        ],
+        [
+          { "shape": "triangle", "color": "blue" },
+          { "shape": "circle", "color": "orange" },
+          { "shape": "square", "color": "green" },
+          { "shape": "arrow", "rotate": 90 },
+          { "shape": "diamond", "color": "blue" },
+          { "shape": "star", "color": "red" },
+          { "shape": "circle", "color": "gray" }
+        ],
+        [
+          { "shape": "triangle", "color": "blue" },
+          { "shape": "circle", "color": "orange" },
+          { "shape": "square", "color": "green" },
+          { "shape": "arrow", "rotate": 90 },
+          { "shape": "star", "color": "red" },
+          { "shape": "diamond", "color": "blue" },
+          { "shape": "circle", "color": "gray" }
+        ]
+      ]
+    },
+    "options": ["1", "2", "3", "4"],
+    "correct": 3,
+    "verify": { "type": "visual", "check": "match_reference" },
+    "explanation_ka": "ემთხვევა მე-4 მწკრივი. 1-ელ მწკრივში ისარი და ვარსკვლავია გადასმული, მე-3-ში — ვარსკვლავი და რომბი. მე-2 მწკრივი ყველაზე მზაკვრულია: ნარინჯისფერმა და ნაცრისფერმა წრეებმა ადგილი გაცვალა — ფორმები იგივეა, მაგრამ ფერები არასწორ პოზიციებზეა.",
+    "explanation_en": "Row 4 matches. Row 1 swaps the arrow and the star, row 3 swaps the star and the diamond. Row 2 is the tricky one: the orange and gray circles have changed places — same shapes, but the colours are in the wrong positions."
+  }
+]

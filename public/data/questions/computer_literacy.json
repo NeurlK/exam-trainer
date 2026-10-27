@@ -1,0 +1,1664 @@
+[
+  {
+    "id": "CL-001",
+    "module": "computer_literacy",
+    "difficulty": 1,
+    "format": "workplace_task",
+    "pattern_tag": "keyboard_shortcuts",
+    "question_ka": "Windows-ზე დოკუმენტში მუშაობისას შემთხვევით მთელი აბზაცი წაშალეთ. კლავიშების რომელი კომბინაცია დააბრუნებს მას მაშინვე?",
+    "question_en": "While working on a document in Windows, you accidentally delete a whole paragraph. Which keyboard shortcut brings it back right away?",
+    "options": [
+      "Ctrl + Y",
+      "Ctrl + Z",
+      "Ctrl + X",
+      "Ctrl + V"
+    ],
+    "correct": 1,
+    "explanation_ka": "Ctrl + Z ბოლო მოქმედებას აუქმებს, ამიტომ წაშლილი აბზაცი ბრუნდება. Ctrl + X ტექსტს ამოჭრის, Ctrl + V კი ბუფერიდან (clipboard) ჩასვამს. წაშლილი აბზაცი ბუფერში არც მოხვედრილა. ხაფანგი: Ctrl + Y-ს ირჩევთ, ის კი მხოლოდ ახლახან გაუქმებულ მოქმედებას იმეორებს.",
+    "explanation_en": "Ctrl + Z undoes the last action, so the deleted paragraph comes back. The trap is Ctrl + Y, which redoes an action you have just undone. Ctrl + X cuts and Ctrl + V pastes from the clipboard — and a deleted paragraph never went to the clipboard."
+  },
+  {
+    "id": "CL-002",
+    "module": "computer_literacy",
+    "difficulty": 1,
+    "format": "data_table",
+    "pattern_tag": "spreadsheet_formulas",
+    "question_ka": "C2 უჯრაში წერია `=IF(B2>=60,\"Pass\",\"Fail\")`. ეს ფორმულა ქვემოთ, C7-მდეა დაკოპირებული. C სვეტის რამდენი უჯრა აჩვენებს „Pass“-ს?",
+    "question_en": "Cell C2 contains `=IF(B2>=60,\"Pass\",\"Fail\")`, and the formula is copied down to C7. How many cells in column C show \"Pass\"?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rows": [
+        [
+          {
+            "ka": "სტუდენტი",
+            "en": "Student"
+          },
+          {
+            "ka": "ქულა",
+            "en": "Score"
+          }
+        ],
+        [
+          {
+            "ka": "ნინო",
+            "en": "Nino"
+          },
+          "72"
+        ],
+        [
+          {
+            "ka": "გიორგი",
+            "en": "Giorgi"
+          },
+          "59"
+        ],
+        [
+          {
+            "ka": "ლუკა",
+            "en": "Luka"
+          },
+          "60"
+        ],
+        [
+          {
+            "ka": "ანა",
+            "en": "Ana"
+          },
+          "45"
+        ],
+        [
+          {
+            "ka": "დავითი",
+            "en": "Davit"
+          },
+          "88"
+        ],
+        [
+          {
+            "ka": "მარიამი",
+            "en": "Mariam"
+          },
+          "61"
+        ]
+      ]
+    },
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": 2,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => q.visual.rows.slice(1).filter(r => Number(r[1]) >= 60).length"
+    },
+    "explanation_ka": "„Pass“ ჩნდება, როცა ქულა 60 ან მეტია: 72, 60, 88 და 61 — სულ 4 უჯრა. ხაფანგი: თუ >= ნიშანს > ნიშნად წაიკითხავთ, ლუკას 60 ქულა „Fail“ გამოვა და მიიღებთ 3-ს.",
+    "explanation_en": "\"Pass\" appears when the score is 60 or more: 72, 60, 88 and 61 — 4 cells. The trap is reading >= as >, which turns Luka's 60 into \"Fail\" and gives 3."
+  },
+  {
+    "id": "CL-003",
+    "module": "computer_literacy",
+    "difficulty": 1,
+    "format": "workplace_task",
+    "pattern_tag": "email_recipients",
+    "question_ka": "ანამ ერთი და იგივე საინფორმაციო წერილი 40 კლიენტს უნდა გაუგზავნოს. კლიენტებმა ერთმანეთის ელფოსტის მისამართები არ უნდა დაინახონ. სად უნდა ჩაწეროს კლიენტების მისამართები?",
+    "question_en": "Ana must send the same newsletter to 40 clients. The clients must not see each other's email addresses. Where should she put the clients' addresses?",
+    "options": [
+      {
+        "ka": "„ვის“ (To) ველში",
+        "en": "In the To field"
+      },
+      {
+        "ka": "CC (ასლი) ველში",
+        "en": "In the CC field"
+      },
+      {
+        "ka": "BCC (ფარული ასლი) ველში",
+        "en": "In the BCC field"
+      },
+      {
+        "ka": "CC ველში, წერილში კი კლიენტებს სთხოვოს, რომ „ყველას პასუხი“ (Reply All) არ გამოიყენონ",
+        "en": "In the CC field, asking clients in the message not to use Reply All"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "BCC ველში ჩაწერილი მისამართები ყველა სხვა მიმღებისთვის დამალულია. To და CC ველების მისამართებს კი ყველა მიმღები ხედავს — CC ნიშნავს „საინფორმაციოდ“ და არა „დამალულად“.",
+    "explanation_en": "Addresses in BCC are hidden from all other recipients. Everyone who receives the message can see the To and CC addresses — CC means \"for information\", not \"hidden\"."
+  },
+  {
+    "id": "CL-004",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "workplace_task",
+    "pattern_tag": "phishing_signs",
+    "question_ka": "წერილში წერია: „თქვენი საფოსტო ყუთი სავსეა. რომ წერილები კვლავ მიიღოთ, დააჭირეთ **აქ**“. რა უნდა გააკეთოთ, რომ ყველაზე უსაფრთხოდ შეამოწმოთ, სინამდვილეში სად მიდის ბმული?",
+    "question_en": "An email says: \"Your mailbox is full. Click **here** to keep receiving mail.\" What is the safest way to check where the link really leads?",
+    "options": [
+      {
+        "ka": "მაუსი მიიტანოთ ბმულზე (ისე, რომ არ დააჭიროთ) და წაიკითხოთ გამოჩენილი მისამართი",
+        "en": "Hover the mouse over the link without clicking and read the address that appears"
+      },
+      {
+        "ka": "ბმულს დააჭიროთ და ნახოთ, ჰგავს თუ არა გახსნილი გვერდი შესვლის ნამდვილ გვერდს",
+        "en": "Click the link and see whether the page that opens looks like the real sign-in page"
+      },
+      {
+        "ka": "გამგზავნს უპასუხოთ და ჰკითხოთ, ნამდვილია თუ არა წერილი",
+        "en": "Reply to the sender and ask whether the email is genuine"
+      },
+      {
+        "ka": "შეამოწმოთ, აქვს თუ არა წერილს კომპანიის ლოგო",
+        "en": "Check whether the email carries the company logo"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "როცა მაუსს ბმულზე მიიტანთ, ჩანს მისი ნამდვილი მისამართი, გვერდი კი არ იხსნება. ბმულის ტექსტს, ლოგოს და თავად გახსნილ გვერდსაც ადვილად აყალბებენ. წერილზე პასუხი კი პირდაპირ თაღლითთან მივა.",
+    "explanation_en": "Hovering shows the real web address behind the link without opening it. Link text, logos and even the page that opens are easy to fake, and a reply goes straight to the scammer."
+  },
+  {
+    "id": "CL-005",
+    "module": "computer_literacy",
+    "difficulty": 1,
+    "format": "workplace_task",
+    "pattern_tag": "file_extensions",
+    "question_ka": "გიორგიმ გუნდს ბიუჯეტის ფაილი უნდა გაუგზავნოს. კოლეგები მას Excel-ში გახსნიან და ფორმულებიც უნდა მუშაობდეს. რა გაფართოება უნდა ჰქონდეს ფაილს?",
+    "question_en": "Giorgi must send the team a budget file that colleagues can open in Excel with working formulas. Which extension should the file have?",
+    "options": [
+      ".docx",
+      ".pptx",
+      ".pdf",
+      ".xlsx"
+    ],
+    "correct": 3,
+    "explanation_ka": ".xlsx Excel-ის ფაილის ფორმატია და ფორმულებს ინარჩუნებს. .docx Word-ის დოკუმენტია, .pptx — PowerPoint-ის პრეზენტაცია. .pdf-ში რიცხვები მხოლოდ ჩანს, ფორმულები კი აღარ ითვლის.",
+    "explanation_en": ".xlsx is the Excel workbook format and keeps formulas. .docx is a Word document, .pptx a PowerPoint presentation, and in a .pdf the numbers are only displayed — formulas no longer calculate."
+  },
+  {
+    "id": "CL-006",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "arithmetic",
+    "pattern_tag": "data_units",
+    "question_ka": "ფლეშ-მეხსიერებაზე 2 GB ეტევა, თითო სასწავლო ვიდეო კი 256 MB-ია. თუ 1 GB = 1024 MB, რამდენი ვიდეო დაეტევა სრულად ცარიელ ფლეშ-მეხსიერებაზე?",
+    "question_en": "A flash drive holds 2 GB, and each training video is 256 MB. If 1 GB = 1024 MB, how many whole videos fit on the empty drive?",
+    "options": [
+      "4",
+      "7",
+      "8",
+      "16"
+    ],
+    "correct": 2,
+    "verify": {
+      "type": "numeric",
+      "expr": "Math.floor(2 * 1024 / 256)"
+    },
+    "explanation_ka": "2 × 1024 = 2048 MB, 2048 ÷ 256 = 8 ვიდეო. ხაფანგი: 1 GB-ს 1000 MB-ად ითვლით (2000 ÷ 256 ≈ 7.8, ანუ 7), პირობაში კი წერია, რომ 1 GB = 1024 MB.",
+    "explanation_en": "2 × 1024 = 2048 MB, and 2048 ÷ 256 = 8 videos. The trap is counting 1 GB as 1000 MB (2000 ÷ 256 ≈ 7.8, so 7) when the question says 1 GB = 1024 MB."
+  },
+  {
+    "id": "CL-007",
+    "module": "computer_literacy",
+    "difficulty": 1,
+    "format": "workplace_task",
+    "pattern_tag": "account_security",
+    "question_ka": "რომელია ყველაზე ძლიერი პაროლი?",
+    "question_en": "Which of these passwords is the strongest?",
+    "options": [
+      "Password123!",
+      "Nino1998",
+      "Gt7#qL",
+      "violet-tractor-harbor-mango-42"
+    ],
+    "correct": 3,
+    "explanation_ka": "პაროლის სიძლიერეს ყველაზე მეტად სიგრძე განსაზღვრავს. ერთმანეთთან უკავშირო სიტყვების გრძელ ფრაზას გაცილებით ძნელად გამოიცნობენ, ვიდრე სიმბოლოებით სავსე მოკლე პაროლს. Password123!-სა და Nino1998-ს (სახელი + დაბადების წელი) თავდამსხმელები პირველივე ცდებში ამოწმებენ.",
+    "explanation_en": "Length matters most: a long phrase of unrelated words is far harder to guess than a short password full of symbols. Password123! and Nino1998 (a name plus a birth year) are among the first guesses attackers try."
+  },
+  {
+    "id": "CL-008",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "data_table",
+    "pattern_tag": "spreadsheet_references",
+    "question_ka": "C2 უჯრაში წერია `=A2*$B$1`. ქეთევანი C2-ს ქვემოთ, C5-მდე აკოპირებს. რა ფორმულა აღმოჩნდება C5-ში?",
+    "question_en": "Cell C2 contains `=A2*$B$1`. Ketevan copies C2 down to C5. Which formula ends up in C5?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        "A",
+        "B",
+        "C"
+      ],
+      "rows": [
+        [
+          {
+            "ka": "კურსი:",
+            "en": "Rate:"
+          },
+          "2.7",
+          ""
+        ],
+        [
+          "100",
+          "",
+          "=A2*$B$1"
+        ],
+        [
+          "250",
+          "",
+          ""
+        ],
+        [
+          "40",
+          "",
+          ""
+        ],
+        [
+          "75",
+          "",
+          ""
+        ]
+      ]
+    },
+    "options": [
+      "=A5*$B$1",
+      "=A5*$B$4",
+      "=A2*$B$1",
+      "=A5*B4"
+    ],
+    "correct": 0,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => {\n        const shift = (f, dr, dc) => f.replace(/(\\$?)([A-Z])(\\$?)(\\d+)/g, (m, cA, col, rA, row) =>\n          cA + (cA ? col : String.fromCharCode(col.charCodeAt(0) + dc)) + rA + (rA ? row : String(Number(row) + dr)));\n        return shift(q.visual.rows[1][2], 3, 0);\n      }"
+    },
+    "explanation_ka": "ფარდობითი მისამართი ფორმულასთან ერთად გადაინაცვლებს: 3 სტრიქონით ქვემოთ A2 ხდება A5. $B$1 აბსოლუტური მისამართია: $ ნიშნები სვეტსაც და სტრიქონსაც აფიქსირებს, ამიტომ ის არ იცვლება. ხაფანგი: ფიქრობთ, რომ ყველა მისამართი გადაინაცვლებს (=A5*$B$4).",
+    "explanation_en": "A relative reference moves with the copy: 3 rows down, A2 becomes A5. $B$1 is absolute — the $ signs lock both the column and the row, so it stays the same. The trap is assuming everything shifts (=A5*$B$4)."
+  },
+  {
+    "id": "CL-009",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "workplace_task",
+    "pattern_tag": "browser_basics",
+    "question_ka": "ლუკა სამსახურის კომპიუტერზე ბრაუზერის პირად (ინკოგნიტო) ფანჯარას ხსნის. რომელი დებულებაა სწორი?",
+    "question_en": "Luka opens a private (incognito) browser window on his work computer. Which statement is true?",
+    "options": [
+      {
+        "ka": "ამ ფანჯარაში გახსნილ საიტებს ვერც კომპანიის ქსელი დაინახავს და ვერც მისი ადმინისტრატორები",
+        "en": "The sites he visits in it are hidden from the company network and its administrators"
+      },
+      {
+        "ka": "ამ ფანჯრიდან ჩამოტვირთული ფაილები ფანჯრის დახურვისას ავტომატურად წაიშლება",
+        "en": "Files he downloads in it are deleted automatically when the window closes"
+      },
+      {
+        "ka": "ეს ფანჯარა კომპიუტერს ვირუსებისგან იცავს",
+        "en": "The window protects the computer from viruses"
+      },
+      {
+        "ka": "ფანჯრის დახურვისას ამ ფანჯრის ისტორია და ქუქი-ფაილები კომპიუტერიდან იშლება",
+        "en": "When he closes the window, its browsing history and cookies are removed from the computer"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "პირადი რეჟიმი მხოლოდ ერთს აკეთებს: ფანჯრის დახურვის შემდეგ ბრაუზერი მის ისტორიას, ქუქი-ფაილებს და ფორმებში შეყვანილ მონაცემებს არ ინახავს. კომპანიის ქსელი, ინტერნეტპროვაიდერი და თავად საიტები ვიზიტებს მაინც ხედავენ. ჩამოტვირთული ფაილებიც კომპიუტერზე რჩება.",
+    "explanation_en": "Private mode only stops the browser from keeping that window's history, cookies and form data after it closes. The company network, the internet provider and the sites themselves still see the visits, and downloaded files stay on the computer."
+  },
+  {
+    "id": "CL-010",
+    "module": "computer_literacy",
+    "difficulty": 1,
+    "format": "workplace_task",
+    "pattern_tag": "hardware_basics",
+    "question_ka": "საბა ანგარიშს წერდა, როცა უცებ დენი გაითიშა. ადრე შენახული ტექსტი ადგილზეა, ბოლო ერთი საათის შეუნახავი სამუშაო კი დაიკარგა. რატომ?",
+    "question_en": "Saba was writing a report when the power suddenly went off. The text he had saved earlier is still there, but the last hour of unsaved work is lost. Why?",
+    "options": [
+      {
+        "ka": "შეუნახავი სამუშაო მხოლოდ ოპერატიულ მეხსიერებაში (RAM) იყო, რომელიც დენის გათიშვისას იშლება",
+        "en": "The unsaved work was held only in RAM, which is cleared when the power goes off"
+      },
+      {
+        "ka": "დენის გათიშვისას საცავი (SSD) სუფთავდება",
+        "en": "The storage drive (SSD) is wiped when the power goes off"
+      },
+      {
+        "ka": "პროცესორი (CPU) დაუმთავრებელ ფაილებს შლის",
+        "en": "The processor (CPU) deletes unfinished files"
+      },
+      {
+        "ka": "ფაილი საცავისთვის ზედმეტად დიდი იყო",
+        "en": "The file was too large for the storage drive"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "RAM დროებითი სამუშაო მეხსიერებაა: მონაცემებს მხოლოდ მაშინ ინახავს, როცა დენი მიეწოდება. შენახული ფაილები საცავზეა (SSD ან მყარი დისკი), საცავი კი მონაცემებს დენის გარეშეც ინახავს. ამიტომ ადრინდელი ვერსია გადარჩა. ხაფანგი: მეხსიერებას (RAM) და საცავს ერთმანეთში ურევთ.",
+    "explanation_en": "RAM is temporary working memory and needs power to keep its contents. Saved files sit on storage (SSD or hard drive), which keeps data without power — that is why the earlier version survived. The trap is mixing up memory (RAM) with storage."
+  },
+  {
+    "id": "CL-011",
+    "module": "computer_literacy",
+    "difficulty": 1,
+    "format": "workplace_task",
+    "pattern_tag": "cloud_sharing",
+    "question_ka": "მარიამი Google Docs-ის დოკუმენტს დავითს უზიარებს. დავითს კომენტარების დატოვება უნდა შეეძლოს, თავად ტექსტის შეცვლა კი — არა. წვდომის რომელი დონე უნდა მისცეს?",
+    "question_en": "Mariam shares a Google Docs document with Davit. He should be able to leave comments but not change the text itself. Which access level should she give him?",
+    "options": [
+      {
+        "ka": "მნახველი (Viewer)",
+        "en": "Viewer"
+      },
+      {
+        "ka": "კომენტატორი (Commenter)",
+        "en": "Commenter"
+      },
+      {
+        "ka": "რედაქტორი (Editor)",
+        "en": "Editor"
+      },
+      {
+        "ka": "მფლობელი (Owner)",
+        "en": "Owner"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "კომენტატორს შეუძლია დოკუმენტი წაიკითხოს და კომენტარი ან შესწორების წინადადება დატოვოს, ტექსტს კი პირდაპირ ვერ შეცვლის. მნახველი კომენტარს საერთოდ ვერ წერს. რედაქტორსა და მფლობელს კი ტექსტის შეცვლა შეუძლიათ — ეს საჭიროზე მეტი წვდომაა.",
+    "explanation_en": "A Commenter can read and leave comments (or suggestions) but cannot change the text directly. A Viewer cannot comment at all, while an Editor or Owner can rewrite the document — more access than needed."
+  },
+  {
+    "id": "CL-012",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "workplace_task",
+    "pattern_tag": "troubleshooting_steps",
+    "question_ka": "ოფისში ნიკას ლეპტოპი ვერცერთ ვებსაიტს ვერ ხსნის, იმავე Wi-Fi ქსელზე მყოფი კოლეგები კი ჩვეულებრივ მუშაობენ. პირველ რიგში რა უნდა გააკეთოს?",
+    "question_en": "At the office, Nika's laptop cannot open any website, while colleagues on the same Wi-Fi network are working normally. What should he do first?",
+    "options": [
+      {
+        "ka": "ოფისის როუტერი გადატვირთოს",
+        "en": "Restart the office router"
+      },
+      {
+        "ka": "ბრაუზერი ხელახლა დააინსტალიროს",
+        "en": "Reinstall the browser"
+      },
+      {
+        "ka": "შეამოწმოს ლეპტოპის Wi-Fi კავშირი, შემდეგ Wi-Fi გამორთოს და ჩართოს ან ლეპტოპი გადატვირთოს",
+        "en": "Check the laptop's Wi-Fi connection, then turn Wi-Fi off and on or restart the laptop"
+      },
+      {
+        "ka": "ინტერნეტპროვაიდერს დაურეკოს და ხარვეზი შეატყობინოს",
+        "en": "Call the internet provider to report an outage"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "იმავე ქსელში კოლეგებთან ყველაფერი მუშაობს, ესე იგი, პრობლემა ნიკას ლეპტოპშია. ამიტომ ჯერ სწრაფად უნდა შეამოწმოს თავისი ლეპტოპი. როუტერის გადატვირთვა და პროვაიდერთან დარეკვა საერთო ქსელს ეხება, ის კი გამართულია. ხელახალ ინსტალაციაზე მხოლოდ მაშინ უნდა იფიქროს, როცა მარტივი ნაბიჯები არ უშველის.",
+    "explanation_en": "Colleagues on the same network are fine, so the fault is on Nika's laptop: start with quick checks on that device. Restarting the router or calling the provider targets the shared network, which works, and reinstalling software comes only after the simple steps fail."
+  },
+  {
+    "id": "CL-013",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "workplace_task",
+    "pattern_tag": "backup_practice",
+    "question_ka": "სარეზერვო ასლების წესი 3-2-1 ასეთია: მონაცემების 3 ასლი, 2 სხვადასხვა ტიპის საცავზე, აქედან 1 ასლი — სხვა ადგილას. ელენე სადიპლომო ნაშრომს ლეპტოპზე ინახავს, ერთ ასლს კი — გარე დისკზე. ამ დისკს ლეპტოპთან ერთად, იმავე ჩანთაში ატარებს. რა აკლია ელენეს?",
+    "question_en": "The 3-2-1 backup rule: keep 3 copies of your data, on 2 different types of storage, with 1 copy in another location. Elene keeps her thesis on her laptop and one copy on an external drive that she carries in the same bag as the laptop. What is missing?",
+    "options": [
+      {
+        "ka": "არაფერი: მას უკვე აქვს 2 ასლი 2 სხვადასხვა ტიპის საცავზე",
+        "en": "Nothing: she already has 2 copies on 2 types of storage"
+      },
+      {
+        "ka": "მესამე ასლი, რომელიც სხვა ადგილას ინახება — მაგალითად, ღრუბლოვან საცავში",
+        "en": "A third copy kept in another location — for example, in cloud storage"
+      },
+      {
+        "ka": "მეორე ასლი იმავე ლეპტოპზე, სხვა საქაღალდეში",
+        "en": "A second copy on the same laptop, in another folder"
+      },
+      {
+        "ka": "გარე დისკზე პაროლის დაყენება",
+        "en": "A password on the external drive"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "ელენეს მხოლოდ 2 ასლი აქვს და ორივე ერთ ჩანთაშია. ჩანთის მოპარვა ან დაზიანება ორივე ასლს გაანადგურებს. ღრუბლოვანი ასლით ელენეს ექნება 3 ასლი, აქედან 1 — სხვა ადგილას. იმავე ლეპტოპზე შენახული ასლი კი ლეპტოპთან ერთად დაიკარგება.",
+    "explanation_en": "Elene has only 2 copies, and both travel in one bag, so a single theft or accident destroys both. A cloud copy makes 3 copies with 1 in another place. A copy on the same laptop is lost together with the laptop."
+  },
+  {
+    "id": "CL-014",
+    "module": "computer_literacy",
+    "difficulty": 3,
+    "format": "counting",
+    "pattern_tag": "email_recipients",
+    "question_ka": "თამარი წერილს აგზავნის: „ვის“ (To) ველში 2 ადამიანია, CC-ში — 3, BCC-ში — 4. ლევანი, რომელიც CC-ში იყო, „ყველას პასუხს“ (Reply All) აჭერს. რამდენი ადამიანი მიიღებს ლევანის პასუხს?",
+    "question_en": "Tamar sends an email with 2 people in To, 3 in CC and 4 in BCC. Levani, one of the CC recipients, clicks Reply All. How many people receive Levani's reply?",
+    "options": [
+      "5",
+      "6",
+      "8",
+      "9"
+    ],
+    "correct": 0,
+    "verify": {
+      "type": "numeric",
+      "expr": "1 + 2 + (3 - 1)"
+    },
+    "explanation_ka": "„ყველას პასუხი“ მიდის გამგზავნთან და To-სა და CC-ში მყოფ ყველასთან, თავად ლევანის გარდა: 1 + 2 + 2 = 5. BCC-ის მისამართები ლევანისთვის დამალულია, ამიტომ მის პასუხს ისინი ვერ მიიღებენ. ხაფანგი: BCC-ში მყოფებსაც ითვლით (9) ან თავად ლევანსაც (6).",
+    "explanation_en": "Reply All goes to the sender and everyone in To and CC except yourself: 1 + 2 + 2 = 5. The BCC addresses are hidden from Levani, so his reply cannot reach them — counting them gives 9, and counting Levani himself gives 6."
+  },
+  {
+    "id": "CL-015",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "workplace_task",
+    "pattern_tag": "keyboard_shortcuts",
+    "question_ka": "ანას სურს, Mac-ზე სწრაფად გადავიდეს ერთი გახსნილი პროგრამიდან მეორეზე (მაგალითად, Excel-იდან Safari-ზე). კლავიშების რომელი კომბინაცია აკეთებს ამას?",
+    "question_en": "On a Mac, Ana wants to switch quickly from one open app to another (for example, from Excel to Safari). Which keyboard shortcut does this?",
+    "options": [
+      "Alt + Tab",
+      "Cmd + Space",
+      "Ctrl + Tab",
+      "Cmd + Tab"
+    ],
+    "correct": 3,
+    "explanation_ka": "macOS-ზე გახსნილ პროგრამებს შორის გადართვა Cmd + Tab-ით ხდება. Alt + Tab იგივეს Windows-ზე აკეთებს. Cmd + Space Spotlight-ის ძიებას ხსნის. Ctrl + Tab კი ერთი პროგრამის შიგნით გადართავს, მაგალითად, ბრაუზერის ჩანართებს შორის.",
+    "explanation_en": "On macOS, Cmd + Tab switches between open apps. Alt + Tab does this on Windows, Cmd + Space opens Spotlight search, and Ctrl + Tab moves between tabs inside one app, such as a browser."
+  },
+  {
+    "id": "CL-016",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "data_table",
+    "pattern_tag": "spreadsheet_formulas",
+    "question_ka": "B9 უჯრაში წერია `=COUNTIF(B2:B8,\">50\")`. რას აჩვენებს B9?",
+    "question_en": "Cell B9 contains `=COUNTIF(B2:B8,\">50\")`. What does B9 show?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rows": [
+        [
+          {
+            "ka": "ფილიალი",
+            "en": "Branch"
+          },
+          {
+            "ka": "გაყიდვები",
+            "en": "Sales"
+          }
+        ],
+        [
+          {
+            "ka": "თბილისი",
+            "en": "Tbilisi"
+          },
+          "75"
+        ],
+        [
+          {
+            "ka": "ბათუმი",
+            "en": "Batumi"
+          },
+          "50"
+        ],
+        [
+          {
+            "ka": "ქუთაისი",
+            "en": "Kutaisi"
+          },
+          "42"
+        ],
+        [
+          {
+            "ka": "რუსთავი",
+            "en": "Rustavi"
+          },
+          "91"
+        ],
+        [
+          {
+            "ka": "გორი",
+            "en": "Gori"
+          },
+          "50"
+        ],
+        [
+          {
+            "ka": "ზუგდიდი",
+            "en": "Zugdidi"
+          },
+          "63"
+        ],
+        [
+          {
+            "ka": "თელავი",
+            "en": "Telavi"
+          },
+          "38"
+        ]
+      ]
+    },
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": 1,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => q.visual.rows.slice(1).filter(r => Number(r[1]) > 50).length"
+    },
+    "explanation_ka": "„>50“ მხოლოდ 50-ზე მეტ რიცხვებს ითვლის: 75, 91 და 63 — სულ 3. ხაფანგი: ორივე 50-საც ითვლით, როგორც ამას „>=50“ გააკეთებდა, და იღებთ 5-ს.",
+    "explanation_en": "\">50\" counts only values strictly greater than 50: 75, 91 and 63 — 3 in total. The two 50s do not count; including them (as \">=50\" would) gives 5."
+  },
+  {
+    "id": "CL-017",
+    "module": "computer_literacy",
+    "difficulty": 3,
+    "format": "data_table",
+    "pattern_tag": "spreadsheet_formulas",
+    "question_ka": "B7 უჯრაში წერია `=AVERAGE(B2:B6)`. B4 უჯრა ცარიელია. რას აჩვენებს B7?",
+    "question_en": "Cell B7 contains `=AVERAGE(B2:B6)`. Cell B4 is empty. What does B7 show?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rows": [
+        [
+          {
+            "ka": "თვე",
+            "en": "Month"
+          },
+          {
+            "ka": "ხარჯი (ლარი)",
+            "en": "Cost (GEL)"
+          }
+        ],
+        [
+          {
+            "ka": "იანვარი",
+            "en": "January"
+          },
+          "120"
+        ],
+        [
+          {
+            "ka": "თებერვალი",
+            "en": "February"
+          },
+          "80"
+        ],
+        [
+          {
+            "ka": "მარტი",
+            "en": "March"
+          },
+          ""
+        ],
+        [
+          {
+            "ka": "აპრილი",
+            "en": "April"
+          },
+          "100"
+        ],
+        [
+          {
+            "ka": "მაისი",
+            "en": "May"
+          },
+          "0"
+        ]
+      ]
+    },
+    "options": [
+      "100",
+      "80",
+      "75",
+      "60"
+    ],
+    "correct": 2,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => {\n        const v = q.visual.rows.slice(1).map(r => r[1]).filter(c => c !== '').map(Number);\n        return v.reduce((s, x) => s + x, 0) / v.length;\n      }"
+    },
+    "explanation_ka": "AVERAGE ცარიელ B4-ს გამოტოვებს, B6-ში ჩაწერილ 0-ს კი ითვლის: (120 + 80 + 100 + 0) ÷ 4 = 75. ხაფანგი: ჯამს 5-ვე უჯრაზე ყოფთ (60) ან 0-საც გამოტოვებთ (100).",
+    "explanation_en": "AVERAGE skips the empty B4 but counts the 0 in B6: (120 + 80 + 100 + 0) ÷ 4 = 75. Dividing by all 5 cells gives 60; skipping the 0 as well gives 100."
+  },
+  {
+    "id": "CL-018",
+    "module": "computer_literacy",
+    "difficulty": 3,
+    "format": "workplace_task",
+    "pattern_tag": "phishing_signs",
+    "question_ka": "„ცისკარი ბანკის“ სახელით მოსულ SMS-ში ასეთი ბმულია: `https://tsiskaribank.ge.secure-login-verify-portal.net/account`. რომელ საიტზე მიდის ეს ბმული სინამდვილეში?",
+    "question_en": "A text message that seems to come from \"Tsiskari Bank\" contains this link: `https://tsiskaribank.ge.secure-login-verify-portal.net/account`. Which website does the link actually lead to?",
+    "options": [
+      {
+        "ka": "ცისკარი ბანკის საიტზე — tsiskaribank.ge",
+        "en": "Tsiskari Bank's own site, tsiskaribank.ge"
+      },
+      {
+        "ka": "სახელმწიფო საიტზე, რადგან მისამართში .ge წერია",
+        "en": "A government site, because the address contains .ge"
+      },
+      {
+        "ka": "უსაფრთხო საიტზე, რადგან მისამართი https-ით იწყება",
+        "en": "A safe site, because the address starts with https"
+      },
+      {
+        "ka": "secure-login-verify-portal.net დომენის საიტზე",
+        "en": "A site on the domain secure-login-verify-portal.net"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "წაიკითხეთ მისამართი https://-ის შემდეგ, პირველ „/“-მდე: tsiskaribank.ge.secure-login-verify-portal.net. ნამდვილი დომენი ამ ნაწილის ბოლოშია: secure-login-verify-portal.net. საიტს სწორედ ამ დომენის მფლობელი მართავს. წინ მიწერილი „tsiskaribank.ge.“ მხოლოდ ქვედომენია და მას მფლობელი ნებისმიერ სახელს დაარქმევს. https კი მხოლოდ იმას ნიშნავს, რომ კავშირი დაშიფრულია.",
+    "explanation_en": "Read the address up to the first single \"/\": tsiskaribank.ge.secure-login-verify-portal.net. The real domain is the end of that part, secure-login-verify-portal.net, and whoever owns it controls the site. \"tsiskaribank.ge.\" in front is only a subdomain, which the owner of secure-login-verify-portal.net can name however they like. https only means the connection is encrypted."
+  },
+  {
+    "id": "CL-019",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "data_table",
+    "pattern_tag": "spreadsheet_formulas",
+    "question_ka": "F1 უჯრაში წერია `=VLOOKUP(\"P-104\",A2:C6,3,FALSE)`. რას აჩვენებს F1?",
+    "question_en": "Cell F1 contains `=VLOOKUP(\"P-104\",A2:C6,3,FALSE)`. What does F1 show?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        "A",
+        "B",
+        "C"
+      ],
+      "rows": [
+        [
+          {
+            "ka": "კოდი",
+            "en": "Code"
+          },
+          {
+            "ka": "პროდუქტი",
+            "en": "Product"
+          },
+          {
+            "ka": "ფასი (ლარი)",
+            "en": "Price (GEL)"
+          }
+        ],
+        [
+          "P-101",
+          {
+            "ka": "მაუსი",
+            "en": "Mouse"
+          },
+          "25"
+        ],
+        [
+          "P-102",
+          {
+            "ka": "კლავიატურა",
+            "en": "Keyboard"
+          },
+          "40"
+        ],
+        [
+          "P-103",
+          {
+            "ka": "მონიტორი",
+            "en": "Monitor"
+          },
+          "380"
+        ],
+        [
+          "P-104",
+          {
+            "ka": "ყურსასმენი",
+            "en": "Headset"
+          },
+          "65"
+        ],
+        [
+          "P-105",
+          {
+            "ka": "ვებკამერა",
+            "en": "Webcam"
+          },
+          "90"
+        ]
+      ]
+    },
+    "options": [
+      "65",
+      {
+        "ka": "ყურსასმენი",
+        "en": "Headset"
+      },
+      "380",
+      "90"
+    ],
+    "correct": 0,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => {\n        const range = q.visual.rows.slice(1, 6);\n        const row = range.find(r => r[0] === 'P-104');\n        const cell = row[3 - 1];\n        return typeof cell === 'string' ? Number(cell) : cell.en;\n      }"
+    },
+    "explanation_ka": "VLOOKUP „P-104“-ს დიაპაზონის პირველ სვეტში პოულობს (მე-5 სტრიქონი). შემდეგ იმავე სტრიქონიდან აბრუნებს A2:C6 დიაპაზონის მე-3 სვეტის მნიშვნელობას. ეს C სვეტია, ანუ ფასი — 65. ხაფანგი: სვეტის ნომერს არასწორად ითვლით; მაგალითად, 2 „ყურსასმენს“ დააბრუნებდა.",
+    "explanation_en": "VLOOKUP finds \"P-104\" in the first column (row 5) and returns the 3rd column of A2:C6, which is C — the price, 65. The trap is miscounting the column number: 2 would return \"Headset\"."
+  },
+  {
+    "id": "CL-020",
+    "module": "computer_literacy",
+    "difficulty": 1,
+    "format": "workplace_task",
+    "pattern_tag": "troubleshooting_steps",
+    "question_ka": "Excel-ში უჯრა, რომელშიც თარიღი უნდა ჩანდეს, ახლა `#####`-ს აჩვენებს. რა არის ყველაზე სავარაუდო მიზეზი?",
+    "question_en": "In Excel, a cell that should show a date now shows `#####`. What is the most likely cause?",
+    "options": [
+      {
+        "ka": "ფორმულაში შეცდომაა",
+        "en": "The formula contains an error"
+      },
+      {
+        "ka": "ფაილი დაზიანებულია",
+        "en": "The file is damaged"
+      },
+      {
+        "ka": "სვეტი ზედმეტად ვიწროა მნიშვნელობის საჩვენებლად",
+        "en": "The column is too narrow to display the value"
+      },
+      {
+        "ka": "თარიღი წაიშალა",
+        "en": "The date has been deleted"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "##### ჩვეულებრივ ნიშნავს, რომ მნიშვნელობა სვეტში არ ეტევა. გააფართოვეთ სვეტი (მაგალითად, ორჯერ დააწკაპუნეთ სვეტის სათაურის მარჯვენა კიდეზე) და თარიღი გამოჩნდება. ნამდვილ შეცდომებს სახელი აქვს, მაგალითად #DIV/0! ან #VALUE!. წაშლილი მნიშვნელობა კი ცარიელ უჯრას ტოვებს.",
+    "explanation_en": "##### usually means the value does not fit: widen the column (for example, double-click the right edge of the column header) and the date appears. Real errors have a name, such as #DIV/0! or #VALUE!, and a deleted value leaves an empty cell."
+  },
+  {
+    "id": "CL-021",
+    "module": "computer_literacy",
+    "difficulty": 3,
+    "format": "data_table",
+    "pattern_tag": "spreadsheet_formulas",
+    "question_ka": "D2 უჯრაში წერია `=B2/C2`, ფორმულა კი ქვემოთ, D7-მდეა დაკოპირებული. D2:D7 დიაპაზონის რამდენი უჯრა აჩვენებს `#DIV/0!` შეცდომას?",
+    "question_en": "Cell D2 contains `=B2/C2`, and the formula is copied down to D7. How many cells in D2:D7 show the `#DIV/0!` error?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        "A",
+        "B",
+        "C"
+      ],
+      "rows": [
+        [
+          {
+            "ka": "გამყიდველი",
+            "en": "Seller"
+          },
+          {
+            "ka": "შემოსავალი",
+            "en": "Revenue"
+          },
+          {
+            "ka": "შეკვეთები",
+            "en": "Orders"
+          }
+        ],
+        [
+          {
+            "ka": "ნინო",
+            "en": "Nino"
+          },
+          "500",
+          "10"
+        ],
+        [
+          {
+            "ka": "გიორგი",
+            "en": "Giorgi"
+          },
+          "300",
+          "0"
+        ],
+        [
+          {
+            "ka": "ლუკა",
+            "en": "Luka"
+          },
+          "450",
+          "9"
+        ],
+        [
+          {
+            "ka": "ანა",
+            "en": "Ana"
+          },
+          "200",
+          ""
+        ],
+        [
+          {
+            "ka": "დავითი",
+            "en": "Davit"
+          },
+          "0",
+          "5"
+        ],
+        [
+          {
+            "ka": "მარიამი",
+            "en": "Mariam"
+          },
+          "600",
+          "12"
+        ]
+      ]
+    },
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 1,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => q.visual.rows.slice(1).filter(r => r[2] === '' || Number(r[2]) === 0).length"
+    },
+    "explanation_ka": "0-ზე გაყოფა #DIV/0! შეცდომას იძლევა. ასეთ ფორმულაში ცარიელი უჯრაც 0-ად ითვლება. შეცდომა ჩნდება გიორგისთან (C3 = 0) და ანასთან (C5 ცარიელია) — 2 უჯრა. დავითთან კი თავად 0 იყოფა: 0 ÷ 5 = 0, და ეს შეცდომა არ არის.",
+    "explanation_en": "Dividing by 0 gives #DIV/0!, and an empty divisor counts as 0: Giorgi (C3 = 0) and Ana (C5 is empty) — 2 cells. Davit's 0 is the number being divided, and 0 ÷ 5 = 0 is not an error."
+  },
+  {
+    "id": "CL-022",
+    "module": "computer_literacy",
+    "difficulty": 3,
+    "format": "data_table",
+    "pattern_tag": "spreadsheet_references",
+    "question_ka": "B2 უჯრაში წერია `=$A2*B$1`. ნიკა B2-ს აკოპირებს და C3-ში ჩასვამს. რა რიცხვს აჩვენებს C3?",
+    "question_en": "Cell B2 contains `=$A2*B$1`. Nika copies B2 and pastes it into C3. What number does C3 show?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "rows": [
+        [
+          "",
+          "2",
+          "3",
+          "4"
+        ],
+        [
+          "10",
+          "=$A2*B$1",
+          "",
+          ""
+        ],
+        [
+          "20",
+          "",
+          "",
+          ""
+        ],
+        [
+          "30",
+          "",
+          "",
+          ""
+        ]
+      ]
+    },
+    "options": [
+      "20",
+      "30",
+      "40",
+      "60"
+    ],
+    "correct": 3,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => {\n        const g = q.visual.rows;\n        const shift = (f, dr, dc) => f.replace(/(\\$?)([A-Z])(\\$?)(\\d+)/g, (m, cA, col, rA, row) =>\n          cA + (cA ? col : String.fromCharCode(col.charCodeAt(0) + dc)) + rA + (rA ? row : String(Number(row) + dr)));\n        const f = shift(g[1][1], 1, 1);\n        const val = ref => { const m = ref.replace(/\\$/g, '').match(/([A-Z])(\\d+)/); return Number(g[Number(m[2]) - 1][m[1].charCodeAt(0) - 65]); };\n        return f.slice(1).split('*').map(val).reduce((a, b) => a * b, 1);\n      }"
+    },
+    "explanation_ka": "ფორმულა ერთი სვეტით მარჯვნივ და ერთი სტრიქონით ქვემოთ გადაიტანეს. $A სვეტს A-ზე აფიქსირებს, სტრიქონი კი იცვლება (A2 → A3). B$1 სტრიქონს 1-ზე აფიქსირებს, სვეტი კი იცვლება (B → C). ამიტომ C3 = $A3*C$1 = 20 × 3 = 60. ხაფანგი: თუ არაფერს გადაწევთ, მიიღებთ 20-ს; თუ მხოლოდ სტრიქონს — 40-ს, მხოლოდ სვეტს — 30-ს.",
+    "explanation_en": "One column right and one row down: $A keeps column A while the row changes (A2 → A3), and B$1 keeps row 1 while the column changes (B → C). So C3 = $A3*C$1 = 20 × 3 = 60. Shifting nothing gives 20, shifting only the row gives 40, only the column 30."
+  },
+  {
+    "id": "CL-023",
+    "module": "computer_literacy",
+    "difficulty": 1,
+    "format": "workplace_task",
+    "pattern_tag": "file_management",
+    "question_ka": "თამარმა 30 ფოტო ელფოსტით ერთ დანართად უნდა გააგზავნოს. რა უნდა გააკეთოს?",
+    "question_en": "Tamar must email 30 photos as a single attachment. What should she do?",
+    "options": [
+      {
+        "ka": "ფოტოები მონიშნოს და ერთ .zip ფაილად შეკუმშოს",
+        "en": "Select the photos and compress them into one .zip file"
+      },
+      {
+        "ka": "ფოტოების საქაღალდეს photos.zip დაარქვას",
+        "en": "Rename the photo folder to photos.zip"
+      },
+      {
+        "ka": "წერილს საქაღალდის მალსახმობი (shortcut) დაურთოს",
+        "en": "Attach a shortcut to the folder"
+      },
+      {
+        "ka": "წერილში საქაღალდის მისამართი ჩასვას (მაგალითად, C:\\Users\\Tamar\\Photos)",
+        "en": "Paste the folder path into the email (for example, C:\\Users\\Tamar\\Photos)"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "შეკუმშვისას ყველა ფოტო ერთ ნამდვილ არქივ-ფაილში ხვდება, ამ ფაილს კი თამარი წერილს დაურთავს. საქაღალდის გადარქმევა მას არქივად არ აქცევს. მალსახმობი და საქაღალდის მისამართი მხოლოდ თამარის კომპიუტერზე არსებულ ფაილებზე მიუთითებს, ამიტომ მიმღები გასახსნელს ვერაფერს მიიღებს.",
+    "explanation_en": "Compressing packs all the photos into one real archive file that can be attached. Renaming a folder does not turn it into an archive, and a shortcut or a folder path only points to files on Tamar's own computer — the recipient gets nothing to open."
+  },
+  {
+    "id": "CL-024",
+    "module": "computer_literacy",
+    "difficulty": 3,
+    "format": "data_table",
+    "pattern_tag": "spreadsheet_references",
+    "question_ka": "B3 უჯრაში წერია `=A3*B1`. ანა B3-ს ქვემოთ, B4-სა და B5-ში აკოპირებს. რას აჩვენებს B4?",
+    "question_en": "Cell B3 contains `=A3*B1`. Ana copies B3 down into B4 and B5. What does B4 show?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rows": [
+        [
+          {
+            "ka": "კურსი:",
+            "en": "Rate:"
+          },
+          "2.7"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "100",
+          "=A3*B1"
+        ],
+        [
+          "200",
+          ""
+        ],
+        [
+          "50",
+          ""
+        ]
+      ]
+    },
+    "options": [
+      "0",
+      "270",
+      "540",
+      "#VALUE!"
+    ],
+    "correct": 0,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => {\n        const g = q.visual.rows;\n        const shift = (f, dr, dc) => f.replace(/(\\$?)([A-Z])(\\$?)(\\d+)/g, (m, cA, col, rA, row) =>\n          cA + (cA ? col : String.fromCharCode(col.charCodeAt(0) + dc)) + rA + (rA ? row : String(Number(row) + dr)));\n        const f = shift(g[2][1], 1, 0);\n        const val = ref => { const m = ref.replace(/\\$/g, '').match(/([A-Z])(\\d+)/); return Number(g[Number(m[2]) - 1][m[1].charCodeAt(0) - 65]); };\n        return f.slice(1).split('*').map(val).reduce((a, b) => a * b, 1);\n      }"
+    },
+    "explanation_ka": "ერთი სტრიქონით ქვემოთ ყველა ფარდობითი მისამართი გადაინაცვლებს: B4 = A4*B2. B2 ცარიელია და ფორმულაში 0-ად ითვლება, ამიტომ 200 × 0 = 0. ანას 540 (200 × 2.7) რომ მიეღო, კურსი $-ით უნდა დაეფიქსირებინა: =A3*$B$1.",
+    "explanation_en": "One row down, every relative reference shifts: B4 = A4*B2. B2 is empty and counts as 0, so 200 × 0 = 0. To get the expected 540 (200 × 2.7), the rate had to be locked: =A3*$B$1."
+  },
+  {
+    "id": "CL-025",
+    "module": "computer_literacy",
+    "difficulty": 3,
+    "format": "data_table",
+    "pattern_tag": "spreadsheet_formulas",
+    "question_ka": "A1:B7 დიაპაზონზე ფილტრია დაყენებული: ჩანს მხოლოდ თბილისის სტრიქონები. B8 უჯრა ფილტრის დიაპაზონის გარეთაა და ჩანს. მასში წერია `=SUM(B2:B7)`. რას აჩვენებს B8?",
+    "question_en": "A filter on A1:B7 shows only the Tbilisi rows. Cell B8, which is outside the filtered range and stays visible, contains `=SUM(B2:B7)`. What does B8 show?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        "A",
+        "B"
+      ],
+      "rows": [
+        [
+          {
+            "ka": "ქალაქი",
+            "en": "City"
+          },
+          {
+            "ka": "თანხა",
+            "en": "Amount"
+          }
+        ],
+        [
+          {
+            "ka": "თბილისი",
+            "en": "Tbilisi"
+          },
+          "120"
+        ],
+        [
+          {
+            "ka": "ბათუმი",
+            "en": "Batumi"
+          },
+          "80"
+        ],
+        [
+          {
+            "ka": "თბილისი",
+            "en": "Tbilisi"
+          },
+          "60"
+        ],
+        [
+          {
+            "ka": "ქუთაისი",
+            "en": "Kutaisi"
+          },
+          "40"
+        ],
+        [
+          {
+            "ka": "თბილისი",
+            "en": "Tbilisi"
+          },
+          "100"
+        ],
+        [
+          {
+            "ka": "ბათუმი",
+            "en": "Batumi"
+          },
+          "50"
+        ]
+      ]
+    },
+    "options": [
+      "280",
+      "450",
+      "170",
+      "130"
+    ],
+    "correct": 1,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => q.visual.rows.slice(1).reduce((s, r) => s + Number(r[1]), 0)"
+    },
+    "explanation_ka": "SUM B2:B7-ის ყველა უჯრას ჯამავს, ფილტრით დამალულ სტრიქონებსაც: 120 + 80 + 60 + 40 + 100 + 50 = 450. მხოლოდ ხილულ სტრიქონებს SUBTOTAL ფუნქცია ჯამავს და არა SUM. ხაფანგი: მხოლოდ თბილისის ხილულ სტრიქონებს ჯამავთ და იღებთ 280-ს.",
+    "explanation_en": "SUM adds every cell in B2:B7, including rows the filter hides: 120 + 80 + 60 + 40 + 100 + 50 = 450. The visible Tbilisi rows alone make 280 — totalling only visible rows needs SUBTOTAL, not SUM."
+  },
+  {
+    "id": "CL-026",
+    "module": "computer_literacy",
+    "difficulty": 3,
+    "format": "arithmetic",
+    "pattern_tag": "data_units",
+    "question_ka": "დავითი 300 MB ზომის ვიდეოს ტვირთავს. ატვირთვის სიჩქარე მუდმივად 20 Mbps-ია (მეგაბიტი წამში), 1 ბაიტი კი 8 ბიტია. რამდენ წამს გასტანს ატვირთვა?",
+    "question_en": "Davit uploads a 300 MB video. His upload speed is a steady 20 Mbps (megabits per second), and 1 byte is 8 bits. How many seconds will the upload take?",
+    "options": [
+      "2",
+      "15",
+      "120",
+      "2400"
+    ],
+    "correct": 2,
+    "verify": {
+      "type": "numeric",
+      "expr": "300 * 8 / 20"
+    },
+    "explanation_ka": "ჯერ ფაილის ზომა ბიტებში გადაიყვანეთ: 300 MB × 8 = 2400 მეგაბიტი. სიჩქარე 20 მეგაბიტია წამში, ამიტომ 2400 ÷ 20 = 120 წამი (2 წუთი). ხაფანგი: მეგაბაიტებს და მეგაბიტებს ერთმანეთში ურევთ და ითვლით 300 ÷ 20 = 15.",
+    "explanation_en": "First convert the file to bits: 300 MB × 8 = 2400 megabits. At 20 megabits per second: 2400 ÷ 20 = 120 seconds (2 minutes). The trap is 300 ÷ 20 = 15, which mixes up megabytes and megabits."
+  },
+  {
+    "id": "CL-027",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "arithmetic",
+    "pattern_tag": "data_units",
+    "question_ka": "თუ 1 GB = 1000 MB, 1 MB = 1000 KB და 1 TB = 1000 GB, რომელია ყველაზე დიდი ზომა?",
+    "question_en": "If 1 GB = 1000 MB, 1 MB = 1000 KB and 1 TB = 1000 GB, which of these sizes is the largest?",
+    "options": [
+      "0.001 TB",
+      "1.2 GB",
+      "900000 KB",
+      "1500 MB"
+    ],
+    "correct": 3,
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => {\n        const inGB = { KB: 1e-6, MB: 1e-3, GB: 1, TB: 1000 };\n        let best = null, bestVal = -1;\n        for (const opt of q.options) {\n          const [n, unit] = opt.split(' ');\n          const v = Number(n) * inGB[unit];\n          if (v > bestVal) { bestVal = v; best = opt; }\n        }\n        return best;\n      }"
+    },
+    "explanation_ka": "ყველაფერი GB-ში გადაიყვანეთ: 0.001 TB = 1 GB, 1.2 GB, 900000 KB = 900 MB = 0.9 GB, 1500 MB = 1.5 GB. ყველაზე დიდია 1500 MB. ხაფანგი: 900000 KB-ს ირჩევთ მხოლოდ იმიტომ, რომ მისი რიცხვი ყველაზე დიდია.",
+    "explanation_en": "Convert everything to GB: 0.001 TB = 1 GB, 1.2 GB, 900000 KB = 900 MB = 0.9 GB, 1500 MB = 1.5 GB. The largest is 1500 MB. The trap is picking 900000 KB just because it has the biggest number."
+  },
+  {
+    "id": "CL-028",
+    "module": "computer_literacy",
+    "difficulty": 3,
+    "format": "workplace_task",
+    "pattern_tag": "backup_practice",
+    "question_ka": "ლევანის სამუშაო საქაღალდე ღრუბლოვან საცავთან ავტომატურად სინქრონიზდება. გამომძალველმა პროგრამამ (ransomware) ლეპტოპზე ამ საქაღალდის ყველა ფაილი დაშიფრა. რა დაემართება, სავარაუდოდ, ფაილებს ღრუბელში?",
+    "question_en": "Levani's work folder syncs automatically with cloud storage. Ransomware has encrypted every file in that folder on his laptop. What most likely happens to the files in the cloud?",
+    "options": [
+      {
+        "ka": "ხელუხლებელი დარჩება, რადგან ღრუბელი ცალკე სარეზერვო ასლია",
+        "en": "They stay untouched, because the cloud is a separate backup"
+      },
+      {
+        "ka": "დაშიფრული ვერსიები ღრუბელშიც გადაიწერება; აღსადგენად ვერსიების ისტორია ან ცალკე სარეზერვო ასლი დასჭირდება",
+        "en": "The encrypted versions sync to the cloud too; to recover he needs version history or a separate backup"
+      },
+      {
+        "ka": "ღრუბლოვანი სერვისი გამომძალველ პროგრამას ავტომატურად წაშლის და ფაილებს გაშიფრავს",
+        "en": "The cloud service automatically removes the ransomware and decrypts the files"
+      },
+      {
+        "ka": "ღრუბელში მხოლოდ ის ფაილები დაზიანდება, რომლებიც ლევანმა იმ დღეს გახსნა",
+        "en": "Only the files Levani opened that day are affected in the cloud"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "სინქრონიზაციისას ღრუბელში ზუსტად ის ფაილები ინახება, რაც ლეპტოპზეა. ამიტომ დაშიფრული ფაილები ღრუბელშიც ჩაანაცვლებს კარგ ფაილებს (ლეპტოპზე წაშლილი ფაილიც ღრუბლიდან იშლება). ფაილების აღდგენა მხოლოდ ორი გზით შეიძლება: ძველი ვერსიებიდან (ვერსიების ისტორიით) ან ცალკე სარეზერვო ასლიდან, რომელსაც სინქრონიზაცია არ ეხება.",
+    "explanation_en": "Sync makes the cloud copy match the laptop, so the encrypted files replace the good ones there too (deletions sync the same way). He can recover only from earlier versions — version history — or from a separate backup that sync does not touch."
+  },
+  {
+    "id": "CL-029",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "workplace_task",
+    "pattern_tag": "browser_basics",
+    "question_ka": "საიტის მისამართი `https://`-ით იწყება (ბევრი ბრაუზერი ამ დროს ბოქლომის ნიშანსაც აჩვენებს). რას ნიშნავს ეს?",
+    "question_en": "A website's address starts with `https://` (many browsers also show a padlock icon). What does this tell you?",
+    "options": [
+      {
+        "ka": "თქვენს ბრაუზერსა და საიტს შორის კავშირი დაშიფრულია",
+        "en": "The connection between your browser and the site is encrypted"
+      },
+      {
+        "ka": "საიტს პატიოსანი, შემოწმებული კომპანია მართავს",
+        "en": "The site is run by an honest, verified company"
+      },
+      {
+        "ka": "საიტი ვირუსებზეა შემოწმებული",
+        "en": "The site has been checked for viruses"
+      },
+      {
+        "ka": "საიტი ქუქი-ფაილებს არ იყენებს",
+        "en": "The site does not use cookies"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "https და ბოქლომი მხოლოდ იმას ნიშნავს, რომ თქვენსა და საიტს შორის გადაცემული მონაცემები დაშიფრულია. ქსელში სხვები მათ ვერ წაიკითხავენ. https-ს თაღლითური საიტიც ადვილად იყენებს. ამიტომ ის არაფერს ამბობს იმაზე, ვინ მართავს საიტს და სანდოა თუ არა.",
+    "explanation_en": "https and the padlock only mean that data travelling between you and the site is encrypted, so others on the network cannot read it. Scam sites can use https just as easily, so it says nothing about who runs the site or whether it can be trusted."
+  },
+  {
+    "id": "CL-030",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "workplace_task",
+    "pattern_tag": "file_management",
+    "question_ka": "Windows-ზე დავითმა სამუშაო მაგიდაზე `Report.docx` ფაილის მალსახმობი (shortcut) შექმნა. ეს ფაილი „დოკუმენტების“ (Documents) საქაღალდეში იყო. შემდეგ დავითმა `Report.docx` „დოკუმენტებიდან“ წაშალა და ნაგვის ყუთი (Recycle Bin) დაცალა. რა მოხდება, როცა მალსახმობზე ორჯერ დააწკაპუნებს?",
+    "question_en": "On Windows, Davit created a desktop shortcut to `Report.docx`, which is in his Documents folder. Later he deleted `Report.docx` from Documents and emptied the Recycle Bin. What happens when he double-clicks the shortcut?",
+    "options": [
+      {
+        "ka": "ანგარიში ჩვეულებრივ გაიხსნება, რადგან მალსახმობი ფაილის ასლია",
+        "en": "The report opens normally, because a shortcut is a copy of the file"
+      },
+      {
+        "ka": "მალსახმობი ანგარიშს ავტომატურად აღადგენს",
+        "en": "The shortcut automatically restores the report"
+      },
+      {
+        "ka": "გაიხსნება იმავე სახელის ცარიელი ახალი დოკუმენტი",
+        "en": "A new empty document with the same name opens"
+      },
+      {
+        "ka": "ანგარიში ვერ გაიხსნება, რადგან ფაილი, რომელზეც მალსახმობი მიუთითებდა, აღარ არსებობს",
+        "en": "The report cannot be opened, because the file the shortcut pointed to no longer exists"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "მალსახმობი მხოლოდ მიუთითებს, სად დევს ფაილი; ის ფაილის ასლი არ არის. ორიგინალი წაიშალა და ნაგვის ყუთიც დაიცალა, ამიტომ მალსახმობი არარსებულ ფაილზე მიუთითებს. Windows დავითს შეატყობინებს, რომ ელემენტი ვერ მოიძებნა.",
+    "explanation_en": "A shortcut is only a pointer to where the file is, not a copy of it. Once the original is deleted and the Recycle Bin is emptied, the shortcut points to nothing and Windows reports that the item cannot be found."
+  },
+  {
+    "id": "CL-031",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "workplace_task",
+    "pattern_tag": "browser_basics",
+    "question_ka": "ნინომ ბრაუზერში ქუქი-ფაილები და ქეში წაშალა. რა იქნება ამის ყველაზე სავარაუდო შედეგი?",
+    "question_en": "Nino clears the cookies and the cache in her browser. What is the most likely result?",
+    "options": [
+      {
+        "ka": "ბრაუზერის სანიშნეები (bookmarks) წაიშლება",
+        "en": "Her bookmarks are deleted"
+      },
+      {
+        "ka": "„ჩამოტვირთვების“ (Downloads) საქაღალდეში არსებული ფაილები წაიშლება",
+        "en": "The files in her Downloads folder are deleted"
+      },
+      {
+        "ka": "საიტების უმეტესობიდან გამოვა და ხელახლა შესვლა მოუწევს",
+        "en": "She is signed out of most websites and has to sign in again"
+      },
+      {
+        "ka": "შენახული პაროლები ავტომატურად შეიცვლება",
+        "en": "Her saved passwords are changed automatically"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "ქუქი-ფაილების მეშვეობით საიტს ახსოვს, რომ უკვე შესული ხართ. ამიტომ მათი წაშლის შემდეგ საიტებიდან გამოხვალთ და საიტების პარამეტრებიც განულდება. ქეში მხოლოდ გვერდების ფაილების ასლებს ინახავს, ამიტომ გვერდები პირველად ცოტა ნელა ჩაიტვირთება. სანიშნეები და ჩამოტვირთული ფაილები ცალკე ინახება და ადგილზე რჩება.",
+    "explanation_en": "Cookies are what keep you signed in to sites, so clearing them signs you out (and resets site preferences). The cache only holds copies of page files, so pages may load a little slower at first. Bookmarks and downloaded files are stored separately and stay where they are."
+  },
+  {
+    "id": "CL-032",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "workplace_task",
+    "pattern_tag": "keyboard_shortcuts",
+    "question_ka": "Windows-ზე ბრაუზერში შემთხვევით დახურეთ ჩანართი, რომელიც ჯერ კიდევ გჭირდებოდათ. კლავიშების რომელი კომბინაცია გახსნის მას ხელახლა?",
+    "question_en": "In a browser on Windows, you accidentally close a tab you still needed. Which keyboard shortcut reopens it?",
+    "options": [
+      "Ctrl + T",
+      "Ctrl + Shift + T",
+      "Ctrl + W",
+      "Ctrl + Z"
+    ],
+    "correct": 1,
+    "explanation_ka": "Ctrl + Shift + T ბოლოს დახურულ ჩანართს ხელახლა ხსნის. Ctrl + T მხოლოდ ახალ, ცარიელ ჩანართს ხსნის. Ctrl + W მიმდინარე ჩანართს ხურავს. Ctrl + Z კი გვერდზე აკრეფილ ტექსტს აუქმებს, ჩანართის დახურვას — არა.",
+    "explanation_en": "Ctrl + Shift + T reopens the last closed tab. Ctrl + T only opens a new empty tab, Ctrl + W closes the current tab, and Ctrl + Z undoes typing on a page, not the closing of a tab."
+  },
+  {
+    "id": "CL-033",
+    "module": "computer_literacy",
+    "difficulty": 1,
+    "format": "workplace_task",
+    "pattern_tag": "account_security",
+    "question_ka": "ქეთევანი Windows-იან კომპიუტერს რამდენიმე წუთით ტოვებს, ოფისში კი სხვებიც არიან. კლავიშების რომელი კომბინაცია დაიცავს მის კომპიუტერს, სანამ დაბრუნდება?",
+    "question_en": "Ketevan is leaving her Windows computer for a few minutes, and other people are in the office. Which keyboard shortcut protects her computer until she comes back?",
+    "options": [
+      "Win + L",
+      "Win + D",
+      "Alt + F4",
+      "Ctrl + S"
+    ],
+    "correct": 0,
+    "explanation_ka": "Win + L კომპიუტერს ბლოკავს: ხელახლა შესასვლელად საჭიროა ქეთევანის პაროლი, PIN-კოდი ან თითის ანაბეჭდი. Win + D მხოლოდ ფანჯრებს მალავს და სამუშაო მაგიდას აჩენს — ნებისმიერს შეუძლია ისინი ისევ გახსნას. Alt + F4 მიმდინარე ფანჯარას ხურავს, Ctrl + S კი ფაილს ინახავს.",
+    "explanation_en": "Win + L locks the computer: getting back in needs her password, PIN or fingerprint. Win + D only hides the windows by showing the desktop — anyone can open them again. Alt + F4 closes the current window, and Ctrl + S saves a file."
+  },
+  {
+    "id": "CL-034",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "workplace_task",
+    "pattern_tag": "hardware_basics",
+    "question_ka": "ნიკას ლეპტოპი ნელა მუშაობს, როცა ერთდროულად ბევრი ჩანართი და პროგრამაა გახსნილი. ამოცანების მენეჯერი (Task Manager) აჩვენებს: მეხსიერება (RAM) — 8 GB-დან 95% დაკავებულია; დისკი (SSD) — 512 GB-დან 400 GB თავისუფალია. რომელი გაუმჯობესება უშველის ყველაზე მეტად?",
+    "question_en": "Nika's laptop is slow when many tabs and apps are open at once. Task Manager shows: memory (RAM) — 95% of 8 GB in use; disk (SSD) — 400 GB free out of 512 GB. Which upgrade would help the most?",
+    "options": [
+      {
+        "ka": "უფრო დიდი SSD, მაგალითად 1 TB",
+        "en": "A bigger SSD, for example 1 TB"
+      },
+      {
+        "ka": "უფრო დიდი მონიტორი",
+        "en": "A bigger monitor"
+      },
+      {
+        "ka": "უფრო სწრაფი ინტერნეტი",
+        "en": "A faster internet connection"
+      },
+      {
+        "ka": "მეტი ოპერატიული მეხსიერება (RAM)",
+        "en": "More RAM"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "RAM თითქმის სავსეა (95%), დისკზე კი ჯერ კიდევ 400 GB თავისუფალია. ესე იგი, ლეპტოპს სამუშაო მეხსიერება (RAM) აკლია. მეტი RAM-ით ერთდროულად მეტი ჩანართი და პროგრამა იმუშავებს. უფრო დიდი SSD საცავს ამატებს, საცავი კი საკმარისია. ხაფანგი: RAM-ს და საცავს ერთმანეთში ურევთ.",
+    "explanation_en": "RAM is almost full (95%) while the disk still has 400 GB free, so the bottleneck is working memory: more RAM lets more tabs and apps run at once. A bigger SSD adds storage that is not lacking — the classic mix-up of RAM with storage."
+  },
+  {
+    "id": "CL-035",
+    "module": "computer_literacy",
+    "difficulty": 3,
+    "format": "workplace_task",
+    "pattern_tag": "file_management",
+    "question_ka": "Windows-ზე ოთხი ფაილი წაიშალა. რომელი მათგანი შეიძლება აღდგეს ნაგვის ყუთიდან (Recycle Bin)?",
+    "question_en": "On Windows, four files were deleted. Which one can be restored from the Recycle Bin?",
+    "options": [
+      {
+        "ka": "Shift + Delete-ით წაშლილი ფაილი",
+        "en": "A file deleted with Shift + Delete"
+      },
+      {
+        "ka": "USB ფლეშ-მეხსიერებიდან წაშლილი ფაილი",
+        "en": "A file deleted from a USB flash drive"
+      },
+      {
+        "ka": "სამუშაო მაგიდიდან Delete კლავიშით წაშლილი ფაილი",
+        "en": "A file deleted from the desktop with the Delete key"
+      },
+      {
+        "ka": "ფაილი, რომელიც ნაგვის ყუთში იყო და შემდეგ ყუთი დაიცალა",
+        "en": "A file that was in the Recycle Bin before the bin was emptied"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "კომპიუტერის საკუთარ დისკზე ჩვეულებრივი Delete ფაილს ნაგვის ყუთში გადაიტანს და იქიდან მისი აღდგენა შეიძლება. Shift + Delete ფაილს ნაგვის ყუთის გვერდის ავლით შლის. USB ფლეშ-მეხსიერებიდან წაშლილი ფაილი ნაგვის ყუთში საერთოდ არ ხვდება: Windows გკითხავთ, სამუდამოდ წაიშალოს თუ არა. ყუთის დაცლა კი მასში არსებულ ყველაფერს შლის.",
+    "explanation_en": "A normal Delete on the computer's own drive moves the file to the Recycle Bin, where it can be restored. Shift + Delete skips the bin, a file deleted from a USB flash drive never goes to the bin (Windows asks you to delete it permanently), and emptying the bin deletes everything in it."
+  },
+  {
+    "id": "CL-036",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "workplace_task",
+    "pattern_tag": "file_extensions",
+    "question_ka": "ანას ელფოსტით მოუვიდა დანართი `Invoice_2026.pdf.exe`. რა ტიპის ფაილია ეს სინამდვილეში?",
+    "question_en": "Ana receives an email attachment named `Invoice_2026.pdf.exe`. What type of file is it really?",
+    "options": [
+      {
+        "ka": "PDF დოკუმენტი, რადგან სახელში .pdf წერია",
+        "en": "A PDF document, because the name contains .pdf"
+      },
+      {
+        "ka": "პროგრამა (შესრულებადი ფაილი), რადგან ბოლო გაფართოებაა .exe",
+        "en": "A program (executable file), because the last extension is .exe"
+      },
+      {
+        "ka": "შეკუმშული არქივი",
+        "en": "A compressed archive"
+      },
+      {
+        "ka": "ორი ფაილი ერთად — PDF და პროგრამა",
+        "en": "Two files in one — a PDF and a program"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "ფაილის ტიპს მხოლოდ ბოლო გაფართოება განსაზღვრავს: .exe პროგრამაა და გახსნისთანავე ეშვება. მის წინ .pdf-ის მიწერა ცნობილი ხრიკია. Windows ხშირად მალავს ცნობილ გაფართოებებს, ამიტომ ფაილი შეიძლება Invoice_2026.pdf-ად ჩანდეს. ასეთ ფაილს ნუ გახსნით — შეატყობინეთ IT-ს.",
+    "explanation_en": "Only the last extension decides the type: .exe is a program that runs as soon as it is opened. Putting .pdf in front is a well-known trick, especially as Windows often hides known extensions, so the file may appear as Invoice_2026.pdf. Do not open it — report it to IT."
+  },
+  {
+    "id": "CL-037",
+    "module": "computer_literacy",
+    "difficulty": 3,
+    "format": "workplace_task",
+    "pattern_tag": "file_extensions",
+    "question_ka": "ნინოს Excel-ის ფაილში 3 ფურცელია, უჯრებში კი ფორმულები და ფერადი ფორმატირება. ნინო ფაილს .csv ფორმატში ინახავს. რა შეინახება?",
+    "question_en": "Nino's Excel workbook has 3 sheets, with formulas and colour formatting in the cells. She saves it in .csv format. What gets saved?",
+    "options": [
+      {
+        "ka": "ყველაფერი — 3 ფურცელი, ფორმულები და ფორმატირება",
+        "en": "Everything — the 3 sheets, formulas and formatting"
+      },
+      {
+        "ka": "3-ვე ფურცელი, მაგრამ ფორმატირების გარეშე",
+        "en": "All 3 sheets, but without formatting"
+      },
+      {
+        "ka": "მხოლოდ ფორმულები, მათი მნიშვნელობების გარეშე",
+        "en": "Only the formulas, without their values"
+      },
+      {
+        "ka": "მხოლოდ მიმდინარე ფურცლის მნიშვნელობები, ფორმულებისა და ფორმატირების გარეშე",
+        "en": "Only the values of the current sheet, without formulas or formatting"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "CSV უბრალო ტექსტია: ერთი ცხრილი, რომელშიც მნიშვნელობები მძიმეებით არის გამოყოფილი. Excel ინახავს მხოლოდ მიმდინარე ფურცელს. თითოეული ფორმულის ნაცვლად კი მის შედეგს წერს, ამიტომ ფორმულები და ფორმატირება იკარგება. ყველაფრის შესანარჩუნებლად .xlsx ფაილიც შეინახეთ.",
+    "explanation_en": "CSV is plain text: a single table of values separated by commas. Excel saves only the active sheet and writes each formula's current result instead of the formula, so formulas and formatting are lost. Keep the .xlsx file as well to preserve everything."
+  },
+  {
+    "id": "CL-038",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "workplace_task",
+    "pattern_tag": "cloud_sharing",
+    "question_ka": "გუნდი ღრუბელში საერთო დოკუმენტზე მუშაობს (Google Docs ან Word-ის ვებვერსია). გუშინ კოლეგამ შეცდომით დოკუმენტის მთელი ნაწილი წაშალა. მას შემდეგ დოკუმენტი ბევრჯერ შეიცვალა. რა უნდა გააკეთოთ, რომ წაშლილი ნაწილი ყველაზე მარტივად დააბრუნოთ?",
+    "question_en": "A team works on a shared cloud document (Google Docs or Word for the web). Yesterday a colleague deleted a whole section by mistake, and the document has changed many times since. What is the simplest way to get the section back?",
+    "options": [
+      {
+        "ka": "ვერსიების ისტორიაში გახსნათ გუშინდელი ვერსია და იქიდან აღადგინოთ წაშლილი ნაწილი",
+        "en": "Open yesterday's version in version history and restore the lost section"
+      },
+      {
+        "ka": "ბევრჯერ დააჭიროთ Ctrl + Z-ს",
+        "en": "Press Ctrl + Z many times"
+      },
+      {
+        "ka": "წაშლილი ნაწილი ნაგვის ყუთში (Recycle Bin) მოძებნოთ",
+        "en": "Look for the deleted section in the Recycle Bin"
+      },
+      {
+        "ka": "IT-ს სთხოვოთ, რომ სერვერის სარეზერვო ასლი აღადგინოს",
+        "en": "Ask IT to restore the server backup"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "ღრუბლოვანი დოკუმენტი ვერსიების ისტორიას ინახავს. ამიტომ შეგიძლიათ გუშინდელი ვერსია გახსნათ და წაშლილი ნაწილი იქიდან აღადგინოთ. Ctrl + Z მხოლოდ თქვენს ბოლო ცვლილებებს აუქმებს და მხოლოდ მიმდინარე სესიაში. ნაგვის ყუთში წაშლილი ფაილები ხვდება და არა წაშლილი ტექსტი. IT-ის აღდგენა ნელია და შეიძლება გუნდის ყველა შემდგომი ცვლილება დაიკარგოს.",
+    "explanation_en": "Cloud documents keep version history, so you can open yesterday's version and restore the section from it. Ctrl + Z only undoes your own recent edits in the current session, the Recycle Bin holds deleted files rather than deleted text, and an IT restore is slow and may overwrite everyone's later work."
+  },
+  {
+    "id": "CL-039",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "workplace_task",
+    "pattern_tag": "cloud_sharing",
+    "question_ka": "ლევანმა ფაილზე დააყენა წვდომა „ყველას, ვისაც ბმული აქვს — მნახველი“ (Anyone with the link — Viewer) და ბმული 3 კოლეგას გაუგზავნა. ერთ-ერთმა კოლეგამ ბმული კომპანიის გარე კონტრაქტორს გადაუგზავნა. რისი გაკეთება შეუძლია კონტრაქტორს?",
+    "question_en": "Levani set a file's access to \"Anyone with the link — Viewer\" and sent the link to 3 colleagues. One colleague forwarded the link to a contractor outside the company. What can the contractor do?",
+    "options": [
+      {
+        "ka": "არაფრის — ფაილს მხოლოდ ის 3 კოლეგა გახსნის, ვისაც ლევანმა ბმული გაუგზავნა",
+        "en": "Nothing — only the 3 colleagues Levani sent it to can open it"
+      },
+      {
+        "ka": "ფაილის გახსნა და რედაქტირება",
+        "en": "Open and edit the file"
+      },
+      {
+        "ka": "ფაილის გახსნა და ნახვა, მაგრამ არა რედაქტირება",
+        "en": "Open and view the file, but not edit it"
+      },
+      {
+        "ka": "გახსნა მხოლოდ მას შემდეგ, რაც ლევანი მის თხოვნას დაადასტურებს",
+        "en": "Open it only after Levani approves a request"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "„ყველას, ვისაც ბმული აქვს“ ზუსტად ამას ნიშნავს: ფაილს გახსნის ნებისმიერი ადამიანი, ვისაც ბმული მიუვა, ვისგანაც არ უნდა მიიღოს. ის მიიღებს იმ როლს, რომელიც ლევანმა დააყენა. აქ ეს მნახველია: ნახვა შეუძლია, რედაქტირება — არა. თუ წვდომა მხოლოდ კონკრეტულ ადამიანებს უნდა ჰქონდეთ, ფაილი მათ ანგარიშებს უნდა გაუზიაროთ (შეზღუდული წვდომა, Restricted).",
+    "explanation_en": "\"Anyone with the link\" means exactly that: whoever gets the link, from whomever, can open the file with the given role — here Viewer, so view but not edit. To limit access to specific people, share the file with their accounts instead (restricted access)."
+  },
+  {
+    "id": "CL-040",
+    "module": "computer_literacy",
+    "difficulty": 3,
+    "format": "workplace_task",
+    "pattern_tag": "account_security",
+    "question_ka": "ღამის 2 საათზე გიორგის ტელეფონზე შეტყობინება ჩნდება: „ადასტურებთ სამსახურებრივ ანგარიშზე შესვლას?“ ამ დროს გიორგი შესვლას არ ცდილობდა. რა უნდა გააკეთოს?",
+    "question_en": "At 2 a.m., a prompt appears on Giorgi's phone: \"Approve sign-in to your work account?\" He was not trying to sign in. What should he do?",
+    "options": [
+      {
+        "ka": "დაადასტუროს, რომ შეტყობინებები შეწყდეს",
+        "en": "Approve it so the prompts stop"
+      },
+      {
+        "ka": "ყურადღება არ მიაქციოს — პაროლის გარეშე მაინც ვერავინ შევა",
+        "en": "Ignore it — nobody can get in without his password anyway"
+      },
+      {
+        "ka": "დაადასტუროს და დილით IT-ს შეატყობინოს",
+        "en": "Approve it and tell IT in the morning"
+      },
+      {
+        "ka": "უარყოს მოთხოვნა, შეცვალოს პაროლი და IT-ს შეატყობინოს",
+        "en": "Deny the request, change his password and report it to IT"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "გიორგის შესვლა არ უცდია, ესე იგი, ვიღაცამ მისი პაროლი უკვე იცის. თავდამსხმელი მხოლოდ მეორე ნაბიჯზე — ტელეფონით დადასტურებაზე — შეჩერდა. უარყოფა მას გზას უკეტავს, ახალი პაროლი კი მოპარულს გამოუსადეგარს ხდის. IT-მაც უნდა იცოდეს ამის შესახებ. დადასტურება, თუნდაც მხოლოდ შეტყობინებების შესაწყვეტად, თავდამსხმელს ანგარიშში შეუშვებს.",
+    "explanation_en": "A prompt Giorgi did not start means someone already knows his password and is stuck only at the second factor. Denying blocks them, changing the password makes the stolen one useless, and IT needs to know. Approving — even just to stop the prompts — lets the attacker in."
+  },
+  {
+    "id": "CL-041",
+    "module": "computer_literacy",
+    "difficulty": 1,
+    "format": "workplace_task",
+    "pattern_tag": "hardware_basics",
+    "question_ka": "კომპიუტერი გთავაზობთ, დააყენოთ ოპერაციული სისტემის განახლება. რატომ არის მნიშვნელოვანი, რომ განახლებები დროულად დააყენოთ?",
+    "question_en": "Your computer offers to install an operating system update. Why is it important to install updates promptly?",
+    "options": [
+      {
+        "ka": "განახლებები ყოველთვის ზრდის ოპერატიულ მეხსიერებას (RAM)",
+        "en": "Updates always add more RAM"
+      },
+      {
+        "ka": "განახლებები ხურავს უსაფრთხოების ხარვეზებს, რომლებსაც თავდამსხმელები იყენებენ",
+        "en": "Updates close security holes that attackers use"
+      },
+      {
+        "ka": "განახლების გარეშე ფაილები თავისით წაიშლება",
+        "en": "Without updates, files delete themselves"
+      },
+      {
+        "ka": "განახლებების შემდეგ სარეზერვო ასლები აღარ არის საჭირო",
+        "en": "Updates remove the need for backups"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "ბევრი განახლება უსაფრთხოების უკვე ცნობილ ხარვეზებს ასწორებს. თავდამსხმელები კი სწორედ იმ კომპიუტერებს ესხმიან თავს, რომლებზეც ეს განახლებები ჯერ არ დგას. განახლება აპარატურას (მაგალითად, RAM-ს) არ ამატებს და სარეზერვო ასლს ვერ ჩაანაცვლებს.",
+    "explanation_en": "Many updates fix security weaknesses that are already publicly known, and attackers target exactly the computers that have not installed them yet. Updates do not add hardware such as RAM and are no substitute for backups."
+  },
+  {
+    "id": "CL-042",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "workplace_task",
+    "pattern_tag": "troubleshooting_steps",
+    "question_ka": "ელენეს Windows-იან კომპიუტერზე Excel-ი რამდენიმე წუთია გაჭედილია და არაფერზე რეაგირებს, სხვა პროგრამები კი ნორმალურად მუშაობს. რა უნდა გააკეთოს?",
+    "question_en": "On Elene's Windows computer, Excel has been frozen for several minutes and does not respond, while other programs work normally. What should she do?",
+    "options": [
+      {
+        "ka": "ჩართვის ღილაკზე ხანგრძლივი დაჭერით კომპიუტერი გამორთოს",
+        "en": "Hold down the power button to switch the computer off"
+      },
+      {
+        "ka": "Excel-ი წაშალოს და ხელახლა დააინსტალიროს",
+        "en": "Uninstall and reinstall Excel"
+      },
+      {
+        "ka": "გახსნას ამოცანების მენეჯერი (Task Manager, Ctrl + Shift + Esc) და Excel-ის ამოცანა დაასრულოს (End task)",
+        "en": "Open Task Manager (Ctrl + Shift + Esc) and end the Excel task"
+      },
+      {
+        "ka": "ყველა სხვა პროგრამა დახუროს და კომპიუტერი ღამით ჩართული დატოვოს",
+        "en": "Close all other programs and leave the computer on overnight"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "გაჭედილია მხოლოდ Excel-ი, ამიტომ მხოლოდ ის უნდა დაიხუროს. ამოცანების მენეჯერი ამ ერთ პროგრამას ხურავს, დანარჩენები კი მუშაობას აგრძელებს. ჩართვის ღილაკით მთელი კომპიუტერი ძალით ითიშება და სხვა პროგრამებში შეუნახავი სამუშაოც შეიძლება დაიკარგოს. ხელახალი ინსტალაცია კი ერთი გაჭედვისთვის ზედმეტად რადიკალური ნაბიჯია.",
+    "explanation_en": "Only Excel is stuck, so close only Excel: Task Manager ends that one program and leaves the rest running. Holding the power button forces the whole computer off and can lose unsaved work in the other programs, and reinstalling is far too drastic for a one-off freeze."
+  },
+  {
+    "id": "CL-043",
+    "module": "computer_literacy",
+    "difficulty": 1,
+    "format": "workplace_task",
+    "pattern_tag": "email_recipients",
+    "question_ka": "საბამ მიიღო წერილი, რომელსაც ხელშეკრულების ფაილი ერთვის. ანა ამ წერილის მიმღებთა შორის არ იყო, მაგრამ მასაც სჭირდება ეს ფაილი. რომელი მოქმედება გაუგზავნის ანას წერილს დანართთან ერთად?",
+    "question_en": "Saba received an email with a contract file attached. Ana, who was not among the recipients, needs the same file. Which action sends Ana the email together with the attachment?",
+    "options": [
+      {
+        "ka": "გადაგზავნა (Forward)",
+        "en": "Forward"
+      },
+      {
+        "ka": "პასუხი (Reply)",
+        "en": "Reply"
+      },
+      {
+        "ka": "ყველას პასუხი (Reply All)",
+        "en": "Reply All"
+      },
+      {
+        "ka": "პასუხი (Reply) და ანას დამატება CC-ში",
+        "en": "Reply and add Ana in CC"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "გადაგზავნა (Forward) წერილს ახალ მიმღებს უგზავნის და დანართებს ინარჩუნებს. პასუხი და „ყველას პასუხი“ წერილის მონაწილეებს უბრუნდება და დანართი მას აღარ ერთვის. ამიტომ, ანა CC-შიც რომ დაემატოს, ის მხოლოდ ტექსტს მიიღებს, ფაილს — არა.",
+    "explanation_en": "Forward sends the message on to a new recipient and keeps the attachments. Reply and Reply All go back to the people already on the email and leave the attachment out — even if Ana is added in CC, she gets the text but not the file."
+  },
+  {
+    "id": "CL-044",
+    "module": "computer_literacy",
+    "difficulty": 3,
+    "format": "workplace_task",
+    "pattern_tag": "phishing_signs",
+    "question_ka": "ელენეს კოლეგის ნამდვილი მისამართიდან მოუვიდა წერილი: „სასწრაფოდ გადახედე, დღეს ბოლო ვადაა“ და დანართი `Payment_details.zip`. ელენესა და ამ კოლეგას გადახდებზე ერთად არასდროს უმუშავიათ. როგორ მოიქცეს ელენე ყველაზე სწორად?",
+    "question_en": "Elene gets an email from a colleague's real address: \"Please check this urgently, today is the deadline\", with the attachment `Payment_details.zip`. Elene and this colleague have never worked on payments together. What is the best action?",
+    "options": [
+      {
+        "ka": "გახსნას, რადგან მისამართი ნამდვილია და გამგზავნი ნაცნობია",
+        "en": "Open it, because the address is genuine and she knows the sender"
+      },
+      {
+        "ka": "არ გახსნას, კოლეგას სხვა არხით (ტელეფონით ან ჩატით) ჰკითხოს და, თუ მას არ გაუგზავნია, IT-ს შეატყობინოს",
+        "en": "Leave it unopened, ask the colleague through another channel (phone or chat), and report it to IT if they did not send it"
+      },
+      {
+        "ka": "იმავე წერილზე უპასუხოს და ჰკითხოს, ნამდვილია თუ არა",
+        "en": "Reply to the same email and ask whether it is genuine"
+      },
+      {
+        "ka": "ჯერ ანტივირუსით შეამოწმოს და, თუ არაფერი აღმოჩნდა, გახსნას",
+        "en": "Scan it with antivirus first and open it if nothing is found"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "ნამდვილი მისამართი არ ამტკიცებს, რომ წერილი კოლეგამ დაწერა: ელფოსტის ანგარიშებს ხშირად ტეხენ. სასწრაფოდ მოქმედების თხოვნა და მოულოდნელი დანართი საფრთხის ნიშნებია, ამიტომ ელენემ კოლეგასთან სხვა გზით უნდა გადაამოწმოს. იმავე წერილზე პასუხი შეიძლება ჰაკერს მიუვიდეს. ანტივირუსმა კი ახალი მავნე პროგრამა შეიძლება ვერ აღმოაჩინოს.",
+    "explanation_en": "A real address does not prove the colleague wrote it: accounts get hacked. Urgency plus an unexpected attachment are the warning signs, so check with the person through a different channel. A reply to the same email may reach the hacker, and an antivirus scan can miss new malware."
+  },
+  {
+    "id": "CL-045",
+    "module": "computer_literacy",
+    "difficulty": 2,
+    "format": "workplace_task",
+    "pattern_tag": "backup_practice",
+    "question_ka": "რომელი ვარიანტი შეესაბამება სარეზერვო ასლების 3-2-1 წესს (3 ასლი, 2 სხვადასხვა ტიპის საცავი, 1 ასლი სხვა ადგილას)?",
+    "question_en": "Which setup follows the 3-2-1 backup rule (3 copies, 2 different types of storage, 1 copy in another location)?",
+    "options": [
+      {
+        "ka": "ფაილები ლეპტოპზე + 2 ასლი იმავე ლეპტოპის ორ სხვა საქაღალდეში",
+        "en": "Files on the laptop + 2 copies in two other folders on the same laptop"
+      },
+      {
+        "ka": "ფაილები ლეპტოპზე + 2 ასლი ორ გარე დისკზე, რომლებიც სახლში, ლეპტოპის გვერდით ინახება",
+        "en": "Files on the laptop + 2 copies on two external drives kept at home next to the laptop"
+      },
+      {
+        "ka": "ფაილები ლეპტოპზე + 1 ასლი ღრუბლოვან საცავში",
+        "en": "Files on the laptop + 1 copy in cloud storage"
+      },
+      {
+        "ka": "ფაილები ლეპტოპზე + 1 ასლი გარე დისკზე სახლში + 1 ასლი ღრუბლოვან საცავში",
+        "en": "Files on the laptop + 1 copy on an external drive at home + 1 copy in cloud storage"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "მხოლოდ ვარიანტში „ლეპტოპი + გარე დისკი + ღრუბელი“ არის 3 ასლი 2 სხვადასხვა ტიპის საცავზე, აქედან 1 (ღრუბელში) სახლის გარეთაა. ლეპტოპის გვერდით მდგარი ორი გარე დისკი 3 ასლს იძლევა, მაგრამ სხვა ადგილას არცერთი არ ინახება — ხანძარი ან ქურდობა ყველას გაანადგურებს. ლეპტოპის სხვა საქაღალდეებში შენახული ასლები იმავე მოწყობილობაზეა. ლეპტოპი + ღრუბელი კი მხოლოდ 2 ასლია.",
+    "explanation_en": "Only laptop + external drive + cloud has 3 copies, on 2 types of storage, with 1 (the cloud) away from home. Two external drives next to the laptop make 3 copies but none elsewhere — a fire or burglary takes them all. Copies on one laptop share one device, and laptop + cloud is only 2 copies."
+  }
+]

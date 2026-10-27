@@ -1,0 +1,86 @@
+{
+  "transposed_characters": {
+    "name_en": "Swapped neighbouring characters",
+    "name_ka": "მეზობელი სიმბოლოების გადასმა",
+    "rule_en": "1172 and 1127 contain the same characters in a different order. Compare in short blocks and check the order inside each block, not only which characters are there.",
+    "rule_ka": "1172 და 1127 ერთსა და იმავე სიმბოლოებს შეიცავს, ოღონდ სხვა რიგით. შეადარე მოკლე ჯგუფებად და თითოეულ ჯგუფში რიგი შეამოწმე და არა მხოლოდ ის, თუ რომელი სიმბოლოებია."
+  },
+  "lookalike_characters": {
+    "name_en": "Lookalike characters",
+    "name_ka": "მსგავსი სიმბოლოები",
+    "rule_en": "0/O, 1/l/I, 5/S, 8/B and rn/m look almost the same. When a code mixes letters and digits, check whether each character is a letter or a digit instead of trusting its shape.",
+    "rule_ka": "0/O, 1/l/I, 5/S, 8/B და rn/m თითქმის ერთნაირად გამოიყურება. როცა კოდში ასოები და ციფრები ერთადაა, თითოეულ სიმბოლოზე შეამოწმე, ასოა თუ ციფრი, და მის მოხაზულობას ნუ ენდობი."
+  },
+  "missing_or_extra_character": {
+    "name_en": "Missing or extra character",
+    "name_ka": "გამოტოვებული ან ზედმეტი სიმბოლო",
+    "rule_en": "A dropped or doubled letter (tsikklauri, gmal) leaves the word readable, so the brain silently corrects it. Compare the length of each block and look for doubled letters.",
+    "rule_ka": "გამოტოვებული ან გაორმაგებული ასო (tsikklauri, gmal) სიტყვას წაკითხვადს ტოვებს, ამიტომ ტვინი მას შეუმჩნევლად „ასწორებს“. შეადარე თითოეული ჯგუფის სიგრძე და მოძებნე გაორმაგებული ასოები."
+  },
+  "spacing_punctuation": {
+    "name_en": "Spaces and punctuation count too",
+    "name_ka": "ჰარებიც და სასვენი ნიშნებიც ითვლება",
+    "rule_en": "Ave., vs Ave, or 14:30 vs 14.30 are real differences. After checking letters and digits, make a second pass that looks only at spaces, dots, commas and colons.",
+    "rule_ka": "Ave., და Ave, ან 14:30 და 14.30 ნამდვილი განსხვავებაა. ასოებისა და ციფრების შემოწმების შემდეგ მეორედ გადახედე მხოლოდ ჰარებს, წერტილებს, მძიმეებსა და ორწერტილებს."
+  },
+  "count_occurrences": {
+    "name_en": "Count only full matches",
+    "name_ka": "დათვალე მხოლოდ სრული დამთხვევები",
+    "rule_en": "When you count a code or a digit, near-matches (right digits, wrong prefix) do not count. Count block by block and note each block's total.",
+    "rule_ka": "კოდის ან ციფრის დათვლისას თითქმის მსგავსი ჩანაწერები (სწორი ციფრები, სხვა პრეფიქსი) არ ითვლება. დათვალე ჯგუფ-ჯგუფად და თითოეული ჯგუფის ჯამი ჩაინიშნე."
+  },
+  "multi_condition_filter": {
+    "name_en": "Every condition must hold",
+    "name_ka": "ყველა პირობა უნდა სრულდებოდეს",
+    "rule_en": "For 'starts with K and ends with an even digit', test both conditions on every item. 'Contains K' is not 'starts with K', and 0 is an even digit.",
+    "rule_ka": "პირობისთვის „იწყება K-თი და მთავრდება ლუწი ციფრით“ თითოეულ ელემენტზე ორივე პირობა შეამოწმე. K-ს შემცველობა არ ნიშნავს, რომ ჩანაწერი K-თი იწყება, ხოლო 0 ლუწი ციფრია."
+  },
+  "table_cross_check": {
+    "name_en": "Row-by-row table check",
+    "name_ka": "ცხრილის სტრიქონ-სტრიქონ შემოწმება",
+    "rule_en": "Compare each row of the copy only with the same row of the original, cell by cell. Read the question carefully: 'rows with an error' and 'cells with an error' give different answers.",
+    "rule_ka": "ასლის თითოეული სტრიქონი შეადარე ორიგინალის იმავე სტრიქონს, უჯრა-უჯრა. კითხვა ყურადღებით წაიკითხე: „შეცდომიანი სტრიქონები“ და „შეცდომიანი უჯრები“ სხვადასხვა პასუხს იძლევა."
+  },
+  "grid_odd_one_out": {
+    "name_en": "Find the odd grid",
+    "name_ka": "განსხვავებული ბადის პოვნა",
+    "rule_en": "Take one grid as the baseline and compare each of the others with it row by row. The odd grid often differs in a single cell, so a glance at the overall pattern is not enough.",
+    "rule_ka": "ერთი ბადე ათვლის წერტილად აიღე და დანარჩენები მას სტრიქონ-სტრიქონ შეადარე. განსხვავებული ბადე ხშირად მხოლოდ ერთი უჯრით გამოირჩევა, ამიტომ ზოგადი სურათის შეხედვა საკმარისი არ არის."
+  },
+  "grid_rotation": {
+    "name_en": "Direction of rotation",
+    "name_ka": "მობრუნების მიმართულება",
+    "rule_en": "A 90° clockwise turn makes the top row the right column (read top to bottom). Track one corner: clockwise, the top-left cell moves to the top-right. Turning the wrong way is the usual trap.",
+    "rule_ka": "საათის ისრის მიმართულებით 90°-ით მობრუნებისას ზედა სტრიქონი მარჯვენა სვეტად იქცევა (ზემოდან ქვემოთ). თვალი ადევნე ერთ კუთხეს: საათის ისრის მიმართულებით ზედა მარცხენა უჯრა ზედა მარჯვენა კუთხეში გადადის. ჩვეული ხაფანგი საპირისპირო მიმართულებით მობრუნებაა."
+  },
+  "grid_mirror": {
+    "name_en": "Mirror image vs rotation",
+    "name_ka": "სარკისებური ასახვა თუ მობრუნება",
+    "rule_en": "A left↔right mirror keeps every row in its place and reverses it; a top↔bottom mirror does the same with every column. A rotation turns rows into columns, so it is not a mirror image.",
+    "rule_ka": "მარცხენა↔მარჯვენა სარკისებური ასახვისას ყოველი სტრიქონი თავის ადგილზე რჩება, ოღონდ შებრუნებული რიგით; ზედა↔ქვედა ასახვისას იგივე ხდება ყოველ სვეტთან. მობრუნება სტრიქონებს სვეტებად აქცევს, ამიტომ ის სარკისებური ასახვა არ არის."
+  },
+  "grid_cell_diff": {
+    "name_en": "Cell-by-cell comparison",
+    "name_ka": "უჯრა-უჯრა შედარება",
+    "rule_en": "Scan both grids in the same order (row 1 left to right, then row 2 …) and tick off every cell. A different symbol in the same cell (a circle instead of a diamond) is a difference just like an empty cell.",
+    "rule_ka": "ორივე ბადე ერთი და იმავე რიგით დაათვალიერე (1-ლი სტრიქონი მარცხნიდან მარჯვნივ, შემდეგ მე-2 …) და ყოველი უჯრა მონიშნე. იმავე უჯრაში სხვა სიმბოლო (წრე რომბის ნაცვლად) ისეთივე განსხვავებაა, როგორც ცარიელი უჯრა."
+  },
+  "symbol_count": {
+    "name_en": "Systematic symbol count",
+    "name_ka": "სიმბოლოების სისტემური დათვლა",
+    "rule_en": "Count row by row, note each row's total, then add the totals. Jumping around the grid leads to counting a cell twice or skipping one.",
+    "rule_ka": "დათვალე სტრიქონ-სტრიქონ, ჩაინიშნე თითოეული სტრიქონის ჯამი და ბოლოს შეკრიბე. ბადეში აქეთ-იქით ხტომისას ადვილია ერთი უჯრის ორჯერ დათვლა ან გამოტოვება."
+  },
+  "shape_attributes": {
+    "name_en": "Colour, fill and rotation",
+    "name_ka": "ფერი, შევსება და მობრუნება",
+    "rule_en": "Two rows can show the same shapes in the same order and still differ: one shape may be outlined instead of filled, have another colour, or be rotated. Check every attribute, one shape at a time.",
+    "rule_ka": "ორ მწკრივში შეიძლება ერთი და იგივე ფიგურები იმავე რიგით იდგეს და მაინც განსხვავდებოდეს: ერთი ფიგურა შეიძლება შეუვსებელი იყოს, სხვა ფერის ან მობრუნებული. თითოეულ ფიგურაზე ყველა ნიშანი შეამოწმე."
+  },
+  "shape_sequence": {
+    "name_en": "Order of shapes",
+    "name_ka": "ფიგურების რიგი",
+    "rule_en": "Rows built from the same shapes can differ only in order: two neighbours swapped, or the whole row reversed. Compare position by position, starting from the left.",
+    "rule_ka": "ერთი და იმავე ფიგურებისგან შედგენილი მწკრივები შეიძლება მხოლოდ რიგით განსხვავდებოდეს: ორი მეზობელი ფიგურა გადასმულია ან მთელი მწკრივი შებრუნებულია. შეადარე პოზიცია-პოზიციით, მარცხნიდან დაწყებული."
+  }
+}

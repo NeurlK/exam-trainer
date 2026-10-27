@@ -1,0 +1,30 @@
+{
+  "settings": {
+    "questions_per_module": 12,
+    "module_seconds": 720,
+    "break_budget_seconds": 600
+  },
+  "modules": [
+    { "id": "computer_literacy",          "prefix": "CL", "name_ka": "კომპიუტერული წიგნიერება",            "name_en": "Computer Literacy" },
+    { "id": "understanding_instructions", "prefix": "UI", "name_ka": "ინსტრუქციების გააზრება",              "name_en": "Understanding Instructions" },
+    { "id": "intermediate_math",          "prefix": "IM", "name_ka": "საშუალო მათემატიკა",                  "name_en": "Intermediate Math" },
+    { "id": "critical_thinking",          "prefix": "CT", "name_ka": "კრიტიკული აზროვნება",                 "name_en": "Critical Thinking" },
+    { "id": "quant_logical",              "prefix": "QL", "name_ka": "რაოდენობრივი და ლოგიკური მსჯელობა",  "name_en": "Quantitative & Logical Reasoning" },
+    { "id": "attention_to_detail",        "prefix": "AD", "name_ka": "დეტალებზე ყურადღება",                 "name_en": "Attention to Detail" },
+    { "id": "verbal_reasoning",           "prefix": "VR", "name_ka": "ვერბალური მსჯელობა",                  "name_en": "Verbal Reasoning" }
+  ],
+  "exams": [
+    {
+      "id": "programming",
+      "name_ka": "პროგრამირება",
+      "name_en": "Programming",
+      "modules": ["computer_literacy", "understanding_instructions", "intermediate_math", "critical_thinking", "quant_logical"]
+    },
+    {
+      "id": "ai",
+      "name_ka": "ხელოვნური ინტელექტი",
+      "name_en": "AI",
+      "modules": ["understanding_instructions", "attention_to_detail", "critical_thinking", "verbal_reasoning", "quant_logical"]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "keyboard_shortcuts": {
+    "name_en": "Look-alike shortcuts",
+    "name_ka": "მსგავსი კლავიშების კომბინაციები",
+    "rule_en": "Neighbouring shortcuts do different things: Ctrl + Z undoes, Ctrl + Y redoes; Ctrl + T opens a new tab, Ctrl + Shift + T reopens a closed one. Check which system the question names: Alt + Tab is Windows, Cmd + Tab is Mac.",
+    "rule_ka": "მსგავსი კომბინაციები სხვადასხვა რამეს აკეთებს. Ctrl + Z მოქმედებას აუქმებს, Ctrl + Y კი გაუქმებულს ხელახლა ასრულებს. Ctrl + T ახალ ჩანართს ხსნის, Ctrl + Shift + T კი დახურულ ჩანართს აბრუნებს. ჯერ ნახეთ, რომელ სისტემაზეა საუბარი: Alt + Tab Windows-ზე მუშაობს, Cmd + Tab — Mac-ზე."
+  },
+  "file_management": {
+    "name_en": "Copy, shortcut, compress, delete",
+    "name_ka": "ასლი, მალსახმობი, შეკუმშვა, წაშლა",
+    "rule_en": "A shortcut only points to a file; it is not a copy. Files deleted from a USB drive or with Shift + Delete skip the Recycle Bin. To pack many files into one, compress them into a .zip; renaming an extension changes nothing inside the file.",
+    "rule_ka": "მალსახმობი (shortcut) მხოლოდ ფაილზე მიუთითებს, ის ფაილის ასლი არ არის. USB ფლეშ-მეხსიერებიდან ან Shift + Delete-ით წაშლილი ფაილი ნაგვის ყუთში (Recycle Bin) არ ხვდება. ბევრი ფაილის ერთად გასაგზავნად ისინი ერთ .zip ფაილად შეკუმშეთ. გაფართოების გადარქმევა ფაილის შიგთავსს არ ცვლის."
+  },
+  "file_extensions": {
+    "name_en": "The last extension decides the type",
+    "name_ka": "ტიპს ბოლო გაფართოება განსაზღვრავს",
+    "rule_en": "Only the last extension counts: invoice.pdf.exe is a program. Know the main ones: .docx Word, .xlsx Excel, .pptx PowerPoint, .pdf fixed layout, .csv plain values only (one sheet, no formulas).",
+    "rule_ka": "ფაილის ტიპს მხოლოდ ბოლო გაფართოება განსაზღვრავს: invoice.pdf.exe პროგრამაა. დაიმახსოვრეთ მთავარი გაფართოებები: .docx — Word, .xlsx — Excel, .pptx — PowerPoint, .pdf — დოკუმენტი, რომლის განლაგებაც არ იცვლება, .csv — მხოლოდ მნიშვნელობები (ერთი ფურცელი, ფორმულების გარეშე)."
+  },
+  "email_recipients": {
+    "name_en": "To, CC, BCC, Reply All, Forward",
+    "name_ka": "To, CC, BCC, „ყველას პასუხი“, გადაგზავნა",
+    "rule_en": "Everyone sees the To and CC addresses; BCC addresses are hidden. Reply All reaches the sender plus To and CC, never BCC. Forward carries the attachments; Reply does not.",
+    "rule_ka": "To და CC მისამართებს ყველა ხედავს, BCC მისამართები კი დამალულია. „ყველას პასუხი“ (Reply All) მიდის გამგზავნთან და To-სა და CC-ში მყოფებთან, BCC-ში მყოფებთან — არასდროს. გადაგზავნა (Forward) დანართებს ინარჩუნებს, პასუხი (Reply) — არა."
+  },
+  "phishing_signs": {
+    "name_en": "Check the real domain and the real request",
+    "name_ka": "შეამოწმეთ ნამდვილი დომენი და გადაამოწმეთ თხოვნა",
+    "rule_en": "Trust the real domain, not the display name, logo or link text. In a web address the domain is the part just before the first single '/', so bank.ge.login-check.net belongs to login-check.net. Urgency and unexpected attachments are red flags even from a familiar address: check through another channel.",
+    "rule_ka": "ენდეთ ნამდვილ დომენს და არა გამგზავნის სახელს, ლოგოს ან ბმულის ტექსტს. ვებმისამართში ნამდვილი დომენი https://-ის შემდეგ, პირველ „/“-მდე არსებული ნაწილის ბოლოშია: bank.ge.login-check.net ეკუთვნის login-check.net-ს. სასწრაფოდ მოქმედების თხოვნა და მოულოდნელი დანართი საფრთხის ნიშანია, თუნდაც ნაცნობი მისამართიდან მოვიდეს. ასეთ დროს გამგზავნთან სხვა გზით გადაამოწმეთ."
+  },
+  "account_security": {
+    "name_en": "Length, uniqueness, a second factor",
+    "name_ka": "სიგრძე, უნიკალური პაროლი, შესვლის დადასტურება",
+    "rule_en": "A long passphrase beats a short password full of symbols. Never reuse passwords. An MFA prompt you did not start means someone has your password: deny it and change the password. Leaving your desk means locking the screen, not just hiding windows.",
+    "rule_ka": "გრძელი ფრაზა სიმბოლოებით სავსე მოკლე პაროლზე ძლიერია. ერთსა და იმავე პაროლს რამდენიმე ადგილას ნუ გამოიყენებთ. თუ შესვლის დადასტურების მოთხოვნა (MFA) მოგივიდათ, შესვლა კი არ გიცდიათ, ესე იგი, ვიღაცამ თქვენი პაროლი იცის. უარყავით მოთხოვნა და შეცვალეთ პაროლი. მაგიდიდან წასვლისას ეკრანი დაბლოკეთ; მხოლოდ ფანჯრების ჩაკეცვა საკმარისი არ არის."
+  },
+  "spreadsheet_formulas": {
+    "name_en": "Read the formula exactly",
+    "name_ka": "ფორმულა ზუსტად წაიკითხეთ",
+    "rule_en": "• >= includes the boundary value, > does not: \">=60\" counts 60, \">60\" does not.\n• AVERAGE and COUNT skip blank cells but do count a cell that holds 0.\n• In plain arithmetic such as =B2/C2 or =A4*B2, a blank cell counts as 0, so dividing by a blank cell gives the #DIV/0! error.\n• SUM still adds rows hidden by a filter; only SUBTOTAL adds just the visible rows.\n• VLOOKUP's column number counts from the first column of the range (the first column is 1).",
+    "rule_ka": "• >= ზღვარსაც მოიცავს, > — არა: „>=60“ 60-საც ითვლის, „>60“ კი — არა.\n• AVERAGE და COUNT ცარიელ უჯრას გამოტოვებს, 0-ს კი ითვლის.\n• ჩვეულებრივ არითმეტიკულ ფორმულაში (მაგალითად, =B2/C2 ან =A4*B2) ცარიელი უჯრა 0-ად ითვლება. ამიტომ ცარიელ უჯრაზე გაყოფა #DIV/0! შეცდომას იძლევა.\n• SUM ფილტრით დამალულ სტრიქონებსაც ჯამავს; მხოლოდ ხილულ სტრიქონებს SUBTOTAL ჯამავს.\n• VLOOKUP-ის სვეტის ნომერს დიაპაზონის პირველი სვეტიდან ითვლით: პირველი სვეტი = 1."
+  },
+  "spreadsheet_references": {
+    "name_en": "$ locks what follows it",
+    "name_ka": "$ აფიქსირებს იმას, რაც მის შემდეგ დგას",
+    "rule_en": "A copied formula shifts its relative references by exactly as many rows and columns as you moved it. $ before the letter locks the column, $ before the number locks the row, $A$1 locks both.",
+    "rule_ka": "ფორმულას რომ აკოპირებთ, მისი ფარდობითი მისამართები იმდენივე სტრიქონითა და სვეტით გადაინაცვლებს, რამდენითაც ფორმულა გადაიტანეთ. $ ასოს წინ სვეტს აფიქსირებს, $ რიცხვის წინ — სტრიქონს, $A$1 კი ორივეს."
+  },
+  "browser_basics": {
+    "name_en": "What the browser feature really does",
+    "name_ka": "რას აკეთებს ბრაუზერის ფუნქცია სინამდვილეში",
+    "rule_en": "Incognito only stops the browser from keeping history on this computer. The padlock means an encrypted connection, not an honest site. Clearing cookies signs you out of sites but keeps bookmarks and downloaded files.",
+    "rule_ka": "ინკოგნიტო რეჟიმში ბრაუზერი ამ კომპიუტერზე ისტორიას არ ინახავს — სხვას არაფერს აკეთებს. ბოქლომი დაშიფრულ კავშირს ნიშნავს და არა სანდო საიტს. ქუქი-ფაილების წაშლის შემდეგ საიტებიდან გამოხვალთ, სანიშნეები და ჩამოტვირთული ფაილები კი ადგილზე რჩება."
+  },
+  "cloud_sharing": {
+    "name_en": "Least access and version history",
+    "name_ka": "მინიმალური წვდომა და ვერსიების ისტორია",
+    "rule_en": "Give the lowest access that does the job: Viewer < Commenter < Editor. 'Anyone with the link' means anyone who gets the link, however it reached them. Earlier versions of a shared file come back through version history, not Ctrl + Z.",
+    "rule_ka": "მიეცით ყველაზე მცირე წვდომა, რაც საქმისთვის საკმარისია: მნახველი < კომენტატორი < რედაქტორი. „ყველას, ვისაც ბმული აქვს“ ნიშნავს ნებისმიერ ადამიანს, ვისაც ბმული მიუვა, სულ ერთია, როგორ. გაზიარებული ფაილის ძველი ვერსია ვერსიების ისტორიით ბრუნდება და არა Ctrl + Z-ით."
+  },
+  "hardware_basics": {
+    "name_en": "Memory is not storage",
+    "name_ka": "მეხსიერება და საცავი სხვადასხვაა",
+    "rule_en": "RAM is temporary working memory: it empties at power-off and limits how much can run at once. Storage (SSD or hard drive) keeps files. Updates matter mainly because they close security holes.",
+    "rule_ka": "RAM დროებითი სამუშაო მეხსიერებაა: დენის გათიშვისას იშლება. მისი მოცულობა განსაზღვრავს, რამდენი პროგრამა და ჩანართი იმუშავებს ერთდროულად. ფაილებს საცავი (SSD ან მყარი დისკი) ინახავს. განახლებები, პირველ რიგში, უსაფრთხოების ხარვეზებს ხურავს."
+  },
+  "data_units": {
+    "name_en": "Bits vs bytes, 1000 vs 1024",
+    "name_ka": "ბიტი და ბაიტი, 1000 და 1024",
+    "rule_en": "1 byte = 8 bits. Internet speed is given in bits (Mbps), file size in bytes (MB), so divide by 8 before comparing. Use whichever of 1000 or 1024 the question states, and convert everything to one unit first.",
+    "rule_ka": "1 ბაიტი = 8 ბიტი. ინტერნეტის სიჩქარე ბიტებში იზომება (Mbps), ფაილის ზომა — ბაიტებში (MB). ამიტომ შედარებამდე ბიტები 8-ზე გაყავით. 1000-სა და 1024-ს შორის აირჩიეთ ის, რასაც პირობა ამბობს. ჯერ ყველაფერი ერთ ერთეულში გადაიყვანეთ."
+  },
+  "troubleshooting_steps": {
+    "name_en": "Simplest, closest cause first",
+    "name_ka": "ჯერ უმარტივესი და უახლოესი მიზეზი",
+    "rule_en": "First narrow down where the problem is (only you, or everyone?), then start with quick, safe checks on that spot. Drastic steps (reinstalling, forcing power off, calling the provider) come only after the simple ones fail.",
+    "rule_ka": "ჯერ გაარკვიეთ, სად არის პრობლემა: მხოლოდ თქვენთან თუ ყველასთან? შემდეგ სწორედ იქ დაიწყეთ სწრაფი და უსაფრთხო შემოწმებით. რადიკალურ ნაბიჯებს (ხელახალი ინსტალაცია, ძალით გამორთვა, პროვაიდერთან დარეკვა) მხოლოდ მაშინ მიმართეთ, როცა მარტივი ნაბიჯები არ შველის."
+  },
+  "backup_practice": {
+    "name_en": "3-2-1, and sync is not a backup",
+    "name_ka": "3-2-1; სინქრონიზაცია სარეზერვო ასლი არ არის",
+    "rule_en": "3-2-1: 3 copies, on 2 kinds of storage, 1 of them in another place. Sync copies deletions and damage too; a real backup is kept separately and keeps older versions.",
+    "rule_ka": "3-2-1: 3 ასლი, 2 სხვადასხვა ტიპის საცავზე, აქედან 1 სხვა ადგილას. სინქრონიზაციისას ფაილის წაშლა ან დაზიანება ასლზეც მეორდება. ნამდვილი სარეზერვო ასლი ცალკე ინახება და ძველ ვერსიებსაც ინარჩუნებს."
+  }
+}

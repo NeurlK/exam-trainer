@@ -1,0 +1,80 @@
+{
+  "series_differences": {
+    "name_en": "Look at the gaps between terms",
+    "name_ka": "დააკვირდით წევრებს შორის სხვაობებს",
+    "rule_en": "Write the differences between neighbouring terms. If they are not constant, check whether they grow steadily, or take the differences of the differences. Check the rule on every pair, including the ones after a gap.",
+    "rule_ka": "ჩაწერეთ მეზობელ წევრებს შორის სხვაობები. თუ ისინი მუდმივი არ არის, შეამოწმეთ, თანაბრად ხომ არ იზრდება, ან სხვაობების სხვაობები გამოთვალეთ. წესი ყველა წყვილზე შეამოწმეთ, გამოტოვებული წევრის შემდეგაც."
+  },
+  "series_multiplicative": {
+    "name_en": "Series built by multiplying",
+    "name_ka": "გამრავლებით აგებული მიმდევრობა",
+    "rule_en": "When the terms grow fast, divide neighbours instead of subtracting them. The rule may be ×k, ×k plus or minus a constant, or a multiplier that itself changes from step to step.",
+    "rule_ka": "როცა წევრები სწრაფად იზრდება, მეზობელ წევრებს ერთმანეთს ნუ გამოაკლებთ — ერთმანეთზე გაყავით. წესი შეიძლება იყოს ×k, ×k პლუს ან მინუს მუდმივი რიცხვი, ან მამრავლი, რომელიც ყოველ ნაბიჯზე იცვლება."
+  },
+  "series_alternating": {
+    "name_en": "Two series in one",
+    "name_ka": "ორი მიმდევრობა ერთში",
+    "rule_en": "If the terms jump up and down, split them into odd and even positions, or look for two operations that take turns. Then decide which of the two series the missing term belongs to.",
+    "rule_ka": "თუ წევრები ხან იზრდება, ხან მცირდება, კენტ და ლუწ ადგილებზე მდგომი წევრები ცალ-ცალკე ჩაწერეთ. ან მოძებნეთ ორი მოქმედება, რომლებიც ერთმანეთს ენაცვლება. შემდეგ გაარკვიეთ, რომელ მიმდევრობას ეკუთვნის საძიებელი წევრი."
+  },
+  "series_powers": {
+    "name_en": "Squares, cubes and primes",
+    "name_ka": "კვადრატები, კუბები და მარტივი რიცხვები",
+    "rule_en": "Know the first squares (1, 4, 9 … 144), cubes (1, 8, 27, 64, 125) and primes (2, 3, 5, 7, 11, 13). A series may be one of these lists, the list ±1, or have the list as its gaps.",
+    "rule_ka": "დაიმახსოვრეთ პირველი კვადრატები (1, 4, 9 … 144), კუბები (1, 8, 27, 64, 125) და მარტივი რიცხვები (2, 3, 5, 7, 11, 13). მიმდევრობა შეიძლება თავად იყოს ასეთი სია ან ასეთი სია ±1. ასეთი სია შეიძლება იყოს მეზობელ წევრებს შორის სხვაობებიც."
+  },
+  "series_recursive": {
+    "name_en": "Each term built from earlier terms",
+    "name_ka": "წევრი წინა წევრებისგან იგება",
+    "rule_en": "If no fixed gap or ratio works, combine the previous two terms: their sum (as in 1, 1, 2, 3, 5, 8) or their product.",
+    "rule_ka": "თუ არც მუდმივი სხვაობა გამოდგება და არც მუდმივი ფარდობა, სცადეთ წინა ორი წევრის ჯამი (როგორც 1, 1, 2, 3, 5, 8-ში) ან ნამრავლი."
+  },
+  "letter_series_skip": {
+    "name_en": "Letter steps: count positions",
+    "name_ka": "ასოების ბიჯი: დათვალეთ პოზიციები",
+    "rule_en": "Turn letters into alphabet positions (A = 1 … Z = 26) and work with the numbers. A step of +3 skips two letters, and after Z the count starts again from A.",
+    "rule_ka": "ყოველი ასო ანბანში მისი პოზიციის რიცხვით შეცვალეთ (A = 1 … Z = 26) და რიცხვებით იმუშავეთ. +3 ბიჯის დროს შუაში ორი ასო გამოიტოვება. Z-ის შემდეგ თვლა ისევ A-დან იწყება."
+  },
+  "ordering_relative": {
+    "name_en": "Build the order before answering",
+    "name_ka": "პასუხამდე რიგი ააგეთ",
+    "rule_en": "Turn every clue into a link (A before B, A directly above B) and place them on one line. If more than one order fits all the clues, an answer that depends on the difference cannot be determined.",
+    "rule_ka": "ყოველი პირობა მოკლედ ჩაწერეთ (A B-ზე წინაა, A უშუალოდ B-ზე ზემოთაა) და ყველა ერთ ხაზზე დაალაგეთ. თუ ყველა პირობას ერთზე მეტი რიგი აკმაყოფილებს და ამ რიგებში პასუხი განსხვავდება, პასუხი ვერ დადგინდება."
+  },
+  "seating_arrangement": {
+    "name_en": "Seating: fix the anchors first",
+    "name_ka": "დასხდომა: ჯერ ფიქსირებული ადგილები",
+    "rule_en": "Seat the people whose exact place is given first, then the pairs that must sit together, then apply the 'not next to' rules. Try each remaining option and drop the ones that break a rule.",
+    "rule_ka": "ჯერ დასვით ისინი, ვისი ადგილიც ზუსტად ცნობილია. შემდეგ — წყვილები, რომლებიც გვერდიგვერდ უნდა ისხდნენ. ბოლოს გამოიყენეთ პირობები „გვერდით არ ზის“. დარჩენილი ვარიანტები სათითაოდ შეამოწმეთ და გამორიცხეთ ის, რომელიც რომელიმე პირობას არღვევს."
+  },
+  "logic_grid": {
+    "name_en": "Logic grid: eliminate, don't guess",
+    "name_ka": "ლოგიკური ცხრილი: გამორიცხეთ, ნუ გამოიცნობთ",
+    "rule_en": "Draw a grid of people × options and mark every 'no' the clues give. When a row or column has one empty cell left, that cell is a 'yes', which removes the option for everyone else.",
+    "rule_ka": "დახაზეთ ცხრილი „ადამიანები × ვარიანტები“ და მონიშნეთ ყველა „არა“, რასაც პირობები იძლევა. როცა სტრიქონში ან სვეტში მხოლოდ ერთი ცარიელი უჯრა რჩება, მასში „კი“ ჩაწერეთ. ეს ვარიანტი დანარჩენებისთვის გამოირიცხება."
+  },
+  "table_reading": {
+    "name_en": "Read the right cells, then calculate",
+    "name_ka": "ჯერ სწორი უჯრები, მერე გამოთვლა",
+    "rule_en": "Find the exact rows and columns the question names before calculating. Percentage change is (new − old) ÷ old, so the base is the earlier value, and the biggest rise in units is not always the biggest in percent.",
+    "rule_ka": "გამოთვლამდე იპოვეთ ზუსტად ის სტრიქონები და სვეტები, რომლებსაც კითხვა ასახელებს. პროცენტული ცვლილება = (ახალი − ძველი) ÷ ძველი, ანუ ყოფთ ადრინდელ მნიშვნელობაზე. ერთეულებში ყველაზე დიდი ზრდა პროცენტულად ყოველთვის ყველაზე დიდი არ არის."
+  },
+  "coding_patterns": {
+    "name_en": "Find the code rule from the example",
+    "name_ka": "კოდის წესი მაგალითიდან იპოვეთ",
+    "rule_en": "Compare the example word and its code letter by letter: is each letter shifted (+1, −2), mirrored (A ↔ Z), moved to another place, or turned into its position number? Test the rule on every letter before you apply it.",
+    "rule_ka": "მაგალითის სიტყვა და მისი კოდი ასო-ასო შეადარეთ. ასო ანბანში წინ ან უკან არის გადაწეული (+1, −2)? სარკისებური ასოთია შეცვლილი (A ↔ Z)? სხვა ადგილზეა გადატანილი? თუ ანბანში თავისი პოზიციის რიცხვით არის შეცვლილი? გამოყენებამდე წესი ყველა ასოზე შეამოწმეთ."
+  },
+  "calendar_clock": {
+    "name_en": "Calendar and clock arithmetic",
+    "name_ka": "კალენდრისა და საათის არითმეტიკა",
+    "rule_en": "Weekdays repeat every 7 days, so only the remainder after dividing by 7 matters; a leap year has 366 days. The hour hand moves too, 0.5° per minute. A time zone changes the clock reading, not how long something lasts.",
+    "rule_ka": "კვირის დღეები ყოველ 7 დღეში მეორდება, ამიტომ მნიშვნელობა მხოლოდ 7-ზე გაყოფის ნაშთს აქვს; ნაკიან წელიწადში 366 დღეა. საათის ისარიც მოძრაობს — წუთში 0.5°-ით. სასაათო სარტყელი საათის ჩვენებას ცვლის და არა მოვლენის ხანგრძლივობას."
+  },
+  "counting_cases": {
+    "name_en": "Count each case exactly once",
+    "name_ka": "ყოველი შემთხვევა ზუსტად ერთხელ დათვალეთ",
+    "rule_en": "A pair is counted once: n × (n − 1) ÷ 2. For 'A or B', subtract the items you counted twice. In probability, list the equally likely outcomes, not just the possible results.",
+    "rule_ka": "ყოველი წყვილი ერთხელ დათვალეთ: n × (n − 1) ÷ 2. „A ან B“-ს დათვლისას გამოაკელით ის, რაც ორჯერ დაითვალეთ. ალბათობის ამოცანაში ჩამოწერეთ თანაბრად სავარაუდო შედეგები და არა უბრალოდ შესაძლო პასუხები."
+  }
+}

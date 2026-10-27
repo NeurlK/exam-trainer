@@ -1,0 +1,86 @@
+{
+  "cannot_say_vs_false": {
+    "name_en": "'Cannot say' vs 'False'",
+    "name_ka": "„ვერ ვიტყვით“ თუ „მცდარია“",
+    "rule_en": "Pick 'False' only when the text contradicts the statement. If the text simply doesn't settle it, the answer is 'Cannot say'.",
+    "rule_ka": "„მცდარია“ აირჩიეთ მხოლოდ მაშინ, როცა ტექსტი დებულებას პირდაპირ ეწინააღმდეგება. თუ ტექსტი ამ საკითხს არ წყვეტს, პასუხია „ვერ ვიტყვით“."
+  },
+  "outside_knowledge": {
+    "name_en": "Use only the given information",
+    "name_ka": "მხოლოდ მოცემული ინფორმაცია ითვლება",
+    "rule_en": "Judge by the text alone. Facts you know from elsewhere don't count, even when they are true.",
+    "rule_ka": "შეაფასეთ მხოლოდ ტექსტის მიხედვით. სხვა წყაროდან ცნობილი ფაქტები არ ითვლება, თუნდაც სწორი იყოს."
+  },
+  "some_not_all": {
+    "name_en": "'Some' does not imply 'all'",
+    "name_ka": "„ზოგიერთი“ არ ნიშნავს „ყველას“",
+    "rule_en": "'Some A are B' guarantees only that at least one A is B. It says nothing about the rest of A.",
+    "rule_ka": "„ზოგიერთი A არის B“ მხოლოდ იმას გვეუბნება, რომ ერთი A მაინც არის B. დანარჩენ A-ებზე ის არაფერს ამბობს."
+  },
+  "some_not_some_not": {
+    "name_en": "'Some are' does not imply 'some are not'",
+    "name_ka": "„ზოგიერთი არის“ არ ნიშნავს „ზოგიერთი არ არის“",
+    "rule_en": "'Some A are B' leaves open that all A are B, so 'some A are not B' does not follow from it.",
+    "rule_ka": "„ზოგიერთი A არის B“ არ გამორიცხავს, რომ ყველა A იყოს B, ამიტომ „ზოგიერთი A არ არის B“ აქედან არ გამომდინარეობს."
+  },
+  "all_not_reversible": {
+    "name_en": "'All A are B' does not reverse",
+    "name_ka": "„ყველა A არის B“-ს შებრუნება არ შეიძლება",
+    "rule_en": "'All dogs are animals' does not mean 'all animals are dogs'. From 'all A are B' only 'some B are A' follows.",
+    "rule_ka": "„ყველა ძაღლი ცხოველია“ არ ნიშნავს, რომ „ყველა ცხოველი ძაღლია“. „ყველა A არის B“-დან მხოლოდ „ზოგიერთი B არის A“ გამომდინარეობს."
+  },
+  "no_reversible": {
+    "name_en": "'No A are B' works both ways",
+    "name_ka": "„არცერთი A არ არის B“ ორივე მიმართულებით მოქმედებს",
+    "rule_en": "If no A is B, then no B is A. It rules out any overlap, from either side.",
+    "rule_ka": "თუ არცერთი A არ არის B, მაშინ არცერთი B არ არის A. ამ ორ ჯგუფს საერთო წევრი საერთოდ არ აქვს."
+  },
+  "chain_middle_term": {
+    "name_en": "A chain needs an 'all' link",
+    "name_ka": "ჯაჭვს „ყველა“ რგოლი სჭირდება",
+    "rule_en": "Two 'some' premises never connect the outer groups. A conclusion about A and C needs the middle group to be fully covered by an 'all' or 'no'. Sketch the circles before concluding.",
+    "rule_ka": "ორი „ზოგიერთი“ (ზოგიერთი A არის B, ზოგიერთი B არის C) A-სა და C-ს ერთმანეთთან ვერ აკავშირებს. A-სა და C-ზე დასკვნისთვის ერთ-ერთი დებულება შუა ჯგუფზე (B) მთლიანად უნდა ლაპარაკობდეს: „ყველა B …“ ან „არცერთი B …“. სანამ დაასკვნით, წრეები დახატეთ."
+  },
+  "affirming_consequent": {
+    "name_en": "The result doesn't prove the cause",
+    "name_ka": "შედეგი მიზეზს არ ამტკიცებს",
+    "rule_en": "'If A then B' plus 'B happened' does not prove A: something else may have caused B.",
+    "rule_ka": "„თუ A, მაშინ B“ და „B მოხდა“ A-ს არ ამტკიცებს: B-ს მიზეზი შეიძლება სხვა რამე იყოს."
+  },
+  "denying_antecedent": {
+    "name_en": "No condition doesn't mean no result",
+    "name_ka": "პირობა არ შესრულდა — შედეგი მაინც შეიძლება დადგეს",
+    "rule_en": "'If A then B' plus 'A did not happen' tells you nothing about B.",
+    "rule_ka": "„თუ A, მაშინ B“ და „A არ მოხდა“ B-ზე არაფერს გვეუბნება: B შეიძლება სხვა მიზეზით მაინც მოხდეს."
+  },
+  "contrapositive": {
+    "name_en": "Contrapositive",
+    "name_ka": "კონტრაპოზიცია",
+    "rule_en": "'If A then B' means the same as 'if not B, then not A'. That is the only valid way to flip it.",
+    "rule_ka": "„თუ A, მაშინ B“ იგივეა, რაც „თუ B არ არის, მაშინ არც A არის“. მაგალითად, „თუ წვიმს, ქუჩა სველია“ ნიშნავს: „თუ ქუჩა სველი არ არის, არ წვიმს“. წესის შებრუნების მხოლოდ ეს გზაა სწორი."
+  },
+  "necessary_vs_sufficient": {
+    "name_en": "'Only if' marks a necessary condition",
+    "name_ka": "„მხოლოდ თუ“ აუცილებელ პირობას ნიშნავს",
+    "rule_en": "'A only if B' means 'if A then B'. B is required for A, but having B does not guarantee A.",
+    "rule_ka": "„A მხოლოდ იმ შემთხვევაში, თუ B“ ნიშნავს: თუ A მოხდა, B-ც აუცილებლად იყო. B აუცილებელია A-სთვის, მაგრამ მარტო B A-ს გარანტიას არ იძლევა."
+  },
+  "hidden_rule_override": {
+    "name_en": "A hidden rule overrides the obvious one",
+    "name_ka": "ფარული წესი აშკარა წესს აუქმებს",
+    "rule_en": "A specific exception or a later rule beats the general one. Scan for 'unless', 'except', 'however', 'only'.",
+    "rule_ka": "კონკრეტული გამონაკლისი ან მოგვიანებით მოცემული წესი ზოგად წესს აუქმებს. მოძებნეთ სიტყვები: „გარდა“, „თუმცა“, „მხოლოდ“, „იმ შემთხვევაში, თუ“."
+  },
+  "qualifier_words": {
+    "name_en": "Qualifiers change the meaning",
+    "name_ka": "დამაზუსტებელი სიტყვები აზრს ცვლის",
+    "rule_en": "'Most', 'usually', 'only', 'at least', 'all' set how strong a claim is. A statement that is stronger than the text is not supported by it.",
+    "rule_ka": "„უმეტესობა“, „ჩვეულებრივ“, „მხოლოდ“, „სულ მცირე“, „ყველა“ განსაზღვრავს, რამდენად ძლიერია მტკიცება. თუ დებულება უფრო ძლიერია, ვიდრე ტექსტი, ტექსტი მას არ ადასტურებს."
+  },
+  "correlation_causation": {
+    "name_en": "Correlation is not causation",
+    "name_ka": "კორელაცია მიზეზობრიობა არ არის",
+    "rule_en": "Two things changing together doesn't show that one causes the other. A third factor, or cause and effect running the other way, may explain it.",
+    "rule_ka": "ის, რომ ორი რამ ერთად იცვლება, არ ნიშნავს, რომ ერთი მეორეს იწვევს. შეიძლება მესამე ფაქტორი მოქმედებდეს, ან მიზეზი და შედეგი პირიქით იყოს."
+  }
+}

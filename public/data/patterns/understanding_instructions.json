@@ -1,0 +1,62 @@
+{
+  "step_order": {
+    "name_en": "Steps run in the given order",
+    "name_ka": "ნაბიჯები მოცემული რიგით სრულდება",
+    "rule_en": "Apply each step to the result of the previous one, in the order written. Doing a later step earlier usually changes the result.",
+    "rule_ka": "ყოველი ნაბიჯი წინა ნაბიჯის შედეგზე შეასრულეთ, ზუსტად იმ რიგით, როგორც წერია. თუ მოგვიანებით მოცემულ ნაბიჯს ადრე შეასრულებთ, შედეგი, როგორც წესი, შეიცვლება."
+  },
+  "track_state": {
+    "name_en": "Keep track of the current state",
+    "name_ka": "თვალი ადევნეთ მიმდინარე მდგომარეობას",
+    "rule_en": "Write down the value after every step or event. Each rule is checked against the current value, not the starting one.",
+    "rule_ka": "ყოველი ნაბიჯის ან მოვლენის შემდეგ ჩაიწერეთ მიმდინარე მნიშვნელობა. ყოველი წესი მიმდინარე მნიშვნელობაზე შეამოწმეთ და არა საწყისზე."
+  },
+  "and_vs_or": {
+    "name_en": "'And' vs 'or'",
+    "name_ka": "„და“ თუ „ან“",
+    "rule_en": "'A and B' needs both conditions; 'A or B' needs at least one. Check which word joins the conditions before you apply the rule.",
+    "rule_ka": "„A და B“ ორივე პირობას მოითხოვს, „A ან B“ — ერთს მაინც. წესის გამოყენებამდე ნახეთ, რომელი სიტყვა აკავშირებს პირობებს."
+  },
+  "boundary_inclusive": {
+    "name_en": "Is the boundary included?",
+    "name_ka": "ზღვარი შედის თუ არა?",
+    "rule_en": "'More than 100' excludes 100; '100 or more', 'at least 100' and 'up to 100 inclusive' include it. Test the exact boundary value against the wording.",
+    "rule_ka": "„100-ზე მეტი“ 100-ს არ მოიცავს. „100 ან მეტი“, „სულ მცირე 100“ და „100-მდე (ჩათვლით)“ 100-ს მოიცავს. ზღვარზე მდგომი მნიშვნელობა (მაგალითად, ზუსტად 100) წესის სიტყვებს ცალკე შეადარეთ."
+  },
+  "priority_rules": {
+    "name_en": "Follow the stated priority",
+    "name_ka": "მიჰყევით მითითებულ პრიორიტეტს",
+    "rule_en": "When several rules could apply, use the order or priority the instructions give. A tie-breaker is used only when the higher rule doesn't decide.",
+    "rule_ka": "თუ რამდენიმე წესი შეიძლება მოქმედებდეს, მიჰყევით ინსტრუქციაში მოცემულ რიგს ან პრიორიტეტს. დამატებითი კრიტერიუმი მხოლოდ მაშინ გამოიყენეთ, როცა უფრო მაღალი წესი საკითხს ვერ წყვეტს."
+  },
+  "position_counting": {
+    "name_en": "Count positions carefully",
+    "name_ka": "პოზიციები ყურადღებით დაითვალეთ",
+    "rule_en": "'3rd from the right' starts counting at the last item as number 1. After a deletion or a move, positions shift: count again on the current sequence.",
+    "rule_ka": "„მარჯვნიდან მე-3“ ასე ითვლება: ბოლო ელემენტი 1-ლია, მის წინა — მე-2, შემდეგი — მე-3. წაშლის ან გადაადგილების შემდეგ პოზიციები იცვლება, ამიტომ ახალ მიმდევრობაში ხელახლა დაითვალეთ."
+  },
+  "literal_instructions": {
+    "name_en": "Do exactly what is written",
+    "name_ka": "გააკეთეთ ზუსტად ის, რაც წერია",
+    "rule_en": "Follow the wording literally, even if another result looks more sensible. Don't add steps, skip steps or 'fix' the rule.",
+    "rule_ka": "ფორმულირებას სიტყვასიტყვით მიჰყევით, თუნდაც სხვა შედეგი უფრო ლოგიკური გეჩვენოთ. ნუ დაამატებთ და ნუ გამოტოვებთ ნაბიჯს, ნუ „შეასწორებთ“ წესს."
+  },
+  "apply_to_every_item": {
+    "name_en": "Apply the rule to every item",
+    "name_ka": "წესი ყველა ელემენტზე ვრცელდება",
+    "rule_en": "A rule about 'each' or 'every' item is checked item by item — not once for the first item, and not once for the total.",
+    "rule_ka": "თუ წესი „ყოველ“ ან „თითოეულ“ ელემენტს ეხება, ის ყველა ელემენტზე ცალ-ცალკე შეამოწმეთ — არა მხოლოდ პირველზე და არა ერთხელ მთლიან ჯამზე."
+  },
+  "conditional_branch": {
+    "name_en": "The condition picks the branch",
+    "name_ka": "პირობა ირჩევს, რომელი მოქმედება შესრულდება",
+    "rule_en": "In 'if … otherwise …' steps, test the condition on the value you have at that moment and follow only that branch.",
+    "rule_ka": "„თუ …, წინააღმდეგ შემთხვევაში …“ ნაბიჯში პირობა იმ მნიშვნელობაზე შეამოწმეთ, რომელიც ამ მომენტში გაქვთ. შემდეგ მხოლოდ შესაბამისი მოქმედება შეასრულეთ."
+  },
+  "rounding_rule": {
+    "name_en": "Round the way the rule says",
+    "name_ka": "დაამრგვალეთ ისე, როგორც წესი ამბობს",
+    "rule_en": "'Every started hour' rounds up, 'only full hours' rounds down, and a free period or a cap changes the count. Apply them in the order the rule gives.",
+    "rule_ka": "„ყოველი დაწყებული საათი“ ზემოთ მრგვალდება, „მხოლოდ სრული საათი“ — ქვემოთ. უფასო პერიოდი ან ზედა ზღვარი კი შედეგს ცვლის. ეს წესები იმ რიგით გამოიყენეთ, როგორც წერია."
+  }
+}

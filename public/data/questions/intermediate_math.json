@@ -1,0 +1,1839 @@
+[
+  {
+    "id": "IM-001",
+    "module": "intermediate_math",
+    "difficulty": 1,
+    "format": "percentage",
+    "pattern_tag": "successive_percent",
+    "question_ka": "ქურთუკი 150 ლარი ღირდა. ჯერ მისი ფასი 20%-ით გაზარდეს, ერთი თვის შემდეგ კი ახალი ფასი 20%-ით შეამცირეს. რა ღირს ქურთუკი ახლა?",
+    "question_en": "A jacket cost 150 GEL. Its price was first raised by 20%, and a month later the new price was cut by 20%. What does the jacket cost now?",
+    "options": [
+      {
+        "ka": "150 ლარი",
+        "en": "150 GEL"
+      },
+      {
+        "ka": "144 ლარი",
+        "en": "144 GEL"
+      },
+      {
+        "ka": "156 ლარი",
+        "en": "156 GEL"
+      },
+      {
+        "ka": "120 ლარი",
+        "en": "120 GEL"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "150 × 1.2 = 180, შემდეგ 180 × 0.8 = 144. ხაფანგი: +20% და −20% ერთმანეთს არ აბათილებს, რადგან მეორე 20% ახალი, უფრო მაღალი ფასიდან აითვლება.",
+    "explanation_en": "150 × 1.2 = 180, then 180 × 0.8 = 144. The trap: +20% and −20% do not cancel out, because the second 20% is taken from the new, higher price.",
+    "verify": {
+      "type": "numeric",
+      "expr": "150 * 1.2 * 0.8"
+    }
+  },
+  {
+    "id": "IM-002",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "percentage",
+    "pattern_tag": "successive_percent",
+    "question_ka": "მაღაზიაში ყველა საქონელზე 30%-იანი ფასდაკლებაა. სალაროსთან ლოიალობის ბარათით უკვე ფასდაკლებულ ფასს დამატებით 20% აკლდება. ჯამში საწყისი ფასის რამდენ პროცენტს ზოგავს მყიდველი?",
+    "question_en": "A shop has a 30% discount on everything. At the checkout, a loyalty card takes another 20% off the already discounted price. In total, what percentage of the original price does the customer save?",
+    "options": [
+      "56%",
+      "50%",
+      "6%",
+      "44%"
+    ],
+    "correct": 3,
+    "explanation_ka": "მყიდველი იხდის ფასის 0.7 × 0.8 = 0.56 ნაწილს, ანუ ზოგავს 100% − 56% = 44%-ს. ხაფანგი: ფასდაკლებებს კრებთ (30% + 20% = 50%), თუმცა მეორე ფასდაკლება უკვე შემცირებული ფასიდან აითვლება.",
+    "explanation_en": "The customer pays 0.7 × 0.8 = 0.56 of the price, so the saving is 100% − 56% = 44%. The trap is 30% + 20% = 50%: the second discount is taken from an already reduced price.",
+    "verify": {
+      "type": "numeric",
+      "expr": "100 - 100 * 0.7 * 0.8"
+    }
+  },
+  {
+    "id": "IM-003",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "percentage",
+    "pattern_tag": "successive_percent",
+    "question_ka": "კვადრატის თითოეული გვერდი 10%-ით გაზარდეს. რამდენი პროცენტით გაიზარდა მისი ფართობი?",
+    "question_en": "Each side of a square is increased by 10%. By what percentage does its area increase?",
+    "options": [
+      "21%",
+      "10%",
+      "121%",
+      "20%"
+    ],
+    "correct": 0,
+    "explanation_ka": "ფართობი = გვერდი × გვერდი, ამიტომ ის 1.1 × 1.1 = 1.21-ზე მრავლდება. ახალი ფართობი ძველის 121%-ია, ანუ ზრდა 21%-ია. ხაფანგი: 10%-ს ორჯერ ამატებთ და იღებთ 20%-ს.",
+    "explanation_en": "Area = side × side, so it is multiplied by 1.1 × 1.1 = 1.21, an increase of 21%. The trap is 20% (adding 10% twice); 121% is the new area compared with the old one, not the increase.",
+    "verify": {
+      "type": "numeric",
+      "expr": "(1.1 * 1.1 - 1) * 100"
+    }
+  },
+  {
+    "id": "IM-004",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "percentage",
+    "pattern_tag": "successive_percent",
+    "question_ka": "ლევანის ხელფასი ჯერ 10%-ით გაიზარდა, შემდეგ კიდევ 20%-ით. ერთი წლის შემდეგ კომპანიამ ყველა ხელფასი 25%-ით შეამცირა. როგორ შეიცვალა ლევანის ხელფასი საწყისთან შედარებით?",
+    "question_en": "Levani's salary was first raised by 10%, then by another 20%. A year later the company cut all salaries by 25%. How has Levani's salary changed compared with the original?",
+    "options": [
+      {
+        "ka": "გაიზარდა 5%-ით",
+        "en": "Up by 5%"
+      },
+      {
+        "ka": "არ შეცვლილა",
+        "en": "No change"
+      },
+      {
+        "ka": "გაიზარდა 1%-ით",
+        "en": "Up by 1%"
+      },
+      {
+        "ka": "შემცირდა 1%-ით",
+        "en": "Down by 1%"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "გადაამრავლეთ კოეფიციენტები: 1.1 × 1.2 × 0.75 = 0.99. ესე იგი, ხელფასი საწყისზე 1%-ით ნაკლებია. ხაფანგი: პროცენტებს კრებთ (+10 + 20 − 25 = +5%), თუმცა ყოველი ცვლილება უკვე შეცვლილ ხელფასზე მოქმედებს.",
+    "explanation_en": "Multiply the factors: 1.1 × 1.2 × 0.75 = 0.99, so the salary is 1% below the original. The trap is adding +10 + 20 − 25 = +5%: each change applies to the already changed salary.",
+    "verify": {
+      "type": "numeric",
+      "expr": "(1.1 * 1.2 * 0.75 - 1) * 100",
+      "option_values": [
+        5,
+        0,
+        1,
+        -1
+      ]
+    }
+  },
+  {
+    "id": "IM-005",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "word_problem",
+    "pattern_tag": "successive_percent",
+    "question_ka": "ლეპტოპის ფასი დღგ-ის გარეშე 1000 ლარია. მაღაზია ამ ფასს 10%-ით ამცირებს, შემდეგ კი შემცირებულ ფასს 18%-იან დღგ-ს ამატებს. რამდენს გადაიხდის მყიდველი?",
+    "question_en": "A laptop costs 1000 GEL before VAT. The shop takes 10% off this price, then adds 18% VAT to the discounted price. How much does the customer pay?",
+    "options": [
+      {
+        "ka": "1180 ლარი",
+        "en": "1180 GEL"
+      },
+      {
+        "ka": "1080 ლარი",
+        "en": "1080 GEL"
+      },
+      {
+        "ka": "1062 ლარი",
+        "en": "1062 GEL"
+      },
+      {
+        "ka": "900 ლარი",
+        "en": "900 GEL"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "1000 × 0.9 = 900, შემდეგ 900 × 1.18 = 1062. ხაფანგი: ჯერ პროცენტებს ერთმანეთს აკლებთ (+18% − 10% = +8%) და იღებთ 1080-ს, თუმცა დღგ უკვე შემცირებულ ფასს ერიცხება.",
+    "explanation_en": "1000 × 0.9 = 900, then 900 × 1.18 = 1062. The trap is netting the rates first (+18% − 10% = +8%, giving 1080): the VAT is charged on the already reduced price.",
+    "verify": {
+      "type": "numeric",
+      "expr": "1000 * 0.9 * 1.18"
+    }
+  },
+  {
+    "id": "IM-006",
+    "module": "intermediate_math",
+    "difficulty": 1,
+    "format": "percentage",
+    "pattern_tag": "percent_change_base",
+    "question_ka": "ბათუმის ერთ-ერთ კინოთეატრში ბილეთის ფასი 8 ლარიდან 10 ლარამდე გაიზარდა. რამდენი პროცენტით გაძვირდა ბილეთი?",
+    "question_en": "At a cinema in Batumi, the ticket price went up from 8 GEL to 10 GEL. By what percentage did the ticket price increase?",
+    "options": [
+      "20%",
+      "25%",
+      "2%",
+      "80%"
+    ],
+    "correct": 1,
+    "explanation_ka": "ფასი 10 − 8 = 2 ლარით გაიზარდა. ზრდა ძველ ფასს უნდა შეადაროთ: 2 ÷ 8 = 25%. ხაფანგი: ზრდას ახალ ფასზე ყოფთ (2 ÷ 10 = 20%).",
+    "explanation_en": "The increase is 10 − 8 = 2 GEL, and the base is the old price: 2 ÷ 8 = 25%. The trap is dividing by the new price (2 ÷ 10 = 20%).",
+    "verify": {
+      "type": "numeric",
+      "expr": "(10 - 8) / 8 * 100"
+    }
+  },
+  {
+    "id": "IM-007",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "percentage",
+    "pattern_tag": "percent_change_base",
+    "question_ka": "ნინომ თავისი ხელნაკეთი სამაჯურების ფასი 25%-ით გაზარდა, მაგრამ გაყიდვები შემცირდა. რამდენი პროცენტით უნდა შეამციროს ახალი ფასი, რომ ისევ ძველ ფასს დაუბრუნდეს?",
+    "question_en": "Nino raised the price of her handmade bracelets by 25%, but sales dropped. By what percentage must she cut the new price to get back to the old price?",
+    "options": [
+      "80%",
+      "25%",
+      "30%",
+      "20%"
+    ],
+    "correct": 3,
+    "explanation_ka": "ჩათვალეთ, რომ ძველი ფასი 100-ია. მაშინ ახალი ფასი 125-ია. ძველ ფასზე დასაბრუნებლად 25 უნდა მოაკლდეს: 25 ÷ 125 = 20%. ხაფანგი: ირჩევთ 25%-ს, თუმცა შემცირება ახალი, უფრო მაღალი ფასიდან აითვლება.",
+    "explanation_en": "Let the old price be 100: the new price is 125. To get back she must remove 25, and 25 ÷ 125 = 20%. The trap is 25%: the cut is measured from the new, larger price.",
+    "verify": {
+      "type": "numeric",
+      "expr": "25 / 125 * 100"
+    }
+  },
+  {
+    "id": "IM-008",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "data_table",
+    "pattern_tag": "percent_change_base",
+    "question_ka": "ცხრილში მოცემულია ოთხი ფილიალის გაყიდვები ორი წლის განმავლობაში. რომელ ფილიალში გაიზარდა გაყიდვები ყველაზე მეტი პროცენტით?",
+    "question_en": "The table shows the sales of four branches over two years. Which branch had the largest percentage increase in sales?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        {
+          "ka": "ფილიალი",
+          "en": "Branch"
+        },
+        {
+          "ka": "2024 (ათასი ლარი)",
+          "en": "2024 (thousand GEL)"
+        },
+        {
+          "ka": "2025 (ათასი ლარი)",
+          "en": "2025 (thousand GEL)"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "ka": "თბილისი",
+            "en": "Tbilisi"
+          },
+          "500",
+          "600"
+        ],
+        [
+          {
+            "ka": "ბათუმი",
+            "en": "Batumi"
+          },
+          "200",
+          "260"
+        ],
+        [
+          {
+            "ka": "ქუთაისი",
+            "en": "Kutaisi"
+          },
+          "300",
+          "375"
+        ],
+        [
+          {
+            "ka": "რუსთავი",
+            "en": "Rustavi"
+          },
+          "150",
+          "180"
+        ]
+      ]
+    },
+    "options": [
+      {
+        "ka": "თბილისი",
+        "en": "Tbilisi"
+      },
+      {
+        "ka": "ბათუმი",
+        "en": "Batumi"
+      },
+      {
+        "ka": "ქუთაისი",
+        "en": "Kutaisi"
+      },
+      {
+        "ka": "რუსთავი",
+        "en": "Rustavi"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "თითოეული ფილიალის ზრდა 2024 წლის გაყიდვებზე გაყავით: თბილისი 100 ÷ 500 = 20%, ბათუმი 60 ÷ 200 = 30%, ქუთაისი 75 ÷ 300 = 25%, რუსთავი 30 ÷ 150 = 20%. ხაფანგი: ირჩევთ თბილისს, რადგან ლარებში მან ყველაზე მეტი მოიმატა, თუმცა მისი საწყისი გაყიდვებიც ყველაზე დიდი იყო.",
+    "explanation_en": "Divide each increase by the 2024 sales: Tbilisi 100 ÷ 500 = 20%, Batumi 60 ÷ 200 = 30%, Kutaisi 75 ÷ 300 = 25%, Rustavi 30 ÷ 150 = 20%. The trap is Tbilisi: it gained the most in GEL, but from the largest starting value.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { let best = null, top = -1; for (const r of q.visual.rows) { const g = (Number(r[2]) - Number(r[1])) / Number(r[1]); if (g > top) { top = g; best = r[0].en; } } return best; }"
+    }
+  },
+  {
+    "id": "IM-009",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "percentage",
+    "pattern_tag": "percent_change_base",
+    "question_ka": "კომპანიის თანამშრომელთა 40% ქალია. ქალების 25% დისტანციურად მუშაობს. კომპანიის ყველა თანამშრომლის რამდენი პროცენტია დისტანციურად მომუშავე ქალი?",
+    "question_en": "40% of a company's employees are women. 25% of the women work remotely. What percentage of all the company's employees are women who work remotely?",
+    "options": [
+      "25%",
+      "15%",
+      "10%",
+      "65%"
+    ],
+    "correct": 2,
+    "explanation_ka": "25% ქალებიდან აითვლება და არა ყველა თანამშრომლიდან: 0.25 × 40% = 10%. ხაფანგი: პასუხად 25%-ს ირჩევთ, ან პროცენტებს ერთმანეთს აკლებთ (40% − 25% = 15%).",
+    "explanation_en": "The 25% is taken of the women, not of everyone: 0.25 × 40% = 10%. The trap is answering 25%, or subtracting 40% − 25% = 15%.",
+    "verify": {
+      "type": "numeric",
+      "expr": "0.25 * 40"
+    }
+  },
+  {
+    "id": "IM-010",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "word_problem",
+    "pattern_tag": "reverse_percent",
+    "question_ka": "მაღაზია საქონელს 120 ლარად ყიდულობს და სურს, რომ მოგება გასაყიდი ფასის 20% იყოს. რა ფასად უნდა გაყიდოს?",
+    "question_en": "A shop buys an item for 120 GEL and wants its profit to be 20% of the selling price. At what price should it sell the item?",
+    "options": [
+      {
+        "ka": "140 ლარი",
+        "en": "140 GEL"
+      },
+      {
+        "ka": "144 ლარი",
+        "en": "144 GEL"
+      },
+      {
+        "ka": "96 ლარი",
+        "en": "96 GEL"
+      },
+      {
+        "ka": "150 ლარი",
+        "en": "150 GEL"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "თუ მოგება გასაყიდი ფასის 20%-ია, შესყიდვის ფასი მისი დანარჩენი 80%-ია. გასაყიდი ფასი = 120 ÷ 0.8 = 150. შემოწმება: მოგება 30 ლარია, ხოლო 30 ÷ 150 = 20%. ხაფანგი: 120 × 1.2 = 144-ს ითვლით, ანუ ამატებთ შესყიდვის ფასის 20%-ს და არა გასაყიდი ფასის 20%-ს.",
+    "explanation_en": "If profit is 20% of the price, the cost is the other 80%: price = 120 ÷ 0.8 = 150 (profit 30, and 30 ÷ 150 = 20%). The trap is 120 × 1.2 = 144, which adds 20% of the cost, not 20% of the price.",
+    "verify": {
+      "type": "numeric",
+      "expr": "120 / 0.8"
+    }
+  },
+  {
+    "id": "IM-011",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "percentage",
+    "pattern_tag": "reverse_percent",
+    "question_ka": "ქვითარში ტელევიზორის ფასი 18%-იანი დღგ-ის ჩათვლით 236 ლარია. რა ღირს ტელევიზორი დღგ-ის გარეშე?",
+    "question_en": "On a receipt, a TV costs 236 GEL including 18% VAT. What is the price of the TV without VAT?",
+    "options": [
+      {
+        "ka": "193.52 ლარი",
+        "en": "193.52 GEL"
+      },
+      {
+        "ka": "200 ლარი",
+        "en": "200 GEL"
+      },
+      {
+        "ka": "218 ლარი",
+        "en": "218 GEL"
+      },
+      {
+        "ka": "36 ლარი",
+        "en": "36 GEL"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "236 ლარი დღგ-ის გარეშე ფასის 118%-ია, ამიტომ ეს ფასი = 236 ÷ 1.18 = 200 ლარი. შემოწმება: 200 + 36 = 236. ხაფანგი: 236-დან 18%-ს აკლებთ (193.52), თუმცა დღგ ერიცხება ფასს დღგ-ის გარეშე და არა საბოლოო თანხას.",
+    "explanation_en": "236 is 118% of the price, so the price is 236 ÷ 1.18 = 200 (check: 200 + 36 = 236). The trap is taking 18% off 236 (193.52): VAT is charged on the price without VAT, not on the final amount.",
+    "verify": {
+      "type": "numeric",
+      "expr": "236 / 1.18"
+    }
+  },
+  {
+    "id": "IM-012",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "word_problem",
+    "pattern_tag": "reverse_percent",
+    "question_ka": "მარიამმა კაბა 25%-იანი ფასდაკლებით 120 ლარად იყიდა. რა ღირდა კაბა ფასდაკლებამდე?",
+    "question_en": "Mariam bought a dress for 120 GEL at a 25% discount. What was the price of the dress before the discount?",
+    "options": [
+      {
+        "ka": "150 ლარი",
+        "en": "150 GEL"
+      },
+      {
+        "ka": "145 ლარი",
+        "en": "145 GEL"
+      },
+      {
+        "ka": "160 ლარი",
+        "en": "160 GEL"
+      },
+      {
+        "ka": "90 ლარი",
+        "en": "90 GEL"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "120 ლარი ძველი ფასის 75%-ია, ამიტომ ძველი ფასი = 120 ÷ 0.75 = 160. ხაფანგი: 120 × 1.25 = 150-ს ითვლით, თუმცა 25% ძველი ფასიდან აკლდა და არა ახლიდან.",
+    "explanation_en": "120 GEL is 75% of the old price, so the old price is 120 ÷ 0.75 = 160. The trap is 120 × 1.25 = 150: the 25% was taken from the old price, not the new one.",
+    "verify": {
+      "type": "numeric",
+      "expr": "120 / 0.75"
+    }
+  },
+  {
+    "id": "IM-013",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "percentage",
+    "pattern_tag": "percentage_points",
+    "question_ka": "გამოკითხვის მიხედვით, ახალ პარკს ადრე ქალაქის მაცხოვრებლების 20% უჭერდა მხარს, ახლა კი — 24%. თუ მაცხოვრებლების რაოდენობა არ შეცვლილა, რამდენი პროცენტით გაიზარდა პარკის მხარდამჭერების რაოდენობა?",
+    "question_en": "According to a survey, the share of a city's residents who support a new park rose from 20% to 24%. If the number of residents did not change, by what percentage did the number of supporters increase?",
+    "options": [
+      "4%",
+      "24%",
+      "20%",
+      "120%"
+    ],
+    "correct": 2,
+    "explanation_ka": "მხარდამჭერების წილი 4 პროცენტული პუნქტით გაიზარდა. მათი რაოდენობა კი 4 ÷ 20 = 20%-ით გაიზარდა. ხაფანგი: ირჩევთ 4%-ს, ანუ პროცენტულ პუნქტებს პროცენტულ ცვლილებად თვლით.",
+    "explanation_en": "The share rose by 4 percentage points, but the number of supporters grew by 4 ÷ 20 = 20%. The trap is 4%: a difference in percentage points is not a percentage change.",
+    "verify": {
+      "type": "numeric",
+      "expr": "(24 - 20) / 20 * 100"
+    }
+  },
+  {
+    "id": "IM-014",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "data_table",
+    "pattern_tag": "percentage_points",
+    "question_ka": "ცხრილში ნაჩვენებია ერთი ქვეყნის სმარტფონების ბაზრის მოცულობა და ამ ბაზარზე „B“ ბრენდის წილი. რამდენი პროცენტით მეტი „B“ ბრენდის სმარტფონი გაიყიდა 2025 წელს, ვიდრე 2024 წელს?",
+    "question_en": "The table shows the size of a country's smartphone market and Brand B's share of it. By what percentage did the number of smartphones sold by Brand B increase from 2024 to 2025?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        {
+          "ka": "წელი",
+          "en": "Year"
+        },
+        {
+          "ka": "ბაზარი (ათასი ცალი)",
+          "en": "Market (thousand units)"
+        },
+        {
+          "ka": "„B“ ბრენდის წილი",
+          "en": "Brand B share"
+        }
+      ],
+      "rows": [
+        [
+          "2024",
+          "2000",
+          "25%"
+        ],
+        [
+          "2025",
+          "2400",
+          "30%"
+        ]
+      ]
+    },
+    "options": [
+      "5%",
+      "20%",
+      "40%",
+      "44%"
+    ],
+    "correct": 3,
+    "explanation_ka": "2024: 2000-ის 25% = 500 ათასი. 2025: 2400-ის 30% = 720 ათასი. ზრდა: 220 ÷ 500 = 44%. ხაფანგი: პასუხად წილის ცვლილებას ირჩევთ (5 პროცენტული პუნქტი), ან ორ ზრდას კრებთ (20% + 20% = 40%), თუმცა ისინი მრავლდება: 1.2 × 1.2 = 1.44.",
+    "explanation_en": "2024: 25% of 2000 = 500 thousand. 2025: 30% of 2400 = 720 thousand. Growth: 220 ÷ 500 = 44%. The trap is 5% (the change in share, in percentage points) or 20% + 20% = 40%: the two increases multiply, 1.2 × 1.2 = 1.44.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const [a, b] = q.visual.rows.map(r => Number(r[1]) * parseFloat(r[2]) / 100); return (b - a) / a * 100; }"
+    }
+  },
+  {
+    "id": "IM-015",
+    "module": "intermediate_math",
+    "difficulty": 1,
+    "format": "percentage",
+    "pattern_tag": "percentage_points",
+    "question_ka": "გამოკითხულთა შორის ონლაინ შოპინგის მომხრეთა წილი 40%-დან 50%-მდე გაიზარდა (გამოკითხულთა რაოდენობა იგივე დარჩა). რომელი დებულებაა სწორი?",
+    "question_en": "Among the people surveyed, the share who prefer online shopping rose from 40% to 50% (the number of people surveyed stayed the same). Which statement is correct?",
+    "options": [
+      {
+        "ka": "წილი 10%-ით გაიზარდა",
+        "en": "The share rose by 10%"
+      },
+      {
+        "ka": "წილი 10 პროცენტული პუნქტით, ანუ 25%-ით გაიზარდა",
+        "en": "The share rose by 10 percentage points, i.e. by 25%"
+      },
+      {
+        "ka": "წილი 25 პროცენტული პუნქტით გაიზარდა",
+        "en": "The share rose by 25 percentage points"
+      },
+      {
+        "ka": "წილი 10 პროცენტული პუნქტით, ანუ 20%-ით გაიზარდა",
+        "en": "The share rose by 10 percentage points, i.e. by 20%"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "50 − 40 = 10 პროცენტული პუნქტი. წილი კი საწყისთან შედარებით 10 ÷ 40 = 25%-ით გაიზარდა. ხაფანგი: 10 პუნქტს „10%“-ს უწოდებთ, ან ზრდას ახალ მნიშვნელობაზე ყოფთ (10 ÷ 50 = 20%).",
+    "explanation_en": "50 − 40 = 10 percentage points, and the relative increase is 10 ÷ 40 = 25%. The trap is calling 10 points '10%', or dividing by the new value (10 ÷ 50 = 20%).",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const a = 40, b = 50; return 'The share rose by ' + (b - a) + ' percentage points, i.e. by ' + ((b - a) / a * 100) + '%'; }"
+    }
+  },
+  {
+    "id": "IM-016",
+    "module": "intermediate_math",
+    "difficulty": 1,
+    "format": "ratio",
+    "pattern_tag": "ratio_parts",
+    "question_ka": "ნიკამ და თამარმა ერთად შეასრულეს შეკვეთა და 120 ლარი მიიღეს. ფული ნამუშევარი საათების მიხედვით, 3 : 5 შეფარდებით გაინაწილეს (ნიკა : თამარი). რამდენი ლარი ერგო თამარს?",
+    "question_en": "Nika and Tamar completed an order together and earned 120 GEL. They split the money by hours worked, in the ratio 3 : 5 (Nika : Tamar). How much did Tamar get?",
+    "options": [
+      {
+        "ka": "75 ლარი",
+        "en": "75 GEL"
+      },
+      {
+        "ka": "45 ლარი",
+        "en": "45 GEL"
+      },
+      {
+        "ka": "24 ლარი",
+        "en": "24 GEL"
+      },
+      {
+        "ka": "40 ლარი",
+        "en": "40 GEL"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "სულ 3 + 5 = 8 ნაწილია. ერთი ნაწილი = 120 ÷ 8 = 15 ლარი. თამარს ერგო 5 × 15 = 75 ლარი. ხაფანგი: ნაწილების ჯამის ნაცვლად 5-ზე ან 3-ზე ყოფთ, ან პასუხად ნიკას წილს (45) ასახელებთ.",
+    "explanation_en": "There are 3 + 5 = 8 parts, so one part is 120 ÷ 8 = 15 GEL and Tamar gets 5 × 15 = 75 GEL. The trap is dividing by 5 or 3 instead of by the total number of parts, or giving Nika's share (45).",
+    "verify": {
+      "type": "numeric",
+      "expr": "120 / (3 + 5) * 5"
+    }
+  },
+  {
+    "id": "IM-017",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "ratio",
+    "pattern_tag": "ratio_parts",
+    "question_ka": "კონფერენციაზე მამაკაცებისა და ქალების რაოდენობების შეფარდებაა 4 : 5. ქალები მამაკაცებზე 8-ით მეტია. სულ რამდენი მონაწილეა კონფერენციაზე?",
+    "question_en": "At a conference, the numbers of men and women are in the ratio 4 : 5. There are 8 more women than men. How many participants are there in total?",
+    "options": [
+      "40",
+      "72",
+      "36",
+      "45"
+    ],
+    "correct": 1,
+    "explanation_ka": "სხვაობა 5 − 4 = 1 ნაწილია, ანუ 1 ნაწილი = 8 ადამიანი. სულ 4 + 5 = 9 ნაწილია, ანუ 72 მონაწილე. ხაფანგი: მხოლოდ ქალებს ითვლით (5 × 8 = 40).",
+    "explanation_en": "The difference is 5 − 4 = 1 part, so 1 part = 8 people. The total is 4 + 5 = 9 parts, i.e. 72 participants. The trap is counting only the women (5 × 8 = 40).",
+    "verify": {
+      "type": "numeric",
+      "expr": "(4 + 5) * 8 / (5 - 4)"
+    }
+  },
+  {
+    "id": "IM-018",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "ratio",
+    "pattern_tag": "ratio_parts",
+    "question_ka": "კომპანიაში დეველოპერებისა და ტესტერების რაოდენობების შეფარდებაა 5 : 2. კომპანიამ 6 ახალი ტესტერი აიყვანა და შეფარდება 5 : 3 გახდა. რამდენი დეველოპერია კომპანიაში?",
+    "question_en": "In a company, the numbers of developers and testers are in the ratio 5 : 2. The company hired 6 new testers, and the ratio became 5 : 3. How many developers does the company have?",
+    "options": [
+      "30",
+      "15",
+      "42",
+      "48"
+    ],
+    "correct": 0,
+    "explanation_ka": "დეველოპერების რაოდენობა არ შეცვლილა, ამიტომ მათი 5 ნაწილი იგივე რჩება. ტესტერები 2 ნაწილიდან 3 ნაწილამდე გაიზარდა, ანუ 1 ნაწილი = 6 ადამიანი. დეველოპერები = 5 × 6 = 30. ხაფანგი: დეველოპერების ნაცვლად ყველა თანამშრომელს ითვლით (42 ან 48).",
+    "explanation_en": "The number of developers did not change, so their 5 parts stay the same, while the testers grew from 2 parts to 3: 1 part = 6 people. Developers = 5 × 6 = 30. The trap is giving the whole staff (42 or 48) instead of the developers.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { for (let k = 1; k < 100; k++) { if (3 * 5 * k === 5 * (2 * k + 6)) return 5 * k; } }"
+    }
+  },
+  {
+    "id": "IM-019",
+    "module": "intermediate_math",
+    "difficulty": 1,
+    "format": "ratio",
+    "pattern_tag": "proportion_scaling",
+    "question_ka": "ანას რეცეპტით 4 აჭარული ხაჭაპურისთვის 600 გ ფქვილია საჭირო. რამდენი ფქვილი დასჭირდება 6 ხაჭაპურისთვის?",
+    "question_en": "Ana's recipe uses 600 g of flour for 4 Adjarian khachapuri. How much flour does she need for 6 khachapuri?",
+    "options": [
+      {
+        "ka": "800 გ",
+        "en": "800 g"
+      },
+      {
+        "ka": "1200 გ",
+        "en": "1200 g"
+      },
+      {
+        "ka": "900 გ",
+        "en": "900 g"
+      },
+      {
+        "ka": "1000 გ",
+        "en": "1000 g"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "ერთ ხაჭაპურს 600 ÷ 4 = 150 გ ფქვილი სჭირდება, 6-ს კი — 6 × 150 = 900 გ. ხაფანგი: ფქვილს აორმაგებთ (1200 გ) ან ზედ რაღაც რაოდენობას ამატებთ, თუმცა ის 6 ÷ 4 = 1.5-ზე უნდა გაამრავლოთ.",
+    "explanation_en": "One khachapuri needs 600 ÷ 4 = 150 g, so 6 need 6 × 150 = 900 g. The trap is adding a fixed amount or doubling (1200 g) instead of multiplying by 6 ÷ 4 = 1.5.",
+    "verify": {
+      "type": "numeric",
+      "expr": "600 / 4 * 6"
+    }
+  },
+  {
+    "id": "IM-020",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "word_problem",
+    "pattern_tag": "proportion_scaling",
+    "question_ka": "რუკის მასშტაბია 1 : 50000. რუკაზე ორ სოფელს შორის მანძილი 6 სმ-ია. რამდენია რეალური მანძილი სოფლებს შორის?",
+    "question_en": "A map has a scale of 1 : 50000. On the map, the distance between two villages is 6 cm. What is the real distance between the villages?",
+    "options": [
+      {
+        "ka": "3 კმ",
+        "en": "3 km"
+      },
+      {
+        "ka": "30 კმ",
+        "en": "30 km"
+      },
+      {
+        "ka": "0.3 კმ",
+        "en": "0.3 km"
+      },
+      {
+        "ka": "300 კმ",
+        "en": "300 km"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "6 სმ × 50000 = 300000 სმ. 1 კმ = 100000 სმ, ამიტომ ეს 3 კმ-ია. ხაფანგი: 100000-ის ნაცვლად 10000-ზე ყოფთ და იღებთ 30 კმ-ს.",
+    "explanation_en": "6 cm × 50000 = 300000 cm. 1 km = 100000 cm, so this is 3 km. The trap is dividing by 10000 instead of 100000, which gives 30 km.",
+    "verify": {
+      "type": "numeric",
+      "expr": "6 * 50000 / 100000"
+    }
+  },
+  {
+    "id": "IM-021",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "word_problem",
+    "pattern_tag": "proportion_scaling",
+    "question_ka": "1 : 1000 მასშტაბის გეგმაზე მიწის ნაკვეთი 4 სმ × 3 სმ ზომის მართკუთხედია. რამდენია ნაკვეთის რეალური ფართობი?",
+    "question_en": "On a plan with a scale of 1 : 1000, a plot of land is a 4 cm × 3 cm rectangle. What is the real area of the plot?",
+    "options": [
+      {
+        "ka": "1.2 მ²",
+        "en": "1.2 m²"
+      },
+      {
+        "ka": "120 მ²",
+        "en": "120 m²"
+      },
+      {
+        "ka": "12000 მ²",
+        "en": "12000 m²"
+      },
+      {
+        "ka": "1200 მ²",
+        "en": "1200 m²"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "ჯერ თითოეული გვერდი რეალურ ზომაზე გადაიყვანეთ: 4 სმ → 4000 სმ = 40 მ, 3 სმ → 30 მ. ფართობი = 40 × 30 = 1200 მ². ხაფანგი: გეგმის ფართობს (12 სმ²) 1000-ზე მხოლოდ ერთხელ ამრავლებთ, თუმცა ფართობი 1000 × 1000-ჯერ იზრდება.",
+    "explanation_en": "Convert each side first: 4 cm → 4000 cm = 40 m and 3 cm → 30 m, so the area is 40 × 30 = 1200 m². The trap is multiplying the plan's area (12 cm²) by 1000 only once: area grows by 1000 × 1000.",
+    "verify": {
+      "type": "numeric",
+      "expr": "(4 * 1000 / 100) * (3 * 1000 / 100)"
+    }
+  },
+  {
+    "id": "IM-022",
+    "module": "intermediate_math",
+    "difficulty": 1,
+    "format": "word_problem",
+    "pattern_tag": "work_rate",
+    "question_ka": "4 მღებავი სკოლის შენობას 6 დღეში ღებავს. რამდენ დღეში შეღებავს იმავე შენობას 8 მღებავი, თუ ყველა ერთნაირი სისწრაფით მუშაობს?",
+    "question_en": "4 painters paint a school building in 6 days. How many days would 8 painters need for the same building, if they all work at the same pace?",
+    "options": [
+      {
+        "ka": "3 დღე",
+        "en": "3 days"
+      },
+      {
+        "ka": "12 დღე",
+        "en": "12 days"
+      },
+      {
+        "ka": "10 დღე",
+        "en": "10 days"
+      },
+      {
+        "ka": "8 დღე",
+        "en": "8 days"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "სამუშაო 4 × 6 = 24 „კაც-დღეს“ მოითხოვს, ამიტომ 8 მღებავს 24 ÷ 8 = 3 დღე დასჭირდება. ხაფანგი: დღეებს აორმაგებთ (6 × 2 = 12), თუმცა მეტ მუშას ნაკლები დღე სჭირდება.",
+    "explanation_en": "The job takes 4 × 6 = 24 painter-days, so 8 painters need 24 ÷ 8 = 3 days. The trap is scaling the wrong way (6 × 2 = 12): more workers means fewer days.",
+    "verify": {
+      "type": "numeric",
+      "expr": "4 * 6 / 8"
+    }
+  },
+  {
+    "id": "IM-023",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "word_problem",
+    "pattern_tag": "work_rate",
+    "question_ka": "გიორგი სატვირთოს 3 საათში ცლის, დავითი კი — 6 საათში. რამდენ საათში დაცლიან სატვირთოს ერთად?",
+    "question_en": "Giorgi can unload a truck in 3 hours, and Davit can do it in 6 hours. How many hours will it take them working together?",
+    "options": [
+      {
+        "ka": "9 საათი",
+        "en": "9 hours"
+      },
+      {
+        "ka": "4.5 საათი",
+        "en": "4.5 hours"
+      },
+      {
+        "ka": "2 საათი",
+        "en": "2 hours"
+      },
+      {
+        "ka": "1.5 საათი",
+        "en": "1.5 hours"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "შეკრიბეთ სისწრაფეები და არა დროები: საათში ისინი ერთად 1/3 + 1/6 = 1/2 სატვირთოს ცლიან, ანუ 2 საათი დასჭირდებათ. ხაფანგი: დროების საშუალოს იღებთ (4.5 საათი), თუმცა ორივეს ერთად ნაკლები დრო უნდა დასჭირდეს, ვიდრე გიორგის მარტო.",
+    "explanation_en": "Add the rates, not the times: together they unload 1/3 + 1/6 = 1/2 of the truck per hour, so they need 2 hours. The trap is averaging the times (4.5 hours): working together must take less time than Giorgi alone.",
+    "verify": {
+      "type": "numeric",
+      "expr": "1 / (1 / 3 + 1 / 6)"
+    }
+  },
+  {
+    "id": "IM-024",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "word_problem",
+    "pattern_tag": "work_rate",
+    "question_ka": "ონკანი ცარიელ ავზს 4 საათში ავსებს. ავზის ძირში ნახვრეტია, რომლიდანაც სავსე ავზი 12 საათში იცლება. რამდენ საათში აივსება ცარიელი ავზი, თუ ონკანიც ღიაა და ნახვრეტიც?",
+    "question_en": "A tap fills an empty tank in 4 hours, while a leak at the bottom empties a full tank in 12 hours. With the tap running and the leak open, how many hours does it take to fill the empty tank?",
+    "options": [
+      {
+        "ka": "8 საათი",
+        "en": "8 hours"
+      },
+      {
+        "ka": "6 საათი",
+        "en": "6 hours"
+      },
+      {
+        "ka": "3 საათი",
+        "en": "3 hours"
+      },
+      {
+        "ka": "16 საათი",
+        "en": "16 hours"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "ყოველ საათში ავზის 1/4 − 1/12 = 3/12 − 1/12 = 2/12 = 1/6 ივსება, ამიტომ ის 6 საათში აივსება. ხაფანგი: დროებს ერთმანეთს აკლებთ (12 − 4 = 8), თუმცა უნდა გამოაკლოთ სისწრაფეები და არა საათები.",
+    "explanation_en": "Each hour the tank gains 1/4 − 1/12 = 3/12 − 1/12 = 2/12 = 1/6 of its volume, so it fills in 6 hours. The trap is subtracting the times (12 − 4 = 8): you subtract rates, not hours.",
+    "verify": {
+      "type": "numeric",
+      "expr": "1 / (1 / 4 - 1 / 12)"
+    }
+  },
+  {
+    "id": "IM-025",
+    "module": "intermediate_math",
+    "difficulty": 1,
+    "format": "equation",
+    "pattern_tag": "equation_setup",
+    "question_ka": "ამოხსენით განტოლება: 4(x − 3) = 2x + 6. რას უდრის x?",
+    "question_en": "Solve the equation 4(x − 3) = 2x + 6. What is x?",
+    "options": [
+      "9",
+      "4.5",
+      "3",
+      "−1"
+    ],
+    "correct": 0,
+    "explanation_ka": "გახსენით ფრჩხილი: 4x − 12 = 2x + 6. აქედან 2x = 18 და x = 9. ხაფანგი: 4-ზე მხოლოდ x-ს ამრავლებთ (4x − 3 = 2x + 6) და იღებთ x = 4.5-ს.",
+    "explanation_en": "Expand the bracket: 4x − 12 = 2x + 6, so 2x = 18 and x = 9. The trap is multiplying only x by 4 (4x − 3 = 2x + 6 gives x = 4.5).",
+    "verify": {
+      "type": "numeric",
+      "expr": "(6 + 12) / (4 - 2)"
+    }
+  },
+  {
+    "id": "IM-026",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "equation",
+    "pattern_tag": "equation_setup",
+    "question_ka": "კაფეში 2 ყავა და 1 კრუასანი 13 ლარი ღირს, ხოლო 1 ყავა და 2 კრუასანი — 11 ლარი. რა ღირს 1 ყავა?",
+    "question_en": "At a café, 2 coffees and 1 croissant cost 13 GEL, while 1 coffee and 2 croissants cost 11 GEL. How much does 1 coffee cost?",
+    "options": [
+      {
+        "ka": "3 ლარი",
+        "en": "3 GEL"
+      },
+      {
+        "ka": "4 ლარი",
+        "en": "4 GEL"
+      },
+      {
+        "ka": "6.5 ლარი",
+        "en": "6.5 GEL"
+      },
+      {
+        "ka": "5 ლარი",
+        "en": "5 GEL"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "შეკრიბეთ ორივე შეკვეთა: 3 ყავა + 3 კრუასანი = 24, ანუ 1 ყავა + 1 კრუასანი = 8. პირველ შეკვეთაში ამ წყვილზე 1 ყავით მეტია: 13 − 8 = 5 ლარი. ხაფანგი: ირჩევთ 3 ლარს, თუმცა ეს კრუასანის ფასია.",
+    "explanation_en": "Adding both orders: 3 coffees + 3 croissants = 24, so 1 coffee + 1 croissant = 8. The first order is that pair plus 1 more coffee: 13 − 8 = 5 GEL. The trap is 3 GEL, which is the croissant's price.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { for (let c = 0; c <= 20; c += 0.5) for (let k = 0; k <= 20; k += 0.5) if (2 * c + k === 13 && c + 2 * k === 11) return c; }"
+    }
+  },
+  {
+    "id": "IM-027",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "equation",
+    "pattern_tag": "equation_setup",
+    "question_ka": "მართკუთხა ბაღის სიგრძე 3 მეტრით მეტია ორმაგ სიგანეზე. ბაღის პერიმეტრი 36 მ-ია. რამდენია ბაღის ფართობი?",
+    "question_en": "A rectangular garden is 3 m longer than twice its width. Its perimeter is 36 m. What is its area?",
+    "options": [
+      {
+        "ka": "60 მ²",
+        "en": "60 m²"
+      },
+      {
+        "ka": "81 მ²",
+        "en": "81 m²"
+      },
+      {
+        "ka": "65 მ²",
+        "en": "65 m²"
+      },
+      {
+        "ka": "72 მ²",
+        "en": "72 m²"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "სიგრძე + სიგანე = 36 ÷ 2 = 18. სიგანე აღნიშნეთ w-თი, მაშინ სიგრძე = 2w + 3. ესე იგი, 3w + 3 = 18, w = 5 მ, სიგრძე კი 13 მ. ფართობი = 5 × 13 = 65 მ². ხაფანგი: ბაღს 9 × 9 კვადრატად თვლით და იღებთ 81 მ²-ს.",
+    "explanation_en": "Length + width = 36 ÷ 2 = 18. With length = 2w + 3: 3w + 3 = 18, so w = 5 m and the length is 13 m. Area = 5 × 13 = 65 m². The trap is 81 m², from treating the garden as a 9 × 9 square.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { for (let w = 0.5; w < 36; w += 0.5) { const l = 2 * w + 3; if (2 * (l + w) === 36) return l * w; } }"
+    }
+  },
+  {
+    "id": "IM-028",
+    "module": "intermediate_math",
+    "difficulty": 1,
+    "format": "arithmetic",
+    "pattern_tag": "order_of_operations",
+    "question_ka": "გამოთვალეთ: 12 + 6 × 3 − 8 ÷ 2",
+    "question_en": "Calculate: 12 + 6 × 3 − 8 ÷ 2",
+    "options": [
+      "26",
+      "23",
+      "11",
+      "50"
+    ],
+    "correct": 0,
+    "explanation_ka": "ჯერ გაამრავლეთ და გაყავით: 6 × 3 = 18 და 8 ÷ 2 = 4. შემდეგ 12 + 18 − 4 = 26. ხაფანგი: ყველაფერს მარცხნიდან მარჯვნივ, რიგრიგობით ითვლით და იღებთ 23-ს.",
+    "explanation_en": "Multiplication and division come first: 6 × 3 = 18 and 8 ÷ 2 = 4. Then 12 + 18 − 4 = 26. The trap is working strictly from left to right, which gives 23.",
+    "verify": {
+      "type": "numeric",
+      "expr": "12 + 6 * 3 - 8 / 2"
+    }
+  },
+  {
+    "id": "IM-029",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "arithmetic",
+    "pattern_tag": "order_of_operations",
+    "question_ka": "მარიამმა ხელფასის 1/3 ბინის ქირაში გადაიხადა, დარჩენილი თანხის 1/4 კი საკვებზე დახარჯა. ხელფასის რა ნაწილი დარჩა მარიამს?",
+    "question_en": "Mariam spent 1/3 of her salary on rent and then 1/4 of the remaining money on food. What fraction of her salary does she have left?",
+    "options": [
+      "5/12",
+      "1/2",
+      "7/12",
+      "1/4"
+    ],
+    "correct": 1,
+    "explanation_ka": "ქირის შემდეგ ხელფასის 2/3 დარჩა. საკვებზე ამ თანხის 1/4 დაიხარჯა, ანუ მისი 3/4 დარჩა: 2/3 × 3/4 = 1/2. ხაფანგი: ითვლით 1 − 1/3 − 1/4 = 5/12-ს, ანუ 1/4-ს მთელი ხელფასიდან იღებთ და არა დარჩენილი თანხიდან.",
+    "explanation_en": "After rent, 2/3 is left. Food takes 1/4 of that, so 3/4 of it remains: 2/3 × 3/4 = 1/2. The trap is 1 − 1/3 − 1/4 = 5/12, which takes the 1/4 from the whole salary instead of from what was left.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const v = (1 - 1 / 3) * (1 - 1 / 4); return q.options.find(o => { const [a, b] = o.split('/').map(Number); return Math.abs(a / b - v) < 1e-9; }); }"
+    }
+  },
+  {
+    "id": "IM-030",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "arithmetic",
+    "pattern_tag": "order_of_operations",
+    "question_ka": "გამოთვალეთ: 2 + (6 − 2)² ÷ 8 × 2",
+    "question_en": "Calculate: 2 + (6 − 2)² ÷ 8 × 2",
+    "options": [
+      "9",
+      "3",
+      "4.5",
+      "6"
+    ],
+    "correct": 3,
+    "explanation_ka": "ჯერ ფრჩხილი: (6 − 2)² = 16. შემდეგ ÷ და × მარცხნიდან მარჯვნივ: 16 ÷ 8 = 2, 2 × 2 = 4. ბოლოს 2 + 4 = 6. ხაფანგი: ×-ს ÷-მდე ასრულებთ (16 ÷ 16 = 1, პასუხი 3), თუმცა მათ თანაბარი რიგი აქვთ და მარცხნიდან მარჯვნივ სრულდება.",
+    "explanation_en": "Brackets first: (6 − 2)² = 16. Then ÷ and × from left to right: 16 ÷ 8 = 2, 2 × 2 = 4. Finally 2 + 4 = 6. The trap is doing × before ÷ (16 ÷ 16 = 1, giving 3): they have equal priority and go from left to right.",
+    "verify": {
+      "type": "numeric",
+      "expr": "2 + (6 - 2) ** 2 / 8 * 2"
+    }
+  },
+  {
+    "id": "IM-031",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "arithmetic",
+    "pattern_tag": "weighted_average",
+    "question_ka": "ქეთევანის საშუალო ქულა 4 ტესტში 80-ია. რამდენი ქულა უნდა მიიღოს მე-5 ტესტში, რომ 5-ვე ტესტის საშუალო ქულა 82 გახდეს?",
+    "question_en": "Ketevan's average score on 4 tests is 80. What score does she need on the 5th test to bring her average over all 5 tests to 82?",
+    "options": [
+      "82",
+      "84",
+      "86",
+      "90"
+    ],
+    "correct": 3,
+    "explanation_ka": "საჭირო ჯამი: 5 × 82 = 410. ახლანდელი ჯამი: 4 × 80 = 320. ესე იგი, საჭიროა 410 − 320 = 90. ხაფანგი: ირჩევთ 84-ს ან 82-ს, თუმცა 5 ტესტის საშუალო 2 ქულით რომ გაიზარდოს, ახალი ქულა 80-ზე 5 × 2 = 10 ქულით მეტი უნდა იყოს.",
+    "explanation_en": "Total needed: 5 × 82 = 410. Total so far: 4 × 80 = 320. So she needs 410 − 320 = 90. The trap is 84 or 82: to lift the average of 5 tests by 2 points, the new score must be 5 × 2 = 10 points above 80.",
+    "verify": {
+      "type": "numeric",
+      "expr": "5 * 82 - 4 * 80"
+    }
+  },
+  {
+    "id": "IM-032",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "data_table",
+    "pattern_tag": "weighted_average",
+    "question_ka": "ცხრილში მოცემულია ორი ჯგუფის გამოცდის შედეგები. რამდენია ორივე ჯგუფის ყველა სტუდენტის საშუალო ქულა?",
+    "question_en": "The table shows the exam results of two groups. What is the average score of all the students in both groups together?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        {
+          "ka": "ჯგუფი",
+          "en": "Group"
+        },
+        {
+          "ka": "სტუდენტები",
+          "en": "Students"
+        },
+        {
+          "ka": "საშუალო ქულა",
+          "en": "Average score"
+        }
+      ],
+      "rows": [
+        [
+          "A",
+          "20",
+          "70"
+        ],
+        [
+          "B",
+          "30",
+          "80"
+        ]
+      ]
+    },
+    "options": [
+      "74",
+      "75",
+      "76",
+      "78"
+    ],
+    "correct": 2,
+    "explanation_ka": "ყველა ქულის ჯამი გაყავით სტუდენტების რაოდენობაზე: (20 × 70 + 30 × 80) ÷ 50 = (1400 + 2400) ÷ 50 = 76. ხაფანგი: ორი საშუალოს საშუალოს იღებთ (75) და არ ითვალისწინებთ, რომ B ჯგუფი უფრო დიდია.",
+    "explanation_en": "Weight each average by the group size: (20 × 70 + 30 × 80) ÷ 50 = (1400 + 2400) ÷ 50 = 76. The trap is the plain average of the averages, 75, which ignores that group B is larger.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { let s = 0, n = 0; for (const r of q.visual.rows) { s += Number(r[1]) * Number(r[2]); n += Number(r[1]); } return s / n; }"
+    }
+  },
+  {
+    "id": "IM-033",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "word_problem",
+    "pattern_tag": "weighted_average",
+    "question_ka": "საგნის საბოლოო შეფასება ასე ითვლება: საშინაო დავალებები — 20%, შუალედური გამოცდა — 30%, ფინალური გამოცდა — 50%. ლუკამ საშინაო დავალებებში 90 ქულა მიიღო, შუალედურ გამოცდაში კი — 70. რამდენი ქულა სჭირდება ფინალურ გამოცდაში, რომ საბოლოო შეფასება 80 იყოს?",
+    "question_en": "A course grade is made up of homework (20%), a midterm exam (30%) and a final exam (50%). Luka scored 90 on homework and 70 on the midterm. What score does he need on the final exam to get an overall grade of 80?",
+    "options": [
+      "82",
+      "80",
+      "81",
+      "84"
+    ],
+    "correct": 0,
+    "explanation_ka": "ლუკას უკვე აქვს 0.2 × 90 + 0.3 × 70 = 18 + 21 = 39 ქულა. დარჩენილი 80 − 39 = 41 ქულა ფინალურმა გამოცდამ უნდა მისცეს. მისი წონა 0.5-ია: 41 ÷ 0.5 = 82. ხაფანგი: სამივე ნაწილს თანაბარ წონას ანიჭებთ და იღებთ 80-ს.",
+    "explanation_en": "0.2 × 90 + 0.3 × 70 = 18 + 21 = 39 points so far. The remaining 80 − 39 = 41 points must come from the final, which has a weight of 0.5: 41 ÷ 0.5 = 82. The trap is 80, from treating the three parts as equally weighted.",
+    "verify": {
+      "type": "numeric",
+      "expr": "(80 - 0.2 * 90 - 0.3 * 70) / 0.5"
+    }
+  },
+  {
+    "id": "IM-034",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "word_problem",
+    "pattern_tag": "speed_time_distance",
+    "question_ka": "ნინომ თბილისიდან გორამდე 90 კმ საშუალოდ 60 კმ/სთ სიჩქარით გაიარა, უკან კი იმავე გზით — 90 კმ/სთ სიჩქარით. რამდენია მისი საშუალო სიჩქარე მთელ მგზავრობაზე?",
+    "question_en": "Nino drove the 90 km from Tbilisi to Gori at an average of 60 km/h and came back the same way at 90 km/h. What was her average speed for the whole trip?",
+    "options": [
+      {
+        "ka": "70 კმ/სთ",
+        "en": "70 km/h"
+      },
+      {
+        "ka": "72 კმ/სთ",
+        "en": "72 km/h"
+      },
+      {
+        "ka": "75 კმ/სთ",
+        "en": "75 km/h"
+      },
+      {
+        "ka": "80 კმ/სთ",
+        "en": "80 km/h"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "იქით: 90 ÷ 60 = 1.5 სთ, უკან: 90 ÷ 90 = 1 სთ. საშუალო სიჩქარე = მთელი მანძილი ÷ მთელი დრო = 180 ÷ 2.5 = 72 კმ/სთ. ხაფანგი: ორი სიჩქარის საშუალოს იღებთ (75), თუმცა ნელი სიჩქარით ნინომ მეტი დრო იმგზავრა.",
+    "explanation_en": "There: 90 ÷ 60 = 1.5 h; back: 90 ÷ 90 = 1 h. Average speed = total distance ÷ total time = 180 ÷ 2.5 = 72 km/h. The trap is 75, the average of the two speeds: Nino spent more time at the slower speed.",
+    "verify": {
+      "type": "numeric",
+      "expr": "(90 + 90) / (90 / 60 + 90 / 90)"
+    }
+  },
+  {
+    "id": "IM-035",
+    "module": "intermediate_math",
+    "difficulty": 1,
+    "format": "word_problem",
+    "pattern_tag": "speed_time_distance",
+    "question_ka": "ველოსიპედისტი 18 კმ/სთ სიჩქარით მოძრაობს. რა მანძილს გაივლის ის 40 წუთში?",
+    "question_en": "A cyclist rides at 18 km/h. How far does the cyclist ride in 40 minutes?",
+    "options": [
+      {
+        "ka": "7.2 კმ",
+        "en": "7.2 km"
+      },
+      {
+        "ka": "10 კმ",
+        "en": "10 km"
+      },
+      {
+        "ka": "12 კმ",
+        "en": "12 km"
+      },
+      {
+        "ka": "15 კმ",
+        "en": "15 km"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "40 წუთი = 40/60 = 2/3 საათი, ამიტომ მანძილი = 18 × 2/3 = 12 კმ. ხაფანგი: 40 წუთს 0.4 საათად წერთ და იღებთ 7.2 კმ-ს.",
+    "explanation_en": "40 minutes = 40/60 = 2/3 of an hour, so the distance is 18 × 2/3 = 12 km. The trap is writing 40 minutes as 0.4 hours, which gives 7.2 km.",
+    "verify": {
+      "type": "numeric",
+      "expr": "18 * 40 / 60"
+    }
+  },
+  {
+    "id": "IM-036",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "word_problem",
+    "pattern_tag": "speed_time_distance",
+    "question_ka": "ლუკა 9:00-ზე გავიდა სახლიდან და 5 კმ/სთ სიჩქარით ფეხით მიდის. საბა იმავე ადგილიდან 10:00-ზე გავიდა და იმავე გზას ველოსიპედით, 15 კმ/სთ სიჩქარით გაჰყვა. რომელ საათზე დაეწევა საბა ლუკას?",
+    "question_en": "Luka left home at 9:00, walking at 5 km/h. Saba left the same place at 10:00 and cycled along the same road at 15 km/h. At what time does Saba catch up with Luka?",
+    "options": [
+      "10:20",
+      "10:30",
+      "10:45",
+      "11:00"
+    ],
+    "correct": 1,
+    "explanation_ka": "10:00-ისთვის ლუკა 5 კმ-ით წინაა. საბა ამ მანძილს საათში 15 − 5 = 10 კმ-ით ამცირებს, ამიტომ მას 5 ÷ 10 = 0.5 სთ სჭირდება: 10:30. ხაფანგი: ლუკას უპირატესობას საბას სრულ სიჩქარეზე ყოფთ და არა სიჩქარეების სხვაობაზე, ამიტომ იღებთ 10:20-ს.",
+    "explanation_en": "By 10:00 Luka is 5 km ahead. Saba closes the gap at 15 − 5 = 10 km/h, so he needs 5 ÷ 10 = 0.5 h: 10:30. The trap is 10:20, from dividing Luka's head start by Saba's full speed instead of by the difference in speeds.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const head = 5 * (10 - 9); const m = 10 * 60 + head / (15 - 5) * 60; return Math.floor(m / 60) + ':' + String(m % 60).padStart(2, '0'); }"
+    }
+  },
+  {
+    "id": "IM-037",
+    "module": "intermediate_math",
+    "difficulty": 1,
+    "format": "arithmetic",
+    "pattern_tag": "unit_conversion",
+    "question_ka": "დავითი სამსახურში მუშაობას 8:45-ზე იწყებს და 17:30-ზე ამთავრებს. სადილის შესვენება 45 წუთია. რეალურად რამდენ ხანს მუშაობს დავითი დღეში?",
+    "question_en": "Davit starts work at 8:45 and finishes at 17:30. His lunch break is 45 minutes. How much time does he actually spend working each day?",
+    "options": [
+      {
+        "ka": "8 სთ",
+        "en": "8 h"
+      },
+      {
+        "ka": "7 სთ 45 წთ",
+        "en": "7 h 45 min"
+      },
+      {
+        "ka": "8 სთ 15 წთ",
+        "en": "8 h 15 min"
+      },
+      {
+        "ka": "8 სთ 45 წთ",
+        "en": "8 h 45 min"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "8:45-დან 17:30-მდე 8 სთ 45 წთ-ია. თუ 45-წუთიან შესვენებას გამოაკლებთ, რჩება 8 სთ. ხაფანგი: შესვენებას არ აკლებთ და 8 სთ 45 წთ-ს ირჩევთ. 8 სთ 15 წთ კი მაშინ მიიღება, თუ მხოლოდ საათებს აკლებთ (17 − 8 = 9 სთ) და წუთებს არ ითვალისწინებთ.",
+    "explanation_en": "From 8:45 to 17:30 is 8 h 45 min. Taking off the 45-minute break leaves 8 h. The trap is forgetting to take off the break, which gives 8 h 45 min. 8 h 15 min comes from subtracting only the hours (17 − 8 = 9 h) and ignoring the minutes.",
+    "verify": {
+      "type": "numeric",
+      "expr": "(17 * 60 + 30) - (8 * 60 + 45) - 45",
+      "option_values": [
+        480,
+        465,
+        495,
+        525
+      ]
+    }
+  },
+  {
+    "id": "IM-038",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "word_problem",
+    "pattern_tag": "unit_conversion",
+    "question_ka": "ოთახის იატაკი 4 მ × 3 მ ზომის მართკუთხედია. მას 20 სმ × 20 სმ ზომის კვადრატული ფილებით აგებენ. რამდენი ფილა დასჭირდება მთელი იატაკის დასაფარად?",
+    "question_en": "A room's floor is a 4 m × 3 m rectangle. It will be covered with square tiles measuring 20 cm × 20 cm. How many tiles are needed to cover the whole floor?",
+    "options": [
+      "60",
+      "600",
+      "3000",
+      "300"
+    ],
+    "correct": 3,
+    "explanation_ka": "ჯერ ყველაფერი სანტიმეტრებში გადაიყვანეთ. ერთი გვერდის გასწვრივ 400 სმ ÷ 20 = 20 ფილა ეტევა, მეორის გასწვრივ — 300 სმ ÷ 20 = 15. სულ 20 × 15 = 300 ფილა. ხაფანგი: 12 მ²-ს 0.2-ზე ყოფთ და იღებთ 60-ს, თუმცა ერთი ფილის ფართობი 0.2 × 0.2 = 0.04 მ²-ია და არა 0.2.",
+    "explanation_en": "Convert to centimetres first: 400 cm ÷ 20 = 20 tiles fit along one side and 300 cm ÷ 20 = 15 along the other, so 20 × 15 = 300 tiles. The trap is 12 m² ÷ 0.2 = 60: one tile's area is 0.2 × 0.2 = 0.04 m², not 0.2.",
+    "verify": {
+      "type": "numeric",
+      "expr": "(4 * 100 / 20) * (3 * 100 / 20)"
+    }
+  },
+  {
+    "id": "IM-039",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "word_problem",
+    "pattern_tag": "unit_conversion",
+    "question_ka": "მანქანა 72 კმ/სთ მუდმივი სიჩქარით მოძრაობს. რამდენ მეტრს გაივლის ის 15 წამში?",
+    "question_en": "A car travels at a constant 72 km/h. How many metres does it cover in 15 seconds?",
+    "options": [
+      {
+        "ka": "300 მ",
+        "en": "300 m"
+      },
+      {
+        "ka": "1080 მ",
+        "en": "1080 m"
+      },
+      {
+        "ka": "1200 მ",
+        "en": "1200 m"
+      },
+      {
+        "ka": "18000 მ",
+        "en": "18000 m"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "72 კმ/სთ = 72000 მ ÷ 3600 წმ = 20 მ/წმ, ამიტომ 15 წამში მანქანა 20 × 15 = 300 მ-ს გაივლის. ხაფანგი: 72 × 15 = 1080-ს ითვლით, ანუ საათებსა და წამებს ერთმანეთში ურევთ.",
+    "explanation_en": "72 km/h = 72000 m ÷ 3600 s = 20 m/s, so in 15 s it covers 20 × 15 = 300 m. The trap is 72 × 15 = 1080, which mixes up hours and seconds.",
+    "verify": {
+      "type": "numeric",
+      "expr": "72 * 1000 / 3600 * 15"
+    }
+  },
+  {
+    "id": "IM-040",
+    "module": "intermediate_math",
+    "difficulty": 1,
+    "format": "percentage",
+    "pattern_tag": "compound_interest",
+    "question_ka": "ნიკამ ბანკიდან 5000 ლარი ისესხა 2 წლით, წლიური 8%-იანი მარტივი პროცენტით. სულ რამდენ ლარს გადაიხდის პროცენტის სახით?",
+    "question_en": "Nika borrowed 5000 GEL from a bank for 2 years at 8% simple interest per year. How much will he pay in interest in total?",
+    "options": [
+      {
+        "ka": "400 ლარი",
+        "en": "400 GEL"
+      },
+      {
+        "ka": "832 ლარი",
+        "en": "832 GEL"
+      },
+      {
+        "ka": "800 ლარი",
+        "en": "800 GEL"
+      },
+      {
+        "ka": "5800 ლარი",
+        "en": "5800 GEL"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "მარტივი პროცენტი ყოველ წელს ერთნაირია: 5000 × 0.08 = 400 ლარი წელიწადში, ორ წელიწადში კი 2 × 400 = 800 ლარი. ხაფანგი: რთულ პროცენტს ითვლით (832), ან ასახელებთ მთელ დასაბრუნებელ თანხას (5800) და არა მხოლოდ პროცენტს.",
+    "explanation_en": "Simple interest is the same every year: 5000 × 0.08 = 400 GEL a year, so 2 × 400 = 800 GEL. The trap is 832 (compounding, which simple interest does not do) or 5800, which is the whole amount repaid, not the interest.",
+    "verify": {
+      "type": "numeric",
+      "expr": "5000 * 0.08 * 2"
+    }
+  },
+  {
+    "id": "IM-041",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "percentage",
+    "pattern_tag": "compound_interest",
+    "question_ka": "თამარმა ბანკში 1000 ლარი შეიტანა წლიური 10%-იანი რთული პროცენტით. ყოველი წლის ბოლოს პროცენტი ანაბარს ემატება. რამდენი ლარი ექნება თამარს ანაბარზე 3 წლის შემდეგ?",
+    "question_en": "Tamar put 1000 GEL into a bank deposit at 10% compound interest per year (the interest is added to the deposit at the end of each year). How much will be in the deposit after 3 years?",
+    "options": [
+      {
+        "ka": "1300 ლარი",
+        "en": "1300 GEL"
+      },
+      {
+        "ka": "1210 ლარი",
+        "en": "1210 GEL"
+      },
+      {
+        "ka": "1030 ლარი",
+        "en": "1030 GEL"
+      },
+      {
+        "ka": "1331 ლარი",
+        "en": "1331 GEL"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "ყოველ წელს თანხა 1.1-ზე მრავლდება: 1000 → 1100 → 1210 → 1331 ლარი. ხაფანგი: ყოველ წელს 100 ლარს ამატებთ (1300) და არ ითვალისწინებთ პროცენტზე დარიცხულ პროცენტს.",
+    "explanation_en": "Each year the balance is multiplied by 1.1: 1000 → 1100 → 1210 → 1331 GEL. The trap is 1300, which adds 100 GEL every year and ignores the interest earned on interest.",
+    "verify": {
+      "type": "numeric",
+      "expr": "1000 * 1.1 ** 3"
+    }
+  },
+  {
+    "id": "IM-042",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "word_problem",
+    "pattern_tag": "compound_interest",
+    "question_ka": "ელენემ ანაბარი წლიური 10%-იანი რთული პროცენტით გახსნა. 2 წლის შემდეგ ანაბარზე 2420 ლარი იყო. რამდენი ლარი შეიტანა ელენემ თავდაპირველად?",
+    "question_en": "Elene opened a deposit at 10% compound interest per year. After 2 years the deposit held 2420 GEL. How much did Elene put in at the start?",
+    "options": [
+      {
+        "ka": "1936 ლარი",
+        "en": "1936 GEL"
+      },
+      {
+        "ka": "2000 ლარი",
+        "en": "2000 GEL"
+      },
+      {
+        "ka": "2178 ლარი",
+        "en": "2178 GEL"
+      },
+      {
+        "ka": "2200 ლარი",
+        "en": "2200 GEL"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "2 წელიწადში ანაბარი 1.1 × 1.1 = 1.21-ზე მრავლდება, ამიტომ საწყისი თანხა = 2420 ÷ 1.21 = 2000 ლარი. ხაფანგი: საბოლოო თანხიდან 20%-ს აკლებთ (2420 × 0.8 = 1936), ანუ პროცენტს არასწორი თანხიდან ითვლით და რთულ პროცენტს არ ითვალისწინებთ.",
+    "explanation_en": "Over 2 years the deposit is multiplied by 1.1 × 1.1 = 1.21, so the starting amount is 2420 ÷ 1.21 = 2000 GEL. The trap is 2420 × 0.8 = 1936: taking 20% off the final amount uses the wrong base and ignores compounding.",
+    "verify": {
+      "type": "numeric",
+      "expr": "2420 / 1.1 / 1.1"
+    }
+  },
+  {
+    "id": "IM-043",
+    "module": "intermediate_math",
+    "difficulty": 1,
+    "format": "probability",
+    "pattern_tag": "probability_basics",
+    "question_ka": "ყუთში 5 შავი, 3 ლურჯი და 2 წითელი კალამია. საბა ყუთიდან შემთხვევით იღებს ერთ კალამს. რისი ტოლია ალბათობა, რომ ის ლურჯი იქნება?",
+    "question_en": "A box holds 5 black, 3 blue and 2 red pens. Saba takes one pen at random. What is the probability that it is blue?",
+    "options": [
+      "3/10",
+      "3/7",
+      "1/3",
+      "3/5"
+    ],
+    "correct": 0,
+    "explanation_ka": "სულ 5 + 3 + 2 = 10 კალამია, აქედან 3 ლურჯია. ამიტომ ალბათობა 3/10-ია. ხაფანგი: ლურჯ კალმებს მხოლოდ დანარჩენ კალმებს ადარებთ (3/7) და არა ყველას.",
+    "explanation_en": "There are 5 + 3 + 2 = 10 pens and 3 of them are blue, so the probability is 3/10. The trap is 3/7, which compares the blue pens with the other pens instead of with all of them.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const v = 3 / (5 + 3 + 2); return q.options.find(o => { const [a, b] = o.split('/').map(Number); return Math.abs(a / b - v) < 1e-9; }); }"
+    }
+  },
+  {
+    "id": "IM-044",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "probability",
+    "pattern_tag": "probability_basics",
+    "question_ka": "ანა ერთდროულად აგდებს 2 მონეტას. რისი ტოლია ალბათობა, რომ ერთ მონეტაზე მაინც „გერბი“ მოვა?",
+    "question_en": "Ana tosses 2 coins at the same time. What is the probability that at least one of them lands heads?",
+    "options": [
+      "1/2",
+      "2/3",
+      "3/4",
+      "1/4"
+    ],
+    "correct": 2,
+    "explanation_ka": "თანაბრად შესაძლო 4 შედეგია: გერბი–გერბი, გერბი–საფასური, საფასური–გერბი, საფასური–საფასური. გერბი არ არის მხოლოდ ბოლო შემთხვევაში, ამიტომ ალბათობა 3/4-ია. ხაფანგი: „ერთ გერბს“ ერთ შედეგად თვლით და იღებთ 2/3-ს, თუმცა გერბი–საფასური და საფასური–გერბი სხვადასხვა შედეგია.",
+    "explanation_en": "There are 4 equally likely outcomes: heads–heads, heads–tails, tails–heads, tails–tails. Only the last has no heads, so the probability is 3/4. The trap is 2/3, from counting 'one head' as a single outcome: heads–tails and tails–heads are different.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { let f = 0, n = 0; for (const a of [0, 1]) for (const b of [0, 1]) { n++; if (a || b) f++; } const v = f / n; return q.options.find(o => { const [x, y] = o.split('/').map(Number); return Math.abs(x / y - v) < 1e-9; }); }"
+    }
+  },
+  {
+    "id": "IM-045",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "probability",
+    "pattern_tag": "probability_basics",
+    "question_ka": "ყუთში 6 ნათურაა: 4 გამართულია, 2 კი — დაზიანებული. ლევანი ყუთიდან შემთხვევით, ერთმანეთის მიყოლებით იღებს 2 ნათურას და უკან აღარ აბრუნებს. რისი ტოლია ალბათობა, რომ ორივე ნათურა გამართული იქნება?",
+    "question_en": "A box holds 6 light bulbs: 4 work and 2 are faulty. Levani takes out 2 bulbs at random, one after the other, without putting any back. What is the probability that both bulbs work?",
+    "options": [
+      "4/9",
+      "2/3",
+      "1/3",
+      "2/5"
+    ],
+    "correct": 3,
+    "explanation_ka": "პირველი ნათურა: 4/6. თუ ის გამართულია, დარჩენილ 5 ნათურაში 3 გამართულია: 3/5. ერთად 4/6 × 3/5 = 12/30 = 2/5. ხაფანგი: მეორე ამოღებისას გამართულ ნათურებს ამცირებთ, ნათურების საერთო რაოდენობას კი — არა: 4/6 × 3/6 = 1/3. თუ საერთოდ დაგავიწყდათ, რომ პირველი ნათურა უკან არ დაბრუნებულა, მიიღებთ 4/6 × 4/6 = 4/9-ს.",
+    "explanation_en": "First bulb: 4/6. If it works, 3 of the remaining 5 bulbs work: 3/5. Together 4/6 × 3/5 = 12/30 = 2/5. The trap is reducing the working bulbs but not the total on the second draw: 4/6 × 3/6 = 1/3. Forgetting altogether that the first bulb was not put back gives 4/6 × 4/6 = 4/9.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const v = 4 / 6 * 3 / 5; return q.options.find(o => { const [a, b] = o.split('/').map(Number); return Math.abs(a / b - v) < 1e-9; }); }"
+    }
+  },
+  {
+    "id": "IM-046",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "probability",
+    "pattern_tag": "probability_basics",
+    "question_ka": "კალათაში 10 ვაშლია: 5 წითელი და 5 მწვანე. თამარი შემთხვევით იღებს ერთ ვაშლს, შემდეგ კი — მეორეს. პირველ ვაშლს კალათაში აღარ აბრუნებს. რისი ტოლია ალბათობა, რომ ორივე ვაშლი წითელი იქნება?",
+    "question_en": "A basket holds 10 apples: 5 red and 5 green. Tamar takes one apple at random, and then a second one. She does not put the first apple back in the basket. What is the probability that both apples are red?",
+    "options": [
+      "1/4",
+      "2/9",
+      "1/2",
+      "1/5"
+    ],
+    "correct": 1,
+    "explanation_ka": "პირველი ვაშლი წითელია ალბათობით 5/10. ამის შემდეგ კალათაში 9 ვაშლი რჩება და მათგან 4 წითელია: 4/9. ორივე ერთად: 5/10 × 4/9 = 20/90 = 2/9. ხაფანგი: მეორე ამოღებისას წითელ ვაშლებს ამცირებთ, ყველა ვაშლს კი არა (5/10 × 4/10 = 1/5), ან საერთოდ არაფერს ამცირებთ (5/10 × 5/10 = 1/4).",
+    "explanation_en": "The first apple is red with probability 5/10. Then 9 apples are left, and 4 of them are red: 4/9. Both together: 5/10 × 4/9 = 20/90 = 2/9. The trap: on the second draw you reduce the red apples but not the total (5/10 × 4/10 = 1/5), or you reduce nothing at all (5/10 × 5/10 = 1/4).",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const v = 5 / 10 * 4 / 9; return q.options.find(o => { const [a, b] = o.split('/').map(Number); return Math.abs(a / b - v) < 1e-9; }); }"
+    }
+  },
+  {
+    "id": "IM-047",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "probability",
+    "pattern_tag": "probability_basics",
+    "question_ka": "სემინარზე 5 სტუდენტია: 3 ბიჭი და 2 გოგო. ლექტორი პროექტისთვის შემთხვევით ირჩევს 2 სტუდენტს. რისი ტოლია ალბათობა, რომ არჩეულთაგან ერთი ბიჭი იქნება, მეორე კი — გოგო?",
+    "question_en": "There are 5 students at a seminar: 3 boys and 2 girls. The lecturer picks 2 students at random for a project. What is the probability that one of the two chosen is a boy and the other is a girl?",
+    "options": [
+      "3/10",
+      "12/25",
+      "1/3",
+      "3/5"
+    ],
+    "correct": 3,
+    "explanation_ka": "ბიჭი და გოგო შეიძლება ორი თანმიმდევრობით აირჩეს. ჯერ ბიჭი, შემდეგ გოგო: 3/5 × 2/4 = 6/20. ჯერ გოგო, შემდეგ ბიჭი: 2/5 × 3/4 = 6/20. ჯამში 6/20 + 6/20 = 12/20 = 3/5. ხაფანგი: მხოლოდ ერთ თანმიმდევრობას ითვლით (3/10), ან გავიწყდებათ, რომ ერთ სტუდენტს ორჯერ ვერ აირჩევენ (12/25).",
+    "explanation_en": "A boy and a girl can be picked in two orders. Boy first, then girl: 3/5 × 2/4 = 6/20. Girl first, then boy: 2/5 × 3/4 = 6/20. In total 6/20 + 6/20 = 12/20 = 3/5. The trap: you count only one order (3/10), or you forget that the same student cannot be picked twice (12/25).",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const s = ['B', 'B', 'B', 'G', 'G']; let f = 0, n = 0; for (let i = 0; i < 5; i++) for (let j = i + 1; j < 5; j++) { n++; if (s[i] !== s[j]) f++; } const v = f / n; return q.options.find(o => { const [a, b] = o.split('/').map(Number); return Math.abs(a / b - v) < 1e-9; }); }"
+    }
+  },
+  {
+    "id": "IM-048",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "probability",
+    "pattern_tag": "probability_basics",
+    "question_ka": "ყუთში 10 ბურთია: 4 ყვითელი და 6 მწვანე. გიორგი შემთხვევით იღებს ერთ ბურთს, ფერს იმახსოვრებს და ბურთს ყუთში აბრუნებს. შემდეგ ბურთებს ურევს და ისევ შემთხვევით იღებს ერთს. რისი ტოლია ალბათობა, რომ გიორგი ორივე ჯერზე ყვითელ ბურთს ამოიღებს?",
+    "question_en": "A box holds 10 balls: 4 yellow and 6 green. Giorgi takes a ball at random, notes its colour and puts it back in the box. Then he mixes the balls and again takes one at random. What is the probability that Giorgi takes a yellow ball both times?",
+    "options": [
+      "4/25",
+      "2/15",
+      "3/25",
+      "2/5"
+    ],
+    "correct": 0,
+    "explanation_ka": "ბურთი უკან ბრუნდება, ამიტომ მეორე ამოღებისას ყუთში ისევ 10 ბურთია და 4 მათგანი ყვითელია. ორივე ჯერზე ალბათობა 4/10-ია: 4/10 × 4/10 = 16/100 = 4/25. ბურთი უკან რომ არ დაებრუნებინა, იქნებოდა 4/10 × 3/9 = 2/15. ხაფანგი: ჩვევით ამცირებთ ბურთების რაოდენობას, თუმცა გიორგიმ ბურთი უკან დააბრუნა.",
+    "explanation_en": "The ball goes back, so on the second draw there are again 10 balls, and 4 of them are yellow. Each time the probability is 4/10: 4/10 × 4/10 = 16/100 = 4/25. If he had not put it back, it would be 4/10 × 3/9 = 2/15. The trap: you reduce the number of balls out of habit, although Giorgi put the ball back.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const v = 4 / 10 * 4 / 10; return q.options.find(o => { const [a, b] = o.split('/').map(Number); return Math.abs(a / b - v) < 1e-9; }); }"
+    }
+  },
+  {
+    "id": "IM-049",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "probability",
+    "pattern_tag": "probability_basics",
+    "question_ka": "დათო ერთდროულად აგდებს 2 ჩვეულებრივ კამათელს. რისი ტოლია ალბათობა, რომ ორ კამათელზე მოსული ქულების ჯამი 7 იქნება?",
+    "question_en": "Dato rolls 2 ordinary dice at the same time. What is the probability that the numbers on the two dice add up to 7?",
+    "options": [
+      "1/11",
+      "1/12",
+      "1/6",
+      "1/7"
+    ],
+    "correct": 2,
+    "explanation_ka": "ორ კამათელს 6 × 6 = 36 თანაბრად შესაძლო შედეგი აქვს. ჯამი 7 გამოდის 6 შემთხვევაში: 1–6, 2–5, 3–4, 4–3, 5–2, 6–1. ალბათობა = 6/36 = 1/6. ხაფანგი: 2-დან 12-მდე 11 ჯამს თანაბრად შესაძლოდ თვლით (1/11), ან 1–6-სა და 6–1-ს ერთ შედეგად თვლით (3/36 = 1/12).",
+    "explanation_en": "Two dice have 6 × 6 = 36 equally likely outcomes. A total of 7 comes up in 6 of them: 1–6, 2–5, 3–4, 4–3, 5–2, 6–1. Probability = 6/36 = 1/6. The trap: you treat the 11 totals from 2 to 12 as equally likely (1/11), or you count 1–6 and 6–1 as one outcome (3/36 = 1/12).",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { let f = 0, n = 0; for (let a = 1; a <= 6; a++) for (let b = 1; b <= 6; b++) { n++; if (a + b === 7) f++; } const v = f / n; return q.options.find(o => { const [x, y] = o.split('/').map(Number); return Math.abs(x / y - v) < 1e-9; }); }"
+    }
+  },
+  {
+    "id": "IM-050",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "word_problem",
+    "pattern_tag": "proportion_scaling",
+    "question_ka": "ანის ბინის გეგმა 1 : 200 მასშტაბითაა დახაზული. გეგმაზე მისაღები ოთახის ფართობი 6 სმ²-ია. რამდენია მისაღები ოთახის რეალური ფართობი?",
+    "question_en": "The plan of Ani's flat is drawn at a scale of 1 : 200. On the plan, the living room has an area of 6 cm². What is the real area of the living room?",
+    "options": [
+      {
+        "ka": "12 მ²",
+        "en": "12 m²"
+      },
+      {
+        "ka": "24 მ²",
+        "en": "24 m²"
+      },
+      {
+        "ka": "240 მ²",
+        "en": "240 m²"
+      },
+      {
+        "ka": "0.12 მ²",
+        "en": "0.12 m²"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "1 : 200 მასშტაბით გეგმის 1 სმ რეალურად 200 სმ = 2 მ-ია. ამიტომ გეგმის 1 სმ² რეალურად 2 მ × 2 მ = 4 მ²-ია. ოთახის ფართობი = 6 × 4 = 24 მ². ხაფანგი: ფართობს მასშტაბზე მხოლოდ ერთხელ ამრავლებთ (6 × 2 = 12 მ²), თუმცა ფართობი მასშტაბის კვადრატით იზრდება.",
+    "explanation_en": "At a scale of 1 : 200, 1 cm on the plan is 200 cm = 2 m in reality. So 1 cm² on the plan is 2 m × 2 m = 4 m² in reality. The room's area = 6 × 4 = 24 m². The trap: you multiply the area by the scale only once (6 × 2 = 12 m²), but area grows with the square of the scale.",
+    "verify": {
+      "type": "numeric",
+      "expr": "6 * (200 / 100) ** 2"
+    }
+  },
+  {
+    "id": "IM-051",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "word_problem",
+    "pattern_tag": "proportion_scaling",
+    "question_ka": "ოსტატმა ქვევრის მოდელი 1 : 10 მასშტაბით გააკეთა. მოდელს ნამდვილი ქვევრის ზუსტად იგივე ფორმა აქვს და მასში 2.5 ლიტრი წყალი ეტევა. რამდენი ლიტრი წყალი ეტევა ნამდვილ ქვევრში?",
+    "question_en": "A craftsman made a model of a qvevri (a clay wine vessel) at a scale of 1 : 10. The model has exactly the same shape as the real qvevri and holds 2.5 litres of water. How many litres of water does the real qvevri hold?",
+    "options": [
+      {
+        "ka": "250 ლიტრი",
+        "en": "250 litres"
+      },
+      {
+        "ka": "25 ლიტრი",
+        "en": "25 litres"
+      },
+      {
+        "ka": "75 ლიტრი",
+        "en": "75 litres"
+      },
+      {
+        "ka": "2500 ლიტრი",
+        "en": "2500 litres"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "ნამდვილი ქვევრის ყოველი ზომა — სიმაღლე, სიგანე და სიღრმე — 10-ჯერ მეტია. მოცულობა სამივე ზომაზეა დამოკიდებული, ამიტომ ის 10 × 10 × 10 = 1000-ჯერ მეტია: 2.5 × 1000 = 2500 ლიტრი. ხაფანგი: მოცულობას მხოლოდ 10-ზე (25 ლიტრი) ან 10 × 10-ზე (250 ლიტრი) ამრავლებთ, თუმცა მოცულობა მასშტაბის კუბით იზრდება.",
+    "explanation_en": "Every dimension of the real qvevri — height, width and depth — is 10 times larger. Volume depends on all three, so it is 10 × 10 × 10 = 1000 times larger: 2.5 × 1000 = 2500 litres. The trap: you multiply the volume only by 10 (25 litres) or by 10 × 10 (250 litres), but volume grows with the cube of the scale.",
+    "verify": {
+      "type": "numeric",
+      "expr": "2.5 * 10 ** 3"
+    }
+  },
+  {
+    "id": "IM-052",
+    "module": "intermediate_math",
+    "difficulty": 1,
+    "format": "word_problem",
+    "pattern_tag": "proportion_scaling",
+    "question_ka": "ლუკამ კედელზე კვადრატული ლოგო დახატა და 20 მლ საღებავი დახარჯა. ახლა ის იმავე ლოგოს ხატავს, ოღონდ ყოველი გვერდი 3-ჯერ გრძელია. საღებავის ფენა ისეთივე სქელი იქნება. რამდენი საღებავი დასჭირდება ლუკას?",
+    "question_en": "Luka painted a square logo on a wall and used 20 ml of paint. Now he is painting the same logo, but every side is 3 times as long. The layer of paint will be just as thick. How much paint will Luka need?",
+    "options": [
+      {
+        "ka": "180 მლ",
+        "en": "180 ml"
+      },
+      {
+        "ka": "60 მლ",
+        "en": "60 ml"
+      },
+      {
+        "ka": "540 მლ",
+        "en": "540 ml"
+      },
+      {
+        "ka": "120 მლ",
+        "en": "120 ml"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "როცა ყოველი გვერდი 3-ჯერ იზრდება, ფართობი 3 × 3 = 9-ჯერ იზრდება. ამიტომ საღებავიც 9-ჯერ მეტი დასჭირდება: 20 × 9 = 180 მლ. ხაფანგი: საღებავს მხოლოდ 3-ზე ამრავლებთ (60 მლ), თუმცა ფართობი გვერდის კვადრატით იზრდება.",
+    "explanation_en": "When every side grows 3 times, the area grows 3 × 3 = 9 times. So he needs 9 times as much paint: 20 × 9 = 180 ml. The trap: you multiply the paint only by 3 (60 ml), but area grows with the square of the side.",
+    "verify": {
+      "type": "numeric",
+      "expr": "20 * 3 ** 2"
+    }
+  },
+  {
+    "id": "IM-053",
+    "module": "intermediate_math",
+    "difficulty": 1,
+    "format": "word_problem",
+    "pattern_tag": "order_of_operations",
+    "question_ka": "სანდროს 80 ლარი ჰქონდა. ჯერ ამ თანხის 1/4 წიგნზე დახარჯა, შემდეგ დარჩენილი ფულის 1/2 — ფეხბურთის ბილეთზე. რამდენი ლარი დარჩა სანდროს?",
+    "question_en": "Sandro had 80 GEL. First he spent 1/4 of it on a book, then 1/2 of the remaining money on a football ticket. How many GEL does Sandro have left?",
+    "options": [
+      {
+        "ka": "20 ლარი",
+        "en": "20 GEL"
+      },
+      {
+        "ka": "40 ლარი",
+        "en": "40 GEL"
+      },
+      {
+        "ka": "30 ლარი",
+        "en": "30 GEL"
+      },
+      {
+        "ka": "60 ლარი",
+        "en": "60 GEL"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "წიგნზე დახარჯა 80 ÷ 4 = 20 ლარი, დარჩა 60. ბილეთზე დახარჯა 60-ის ნახევარი, ანუ 30 ლარი. დარჩა 60 − 30 = 30 ლარი. ხაფანგი: 1/2-ს მთელი თანხიდან ითვლით (40 ლარი) და არა დარჩენილიდან, ამიტომ იღებთ 20-ს.",
+    "explanation_en": "The book cost 80 ÷ 4 = 20 GEL, leaving 60. The ticket took half of 60, i.e. 30 GEL. That leaves 60 − 30 = 30 GEL. The trap: you take 1/2 of the whole amount (40 GEL) instead of the remainder, and get 20.",
+    "verify": {
+      "type": "numeric",
+      "expr": "80 * (1 - 1 / 4) * (1 - 1 / 2)"
+    }
+  },
+  {
+    "id": "IM-054",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "word_problem",
+    "pattern_tag": "order_of_operations",
+    "question_ka": "ფერმერმა მანდარინის მოსავლის 1/6 ნათესავებს გაუგზავნა. დარჩენილი მანდარინის 1/5 წვენისთვის გამოიყენა. ბოლოს ამის შემდეგ დარჩენილი მანდარინის 1/2 ბაზარზე გაყიდა. მოსავლის რა ნაწილი დარჩა ფერმერს?",
+    "question_en": "A farmer sent 1/6 of his tangerine harvest to relatives. He used 1/5 of the remaining tangerines for juice. Finally, he sold 1/2 of the tangerines left after that at the market. What fraction of the harvest does the farmer have left?",
+    "options": [
+      "2/15",
+      "1/3",
+      "1/6",
+      "2/3"
+    ],
+    "correct": 1,
+    "explanation_ka": "ნათესავებს რომ გაუგზავნა, მოსავლის 5/6 დარჩა. წვენის შემდეგ დარჩა 5/6 × 4/5 = 2/3. ბაზრის შემდეგ — 2/3 × 1/2 = 1/3. ხაფანგი: ყველა წილადს მთელი მოსავლიდან ითვლით: 1 − 1/6 − 1/5 − 1/2 = 2/15.",
+    "explanation_en": "After sending tangerines to relatives, 5/6 of the harvest was left. After the juice, 5/6 × 4/5 = 2/3 was left. After the market: 2/3 × 1/2 = 1/3. The trap: you take every fraction from the whole harvest: 1 − 1/6 − 1/5 − 1/2 = 2/15.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const v = (1 - 1 / 6) * (1 - 1 / 5) * (1 - 1 / 2); return q.options.find(o => { const [a, b] = o.split('/').map(Number); return Math.abs(a / b - v) < 1e-9; }); }"
+    }
+  },
+  {
+    "id": "IM-055",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "word_problem",
+    "pattern_tag": "order_of_operations",
+    "question_ka": "ეკამ პრემიის 1/5 ტელეფონზე დახარჯა, დარჩენილი თანხის 1/2 კი — მოგზაურობაზე. ახლა მას 360 ლარი დარჩა. რამდენი ლარი იყო პრემია?",
+    "question_en": "Eka spent 1/5 of her bonus on a phone and 1/2 of the remaining money on a trip. She now has 360 GEL left. How much was the bonus?",
+    "options": [
+      {
+        "ka": "1200 ლარი",
+        "en": "1200 GEL"
+      },
+      {
+        "ka": "612 ლარი",
+        "en": "612 GEL"
+      },
+      {
+        "ka": "720 ლარი",
+        "en": "720 GEL"
+      },
+      {
+        "ka": "900 ლარი",
+        "en": "900 GEL"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "ტელეფონის შემდეგ პრემიის 4/5 დარჩა. მოგზაურობის შემდეგ — 4/5 × 1/2 = 2/5. ესე იგი, 360 ლარი პრემიის 2/5-ია: 360 ÷ 2/5 = 360 × 5/2 = 900 ლარი. ხაფანგი: ორივე წილადს მთელი პრემიიდან ითვლით (1 − 1/5 − 1/2 = 3/10) და იღებთ 360 ÷ 3/10 = 1200-ს.",
+    "explanation_en": "After the phone, 4/5 of the bonus is left. After the trip: 4/5 × 1/2 = 2/5. So 360 GEL is 2/5 of the bonus: 360 ÷ 2/5 = 360 × 5/2 = 900 GEL. The trap: you take both fractions from the whole bonus (1 − 1/5 − 1/2 = 3/10) and get 360 ÷ 3/10 = 1200.",
+    "verify": {
+      "type": "numeric",
+      "expr": "360 / ((1 - 1 / 5) * (1 - 1 / 2))"
+    }
+  },
+  {
+    "id": "IM-056",
+    "module": "intermediate_math",
+    "difficulty": 1,
+    "format": "word_problem",
+    "pattern_tag": "weighted_average",
+    "question_ka": "კაფეში 6 მიმტანი და 2 მზარეული მუშაობს. მიმტანების საშუალო ხელფასი 900 ლარია, მზარეულებისა — 1500 ლარი. რამდენია კაფის 8-ვე თანამშრომლის საშუალო ხელფასი?",
+    "question_en": "A café employs 6 waiters and 2 cooks. The waiters' average salary is 900 GEL, and the cooks' is 1500 GEL. What is the average salary of all 8 café employees?",
+    "options": [
+      {
+        "ka": "1050 ლარი",
+        "en": "1050 GEL"
+      },
+      {
+        "ka": "1200 ლარი",
+        "en": "1200 GEL"
+      },
+      {
+        "ka": "1350 ლარი",
+        "en": "1350 GEL"
+      },
+      {
+        "ka": "1400 ლარი",
+        "en": "1400 GEL"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "ყველა ხელფასის ჯამი: 6 × 900 + 2 × 1500 = 5400 + 3000 = 8400 ლარი. საშუალო: 8400 ÷ 8 = 1050 ლარი. ხაფანგი: ორი საშუალოს საშუალოს იღებთ (1200 ლარი) და არ ითვალისწინებთ, რომ მიმტანები 3-ჯერ მეტია.",
+    "explanation_en": "Total of all salaries: 6 × 900 + 2 × 1500 = 5400 + 3000 = 8400 GEL. Average: 8400 ÷ 8 = 1050 GEL. The trap: you average the two averages (1200 GEL) and ignore that there are 3 times as many waiters.",
+    "verify": {
+      "type": "numeric",
+      "expr": "(6 * 900 + 2 * 1500) / 8"
+    }
+  },
+  {
+    "id": "IM-057",
+    "module": "intermediate_math",
+    "difficulty": 2,
+    "format": "word_problem",
+    "pattern_tag": "weighted_average",
+    "question_ka": "მაღაზია ჩაის ნარევს ამზადებს. წონით ნარევის 60% ქართული ჩაია, 40% კი — ინდური. 1 კგ ქართული ჩაი 12 ლარი ღირს, 1 კგ ინდური — 20 ლარი. რა ღირს ნარევის 1 კგ?",
+    "question_en": "A shop makes a tea blend. By weight, 60% of the blend is Georgian tea and 40% is Indian tea. 1 kg of Georgian tea costs 12 GEL, and 1 kg of Indian tea costs 20 GEL. What does 1 kg of the blend cost?",
+    "options": [
+      {
+        "ka": "16 ლარი",
+        "en": "16 GEL"
+      },
+      {
+        "ka": "16.8 ლარი",
+        "en": "16.8 GEL"
+      },
+      {
+        "ka": "15.2 ლარი",
+        "en": "15.2 GEL"
+      },
+      {
+        "ka": "7.6 ლარი",
+        "en": "7.6 GEL"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "ყოველი ფასი თავის წილზე გაამრავლეთ და შეკრიბეთ: 0.6 × 12 + 0.4 × 20 = 7.2 + 8 = 15.2 ლარი. ხაფანგი: ორი ფასის უბრალო საშუალოს იღებთ (16 ლარი) და არ ითვალისწინებთ, რომ ნარევში იაფი ჩაი მეტია.",
+    "explanation_en": "Multiply each price by its share and add: 0.6 × 12 + 0.4 × 20 = 7.2 + 8 = 15.2 GEL. The trap: you take the plain average of the two prices (16 GEL) and ignore that the blend contains more of the cheaper tea.",
+    "verify": {
+      "type": "numeric",
+      "expr": "0.6 * 12 + 0.4 * 20"
+    }
+  },
+  {
+    "id": "IM-058",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "word_problem",
+    "pattern_tag": "weighted_average",
+    "question_ka": "გუნდში 9 თანამშრომელია და მათი საშუალო ხელფასი 1200 ლარია. გუნდს ახალი მენეჯერი შეუერთდა. მისი ხელფასი 2100 ლარია. რამდენი ლარით გაიზრდება გუნდის საშუალო ხელფასი?",
+    "question_en": "A team has 9 employees, and their average salary is 1200 GEL. A new manager joins the team. The manager's salary is 2100 GEL. By how many GEL does the team's average salary increase?",
+    "options": [
+      {
+        "ka": "100 ლარით",
+        "en": "By 100 GEL"
+      },
+      {
+        "ka": "90 ლარით",
+        "en": "By 90 GEL"
+      },
+      {
+        "ka": "450 ლარით",
+        "en": "By 450 GEL"
+      },
+      {
+        "ka": "900 ლარით",
+        "en": "By 900 GEL"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "ძველი ჯამი: 9 × 1200 = 10800 ლარი. ახალი ჯამი: 10800 + 2100 = 12900 ლარი 10 ადამიანზე. ახალი საშუალო: 12900 ÷ 10 = 1290, ანუ საშუალო 90 ლარით გაიზარდა. ხაფანგი: სხვაობას (2100 − 1200 = 900) ძველ 9 ადამიანზე ყოფთ (100 ლარი), თუმცა ახლა გუნდში 10 ადამიანია.",
+    "explanation_en": "Old total: 9 × 1200 = 10800 GEL. New total: 10800 + 2100 = 12900 GEL for 10 people. New average: 12900 ÷ 10 = 1290, so the average rose by 90 GEL. The trap: you divide the difference (2100 − 1200 = 900) by the old 9 people (100 GEL), but the team now has 10 people.",
+    "verify": {
+      "type": "numeric",
+      "expr": "(9 * 1200 + 2100) / 10 - 1200"
+    }
+  },
+  {
+    "id": "IM-059",
+    "module": "intermediate_math",
+    "difficulty": 3,
+    "format": "percentage",
+    "pattern_tag": "percent_change_base",
+    "question_ka": "კომპანიის თანამშრომლების 30% გაყიდვებში მუშაობს. გაყიდვების თანამშრომლების 40% ამ წელს აიყვანეს. მთელ კომპანიაში ამ წელს აყვანილია ყველა თანამშრომლის 20%. ამ წელს აყვანილი თანამშრომლების რამდენი პროცენტი მუშაობს გაყიდვებში?",
+    "question_en": "30% of a company's employees work in sales. 40% of the sales staff were hired this year. Across the whole company, 20% of all employees were hired this year. What percentage of this year's hires work in sales?",
+    "options": [
+      "12%",
+      "40%",
+      "30%",
+      "60%"
+    ],
+    "correct": 3,
+    "explanation_ka": "ჩათვალეთ, რომ კომპანიაში 100 თანამშრომელია. გაყიდვებში 30 ადამიანია, მათგან ამ წელს აყვანილია 30-ის 40% = 12. მთელ კომპანიაში ამ წელს 20 ადამიანი აიყვანეს. ესე იგი, ახალი თანამშრომლების 12 ÷ 20 = 60% გაყიდვებშია. ხაფანგი: ირჩევთ 12%-ს, ანუ ყველა თანამშრომელს ადარებთ და არა მხოლოდ ამ წელს აყვანილებს.",
+    "explanation_en": "Suppose the company has 100 employees. 30 work in sales, and 40% of 30 = 12 of them were hired this year. Across the company, 20 people were hired this year. So 12 ÷ 20 = 60% of the new hires are in sales. The trap: you choose 12%, which compares with all employees instead of only this year's hires.",
+    "verify": {
+      "type": "numeric",
+      "expr": "0.3 * 0.4 / 0.2 * 100"
+    }
+  },
+  {
+    "id": "IM-060",
+    "module": "intermediate_math",
+    "difficulty": 1,
+    "format": "percentage",
+    "pattern_tag": "successive_percent",
+    "question_ka": "ბათუმის ერთ სასტუმროში ოთახი ღამეში 200 ლარი ღირდა. ივნისში ფასი 25%-ით გაიზარდა, ივლისში კი ახალი ფასი კიდევ 20%-ით გაიზარდა. რა ღირს ოთახი ღამეში ახლა?",
+    "question_en": "At a hotel in Batumi, a room cost 200 GEL a night. In June the price went up by 25%, and in July the new price went up by another 20%. What does the room cost per night now?",
+    "options": [
+      {
+        "ka": "300 ლარი",
+        "en": "300 GEL"
+      },
+      {
+        "ka": "290 ლარი",
+        "en": "290 GEL"
+      },
+      {
+        "ka": "250 ლარი",
+        "en": "250 GEL"
+      },
+      {
+        "ka": "240 ლარი",
+        "en": "240 GEL"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "ივნისის შემდეგ: 200 × 1.25 = 250 ლარი. ივლისის შემდეგ: 250 × 1.2 = 300 ლარი. ხაფანგი: პროცენტებს კრებთ (25% + 20% = 45%) და იღებთ 290-ს, თუმცა მეორე ზრდა უკვე გაზრდილი ფასიდან აითვლება.",
+    "explanation_en": "After June: 200 × 1.25 = 250 GEL. After July: 250 × 1.2 = 300 GEL. The trap: you add the percentages (25% + 20% = 45%) and get 290, but the second rise is taken from the already raised price.",
+    "verify": {
+      "type": "numeric",
+      "expr": "200 * 1.25 * 1.2"
+    }
+  }
+]

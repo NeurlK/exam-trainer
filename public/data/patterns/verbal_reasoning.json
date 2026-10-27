@@ -1,0 +1,56 @@
+{
+  "text_supported_inference": {
+    "name_en": "What the text actually supports",
+    "name_ka": "რას ამყარებს ტექსტი სინამდვილეში",
+    "rule_en": "The right answer is stated in the text or follows from it strictly, even if it is worded differently. A claim that only sounds likely, or adds a cause the text never gives, is not supported.",
+    "rule_ka": "სწორი პასუხი ტექსტში წერია ან მისგან უცილობლად გამომდინარეობს, თუნდაც სხვა სიტყვებით იყოს ნათქვამი. მტკიცება, რომელიც მხოლოდ სავარაუდოდ ჟღერს ან ტექსტში არნახსენებ მიზეზს ამატებს, ტექსტით არ დასტურდება."
+  },
+  "main_idea_vs_detail": {
+    "name_en": "Main idea vs detail",
+    "name_ka": "მთავარი აზრი თუ დეტალი",
+    "rule_en": "The main idea covers the whole passage. A true detail, an example or a single number is not the main idea, and neither is a broader claim the text never makes.",
+    "rule_ka": "მთავარი აზრი მთელ ტექსტს მოიცავს. სწორი დეტალი, მაგალითი ან ერთი რიცხვი მთავარი აზრი არ არის; არც ისეთი ზოგადი მტკიცებაა მთავარი აზრი, რომელსაც ტექსტი არ აკეთებს."
+  },
+  "author_purpose": {
+    "name_en": "Author's purpose",
+    "name_ka": "ავტორის მიზანი",
+    "rule_en": "Ask why the text was written: to inform, to advise, to persuade, to warn, to compare. Look at the form (instructions, data, a recommendation) and don't pick a purpose that needs claims the text doesn't make.",
+    "rule_ka": "დაფიქრდი, რისთვის დაიწერა ტექსტი: ინფორმაციის მისაწოდებლად, რჩევის მისაცემად, დასარწმუნებლად, გასაფრთხილებლად თუ შესადარებლად. ყურადღება მიაქციე ფორმას (ინსტრუქციები, მონაცემები, რეკომენდაცია) და ნუ აირჩევ მიზანს, რომელიც ტექსტში არარსებულ მტკიცებებს საჭიროებს."
+  },
+  "analogy_relation": {
+    "name_en": "Name the exact relation",
+    "name_ka": "ზუსტი მიმართების დადგენა",
+    "rule_en": "Put the first pair into a sentence (\"a thermometer measures temperature\") and test each option in the same sentence. Options from the same topic but with a different relation (a unit instead of an instrument, an author instead of a part) are the traps.",
+    "rule_ka": "პირველი წყვილი წინადადებად ჩამოაყალიბე („თერმომეტრი ზომავს ტემპერატურას“) და ყველა ვარიანტი იმავე წინადადებაში ჩასვი. ხაფანგია იმავე თემის სიტყვები, ოღონდ სხვა მიმართებით (ერთეული ხელსაწყოს ნაცვლად, ავტორი ნაწილის ნაცვლად)."
+  },
+  "synonym_precision": {
+    "name_en": "Closest meaning, not just related",
+    "name_ka": "უახლოესი მნიშვნელობა და არა უბრალოდ მონათესავე",
+    "rule_en": "A synonym must be replaceable in a typical sentence without changing its meaning. Words from the same topic, or words that are only associated, are traps.",
+    "rule_ka": "სინონიმი ტიპურ წინადადებაში ისე უნდა ჩაენაცვლოს სიტყვას, რომ აზრი არ შეიცვალოს. იმავე თემის ან მხოლოდ ასოციაციით დაკავშირებული სიტყვები ხაფანგია."
+  },
+  "antonym_precision": {
+    "name_en": "Opposite, not a synonym or a neighbour",
+    "name_ka": "საპირისპირო და არა სინონიმი ან მეზობელი სიტყვა",
+    "rule_en": "In an antonym question, first rule out the synonyms that are planted among the options, then pick the word that is opposite on the same scale.",
+    "rule_ka": "ანტონიმის კითხვაში ჯერ ვარიანტებში ჩამალული სინონიმები გამორიცხე, შემდეგ კი ის სიტყვა აირჩიე, რომელიც იმავე ნიშნით არის საპირისპირო."
+  },
+  "word_in_context": {
+    "name_en": "Meaning depends on context",
+    "name_ka": "მნიშვნელობა კონტექსტზეა დამოკიდებული",
+    "rule_en": "Many words have several meanings. Re-read the sentence and choose the meaning that fits there, not the first or most common meaning of the word.",
+    "rule_ka": "ბევრ სიტყვას რამდენიმე მნიშვნელობა აქვს. წინადადება ხელახლა წაიკითხე და ის მნიშვნელობა აირჩიე, რომელიც სწორედ აქ ერგება, და არა სიტყვის პირველი ან ყველაზე გავრცელებული მნიშვნელობა."
+  },
+  "category_odd_one_out": {
+    "name_en": "Find the rule that leaves exactly one out",
+    "name_ka": "წესი, რომელიც ზუსტად ერთს გამორიცხავს",
+    "rule_en": "Several groupings may come to mind. The right one puts three words together and leaves exactly one out; a rule that splits them two and two is not it.",
+    "rule_ka": "შეიძლება რამდენიმე დაჯგუფება მოგაფიქრდეს. სწორი წესი სამ სიტყვას აერთიანებს და ზუსტად ერთს გამორიცხავს; წესი, რომელიც მათ ორ-ორად ყოფს, სწორი არ არის."
+  },
+  "logical_connectors": {
+    "name_en": "Connectors show the logic",
+    "name_ka": "მაკავშირებელი სიტყვები ლოგიკას აჩვენებს",
+    "rule_en": "Decide how the two parts relate before reading the options: contrast (however, nevertheless), cause and result (therefore, because), addition (moreover), example (for instance), concession (despite, although).",
+    "rule_ka": "ვარიანტების წაკითხვამდე დაადგინე, როგორ უკავშირდება ერთმანეთს ორი ნაწილი: კონტრასტი (თუმცა, მიუხედავად ამისა), მიზეზი და შედეგი (ამიტომ, რადგან), დამატება (გარდა ამისა), მაგალითი (მაგალითად), დათმობა (მიუხედავად იმისა, რომ)."
+  }
+}

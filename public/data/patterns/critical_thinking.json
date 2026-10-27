@@ -1,0 +1,26 @@
+{
+  "must_be_true_vs_likely": {
+    "name_en": "Must be true vs. could be true",
+    "name_ka": "„აუცილებლად ჭეშმარიტია“ თუ „შეიძლება ჭეშმარიტი იყოს“",
+    "rule_en": "A 'must be true' answer holds in every situation the facts allow. A plausible or likely claim is not enough: if you can picture one situation that fits the facts but breaks the claim, reject it. In order puzzles, check every arrangement the clues allow, not only the first one you find.",
+    "rule_ka": "„აუცილებლად ჭეშმარიტი“ პასუხი მართალია ყველა შემთხვევაში, რასაც ფაქტები უშვებს. დამაჯერებელი ან სავარაუდო პასუხი საკმარისი არ არის. თუ ერთ შემთხვევას მაინც მოიფიქრებთ, რომელიც ფაქტებს ერგება, პასუხს კი არღვევს, ეს პასუხი უარყავით. განლაგების ამოცანებში შეამოწმეთ ყველა განლაგება, რასაც პირობები უშვებს, და არა მხოლოდ პირველი, რომელსაც იპოვით."
+  },
+  "hidden_assumption": {
+    "name_en": "Find the missing link",
+    "name_ka": "იპოვეთ გამოტოვებული რგოლი",
+    "rule_en": "An assumption is the unstated idea the conclusion needs. Test each option by negating it: if the argument falls apart when the option is false, that option is the assumption. Options that are merely on-topic or nice to have are traps.",
+    "rule_ka": "დაშვება ის აზრია, რომელიც ტექსტში არ წერია, მაგრამ დასკვნა მის გარეშე არ დგას. თითოეული პასუხი ასე შეამოწმეთ: წარმოიდგინეთ, რომ ის მცდარია. თუ ამ დროს მსჯელობა ინგრევა, სწორედ ეს პასუხია დაშვება. პასუხები, რომლებიც მხოლოდ თემას ეხება ან უბრალოდ „კარგი იქნებოდა“, ხაფანგია."
+  },
+  "out_of_scope_option": {
+    "name_en": "On topic is not the same as relevant",
+    "name_ka": "თემაზეა, მაგრამ მსჯელობას არ ეხება",
+    "rule_en": "To strengthen or weaken an argument, an option must touch the link between the evidence and the conclusion. Options about cost, popularity, feelings or other places may share the topic but leave that link untouched.",
+    "rule_ka": "მსჯელობის გასაძლიერებლად ან შესასუსტებლად პასუხი მტკიცებულებასა და დასკვნას შორის კავშირს უნდა ეხებოდეს. ფაქტები ფასზე, პოპულარობაზე, ემოციებზე ან სხვა ადგილებზე შეიძლება იმავე თემაზე იყოს, მაგრამ ამ კავშირს ხელს არ ახლებს."
+  },
+  "sampling_bias": {
+    "name_en": "Who was asked, and how many?",
+    "name_ka": "ვინ გამოიკითხა და რამდენი?",
+    "rule_en": "A conclusion about a whole group needs evidence from a sample that looks like that group. A handful of cases, or people who chose themselves (fans, volunteers, visitors of one website), cannot speak for everyone.",
+    "rule_ka": "მთელ ჯგუფზე დასკვნის გასაკეთებლად გამოკითხულები ამ ჯგუფს უნდა ჰგავდნენ. რამდენიმე შემთხვევა ყველას აზრს ვერ გამოხატავს. ვერც ის ადამიანები გამოხატავენ, ვინც მონაწილეობა თავად აირჩია (გულშემატკივრები, მოხალისეები, ერთი საიტის ვიზიტორები)."
+  }
+}

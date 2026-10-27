@@ -1,0 +1,86 @@
+{
+  "successive_percent": {
+    "name_en": "Successive percentages multiply",
+    "name_ka": "ზედიზედ პროცენტები მრავლდება",
+    "rule_en": "+20% then −20% is not 0%: 1.2 × 0.8 = 0.96, a 4% drop. Each new percentage is taken from the already changed value, so multiply the factors instead of adding the percentages.",
+    "rule_ka": "+20% და შემდეგ −20% არ არის 0%: 1.2 × 0.8 = 0.96, ანუ 4%-ით კლება. ყოველი ახალი პროცენტი უკვე შეცვლილი მნიშვნელობიდან აითვლება. ამიტომ პროცენტებს ნუ შეკრებთ — კოეფიციენტები გადაამრავლეთ."
+  },
+  "percent_change_base": {
+    "name_en": "Percent of what? Find the base",
+    "name_ka": "რისი პროცენტი? იპოვეთ, რისგან ითვლება",
+    "rule_en": "A change is measured from the starting value: 8 → 10 is +25%, but 10 → 8 is −20%. A percentage of a subgroup is not a percentage of the whole: 25% of the 40% who are women is 10% of everyone.",
+    "rule_ka": "ცვლილება საწყისი მნიშვნელობიდან აითვლება: 8 → 10 არის +25%, ხოლო 10 → 8 არის −20%. ნაწილის პროცენტი მთელის პროცენტი არ არის: თუ თანამშრომლების 40% ქალია, ქალების 25% ყველა თანამშრომლის 10%-ია."
+  },
+  "reverse_percent": {
+    "name_en": "Reverse percentage: divide, don't add back",
+    "name_ka": "საწყისი მნიშვნელობის აღდგენა: გაყავით, ნუ დაუმატებთ",
+    "rule_en": "If a price is 120 after a 25% discount, it is 75% of the original: 120 ÷ 0.75 = 160. Adding 25% back gives the wrong 150. To remove 18% VAT, divide by 1.18.",
+    "rule_ka": "თუ 25%-იანი ფასდაკლების შემდეგ ფასი 120-ია, ეს საწყისი ფასის 75%-ია: 120 ÷ 0.75 = 160. თუ 25%-ს უკან დაუმატებთ, მიიღებთ არასწორ პასუხს, 150-ს. ფასი 18%-იანი დღგ-ის გარეშე რომ იპოვოთ, გაყავით 1.18-ზე."
+  },
+  "percentage_points": {
+    "name_en": "Percentage points vs percent",
+    "name_ka": "პროცენტული პუნქტი და პროცენტი",
+    "rule_en": "A rise from 40% to 50% is 10 percentage points, but a 25% increase (10 ÷ 40). Points are a plain difference of two percentages; percent is a change relative to the start.",
+    "rule_ka": "40%-დან 50%-მდე ზრდა 10 პროცენტული პუნქტია, მაგრამ საწყისთან შედარებით ეს 25%-იანი ზრდაა (10 ÷ 40). პუნქტი ორი პროცენტის უბრალო სხვაობაა. პროცენტი კი ცვლილებას საწყის მნიშვნელობას ადარებს."
+  },
+  "ratio_parts": {
+    "name_en": "Ratios: count the parts",
+    "name_ka": "შეფარდება: დაითვალეთ ნაწილები",
+    "rule_en": "In 3 : 5 there are 8 parts in total. Find the size of one part first, then multiply. If one group does not change, its parts stay fixed and anchor the new ratio.",
+    "rule_ka": "3 : 5 შეფარდებაში სულ 8 ნაწილია. ჯერ ერთი ნაწილის სიდიდე იპოვეთ, შემდეგ გაამრავლეთ. თუ ერთი ჯგუფი არ იცვლება, მისი ნაწილებიც არ იცვლება — სწორედ მათით შეადარეთ ძველი და ახალი შეფარდება."
+  },
+  "proportion_scaling": {
+    "name_en": "Scale by multiplying, not adding",
+    "name_ka": "მასშტაბირება — გამრავლებით და არა მიმატებით",
+    "rule_en": "Recipes and maps scale by a factor: 4 → 6 portions is ×1.5. Lengths scale by the factor, areas by its square and volumes by its cube.",
+    "rule_ka": "რეცეპტი და რუკა კოეფიციენტზე გამრავლებით იცვლება: 4 ულუფიდან 6 ულუფაზე გადასვლა ×1.5-ს ნიშნავს. სიგრძე კოეფიციენტზე მრავლდება, ფართობი — მის კვადრატზე, მოცულობა კი — მის კუბზე."
+  },
+  "work_rate": {
+    "name_en": "Add rates, not times",
+    "name_ka": "შეკრიბეთ სისწრაფეები და არა დროები",
+    "rule_en": "If 4 people need 6 days, the job is 24 person-days, so more workers means fewer days. Rates add: 1/3 + 1/6 of a job per hour = 1/2, so 2 hours. Never average or subtract the times.",
+    "rule_ka": "თუ 4 ადამიანს 6 დღე სჭირდება, სამუშაო 24 „კაც-დღეა“, ამიტომ მეტ მუშას ნაკლები დღე სჭირდება. სისწრაფეები იკრიბება: საათში 1/3 + 1/6 = 1/2 სამუშაო, ანუ 2 საათი. დროების საშუალოს ნუ აიღებთ და დროებს ნუ გამოაკლებთ."
+  },
+  "equation_setup": {
+    "name_en": "Set up the equation carefully",
+    "name_ka": "განტოლების სწორად შედგენა",
+    "rule_en": "Write one equation per fact, expand brackets fully (4(x − 3) = 4x − 12), and answer the quantity actually asked for, not the first number you find.",
+    "rule_ka": "ყოველ ფაქტზე ერთი განტოლება დაწერეთ. ფრჩხილი ბოლომდე გახსენით: 4(x − 3) = 4x − 12. უპასუხეთ იმას, რასაც გეკითხებიან, და არა პირველ ნაპოვნ რიცხვს."
+  },
+  "order_of_operations": {
+    "name_en": "Order of operations and 'of the rest'",
+    "name_ka": "მოქმედებათა რიგი და „დარჩენილის ნაწილი“",
+    "rule_en": "Brackets first, then × and ÷, then + and −. Dividing by a fraction means multiplying by its flip. 'A fraction of the rest' is taken from what is left, not from the whole.",
+    "rule_ka": "ჯერ ფრჩხილები, შემდეგ × და ÷, ბოლოს + და −. წილადზე გაყოფა მის შებრუნებულზე გამრავლებაა. „დარჩენილის ნაწილი“ იმიდან აითვლება, რაც დარჩა, და არა მთლიანიდან."
+  },
+  "weighted_average": {
+    "name_en": "Averages are weighted by size",
+    "name_ka": "შეწონილი საშუალო: ჯგუფის ზომაც მნიშვნელოვანია",
+    "rule_en": "The average of two groups is not the average of their averages unless the groups are the same size. Work with totals: total sum ÷ total count. Weights in percent work the same way.",
+    "rule_ka": "თუ ჯგუფები სხვადასხვა ზომისაა, საერთო საშუალო ჯგუფების საშუალოების საშუალო არ არის. იმუშავეთ ჯამებით: საერთო ჯამი ÷ საერთო რაოდენობა. თუ წონები პროცენტებშია მოცემული, წესი იგივეა."
+  },
+  "speed_time_distance": {
+    "name_en": "Average speed = total distance ÷ total time",
+    "name_ka": "საშუალო სიჩქარე = მთელი მანძილი ÷ მთელი დრო",
+    "rule_en": "Don't average the speeds. Convert minutes to hours properly (40 min = 2/3 h, not 0.4 h). When one object chases another, use the difference of their speeds.",
+    "rule_ka": "სიჩქარეების საშუალოს ნუ აიღებთ. წუთები საათებში სწორად გადაიყვანეთ: 40 წთ = 2/3 სთ და არა 0.4 სთ. როცა ერთი მეორეს ეწევა, გამოიყენეთ მათი სიჩქარეების სხვაობა."
+  },
+  "unit_conversion": {
+    "name_en": "Convert units before calculating",
+    "name_ka": "ჯერ ერთეულები, მერე გამოთვლა",
+    "rule_en": "Put everything in the same units first. An hour has 60 minutes, not 100. 1 m = 100 cm, but 1 m² = 10000 cm². 1 m/s = 3.6 km/h.",
+    "rule_ka": "ყველაფერი ჯერ ერთსა და იმავე ერთეულებში გადაიყვანეთ. საათში 60 წუთია და არა 100. 1 მ = 100 სმ, მაგრამ 1 მ² = 10000 სმ². 1 მ/წმ = 3.6 კმ/სთ."
+  },
+  "compound_interest": {
+    "name_en": "Simple vs compound interest",
+    "name_ka": "მარტივი და რთული პროცენტი",
+    "rule_en": "Simple interest adds the same amount every year. Compound interest is also earned on earlier interest: 10% a year for 3 years is 1.1 × 1.1 × 1.1 = 1.331, not +30%.",
+    "rule_ka": "მარტივი პროცენტი ყოველ წელს ერთსა და იმავე თანხას ამატებს. რთული პროცენტი უკვე დარიცხულ პროცენტსაც ერიცხება: წლიური 10% 3 წლის შემდეგ ნიშნავს 1.1 × 1.1 × 1.1 = 1.331-ს და არა +30%-ს."
+  },
+  "probability_basics": {
+    "name_en": "Probability = favourable ÷ all outcomes",
+    "name_ka": "ალბათობა = ხელსაყრელი ÷ ყველა შედეგი",
+    "rule_en": "Divide by the total number of outcomes, not by the 'other' outcomes. Count only equally likely outcomes (heads–tails and tails–heads are different). Without replacement, the second draw has one item fewer.",
+    "rule_ka": "ხელსაყრელი შედეგების რაოდენობა ყველა შედეგის რაოდენობაზე გაყავით და არა მხოლოდ „დანარჩენებზე“. დაითვალეთ მხოლოდ თანაბრად შესაძლო შედეგები: გერბი–საფასური და საფასური–გერბი სხვადასხვა შედეგია. თუ ამოღებულს უკან არ აბრუნებენ, მეორე ამოღებისას ერთით ნაკლები საგანია."
+  }
+}

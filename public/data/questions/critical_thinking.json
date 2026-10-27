@@ -1,0 +1,2233 @@
+[
+  {
+    "id": "CT-001",
+    "module": "critical_thinking",
+    "difficulty": 1,
+    "format": "syllogism",
+    "pattern_tag": "all_not_reversible",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულება ჭეშმარიტია:\n• კომპანიის ყველა პროგრამისტი Linux-ს იყენებს.\n\nმხოლოდ ამ დებულებაზე დაყრდნობით, დასკვნა მართალია, მცდარია თუ ვერ ვიტყვით?\n**კომპანიაში ყველა, ვინც Linux-ს იყენებს, პროგრამისტია.**",
+    "question_en": "Assume the following statement is true:\n• All programmers at the company use Linux.\n\nBased only on this statement, is the conclusion True, False, or Cannot say?\n**Everyone at the company who uses Linux is a programmer.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "დებულება მხოლოდ იმას ამბობს, რომ პროგრამისტები Linux-ის მომხმარებლებს შორის არიან. Linux-ს შეიძლება დიზაინერები ან მენეჯერებიც იყენებდნენ — ან შეიძლება არც იყენებდნენ, ამიტომ ვერ ვიტყვით. ხაფანგი: „ყველა A არის B“-ს აბრუნებთ და კითხულობთ, როგორც „ყველა B არის A“.",
+    "explanation_en": "The statement only places the programmers inside the group of Linux users. Designers or managers may use Linux as well — or may not — so we cannot say. Trap: flipping \"all A are B\" into \"all B are A\".",
+    "verify": {
+      "type": "syllogism",
+      "sets": [
+        "P",
+        "L"
+      ],
+      "premises": [
+        "all P L"
+      ],
+      "conclusion": "all L P"
+    }
+  },
+  {
+    "id": "CT-002",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "syllogism",
+    "pattern_tag": "chain_middle_term",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• ბანკის ზოგიერთი მენეჯერი ველოსიპედისტია.\n• ბანკის ზოგიერთი ველოსიპედისტი ვეგეტარიანელია.\n\nმხოლოდ ამ დებულებებზე დაყრდნობით, დასკვნა მართალია, მცდარია თუ ვერ ვიტყვით?\n**ბანკის ზოგიერთი მენეჯერი ვეგეტარიანელია.**",
+    "question_en": "Assume the following statements are true:\n• Some managers at the bank are cyclists.\n• Some cyclists at the bank are vegetarians.\n\nBased only on these statements, is the conclusion True, False, or Cannot say?\n**Some managers at the bank are vegetarians.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "ველოსიპედისტი მენეჯერები და ვეგეტარიანელი ველოსიპედისტები შეიძლება სულ სხვადასხვა ადამიანები იყვნენ, მაგრამ შეიძლება ნაწილობრივ ემთხვეოდნენ კიდეც. ორი „ზოგიერთი“ მენეჯერებსა და ვეგეტარიანელებს ერთმანეთთან ვერ აკავშირებს. ხაფანგი: ფიქრობთ, რომ ეს ორი ჯგუფი აუცილებლად გადაიკვეთება.",
+    "explanation_en": "The cycling managers and the vegetarian cyclists may be completely different people, or they may overlap. Two \"some\" premises never link the outer groups — the trap is assuming the two overlaps must meet.",
+    "verify": {
+      "type": "syllogism",
+      "sets": [
+        "M",
+        "C",
+        "V"
+      ],
+      "premises": [
+        "some M C",
+        "some C V"
+      ],
+      "conclusion": "some M V"
+    }
+  },
+  {
+    "id": "CT-003",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "syllogism",
+    "pattern_tag": "some_not_some_not",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• გუნდის ზოგიერთი ინჟინერი გერმანულად ლაპარაკობს.\n• გუნდში ყველას, ვინც გერმანულად ლაპარაკობს, საზღვარგარეთ უმუშავია.\n\nმხოლოდ ამ დებულებებზე დაყრდნობით, დასკვნა მართალია, მცდარია თუ ვერ ვიტყვით?\n**გუნდის ზოგიერთ ინჟინერს საზღვარგარეთ არ უმუშავია.**",
+    "question_en": "Assume the following statements are true:\n• Some engineers in the team speak German.\n• Everyone in the team who speaks German has worked abroad.\n\nBased only on these statements, is the conclusion True, False, or Cannot say?\n**Some engineers in the team have not worked abroad.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "გერმანულად მოლაპარაკე ინჟინრებს საზღვარგარეთ უმუშავიათ. დანარჩენ ინჟინრებზე არაფერია ნათქვამი. შეიძლება ასეთები საერთოდ არ არიან და ყველა ინჟინერი გერმანულად ლაპარაკობს. ხაფანგი: „ზოგიერთი არის“-ს ისე კითხულობთ, თითქოს ის „ზოგიერთი არ არის“-საც ნიშნავდეს.",
+    "explanation_en": "The German-speaking engineers have worked abroad. Nothing is said about the other engineers — there may be none, if every engineer speaks German. Trap: reading \"some are\" as if it also meant \"some are not\".",
+    "verify": {
+      "type": "syllogism",
+      "sets": [
+        "E",
+        "G",
+        "W"
+      ],
+      "premises": [
+        "some E G",
+        "all G W"
+      ],
+      "conclusion": "some E not W"
+    }
+  },
+  {
+    "id": "CT-004",
+    "module": "critical_thinking",
+    "difficulty": 1,
+    "format": "ordering_puzzle",
+    "pattern_tag": "must_be_true_vs_likely",
+    "question_ka": "4 მეგობარი — ნინო, გიორგი, ლუკა და ანა — ყავის ჯიხურთან რიგში დგას.\n• გიორგი რიგში პირველია.\n• ანა უშუალოდ ნინოს უკან დგას.\n• ლუკა ბოლო არ არის.\n\nვინ დგას რიგში მეორე ადგილზე?",
+    "question_en": "4 friends — Nino, Giorgi, Luka and Ana — are standing in line at a coffee stand.\n• Giorgi is first in line.\n• Ana stands directly behind Nino.\n• Luka is not last.\n\nWho is second in line?",
+    "options": [
+      {
+        "ka": "ნინო",
+        "en": "Nino"
+      },
+      {
+        "ka": "ლუკა",
+        "en": "Luka"
+      },
+      {
+        "ka": "გიორგი",
+        "en": "Giorgi"
+      },
+      {
+        "ka": "ანა",
+        "en": "Ana"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "გიორგი 1-ელ ადგილზეა. ნინო და ანა გვერდიგვერდ უნდა იდგნენ, ანა — ნინოს უკან. ლუკა მე-4 ადგილზე ვერ იქნება, ამიტომ ლუკა მე-2 ადგილზეა, ნინო და ანა კი — მე-3 და მე-4 ადგილებზე. ხაფანგი: ნინოს ირჩევთ მხოლოდ იმიტომ, რომ ის ანას წინ დგას, ეს წყვილი კი მხოლოდ ბოლოში ეტევა.",
+    "explanation_en": "Giorgi takes place 1. Nino and Ana must stand back to back, and Luka cannot take place 4, so Luka takes place 2 and Nino and Ana take places 3 and 4. Trap: picking Nino just because she is ahead of Ana — the pair only fits at the back.",
+    "verify": {
+      "type": "ordering",
+      "items": [
+        "Nino",
+        "Giorgi",
+        "Luka",
+        "Ana"
+      ],
+      "constraints": [
+        "pos.Giorgi === 0",
+        "pos.Ana === pos.Nino + 1",
+        "pos.Luka !== 3"
+      ],
+      "ask": "(order) => order[1]"
+    }
+  },
+  {
+    "id": "CT-005",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "syllogism",
+    "pattern_tag": "all_not_reversible",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• ჭადრაკის წრის ყველა წევრი სტუდენტია.\n• ზოგიერთი მოცურავე სტუდენტი არ არის.\n\nრომელი დასკვნა გამომდინარეობს აუცილებლად?",
+    "question_en": "Assume the following statements are true:\n• All members of the chess club are students.\n• Some swimmers are not students.\n\nWhich conclusion must be true?",
+    "options": [
+      {
+        "ka": "ზოგიერთი სტუდენტი ჭადრაკის წრის წევრი არ არის.",
+        "en": "Some students are not members of the chess club."
+      },
+      {
+        "ka": "ჭადრაკის წრის ზოგიერთი წევრი მოცურავე არ არის.",
+        "en": "Some members of the chess club are not swimmers."
+      },
+      {
+        "ka": "ზოგიერთი მოცურავე ჭადრაკის წრის წევრი არ არის.",
+        "en": "Some swimmers are not members of the chess club."
+      },
+      {
+        "ka": "არცერთი მოცურავე არ არის ჭადრაკის წრის წევრი.",
+        "en": "No swimmers are members of the chess club."
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "წრის ყველა წევრი სტუდენტია. ამიტომ ის მოცურავეები, ვინც სტუდენტი არ არის, წრის წევრები ვერ იქნებიან. ესე იგი, ზოგიერთი მოცურავე წრის წევრი არ არის. „ზოგიერთი სტუდენტი წრის წევრი არ არის“ მხოლოდ მაშინ იქნებოდა სწორი, თუ სტუდენტები წრის წევრებზე მეტნი არიან, ეს კი არსად წერია. ხაფანგი: „ყველა A არის B“-დან ასკვნით, რომ B აუცილებლად A-ზე დიდი ჯგუფია.",
+    "explanation_en": "The swimmers who are not students cannot be club members, because every member is a student — so some swimmers are not members. \"Some students are not members\" would need the student group to be bigger than the club, which is never stated. Trap: reading \"all A are B\" as if B had to be larger than A.",
+    "verify": {
+      "type": "syllogism",
+      "sets": [
+        "C",
+        "T",
+        "S"
+      ],
+      "premises": [
+        "all C T",
+        "some S not T"
+      ],
+      "option_statements": [
+        "some T not C",
+        "some C not S",
+        "some S not C",
+        "no S C"
+      ]
+    }
+  },
+  {
+    "id": "CT-006",
+    "module": "critical_thinking",
+    "difficulty": 1,
+    "format": "conditional_logic",
+    "pattern_tag": "affirming_consequent",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• თუ შაბათს იწვიმებს, რუსთავში ფეხბურთის მატჩი გადაიდება.\n• რუსთავში ფეხბურთის მატჩი გადაიდო.\n\nმხოლოდ ამ დებულებებზე დაყრდნობით, დასკვნა მართალია, მცდარია თუ ვერ ვიტყვით?\n**შაბათს იწვიმა.**",
+    "question_en": "Assume the following statements are true:\n• If it rains on Saturday, the football match in Rustavi will be postponed.\n• The football match in Rustavi was postponed.\n\nBased only on these statements, is the conclusion True, False, or Cannot say?\n**It rained on Saturday.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "წვიმა მატჩის გადადების ერთ-ერთი მიზეზია და არა ერთადერთი. მატჩი შეიძლება სტადიონის პრობლემის გამოც გადაიდოს, ან იმიტომ, რომ გუნდში მოთამაშეები ავად არიან. ხაფანგი: შედეგს (გადადებას) მიზეზის (წვიმის) დასტურად თვლით.",
+    "explanation_en": "Rain is one reason the match gets postponed, not the only one — a stadium problem or illness in a team would do the same. Trap: treating the result as proof of the cause.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "R",
+        "P"
+      ],
+      "premises": [
+        "imp(R, P)",
+        "P"
+      ],
+      "conclusion": "R"
+    }
+  },
+  {
+    "id": "CT-007",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "conditional_logic",
+    "pattern_tag": "necessary_vs_sufficient",
+    "question_ka": "ანა წლიურ პრემიას მიიღებს მხოლოდ იმ შემთხვევაში, თუ პროექტს პარასკევისთვის დაასრულებს.\n\nრომელი დებულებაა აუცილებლად ჭეშმარიტი?",
+    "question_en": "Ana will receive the annual bonus only if she finishes the project by Friday.\n\nWhich statement must be true?",
+    "options": [
+      {
+        "ka": "თუ ანა პროექტს პარასკევისთვის დაასრულებს, პრემიას მიიღებს.",
+        "en": "If Ana finishes the project by Friday, she will receive the bonus."
+      },
+      {
+        "ka": "თუ ანამ პრემია მიიღო, მაშინ პროექტი პარასკევისთვის დაასრულა.",
+        "en": "If Ana received the bonus, she finished the project by Friday."
+      },
+      {
+        "ka": "თუ ანამ პრემია ვერ მიიღო, მაშინ პროექტი პარასკევისთვის ვერ დაასრულა.",
+        "en": "If Ana did not receive the bonus, she did not finish the project by Friday."
+      },
+      {
+        "ka": "ანა პროექტს პარასკევისთვის დაასრულებს.",
+        "en": "Ana will finish the project by Friday."
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "„მხოლოდ იმ შემთხვევაში, თუ“ დროულ დასრულებას აუცილებელ პირობად აქცევს: პრემია → დასრულება. ეს გარანტია არ არის: ანამ პროექტი შეიძლება დროულად დაასრულოს და პრემია მაინც არ მიიღოს. ამიტომ არ გამომდინარეობს არც „თუ დაასრულებს, პრემიას მიიღებს“ და არც „თუ პრემია ვერ მიიღო, ვერ დაასრულა“ — ორივე ერთსა და იმავეს ამბობს. ხაფანგი: „მხოლოდ თუ“-ს ჩვეულებრივ „თუ“-დ კითხულობთ.",
+    "explanation_en": "\"Only if\" makes finishing on time a requirement: bonus → finished. It is not a guarantee — she may finish on time and still get no bonus, so neither \"if she finishes, she gets the bonus\" nor \"if she got no bonus, she did not finish\" follows (the two say the same thing). Trap: reading \"only if\" as a plain \"if\".",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "B",
+        "F"
+      ],
+      "premises": [
+        "imp(B, F)"
+      ],
+      "option_statements": [
+        "imp(F, B)",
+        "imp(B, F)",
+        "imp(!B, !F)",
+        "F"
+      ]
+    }
+  },
+  {
+    "id": "CT-008",
+    "module": "critical_thinking",
+    "difficulty": 1,
+    "format": "tfc_passage",
+    "pattern_tag": "cannot_say_vs_false",
+    "question_ka": "ქუთაისის საჯარო ბიბლიოთეკამ მარტში ახალი სამკითხველო დარბაზი გახსნა. დარბაზში 40 ადგილია. სამუშაო დღეებში ის 10:00-დან 20:00-მდე მუშაობს, შაბათობით კი 16:00-ზე იკეტება. დარბაზის კომპიუტერებით სარგებლობისთვის ბიბლიოთეკის ბარათია საჭირო.\n\nმხოლოდ ზემოთ მოცემული ტექსტის მიხედვით, შემდეგი დებულება მართალია, მცდარია თუ ვერ ვიტყვით?\n**სამკითხველო დარბაზი კვირაობით ღიაა.**",
+    "question_en": "The public library in Kutaisi opened a new reading room in March. The room has 40 seats. On weekdays it is open from 10:00 to 20:00, and on Saturdays it closes at 16:00. A library card is needed to use the computers in the room.\n\nBased only on the text above, is the following statement True, False, or Cannot say?\n**The reading room is open on Sundays.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "ტექსტში მხოლოდ სამუშაო დღეებისა და შაბათის განრიგია; კვირა საერთოდ არ არის ნახსენები. ის, რაც ტექსტში არ წერია, ტექსტით უარყოფილი არ არის, ამიტომ პასუხია „ვერ ვიტყვით“. ხაფანგი: „მცდარია“-ს ირჩევთ, რადგან ფიქრობთ, რომ კვირა „ალბათ“ დასვენების დღეა.",
+    "explanation_en": "The text gives hours for weekdays and Saturdays only; Sunday is never mentioned. Something the text leaves out is not contradicted by it, so the answer is Cannot say. Trap: choosing False because Sunday is \"probably\" a day off."
+  },
+  {
+    "id": "CT-009",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "inference",
+    "pattern_tag": "must_be_true_vs_likely",
+    "question_ka": "თბილისში 200 მცხოვრები გამოკითხეს. 70%-მა თქვა, რომ საზოგადოებრივ ტრანსპორტს კვირაში ერთხელ მაინც იყენებს. მათმა უმეტესობამ ძირითად ტრანსპორტად მეტრო დაასახელა.\n\nრომელი დებულებაა აუცილებლად ჭეშმარიტი?",
+    "question_en": "In a survey of 200 Tbilisi residents, 70% said they use public transport at least once a week. Most of them named the metro as their main type of transport.\n\nWhich statement must be true?",
+    "options": [
+      {
+        "ka": "თბილისის მცხოვრებთა უმეტესობისთვის ძირითადი ტრანსპორტი მეტროა.",
+        "en": "For most Tbilisi residents, the metro is their main type of transport."
+      },
+      {
+        "ka": "თბილისელებში მეტრო ავტობუსზე პოპულარულია.",
+        "en": "Among Tbilisi residents, the metro is more popular than the bus."
+      },
+      {
+        "ka": "გამოკითხულთაგან ზუსტად 60 ადამიანი საზოგადოებრივ ტრანსპორტს საერთოდ არ იყენებს.",
+        "en": "Exactly 60 of the surveyed residents never use public transport."
+      },
+      {
+        "ka": "გამოკითხულთაგან 70-ზე მეტმა ადამიანმა ძირითად ტრანსპორტად მეტრო დაასახელა.",
+        "en": "More than 70 of the surveyed residents named the metro as their main type of transport."
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "200-ის 70% არის 140 ადამიანი. 140-ის უმეტესობა 70-ზე მეტია, ამიტომ „70-ზე მეტმა დაასახელა მეტრო“ აუცილებლად ჭეშმარიტია. დებულებები თბილისელების უმეტესობასა და მეტროს პოპულარობაზე 200-კაციან გამოკითხვას მთელ ქალაქზე ავრცელებს. „ზუსტად 60 საერთოდ არ იყენებს“ კი ურევს „კვირაში ერთხელზე ნაკლებს“ და „არასდროს“. ხაფანგი: სავარაუდო მტკიცებას ირჩევთ და არა იმას, რასაც მონაცემები აუცილებლად მოითხოვს.",
+    "explanation_en": "70% of 200 is 140 people, and most of 140 means more than 70, so \"more than 70 named the metro\" must be true. The claims about most Tbilisi residents and the metro's popularity stretch a 200-person survey to the whole city, and \"exactly 60 never use it\" turns \"less than once a week\" into \"never\". Trap: picking a likely-sounding claim instead of one the data forces."
+  },
+  {
+    "id": "CT-010",
+    "module": "critical_thinking",
+    "difficulty": 1,
+    "format": "strengthen_weaken",
+    "pattern_tag": "correlation_causation",
+    "question_ka": "გასულ წელს გორის 5 სკოლაში ინტერაქტიური დაფები დამონტაჟდა. წლის ბოლოსთვის ამ სკოლებში მოსწავლეების საშუალო ქულა ტესტებში 10%-ით გაიზარდა. ადგილობრივი განათლების სამსახური ასკვნის, რომ სწავლის შედეგები დაფებმა გააუმჯობესა.\n\nრომელი დებულება ასუსტებს ამ დასკვნას ყველაზე მეტად, თუ ის ჭეშმარიტია?",
+    "question_en": "Last year, 5 schools in Gori installed interactive whiteboards. By the end of the year, their students' average test score had risen by 10%. The local education office concludes that the whiteboards improved learning.\n\nWhich statement, if true, most weakens this conclusion?",
+    "options": [
+      {
+        "ka": "იმავე წელს ამ 5 სკოლამ მათემატიკისა და ქართული ენის დამატებითი მასწავლებლებიც აიყვანა.",
+        "en": "In the same year, these 5 schools also hired extra maths and Georgian language teachers."
+      },
+      {
+        "ka": "ინტერაქტიური დაფები ჩვეულებრივ დაფებზე ძვირია.",
+        "en": "Interactive whiteboards cost more than ordinary boards."
+      },
+      {
+        "ka": "ზოგიერთი მასწავლებელი ამბობს, რომ ცარცით წერა ურჩევნია.",
+        "en": "Some teachers say they prefer writing with chalk."
+      },
+      {
+        "ka": "მოსწავლეები ამბობენ, რომ დაფით ჩატარებული გაკვეთილები უფრო სახალისოა.",
+        "en": "Students say lessons with the whiteboards are more fun."
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "ქულები დაფების გამოჩენასთან ერთად გაიზარდა, მაგრამ იმავე დროს ახალი მასწავლებლებიც მოვიდნენ. შესაძლოა, ზრდა სწორედ მათ გამოიწვიეს. ფასი და მასწავლებლების გემოვნება მიზეზს არ ეხება, ხოლო ის, რომ მოსწავლეებს დაფით გაკვეთილები უფრო ახალისებთ, დასკვნას პირიქით ოდნავ ამაგრებს. ხაფანგი: „ერთად მოხდა“-ს „ერთმა მეორე გამოიწვია“-დ თვლით.",
+    "explanation_en": "Scores rose when the boards arrived, but new teachers arrived at the same time, so they could explain the rise instead. Price and teacher preferences do not touch the cause, and the students finding the lessons more fun slightly supports the conclusion. Trap: treating \"happened together\" as \"one caused the other\"."
+  },
+  {
+    "id": "CT-011",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "assumption",
+    "pattern_tag": "hidden_assumption",
+    "question_ka": "ნიკა ბოლო 3 თვეა ყოველ დილით 5 კმ-ს დარბის. მაშასადამე, ოქტომბერში თბილისის სრულ მარათონს აუცილებლად დაასრულებს.\n\nრომელ დაშვებას ეყრდნობა ეს მსჯელობა?",
+    "question_en": "For the last 3 months, Nika has run 5 km every morning. So he will certainly finish the full Tbilisi Marathon in October.\n\nWhich assumption does this argument rely on?",
+    "options": [
+      {
+        "ka": "ნიკას დილით სირბილი სიამოვნებს.",
+        "en": "Nika enjoys running in the morning."
+      },
+      {
+        "ka": "ნიკას მარათონი აქამდე არასდროს გაურბენია.",
+        "en": "Nika has never run a marathon before."
+      },
+      {
+        "ka": "3 თვე ყოველდღე 5 კმ-ის სირბილი საკმარისი მომზადებაა სრული მარათონის დასასრულებლად.",
+        "en": "Running 5 km a day for 3 months is enough preparation to finish a full marathon."
+      },
+      {
+        "ka": "დილის მორბენალთაგან ბევრი მარათონებშიც მონაწილეობს.",
+        "en": "Many people who run in the mornings also take part in marathons."
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "მსჯელობა „დღეში 5 კმ“-დან „სრულ მარათონამდე“ ხტება. ის მხოლოდ მაშინ მუშაობს, თუ ასეთი მომზადება საკმარისია. თუ ეს მცდარია, დასკვნა ინგრევა. დანარჩენი პასუხები რომ მცდარი იყოს, მსჯელობას არაფერი დააკლდება. ხაფანგი: ირჩევთ ფაქტს, რომელიც თემას ეხება, მაგრამ მსჯელობას არ სჭირდება.",
+    "explanation_en": "The argument jumps from \"5 km a day\" to \"a full marathon\"; it only works if that training is enough. If that is false, the conclusion collapses, while the other options could be false without hurting the argument. Trap: picking a fact that is on topic but not needed."
+  },
+  {
+    "id": "CT-012",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "argument_flaw",
+    "pattern_tag": "sampling_bias",
+    "question_ka": "პოპულარულ სათამაშო ვებსაიტზე ვიზიტორებს ჰკითხეს, უნდა ისწავლებოდეს თუ არა სკოლაში ვიდეოთამაშების შექმნა. 85%-მა „დიახ“ უპასუხა. საიტის რედაქტორმა დაასკვნა, რომ საქართველოში მშობლების უმეტესობა ამას მხარს უჭერს.\n\nრა არის ამ მსჯელობის მთავარი ხარვეზი?",
+    "question_en": "A popular gaming website asked its visitors whether schools should teach video game design; 85% answered \"yes\". The site's editor concluded that most parents in Georgia support the idea.\n\nWhat is the main flaw in this reasoning?",
+    "options": [
+      {
+        "ka": "ის გამოკითხვას იმის დასტურად მიიჩნევს, რომ ვიდეოთამაშები სწავლას აუმჯობესებს.",
+        "en": "It treats the poll as proof that video games improve learning."
+      },
+      {
+        "ka": "გამოკითხვის მონაწილეები, სავარაუდოდ, საქართველოს მშობლებს არ წარმოადგენენ.",
+        "en": "The people who answered are unlikely to represent parents in Georgia."
+      },
+      {
+        "ka": "ის მიზეზსა და შედეგს ერთმანეთში ურევს.",
+        "en": "It confuses a cause with its effect."
+      },
+      {
+        "ka": "ის სხვა სფეროს ექსპერტის აზრს ეყრდნობა.",
+        "en": "It relies on the opinion of an expert from another field."
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "სათამაშო საიტის ვიზიტორები ძირითადად თამაშების მოყვარულები არიან და ბევრი მათგანი მშობელიც კი არ არის. მათი პასუხები მშობლების აზრზე სანდოს ვერაფერს გვეუბნება. ხაფანგი: დიდ პროცენტს ენდობით და არ ამოწმებთ, ვინ გამოიკითხა.",
+    "explanation_en": "Visitors to a gaming site are mostly game fans, and many of them are not parents at all. Their answers say nothing reliable about what parents think. Trap: trusting a big percentage without asking who was asked."
+  },
+  {
+    "id": "CT-013",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "ordering_puzzle",
+    "pattern_tag": "must_be_true_vs_likely",
+    "question_ka": "ბათუმში 5-სართულიან სახლში დავითი, მარიამი, საბა, ელენე და თამარი ცხოვრობენ — თითოეული თავის სართულზე (1-ლი სართული ყველაზე დაბალია).\n• თამარი მე-3 სართულზე ცხოვრობს.\n• დავითი უშუალოდ ელენეს ზემოთ ცხოვრობს.\n• მარიამი საბაზე მაღლა ცხოვრობს.\n• საბა 1-ელ სართულზე არ ცხოვრობს.\n\nვინ ცხოვრობს მე-5 სართულზე?",
+    "question_en": "Davit, Mariam, Saba, Elene and Tamar live in a 5-storey building in Batumi, one person per floor (floor 1 is the lowest).\n• Tamar lives on floor 3.\n• Davit lives directly above Elene.\n• Mariam lives higher than Saba.\n• Saba does not live on floor 1.\n\nWho lives on floor 5?",
+    "options": [
+      {
+        "ka": "დავითი",
+        "en": "Davit"
+      },
+      {
+        "ka": "საბა",
+        "en": "Saba"
+      },
+      {
+        "ka": "ელენე",
+        "en": "Elene"
+      },
+      {
+        "ka": "მარიამი",
+        "en": "Mariam"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "ელენე–დავითის წყვილი ან 1–2 სართულებზეა, ან 4–5 სართულებზე. თუ წყვილი ზემოთაა, საბა და მარიამი 1–2 სართულებზე აღმოჩნდებიან. მარიამი საბაზე მაღლაა, ამიტომ საბა 1-ელ სართულზე მოხვდება, ეს კი აკრძალულია. ესე იგი, ელენე 1-ელ სართულზეა, დავითი — მე-2-ზე, საბა — მე-4-ზე, მარიამი — მე-5-ზე. ხაფანგი: პირველივე განლაგებას, რომელიც კარგად გამოიყურება, ენდობით და მეორეს აღარ ამოწმებთ.",
+    "explanation_en": "The Elene–Davit pair fits either on floors 1–2 or on floors 4–5. If it is on top, Saba and Mariam get floors 1–2 and Saba ends up on floor 1, which is forbidden. So Elene is on 1, Davit on 2, Saba on 4 and Mariam on 5. Trap: trusting the first layout that looks fine without checking the other one.",
+    "verify": {
+      "type": "ordering",
+      "items": [
+        "Davit",
+        "Mariam",
+        "Saba",
+        "Elene",
+        "Tamar"
+      ],
+      "constraints": [
+        "pos.Tamar === 2",
+        "pos.Davit === pos.Elene + 1",
+        "pos.Mariam > pos.Saba",
+        "pos.Saba !== 0"
+      ],
+      "ask": "(order) => order[4]",
+      "unique_arrangement": true
+    }
+  },
+  {
+    "id": "CT-014",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "syllogism",
+    "pattern_tag": "some_not_all",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• ფირმის არცერთი ბუღალტერი არ მუშაობს დისტანციურად.\n• ფირმის ზოგიერთი დისტანციური თანამშრომელი დიზაინერია.\n\nრომელი დასკვნა გამომდინარეობს აუცილებლად?",
+    "question_en": "Assume the following statements are true:\n• No accountants at the firm work remotely.\n• Some remote workers at the firm are designers.\n\nWhich conclusion must be true?",
+    "options": [
+      {
+        "ka": "ფირმის ზოგიერთი დიზაინერი ბუღალტერი არ არის.",
+        "en": "Some designers at the firm are not accountants."
+      },
+      {
+        "ka": "ფირმის არცერთი დიზაინერი არ არის ბუღალტერი.",
+        "en": "No designers at the firm are accountants."
+      },
+      {
+        "ka": "ფირმის ზოგიერთი ბუღალტერი დიზაინერია.",
+        "en": "Some accountants at the firm are designers."
+      },
+      {
+        "ka": "ფირმის ზოგიერთი ბუღალტერი დიზაინერი არ არის.",
+        "en": "Some accountants at the firm are not designers."
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "დისტანციურად მომუშავე დიზაინერები ბუღალტრები ვერ იქნებიან, რადგან არცერთი ბუღალტერი დისტანციურად არ მუშაობს. ესე იგი, ზოგიერთი დიზაინერი ბუღალტერი არ არის. ოფისში მომუშავე დიზაინერებზე არაფერია ცნობილი: ისინი შეიძლება ბუღალტრებიც იყვნენ. ამიტომ „არცერთი დიზაინერი არ არის ბუღალტერი“ არ გამომდინარეობს. ხაფანგი: ზოგიერთ დიზაინერზე გამოტანილ დასკვნას ყველა დიზაინერზე ავრცელებთ.",
+    "explanation_en": "The designers who work remotely cannot be accountants, since no accountant works remotely — so some designers are not accountants. Nothing is known about designers who work in the office: they could also be accountants, so \"no designers\" goes too far. Trap: stretching a conclusion about some designers to all of them.",
+    "verify": {
+      "type": "syllogism",
+      "sets": [
+        "A",
+        "R",
+        "D"
+      ],
+      "premises": [
+        "no A R",
+        "some R D"
+      ],
+      "option_statements": [
+        "some D not A",
+        "no D A",
+        "some A D",
+        "some A not D"
+      ]
+    }
+  },
+  {
+    "id": "CT-015",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "conditional_logic",
+    "pattern_tag": "contrapositive",
+    "question_ka": "თუ სერვერი გადატვირთულია, კომპანიის ვებგვერდი ნელა იტვირთება. ამჟამად ვებგვერდი ნელა არ იტვირთება.\n\nრა დასკვნა გამომდინარეობს აუცილებლად?",
+    "question_en": "If the server is overloaded, the company website loads slowly. Right now the website is not loading slowly.\n\nWhat must be concluded?",
+    "options": [
+      {
+        "ka": "სერვერი გადატვირთულია.",
+        "en": "The server is overloaded."
+      },
+      {
+        "ka": "სერვერი ცოტა ხნის წინ განაახლეს.",
+        "en": "The server was recently upgraded."
+      },
+      {
+        "ka": "სერვერი გადატვირთული არ არის.",
+        "en": "The server is not overloaded."
+      },
+      {
+        "ka": "სერვერზე რაიმე დასკვნის გაკეთება შეუძლებელია.",
+        "en": "Nothing can be concluded about the server."
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "სერვერი რომ გადატვირთული ყოფილიყო, ვებგვერდი ნელა ჩაიტვირთებოდა. ვებგვერდი ნელა არ იტვირთება, ესე იგი სერვერი გადატვირთული არ არის — ეს კონტრაპოზიციაა (არა B → არა A). ხაფანგი: ფიქრობთ, რომ როცა შედეგი არ დადგა, „თუ… მაშინ“ წესი აღარაფერს გვეუბნება.",
+    "explanation_en": "If the server were overloaded, the site would load slowly. It is not loading slowly, so the server is not overloaded — this is the contrapositive (not B → not A). Trap: thinking an \"if… then\" rule tells you nothing once the result is missing.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "O",
+        "S",
+        "U"
+      ],
+      "premises": [
+        "imp(O, S)",
+        "!S"
+      ],
+      "option_statements": [
+        "O",
+        "U",
+        "!O",
+        null
+      ]
+    }
+  },
+  {
+    "id": "CT-016",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "syllogism",
+    "pattern_tag": "some_not_some_not",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• საავადმყოფოს ყველა ექთანს პირველადი დახმარების სერტიფიკატი აქვს.\n• საავადმყოფოს ზოგიერთი ექთანი ღამის ცვლაში მუშაობს.\n\nრომელი დასკვნა გამომდინარეობს აუცილებლად?",
+    "question_en": "Assume the following statements are true:\n• All nurses at the hospital have a first-aid certificate.\n• Some nurses at the hospital work night shifts.\n\nWhich conclusion must be true?",
+    "options": [
+      {
+        "ka": "საავადმყოფოს ზოგიერთი ექთანი ღამის ცვლაში არ მუშაობს.",
+        "en": "Some nurses at the hospital do not work night shifts."
+      },
+      {
+        "ka": "საავადმყოფოში ყველა, ვინც ღამის ცვლაში მუშაობს, ექთანია.",
+        "en": "Everyone at the hospital who works night shifts is a nurse."
+      },
+      {
+        "ka": "საავადმყოფოში ღამის ცვლის ზოგიერთ თანამშრომელს პირველადი დახმარების სერტიფიკატი არ აქვს.",
+        "en": "Some night-shift workers at the hospital do not have a first-aid certificate."
+      },
+      {
+        "ka": "საავადმყოფოში ზოგიერთი თანამშრომელი, ვისაც პირველადი დახმარების სერტიფიკატი აქვს, ღამის ცვლაში მუშაობს.",
+        "en": "Some first-aid certificate holders at the hospital work night shifts."
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "ყველა ექთანს სერტიფიკატი აქვს, მათ შორის ღამის ცვლაში მომუშავე ექთნებსაც. ესე იგი, ზოგიერთი, ვისაც სერტიფიკატი აქვს, ღამის ცვლაში მუშაობს. „ზოგიერთი ექთანი ღამით მუშაობს“ არ ნიშნავს, რომ დანარჩენები ღამით არ მუშაობენ — შეიძლება ყველა მუშაობდეს. ხაფანგი: „ზოგიერთი“-ს „მხოლოდ ზოგიერთად“ იგებთ.",
+    "explanation_en": "The nurses who work nights hold the certificate, like every nurse, so some certificate holders work nights. \"Some nurses work nights\" does not mean the others do not — every nurse might. Trap: hearing \"some\" as \"only some\".",
+    "verify": {
+      "type": "syllogism",
+      "sets": [
+        "N",
+        "F",
+        "S"
+      ],
+      "premises": [
+        "all N F",
+        "some N S"
+      ],
+      "option_statements": [
+        "some N not S",
+        "all S N",
+        "some S not F",
+        "some F S"
+      ]
+    }
+  },
+  {
+    "id": "CT-017",
+    "module": "critical_thinking",
+    "difficulty": 1,
+    "format": "conditional_logic",
+    "pattern_tag": "denying_antecedent",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• თუ ლევანი დასკვნით გამოცდას ჩააბარებს, სტიპენდიას მიიღებს.\n• ლევანმა დასკვნითი გამოცდა ვერ ჩააბარა.\n\nმხოლოდ ამ დებულებებზე დაყრდნობით, დასკვნა მართალია, მცდარია თუ ვერ ვიტყვით?\n**ლევანი სტიპენდიას არ მიიღებს.**",
+    "question_en": "Assume the following statements are true:\n• If Levani passes the final exam, he will receive a scholarship.\n• Levani did not pass the final exam.\n\nBased only on these statements, is the conclusion True, False, or Cannot say?\n**Levani will not receive a scholarship.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "წესი მხოლოდ იმას ამბობს, რა მოხდება, თუ ლევანი გამოცდას ჩააბარებს. სტიპენდიის სხვა გზებზე, მაგალითად სპორტულ ან სოციალურ სტიპენდიაზე, ის არაფერს ამბობს. ხაფანგი: ფიქრობთ, რომ პირობის გარეშე შედეგი ვერ დადგება.",
+    "explanation_en": "The rule only says what happens if Levani passes. It says nothing about other routes, such as a sports or social scholarship. Trap: assuming that without the condition the result cannot happen.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "P",
+        "S"
+      ],
+      "premises": [
+        "imp(P, S)",
+        "!P"
+      ],
+      "conclusion": "!S"
+    }
+  },
+  {
+    "id": "CT-018",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "tfc_passage",
+    "pattern_tag": "outside_knowledge",
+    "question_ka": "„ალაზნის მარანი“ თელავის საოჯახო კომპანიაა. ყურძნის დიდ ნაწილს ის კახეთის 12 მცირე ვენახიდან ყიდულობს. ღვინის ნაწილს კომპანია ქვევრებში — თიხის დიდ ჭურჭელში — აძველებს. 2025 წელს კომპანიამ ღვინო 4 ქვეყანაში გაიტანა, მათ შორის პოლონეთსა და იაპონიაში.\n\nმხოლოდ ზემოთ მოცემული ტექსტის მიხედვით, შემდეგი დებულება მართალია, მცდარია თუ ვერ ვიტყვით?\n**საქართველო ღვინის დაყენების ერთ-ერთი უძველესი ქვეყანაა მსოფლიოში.**",
+    "question_en": "Alazani Cellar is a family company in Telavi. It buys most of its grapes from 12 small vineyards in Kakheti and ages part of its wine in qvevri — large clay vessels. In 2025 the company exported wine to 4 countries, including Poland and Japan.\n\nBased only on the text above, is the following statement True, False, or Cannot say?\n**Georgia is one of the oldest wine-making countries in the world.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "ბევრმა იცის, რომ ეს სიმართლეა, მაგრამ ტექსტი ქართული ღვინის ისტორიაზე არაფერს ამბობს. ამ ტესტში მხოლოდ ტექსტი ითვლება, ამიტომ პასუხია „ვერ ვიტყვით“. ხაფანგი: „მართალია“-ს ზოგადი ცოდნით ირჩევთ და არა ტექსტით.",
+    "explanation_en": "Many people know this to be true, but the text says nothing about the history of Georgian wine. In this test only the text counts, so the answer is Cannot say. Trap: answering True from general knowledge."
+  },
+  {
+    "id": "CT-019",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "strengthen_weaken",
+    "pattern_tag": "out_of_scope_option",
+    "question_ka": "ბათუმის ერთ-ერთმა კაფემ მაისში ლოიალობის ბარათი შემოიღო. ივნისში განმეორებით მოსული სტუმრების რაოდენობა 25%-ით გაიზარდა. მეპატრონე ასკვნის, რომ სტუმრები სწორედ ბარათმა დააბრუნა.\n\nრომელი დებულება აძლიერებს მეპატრონის დასკვნას ყველაზე მეტად, თუ ის ჭეშმარიტია?",
+    "question_en": "A café in Batumi introduced a loyalty card in May. In June, the number of returning customers rose by 25%. The owner concludes that it was the loyalty card that brought the customers back.\n\nWhich statement, if true, most strengthens the owner's conclusion?",
+    "options": [
+      {
+        "ka": "იმავე ქუჩაზე მსგავს კაფეში, სადაც ლოიალობის ბარათი არ არის, განმეორებით მოსული სტუმრების რაოდენობა ივნისში არ გაზრდილა.",
+        "en": "At a similar café on the same street, which has no loyalty card, the number of returning customers did not rise in June."
+      },
+      {
+        "ka": "ივნისში ბათუმში ტურისტული სეზონი იწყება.",
+        "en": "The tourist season in Batumi starts in June."
+      },
+      {
+        "ka": "ევროპის ბევრ ქალაქში კაფეები ლოიალობის ბარათებს ფართოდ იყენებს.",
+        "en": "Loyalty cards are widely used by cafés in many European cities."
+      },
+      {
+        "ka": "მაისში კაფემ მენიუში ახალი დესერტებიც დაამატა.",
+        "en": "In May the café also added new desserts to its menu."
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "მსგავს კაფეში, სადაც ბარათი არ არის, იმავე თვეში ზრდა არ ყოფილა. ესე იგი, ზრდას ვერც სეზონი ხსნის და ვერც ქუჩა, ბარათი კი ყველაზე სავარაუდო მიზეზი ხდება. ევროპის კაფეები თემას ეხება, მაგრამ ამ კაფეზე არაფერს გვეუბნება. ტურისტული სეზონი და ახალი დესერტები კი სხვა მიზეზს გვთავაზობს და დასკვნას ასუსტებს. ხაფანგი: ირჩევთ ფაქტს, რომელიც თემაზეა, მაგრამ მიზეზსა და შედეგს შორის კავშირს არ ეხება.",
+    "explanation_en": "A similar café without the card saw no rise in the same month, so neither the season nor the street explains the jump, and the card becomes the likeliest cause. European cafés are on topic but say nothing about this café, while the tourist season and the new desserts offer other causes and weaken the conclusion. Trap: an on-topic fact that does not touch the cause-and-effect link."
+  },
+  {
+    "id": "CT-020",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "assumption",
+    "pattern_tag": "hidden_assumption",
+    "question_ka": "საკრებულომ ქუჩის ყველა ნათურა LED ნათურით უნდა შეცვალოს, რადგან LED ნათურები ამჟამინდელზე 50%-ით ნაკლებ ელექტროენერგიას მოიხმარს.\n\nრომელ დაშვებას ეყრდნობა ეს მსჯელობა?",
+    "question_en": "The city council should replace all street lights with LED lamps, because LED lamps use 50% less electricity than the current ones.\n\nWhich assumption does this argument rely on?",
+    "options": [
+      {
+        "ka": "LED ნათურები ამჟამინდელზე უფრო კაშკაშა შუქს იძლევა.",
+        "en": "LED lamps give brighter light than the current lamps."
+      },
+      {
+        "ka": "ნათურების გამოცვლა იმაზე მეტი არ დაჯდება, ვიდრე ელექტროენერგიაზე დაიზოგება.",
+        "en": "The cost of replacing the lamps will not outweigh the savings on electricity."
+      },
+      {
+        "ka": "სხვა ქალაქების უმეტესობა LED ნათურებზე უკვე გადავიდა.",
+        "en": "Most other cities have already switched to LED lamps."
+      },
+      {
+        "ka": "მომავალ წელს ელექტროენერგია გაძვირდება.",
+        "en": "Electricity will become more expensive next year."
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "ერთადერთი არგუმენტი დაზოგვაა. ამიტომ დასკვნა „უნდა შეცვალოს“ მხოლოდ მაშინ დგას, თუ გამოცვლა იმაზე მეტი არ დაჯდება, ვიდრე დაზოგავს. თუ ხარჯი დანაზოგს აჭარბებს, მსჯელობა ინგრევა. დანარჩენი პასუხები დამატებითი არგუმენტებია, მაგრამ მსჯელობას არ სჭირდება. ხაფანგი: ირჩევთ დამატებით მიზეზს და არა გამოტოვებულ რგოლს.",
+    "explanation_en": "The only reason given is the saving, so \"should replace\" holds only if the switch does not cost more than it saves. If the cost is bigger than the saving, the argument fails; the other options would be nice extras but are not required. Trap: choosing a bonus reason instead of the missing link."
+  },
+  {
+    "id": "CT-021",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "ordering_puzzle",
+    "pattern_tag": "must_be_true_vs_likely",
+    "question_ka": "მთაწმინდის პარკში გამართულ რბოლაში 5 მორბენალმა — საბამ, ნიკამ, ლევანმა, თამარმა და ქეთევანმა — ფინიშს სხვადასხვა დროს მიაღწია.\n• ქეთევანი მე-2 მოვიდა.\n• ნიკა ლევანზე ადრე მოვიდა.\n• თამარი უშუალოდ საბას შემდეგ მოვიდა.\n\nვინ მოვიდა ფინიშზე ბოლო?",
+    "question_en": "5 runners — Saba, Nika, Levani, Tamar and Ketevan — finished a race in Mtatsminda Park, each at a different time.\n• Ketevan finished 2nd.\n• Nika finished ahead of Levani.\n• Tamar finished directly after Saba.\n\nWho finished last?",
+    "options": [
+      {
+        "ka": "ლევანი",
+        "en": "Levani"
+      },
+      {
+        "ka": "თამარი",
+        "en": "Tamar"
+      },
+      {
+        "ka": "საბა",
+        "en": "Saba"
+      },
+      {
+        "ka": "ამის დადგენა შეუძლებელია",
+        "en": "Cannot be determined"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "ქეთევანი მე-2 ადგილზეა. საბა–თამარის წყვილს ზედიზედ 2 ადგილი სჭირდება: მე-3 და მე-4, ან მე-4 და მე-5. ნიკა ლევანზე წინაა, ამიტომ ნიკა 1-ლია. ყველა პირობას ორივე განლაგება აკმაყოფილებს: „ნიკა, ქეთევანი, საბა, თამარი, ლევანი“ და „ნიკა, ქეთევანი, ლევანი, საბა, თამარი“. ამიტომ ბოლო შეიძლება ლევანიც იყოს და თამარიც. ხაფანგი: პირველივე შესაფერის განლაგებას პოულობთ და იქვე ჩერდებით.",
+    "explanation_en": "Ketevan is 2nd, and the Saba–Tamar pair needs 2 places in a row: 3rd–4th or 4th–5th. Nika is ahead of Levani, so Nika is 1st. Both Nika, Ketevan, Saba, Tamar, Levani and Nika, Ketevan, Levani, Saba, Tamar fit every clue, so the last runner could be Levani or Tamar. Trap: stopping at the first arrangement that works.",
+    "verify": {
+      "type": "ordering",
+      "items": [
+        "Saba",
+        "Nika",
+        "Levani",
+        "Tamar",
+        "Ketevan"
+      ],
+      "constraints": [
+        "pos.Ketevan === 1",
+        "pos.Nika < pos.Levani",
+        "pos.Tamar === pos.Saba + 1"
+      ],
+      "ask": "(order) => order[4]",
+      "undetermined_option": 3
+    }
+  },
+  {
+    "id": "CT-022",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "syllogism",
+    "pattern_tag": "all_not_reversible",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• მაღაზიაში გაყიდულ ყველა ლეპტოპს უფასო მაუსი მოჰყვება.\n• თამარის ახალ ლეპტოპს უფასო მაუსი მოჰყვა.\n\nმხოლოდ ამ დებულებებზე დაყრდნობით, დასკვნა მართალია, მცდარია თუ ვერ ვიტყვით?\n**თამარის ახალი ლეპტოპი ამ მაღაზიაშია ნაყიდი.**",
+    "question_en": "Assume the following statements are true:\n• All laptops sold at the store come with a free mouse.\n• Tamar's new laptop came with a free mouse.\n\nBased only on these statements, is the conclusion True, False, or Cannot say?\n**Tamar's new laptop was bought at this store.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "მაღაზიის ყველა ლეპტოპს მაუსი მოჰყვება, მაგრამ არსად წერია, რომ უფასო მაუსს მხოლოდ ეს მაღაზია იძლევა. თამარის ლეპტოპი „მაუსიანი ლეპტოპების“ ჯგუფშია, ეს ჯგუფი კი შეიძლება მაღაზიის ლეპტოპებზე ფართო იყოს. ხაფანგი: „მაღაზიის ყველა ლეპტოპს მაუსი მოჰყვება“-ს აბრუნებთ და კითხულობთ, როგორც „ყველა ლეპტოპი, რომელსაც მაუსი მოჰყვა, ამ მაღაზიიდანაა“.",
+    "explanation_en": "Every laptop from the store comes with a mouse, but nothing says that only this store gives one away. Tamar's laptop is in the \"came with a mouse\" group, which may be wider than the store's laptops. Trap: reversing \"all store laptops come with a mouse\" into \"every laptop with a mouse is from the store\".",
+    "verify": {
+      "type": "syllogism",
+      "sets": [
+        "S",
+        "M",
+        "T"
+      ],
+      "premises": [
+        "all S M",
+        "all T M"
+      ],
+      "conclusion": "all T S"
+    }
+  },
+  {
+    "id": "CT-023",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "conditional_logic",
+    "pattern_tag": "necessary_vs_sufficient",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• ვიზიტორს საკონფერენციო დარბაზში შესვლის უფლება მხოლოდ იმ შემთხვევაში აქვს, თუ ბეჯი აქვს.\n• ელენეს ბეჯი აქვს.\n\nმხოლოდ ამ დებულებებზე დაყრდნობით, დასკვნა მართალია, მცდარია თუ ვერ ვიტყვით?\n**ელენეს საკონფერენციო დარბაზში შესვლის უფლება აქვს.**",
+    "question_en": "Assume the following statements are true:\n• A visitor is allowed into the conference hall only if they have a badge.\n• Elene has a badge.\n\nBased only on these statements, is the conclusion True, False, or Cannot say?\n**Elene is allowed into the conference hall.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "ბეჯი აუცილებელი პირობაა და არა საკმარისი: წესი არ ამბობს, რომ მარტო ბეჯი შესვლისთვის საკმარისია — შეიძლება რეგისტრაცია ან ბილეთიც იყოს საჭირო. ხაფანგი: „მხოლოდ იმ შემთხვევაში, თუ“-ს ჩვეულებრივ „თუ“-დ კითხულობთ.",
+    "explanation_en": "The badge is a necessary condition, not a sufficient one: the rule never says a badge alone gets you in — registration or a ticket may also be needed. Trap: reading \"only if\" as a plain \"if\".",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "A",
+        "B"
+      ],
+      "premises": [
+        "imp(A, B)",
+        "B"
+      ],
+      "conclusion": "A"
+    }
+  },
+  {
+    "id": "CT-024",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "tfc_passage",
+    "pattern_tag": "contrapositive",
+    "question_ka": "ბიბლიოთეკის წესები: წევრს, რომელსაც გადაუხდელი ჯარიმა აქვს, ახალი წიგნის გატანა არ შეუძლია. თუ წევრი წიგნს დაგვიანებით აბრუნებს, ყოველ დაგვიანებულ დღეზე 2 ლარი ჯარიმა ერიცხება. ჯარიმის გადახდა შესაძლებელია მისაღებში ან ონლაინ. გუშინ საბამ ბიბლიოთეკიდან 2 ახალი წიგნი გაიტანა.\n\nმხოლოდ ზემოთ მოცემული ტექსტის მიხედვით, შემდეგი დებულება მართალია, მცდარია თუ ვერ ვიტყვით?\n**როცა საბამ წიგნები გაიტანა, მას გადაუხდელი ჯარიმა არ ჰქონდა.**",
+    "question_en": "Library rules: a member who has an unpaid fine cannot borrow new books. A fine of 2 GEL is charged for each day a book is returned late. Fines can be paid at the front desk or online. Yesterday Saba borrowed 2 new books from the library.\n\nBased only on the text above, is the following statement True, False, or Cannot say?\n**When Saba borrowed the books, he had no unpaid fine.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "წესი: გადაუხდელი ჯარიმა → ახალი წიგნის გატანა არ შეიძლება. საბამ წიგნები გაიტანა, ესე იგი იმ მომენტში გადაუხდელი ჯარიმა არ ჰქონდა (კონტრაპოზიცია). ხაფანგი: „ვერ ვიტყვით“-ს ირჩევთ, რადგან ტექსტში საბას ჯარიმა პირდაპირ არ არის ნახსენები.",
+    "explanation_en": "Rule: unpaid fine → cannot borrow. Saba did borrow, so at that moment he had no unpaid fine (the contrapositive). Trap: choosing Cannot say because the text never mentions Saba's fines directly.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "F",
+        "B"
+      ],
+      "premises": [
+        "imp(F, !B)",
+        "B"
+      ],
+      "conclusion": "!F"
+    }
+  },
+  {
+    "id": "CT-025",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "inference",
+    "pattern_tag": "must_be_true_vs_likely",
+    "question_ka": "გასულ წელს თბილისის ერთ-ერთმა საცხობების ქსელმა 3 ახალი მაღაზია გახსნა, სამივე მეტროს სადგურთან. ქსელის არცერთი მაღაზია არ დახურულა. ქსელის მთლიანი შემოსავალი წინა წელთან შედარებით 12%-ით გაიზარდა. მარტო 3 ახალი მაღაზიის გაყიდვები წინა წლის მთლიანი შემოსავლის 9%-ის ტოლი იყო.\n\nრომელი დებულებაა აუცილებლად ჭეშმარიტი?",
+    "question_en": "Last year a bakery chain in Tbilisi opened 3 new shops, all next to metro stations; none of the chain's shops closed. The chain's total revenue grew by 12% compared with the year before, and the sales of the 3 new shops alone were equal to 9% of the previous year's total revenue.\n\nWhich statement must be true?",
+    "options": [
+      {
+        "ka": "უკვე არსებული მაღაზიების ჯამური შემოსავალი გასულ წელს გაიზარდა.",
+        "en": "The combined revenue of the shops that were already open grew last year."
+      },
+      {
+        "ka": "მეტროსთან ახლოს მდებარე მაღაზიები ქსელის სხვა მაღაზიებზე მეტს გამოიმუშავებს.",
+        "en": "Shops next to metro stations earn more than the chain's other shops."
+      },
+      {
+        "ka": "გასულ წელს ქსელის შემოსავლის ნახევარზე მეტი ახალ მაღაზიებზე მოდიოდა.",
+        "en": "Last year, more than half of the chain's revenue came from the new shops."
+      },
+      {
+        "ka": "წელს ქსელი მეტროსთან კიდევ გახსნის მაღაზიებს.",
+        "en": "This year the chain will open more shops next to metro stations."
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "12%-იან ზრდას გამოაკელით 9%, რაც ახალ მაღაზიებზე მოდის. რჩება 3%, რომელიც ძველ მაღაზიებს უნდა მოეტანა, ესე იგი მათი შემოსავალი გაიზარდა. დებულებები მეტროსთან მდებარე მაღაზიებსა და მომავალ გახსნებზე დამაჯერებლად ჟღერს, მაგრამ ციფრებიდან არ გამომდინარეობს. „ნახევარზე მეტი“ კი შეუძლებელია: 9 ბევრად ნაკლებია 112-ის ნახევარზე. ხაფანგი: დამაჯერებელ ისტორიას ირჩევთ და არა იმას, რასაც ციფრები აუცილებლად მოითხოვს.",
+    "explanation_en": "Take the 9% that came from the new shops away from the 12% growth and 3% is left, which must have come from the old shops — so their revenue grew. The claims about metro shops and future openings sound believable but nothing forces them, and \"more than half\" is impossible: 9 is far below half of 112. Trap: picking a believable story instead of what the numbers force."
+  },
+  {
+    "id": "CT-026",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "argument_flaw",
+    "pattern_tag": "affirming_consequent",
+    "question_ka": "კარგი პროგრამისტები საკუთარ კოდზე ტესტებს წერენ. დავითი საკუთარ კოდზე ტესტებს წერს. მაშასადამე, დავითი კარგი პროგრამისტია.\n\nრომელი დებულება აღწერს ამ მსჯელობის ხარვეზს ყველაზე ზუსტად?",
+    "question_en": "Good programmers write tests for their code. Davit writes tests for his code. Therefore, Davit is a good programmer.\n\nWhich statement best describes the flaw in this argument?",
+    "options": [
+      {
+        "ka": "ის ძალიან მცირე შერჩევას ეყრდნობა.",
+        "en": "It relies on a sample that is too small."
+      },
+      {
+        "ka": "ის კორელაციას მიზეზობრიობაში ურევს.",
+        "en": "It confuses correlation with causation."
+      },
+      {
+        "ka": "ის უშვებს, რომ ტესტებს მხოლოდ კარგი პროგრამისტები წერენ.",
+        "en": "It assumes that only good programmers write tests."
+      },
+      {
+        "ka": "ის იმას ეყრდნობა, რას ფიქრობს დავითი საკუთარ თავზე.",
+        "en": "It relies on Davit's opinion of himself."
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "წანამძღვარი ამბობს, რომ კარგი პროგრამისტები ტესტებს წერენ. ის არ ამბობს, რომ მხოლოდ ისინი წერენ — ტესტებს დამწყებებიც წერენ. ხაფანგი: შედეგიდან (ტესტებს წერს) მიზეზზე (კარგი პროგრამისტია) ბრუნდებით — ეს შედეგის დადასტურების კლასიკური შეცდომაა.",
+    "explanation_en": "The premise says good programmers write tests, not that only good programmers do — beginners write tests too. Going back from the result (writes tests) to the cause (is a good programmer) is the classic error of affirming the consequent."
+  },
+  {
+    "id": "CT-027",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "strengthen_weaken",
+    "pattern_tag": "correlation_causation",
+    "question_ka": "3000 ზრდასრულის კვლევამ აჩვენა, რომ ძაღლის პატრონებს საშუალოდ უფრო დაბალი წნევა აქვთ, ვიდრე მათ, ვისაც ძაღლი არ ჰყავს. ავტორები ასკვნიან, რომ ძაღლის ყოლა წნევას ამცირებს.\n\nრომელი დებულება ასუსტებს ამ დასკვნას ყველაზე მეტად, თუ ის ჭეშმარიტია?",
+    "question_en": "A study of 3000 adults found that dog owners have, on average, lower blood pressure than people without a dog. The authors conclude that owning a dog lowers blood pressure.\n\nWhich statement, if true, most weakens this conclusion?",
+    "options": [
+      {
+        "ka": "ძაღლს დღეში 2-ჯერ მაინც სეირნობა სჭირდება.",
+        "en": "A dog needs to be walked at least 2 times a day."
+      },
+      {
+        "ka": "ძაღლს გაცილებით ხშირად ის ადამიანები იყვანენ, ვინც ისედაც ჯანმრთელი და აქტიურია.",
+        "en": "People who are already healthy and active are much more likely to decide to get a dog."
+      },
+      {
+        "ka": "იმავე კვლევაში კატის პატრონებსაც საშუალოზე დაბალი წნევა ჰქონდათ.",
+        "en": "In the same study, cat owners also had lower than average blood pressure."
+      },
+      {
+        "ka": "კვლევა ცნობილმა უნივერსიტეტმა ჩაატარა.",
+        "en": "The study was carried out by a well-known university."
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "თუ ძაღლს ძირითადად ისედაც ჯანმრთელი და აქტიური ადამიანები იყვანენ, მათ დაბალი წნევა შეიძლება ძაღლამდეც ჰქონდათ. ესე იგი, მიზეზი და შედეგი შეიძლება პირიქით იყოს. სეირნობის საჭიროება დასკვნას ამაგრებს, უნივერსიტეტის სახელი კი კვლევას მხოლოდ უფრო სანდოდ აჩენს. ხაფანგი: ფიქრობთ, რომ მიზეზი აუცილებლად ძაღლია, შედეგი კი — ჯანმრთელობა.",
+    "explanation_en": "If mostly healthy, active people get dogs, their low blood pressure may come before the dog — the link runs the other way. The need for walks supports the conclusion, and the university's name only makes the study sound more credible. Trap: assuming the arrow must point from the dog to the health."
+  },
+  {
+    "id": "CT-028",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "syllogism",
+    "pattern_tag": "chain_middle_term",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• სადებატო კლუბის ყველა წევრი პირველკურსელია.\n• არცერთი პირველკურსელი არ ცხოვრობს საერთო საცხოვრებელში.\n\nმხოლოდ ამ დებულებებზე დაყრდნობით, დასკვნა მართალია, მცდარია თუ ვერ ვიტყვით?\n**საერთო საცხოვრებლის ზოგიერთი მაცხოვრებელი სადებატო კლუბის წევრია.**",
+    "question_en": "Assume the following statements are true:\n• All members of the debate club are first-year students.\n• No first-year students live in the dormitory.\n\nBased only on these statements, is the conclusion True, False, or Cannot say?\n**Some residents of the dormitory are members of the debate club.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "კლუბის ყველა წევრი პირველკურსელია, არცერთი პირველკურსელი კი საერთო საცხოვრებელში არ ცხოვრობს, ამიტომ კლუბის არცერთი წევრი იქ არ ცხოვრობს. დასკვნა გამორიცხულია, ესე იგი პასუხია „მცდარია“ და არა „ვერ ვიტყვით“. ხაფანგი: „ვერ ვიტყვით“-ს ირჩევთ, თუმცა „ყველა“ და „არცერთი“ საკითხს ბოლომდე წყვეტს.",
+    "explanation_en": "Every club member is a first-year student and no first-year student lives in the dormitory, so no club member lives there. The conclusion is ruled out, so the answer is False, not Cannot say. Trap: answering Cannot say when the \"all\" and \"no\" links settle the question completely.",
+    "verify": {
+      "type": "syllogism",
+      "sets": [
+        "D",
+        "F",
+        "R"
+      ],
+      "premises": [
+        "all D F",
+        "no F R"
+      ],
+      "conclusion": "some R D"
+    }
+  },
+  {
+    "id": "CT-029",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "conditional_logic",
+    "pattern_tag": "contrapositive",
+    "question_ka": "ქუთაისის აეროპორტის წესი: „დილის რეისი დროულად გადის, თუ ნისლი არ არის.“\n\nრომელი დებულებაა აუცილებლად ჭეშმარიტი, თუ წესი სრულდება?",
+    "question_en": "A rule at Kutaisi airport: \"The morning flight leaves on time unless there is fog.\"\n\nWhich statement must be true if the rule holds?",
+    "options": [
+      {
+        "ka": "თუ ნისლია, რეისი იგვიანებს.",
+        "en": "If there is fog, the flight is delayed."
+      },
+      {
+        "ka": "თუ რეისი დროულად გავიდა, ნისლი არ ყოფილა.",
+        "en": "If the flight left on time, there was no fog."
+      },
+      {
+        "ka": "თუ ნისლი არ არის, რეისი იგვიანებს.",
+        "en": "If there is no fog, the flight is delayed."
+      },
+      {
+        "ka": "თუ რეისმა დაიგვიანა, ნისლი იყო.",
+        "en": "If the flight was delayed, there was fog."
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "წესი ნიშნავს: ნისლი არ არის → რეისი დროულადაა. მისი ერთადერთი სწორი შებრუნება კონტრაპოზიციაა: რეისი დაიგვიანა → ნისლი იყო. ნისლიან დღეებზე წესი არაფერს ამბობს — რეისი შეიძლება მაინც დროულად გავიდეს. ამიტომ არც „ნისლი → დაგვიანება“ გამომდინარეობს და არც „დროულად გავიდა → ნისლი არ იყო“. ხაფანგი: წესს ისე კითხულობთ, თითქოს ის „მაშინ და მხოლოდ მაშინ“ იყოს.",
+    "explanation_en": "\"Unless there is fog\" means: no fog → on time. The only valid flip is the contrapositive: delayed → there was fog. The rule says nothing about foggy days — the flight may still leave on time — so neither \"fog → delayed\" nor \"on time → no fog\" follows. Trap: reading \"unless\" as \"if and only if\".",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "F",
+        "T"
+      ],
+      "premises": [
+        "imp(!F, T)"
+      ],
+      "option_statements": [
+        "imp(F, !T)",
+        "imp(T, !F)",
+        "imp(!F, !T)",
+        "imp(!T, F)"
+      ]
+    }
+  },
+  {
+    "id": "CT-030",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "tfc_passage",
+    "pattern_tag": "outside_knowledge",
+    "question_ka": "კომპანიის თბილისის ოფისის შიდა სახელმძღვანელო: კომპანიის კალენდრით სამუშაო კვირის პირველი დღე კვირაა, ბოლო დღე კი — ხუთშაბათი. ყოველკვირეული ანგარიში სამუშაო კვირის ბოლო დღეს უნდა ჩაბარდეს.\n\nმხოლოდ ზემოთ მოცემული ტექსტის მიხედვით, შემდეგი დებულება მართალია, მცდარია თუ ვერ ვიტყვით?\n**სახელმძღვანელოს მიხედვით, ყოველკვირეული ანგარიში ხუთშაბათს უნდა ჩაბარდეს.**",
+    "question_en": "Internal guide of the company's Tbilisi office: in the company calendar, the first day of the working week is Sunday and the last day is Thursday. The weekly report must be submitted on the last day of the working week.\n\nBased only on the text above, is the following statement True, False, or Cannot say?\n**According to the guide, the weekly report must be submitted on Thursday.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "ამ კომპანიის კალენდრით სამუშაო კვირის ბოლო დღე ხუთშაბათია, ანგარიში კი სწორედ ამ დღეს ბარდება, ამიტომ დებულება მართალია. ხაფანგი: „მცდარია“-ს ირჩევთ, რადგან საქართველოში ოფისების უმეტესობა პარასკევამდე მუშაობს, პასუხს კი ტექსტი წყვეტს და არა პირადი გამოცდილება.",
+    "explanation_en": "In this company's calendar the last working day is Thursday, and the report is due on that day, so the statement is True. Trap: choosing False because most offices in Georgia work until Friday — the text decides, not your own experience."
+  },
+  {
+    "id": "CT-031",
+    "module": "critical_thinking",
+    "difficulty": 1,
+    "format": "syllogism",
+    "pattern_tag": "some_not_some_not",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• მარიამის ყველა მეგობარი ჭადრაკს თამაშობს.\n• მარიამის ზოგიერთი მეგობარი ჩოგბურთს თამაშობს.\n\nმხოლოდ ამ დებულებებზე დაყრდნობით, დასკვნა მართალია, მცდარია თუ ვერ ვიტყვით?\n**მარიამის ზოგიერთი მეგობარი ჩოგბურთს არ თამაშობს.**",
+    "question_en": "Assume the following statements are true:\n• All of Mariam's friends play chess.\n• Some of Mariam's friends play tennis.\n\nBased only on these statements, is the conclusion True, False, or Cannot say?\n**Some of Mariam's friends do not play tennis.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "მხოლოდ ის ვიცით, რომ ერთი მეგობარი მაინც თამაშობს ჩოგბურთს. შესაძლებელია, რომ ყველა თამაშობდეს. ჭადრაკის შესახებ დებულება ამას არ ცვლის. ხაფანგი: „ზოგიერთი“-ს ისე იგებთ, თითქოს ის „არა ყველას“ ნიშნავდეს.",
+    "explanation_en": "We only know that at least one friend plays tennis; it is possible that all of them do. The chess statement does not change that. Trap: hearing \"some\" as \"not all\".",
+    "verify": {
+      "type": "syllogism",
+      "sets": [
+        "F",
+        "C",
+        "T"
+      ],
+      "premises": [
+        "all F C",
+        "some F T"
+      ],
+      "conclusion": "some F not T"
+    }
+  },
+  {
+    "id": "CT-032",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "conditional_logic",
+    "pattern_tag": "denying_antecedent",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• თუ ტვირთი ორშაბათისთვის ჩამოვა, მაღაზია სამშაბათს გაიხსნება.\n• თუ მაღაზია სამშაბათს გაიხსნება, იმ დღეს პირველ ცვლაში თამარი იმუშავებს.\n• ტვირთი ორშაბათისთვის არ ჩამოვიდა.\n\nრომელი დებულებაა აუცილებლად ჭეშმარიტი?",
+    "question_en": "Assume the following statements are true:\n• If the shipment arrives by Monday, the shop will open on Tuesday.\n• If the shop opens on Tuesday, Tamar will work the first shift that day.\n• The shipment did not arrive by Monday.\n\nWhich statement must be true?",
+    "options": [
+      {
+        "ka": "მაღაზია სამშაბათს არ გაიხსნება.",
+        "en": "The shop will not open on Tuesday."
+      },
+      {
+        "ka": "თამარი სამშაბათს პირველ ცვლაში არ იმუშავებს.",
+        "en": "Tamar will not work the first shift on Tuesday."
+      },
+      {
+        "ka": "თუ თამარი სამშაბათს პირველ ცვლაში არ იმუშავებს, მაღაზია სამშაბათს არ გაიხსნება.",
+        "en": "If Tamar does not work the first shift on Tuesday, the shop will not open on Tuesday."
+      },
+      {
+        "ka": "თუ მაღაზია სამშაბათს გაიხსნება, ესე იგი ტვირთი ორშაბათისთვის ჩამოვიდა.",
+        "en": "If the shop opens on Tuesday, the shipment arrived by Monday."
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "ტვირთი დაგვიანდა, ამიტომ სამშაბათს გახსნის ერთი მიზეზი აღარ არის. მაგრამ წესები არ ამბობს, რომ ეს ერთადერთი მიზეზია. ამიტომ არ გამომდინარეობს არც ის, რომ მაღაზია სამშაბათს არ გაიხსნება, და არც ის, რომ თამარი არ იმუშავებს. „თუ თამარი არ იმუშავებს, მაღაზია არ გაიხსნება“ მეორე წესის კონტრაპოზიციაა და ჭეშმარიტია, ტვირთს რაც არ უნდა დაემართოს. „თუ მაღაზია გაიხსნება, ტვირთი ჩამოვიდა“ კი პირველ წესს არასწორად აბრუნებს. ხაფანგი: ჯაჭვში ორჯერ ზედიზედ ასკვნით: „პირობა არ შესრულდა, ესე იგი არც შედეგი იქნება“.",
+    "explanation_en": "The late shipment removes one reason to open on Tuesday, but the rules never say it is the only reason, so neither \"the shop stays closed\" nor \"Tamar does not work\" follows. \"If Tamar does not work the first shift, the shop will not open\" is the contrapositive of the second rule and holds whatever happens to the shipment; \"if the shop opens, the shipment arrived\" reverses the first rule. Trap: denying the antecedent twice down the chain.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "A",
+        "O",
+        "T"
+      ],
+      "premises": [
+        "imp(A, O)",
+        "imp(O, T)",
+        "!A"
+      ],
+      "option_statements": [
+        "!O",
+        "!T",
+        "imp(!T, !O)",
+        "imp(O, A)"
+      ]
+    }
+  },
+  {
+    "id": "CT-033",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "conditional_logic",
+    "pattern_tag": "affirming_consequent",
+    "question_ka": "ოფისის სპამ-ფილტრის ერთ-ერთი წესი ასეთია: თუ წერილი ბმულს შეიცავს და უცნობი გამგზავნისგანაა, ის „სპამის“ საქაღალდეში გადადის. დღეს დილით გიორგისთვის გაგზავნილი წერილი „სპამის“ საქაღალდეში გადავიდა.\n\nრომელი დასკვნა გამომდინარეობს აუცილებლად?",
+    "question_en": "One of the rules of the office spam filter is: if an email contains a link and comes from an unknown sender, it is moved to the Spam folder. This morning an email sent to Giorgi was moved to the Spam folder.\n\nWhich conclusion must be true?",
+    "options": [
+      {
+        "ka": "წერილი უცნობი გამგზავნისგან იყო.",
+        "en": "The email came from an unknown sender."
+      },
+      {
+        "ka": "წერილი ბმულს შეიცავდა.",
+        "en": "The email contained a link."
+      },
+      {
+        "ka": "წერილი ბმულს შეიცავდა და უცნობი გამგზავნისგან იყო.",
+        "en": "The email contained a link and came from an unknown sender."
+      },
+      {
+        "ka": "ამ დასკვნებიდან არცერთი არ გამომდინარეობს.",
+        "en": "None of these conclusions follows."
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "ეს ფილტრის მხოლოდ ერთ-ერთი წესია — წერილი „სპამში“ სხვა წესითაც შეიძლება მოხვედრილიყო. „სპამში“ მოხვედრა ბმულს ან უცნობ გამგზავნს არ ამტკიცებს, ამიტომ არცერთი დასკვნა არ გამომდინარეობს. ხაფანგი: შედეგიდან (სპამი) მიზეზზე (ბმული და უცნობი გამგზავნი) ბრუნდებით.",
+    "explanation_en": "This is only one of the filter's rules — the email could have landed in Spam because of another one. Being in Spam proves neither a link nor an unknown sender, so none of the conclusions follows. Trap: going back from the result (Spam) to the cause (link and unknown sender).",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "L",
+        "U",
+        "S"
+      ],
+      "premises": [
+        "imp(L && U, S)",
+        "S"
+      ],
+      "option_statements": [
+        "U",
+        "L",
+        "L && U",
+        null
+      ]
+    }
+  },
+  {
+    "id": "CT-034",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "tfc_passage",
+    "pattern_tag": "necessary_vs_sufficient",
+    "question_ka": "თბილისის IT აკადემიის წესი: სტუდენტი სრულ სტიპენდიას იღებს მხოლოდ იმ შემთხვევაში, თუ მისი საშუალო ქულა სულ მცირე 90-ია და არასაპატიო გაცდენები არ აქვს. ანას საშუალო ქულა 93-ია და არასაპატიო გაცდენები არ აქვს.\n\nმხოლოდ ზემოთ მოცემული ტექსტის მიხედვით, შემდეგი დებულება მართალია, მცდარია თუ ვერ ვიტყვით?\n**ანა სრულ სტიპენდიას იღებს.**",
+    "question_en": "Rule of an IT academy in Tbilisi: a student receives the full scholarship only if their average grade is at least 90 and they have no unexcused absences. Ana's average grade is 93, and she has no unexcused absences.\n\nBased only on the text above, is the following statement True, False, or Cannot say?\n**Ana receives the full scholarship.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "„მხოლოდ იმ შემთხვევაში, თუ“ ჩამოთვლის, რა არის აუცილებელი, და არა იმას, რა არის საკმარისი. ანა ორივე მოთხოვნას აკმაყოფილებს, მაგრამ წესი არ ამბობს, რომ ამით სტიპენდია გარანტირებულია — შეიძლება ადგილები შეზღუდული იყოს ან გასაუბრებაც იყოს საჭირო. ხაფანგი: აუცილებელი პირობების ჩამონათვალს დაპირებად თვლით.",
+    "explanation_en": "\"Only if\" lists what is required, not what is enough. Ana meets both requirements, but the rule never says that this guarantees the scholarship — places may be limited, or an interview may also be needed. Trap: treating a list of necessary conditions as a promise.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "S",
+        "G",
+        "A"
+      ],
+      "premises": [
+        "imp(S, G && A)",
+        "G",
+        "A"
+      ],
+      "conclusion": "S"
+    }
+  },
+  {
+    "id": "CT-035",
+    "module": "critical_thinking",
+    "difficulty": 1,
+    "format": "tfc_passage",
+    "pattern_tag": "cannot_say_vs_false",
+    "question_ka": "რუსთავის საცურაო აუზი 1-დან 14 აგვისტომდე რემონტის გამო დაკეტილია. ამ პერიოდში აუზის წევრებს თბილისის აუზით სარგებლობა უფასოდ შეუძლიათ. რუსთავის აუზი 15 აგვისტოს ახალი სამუშაო საათებით გაიხსნება.\n\nმხოლოდ ზემოთ მოცემული ტექსტის მიხედვით, შემდეგი დებულება მართალია, მცდარია თუ ვერ ვიტყვით?\n**10 აგვისტოს წევრებს რუსთავის აუზში ცურვა შეუძლიათ.**",
+    "question_en": "The Rustavi swimming pool is closed for repairs from 1 to 14 August. During this period, its members can use the pool in Tbilisi free of charge. The Rustavi pool will reopen on 15 August with new opening hours.\n\nBased only on the text above, is the following statement True, False, or Cannot say?\n**On 10 August, members can swim in the Rustavi pool.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "10 აგვისტო 1–14 აგვისტოს პერიოდში ხვდება, როცა აუზი დაკეტილია, ამიტომ ტექსტი დებულებას პირდაპირ ეწინააღმდეგება — პასუხია „მცდარია“. ხაფანგი: „ვერ ვიტყვით“-ს ირჩევთ, თუმცა ტექსტი საკითხს ცალსახად წყვეტს.",
+    "explanation_en": "10 August falls within 1–14 August, when the pool is closed, so the text directly contradicts the statement — the answer is False. Trap: choosing Cannot say when the text clearly settles the question.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "Closed",
+        "Swim"
+      ],
+      "premises": [
+        "Closed",
+        "imp(Closed, !Swim)"
+      ],
+      "conclusion": "Swim"
+    }
+  },
+  {
+    "id": "CT-036",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "tfc_passage",
+    "pattern_tag": "cannot_say_vs_false",
+    "question_ka": "2025 წელს საქართველოში 500 IT კომპანია გამოკითხეს. გამოკითხვამ აჩვენა, რომ მათი უმეტესობა მომავალ წელს უმცროსი დეველოპერების აყვანას გეგმავს. გამოკითხული კომპანიების 80% თბილისშია. თბილისის გარეთ მყოფი კომპანიებიდან უმცროსი დეველოპერების აყვანას ნახევარზე ნაკლები გეგმავს.\n\nმხოლოდ ზემოთ მოცემული ტექსტის მიხედვით, შემდეგი დებულება მართალია, მცდარია თუ ვერ ვიტყვით?\n**გამოკითხული თბილისური კომპანიების ნახევარზე ნაკლები გეგმავს უმცროსი დეველოპერების აყვანას.**",
+    "question_en": "A 2025 survey of 500 IT companies in Georgia found that most of them plan to hire junior developers next year. Of the surveyed companies, 80% are based in Tbilisi. Among the companies outside Tbilisi, fewer than half plan to hire junior developers.\n\nBased only on the text above, is the following statement True, False, or Cannot say?\n**Fewer than half of the surveyed Tbilisi companies plan to hire junior developers.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "500-ის 80% არის 400 თბილისური კომპანია, დანარჩენი 100 კი თბილისის გარეთაა. 500-ის „უმეტესობა“ სულ მცირე 251 კომპანიაა. მათგან თბილისის გარეთ მაქსიმუმ 49-ია, ესე იგი თბილისში სულ მცირე 202 — ეს 400-ის ნახევარზე მეტია. დებულება ტექსტს ეწინააღმდეგება, ამიტომ „მცდარია“. ხაფანგი: „ვერ ვიტყვით“-ს ირჩევთ მხოლოდ იმიტომ, რომ თბილისის რიცხვი ტექსტში პირდაპირ არ წერია.",
+    "explanation_en": "80% of 500 is 400 Tbilisi companies, and the other 100 are outside Tbilisi. \"Most\" of 500 means at least 251; at most 49 of them are outside Tbilisi, so at least 202 are in Tbilisi — more than half of 400. The text contradicts the statement, so it is False. Trap: choosing Cannot say just because the Tbilisi figure is not written out directly.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { let canTrue = false, canFalse = false; for (let out = 0; out <= 49; out++) for (let total = 251; total <= 500; total++) { const tb = total - out; if (tb < 0 || tb > 400) continue; if (tb < 200) canTrue = true; else canFalse = true; } return canTrue && canFalse ? 'Cannot say' : canTrue ? 'True' : 'False'; }"
+    }
+  },
+  {
+    "id": "CT-037",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "strengthen_weaken",
+    "pattern_tag": "out_of_scope_option",
+    "question_ka": "გასულ წელს ზუგდიდში 10 კმ ველობილიკი მოაწყვეს. ამის შემდეგ სამსახურში ველოსიპედით მოსიარულეთა რაოდენობა გაორმაგდა. რეგიონული განვითარების სამსახური ასკვნის: თუ თელავშიც მოეწყობა ველობილიკები, იქაც გაორმაგდება მათი რაოდენობა, ვინც სამსახურში ველოსიპედით დადის.\n\nრომელი დებულება ასუსტებს ამ დასკვნას ყველაზე მეტად, თუ ის ჭეშმარიტია?",
+    "question_en": "After 10 km of bike lanes were built in Zugdidi last year, the number of people cycling to work doubled. A regional development office concludes that building bike lanes in Telavi will double the number of people cycling to work there too.\n\nWhich statement, if true, most weakens this conclusion?",
+    "options": [
+      {
+        "ka": "ზუგდიდის ველობილიკები დაგეგმილზე იაფი დაჯდა.",
+        "en": "The bike lanes in Zugdidi cost less than planned."
+      },
+      {
+        "ka": "ზუგდიდი ვაკეზე მდებარეობს, თელავი კი ციცაბო ფერდობებზეა გაშენებული.",
+        "en": "Unlike Zugdidi, which lies on flat land, Telavi is built on steep slopes."
+      },
+      {
+        "ka": "ქალაქის გამოკითხვაში ზუგდიდელებმა ახალ ველობილიკებს მაღალი შეფასება მისცეს.",
+        "en": "In a city survey, Zugdidi residents gave the new bike lanes high ratings."
+      },
+      {
+        "ka": "თელავის მოსახლეობა ზუგდიდისაზე ნაკლებია.",
+        "en": "Telavi has a smaller population than Zugdidi."
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "დასკვნა უშვებს, რომ თელავი ზუგდიდს ჰგავს ყველაფერში, რაც ველოსიპედით სიარულისთვის მნიშვნელოვანია. ციცაბო ფერდობები სწორედ ის განსხვავებაა, რის გამოც ხალხმა ახალი ბილიკების მიუხედავად შეიძლება ველოსიპედი არ აირჩიოს. ფასი, შეფასებები და მოსახლეობის რაოდენობა თემას ეხება, მაგრამ შედარებას ვერ არღვევს: გაორმაგება ფარდობაა და პატარა ქალაქშიც შესაძლებელია. ხაფანგი: ირჩევთ პასუხს, რომელიც თემას ეხება, მაგრამ ზუგდიდისა და თელავის შედარებას ხელს არ ახლებს.",
+    "explanation_en": "The conclusion assumes Telavi is like Zugdidi in everything that matters for cycling. Steep slopes are exactly the kind of difference that could keep people off bikes even with new lanes. Cost, ratings and population size are on topic but do not break the comparison — doubling is a ratio, so a smaller town can double too. Trap: on-topic options that leave the comparison untouched."
+  },
+  {
+    "id": "CT-038",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "strengthen_weaken",
+    "pattern_tag": "sampling_bias",
+    "question_ka": "ონლაინ ენის სკოლამ 6-თვიანი კურსის დამამთავრებლებს სთხოვა, თავად შეეფასებინათ საკუთარი პროგრესი. 92%-მა თქვა, რომ ახლა უკვე შეუძლია საუბრის წარმართვა. სკოლა რეკლამაში ამბობს: „ჩვენი კურსი ყოველ 10 სტუდენტში 9-ს ასწავლის საუბარს.“\n\nრომელი დებულება ასუსტებს სკოლის მტკიცებას ყველაზე მეტად, თუ ის ჭეშმარიტია?",
+    "question_en": "An online language school asked the graduates of its 6-month course to rate their own progress; 92% said they can now hold a conversation. The school's advert says: \"Our course teaches 9 out of 10 students to hold a conversation.\"\n\nWhich statement, if true, most weakens the school's claim?",
+    "options": [
+      {
+        "ka": "კურსი სხვა ონლაინ კურსების უმეტესობაზე ძვირია.",
+        "en": "The course costs more than most other online courses."
+      },
+      {
+        "ka": "გამოკითხვა ანონიმური იყო.",
+        "en": "The survey was anonymous."
+      },
+      {
+        "ka": "დამამთავრებლებს სასაუბრო ტესტიც ჩაუტარდათ და უმეტესობამ ის წარმატებით გაიარა.",
+        "en": "The graduates also took a speaking test, which most of them passed."
+      },
+      {
+        "ka": "სტუდენტების დაახლოებით ნახევარი კურსს დასრულებამდე ტოვებს.",
+        "en": "About half of the students who start the course drop out before finishing it."
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "გამოკითხეს მხოლოდ დამამთავრებლები — ისინი, ვისაც კურსი ყველაზე კარგად გამოადგა. თუ სტუდენტების დაახლოებით ნახევარი კურსს ტოვებს, „10-დან 9“ სინამდვილეში ჩარიცხულების გაცილებით მცირე წილს აღწერს. ანონიმურობა და სასაუბრო ტესტი მტკიცებას, პირიქით, ამაგრებს, ფასი კი მას არ ეხება. ხაფანგი: მაღალ პროცენტს ენდობით, თუმცა ის მხოლოდ იმ ჯგუფს ეკუთვნის, რომელიც თავისით „გაიფილტრა“.",
+    "explanation_en": "Only graduates were asked — the people for whom the course worked best. If about half of the starters drop out, \"9 out of 10\" really describes a much smaller share of the people who enrol. Anonymity and the speaking test support the claim, and the price does not touch it. Trap: trusting a high percentage from a group that filtered itself."
+  },
+  {
+    "id": "CT-039",
+    "module": "critical_thinking",
+    "difficulty": 1,
+    "format": "strengthen_weaken",
+    "pattern_tag": "out_of_scope_option",
+    "question_ka": "საბა ამბობს, რომ მარშრუტის დამგეგმავი ახალი აპლიკაცია კომპანიის კურიერებს დროს დაუზოგავს. 2-კვირიან საცდელ პერიოდში აპლიკაციას 10 კურიერი იყენებდა. ისინი ამანათების მიტანას დღეში საშუალოდ 30 წუთით ადრე ამთავრებდნენ, ვიდრე საცდელ პერიოდამდე.\n\nრომელი დებულება აძლიერებს საბას დასკვნას ყველაზე მეტად, თუ ის ჭეშმარიტია?",
+    "question_en": "Saba says the new route-planning app will save the company's couriers time: during a 2-week trial, the 10 couriers who used the app finished their deliveries 30 minutes earlier per day, on average, than before the trial.\n\nWhich statement, if true, most strengthens Saba's conclusion?",
+    "options": [
+      {
+        "ka": "აპლიკაცია ტალინელმა კომპანიამ შექმნა.",
+        "en": "The app was made by a company from Tallinn."
+      },
+      {
+        "ka": "კურიერებს აპლიკაციის ფერადი დიზაინი მოეწონათ.",
+        "en": "The couriers liked the app's colourful design."
+      },
+      {
+        "ka": "საცდელ პერიოდში კურიერებს იგივე მარშრუტები და ამანათების იგივე რაოდენობა ჰქონდათ, რაც მანამდე.",
+        "en": "During the trial, the couriers had the same routes and the same number of parcels as before."
+      },
+      {
+        "ka": "მარშრუტის დამგეგმავ აპლიკაციებს ბევრი კომპანია იყენებს.",
+        "en": "Many companies use route-planning apps."
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "თუ მარშრუტები და ამანათების რაოდენობა არ შეცვლილა, დაზოგილ დროს უფრო მსუბუქი სამუშაო ვერ ახსნის და აპლიკაცია ყველაზე სავარაუდო მიზეზად რჩება. შემქმნელის ქალაქი, დიზაინი და სხვა კომპანიების ჩვევები თემას ეხება, მაგრამ არაფერს ამბობს იმაზე, დაზოგა თუ არა ამ აპლიკაციამ დრო. ხაფანგი: ირჩევთ პასუხს, რომელიც აპლიკაციის სასარგებლოდ ჟღერს, მაგრამ მიზეზს არ ეხება.",
+    "explanation_en": "If routes and parcel numbers stayed the same, the saved time cannot be explained by lighter work, so the app remains the likeliest cause. The developer's city, the design and other companies' habits are on topic but say nothing about whether this app saved time. Trap: an option that sounds good for the app but does not touch the cause."
+  },
+  {
+    "id": "CT-040",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "strengthen_weaken",
+    "pattern_tag": "correlation_causation",
+    "question_ka": "საქართველოს 20 ქალაქის მონაცემებით, იქ, სადაც მეტი ფიტნეს-კლუბია, გულის დაავადებები უფრო იშვიათია. ჯანდაცვის სამსახურის წარმომადგენელი ასკვნის, რომ ახალი ფიტნეს-კლუბების გახსნა გულის დაავადებებს შეამცირებს.\n\nრომელი დებულება ასუსტებს ამ დასკვნას ყველაზე მეტად, თუ ის ჭეშმარიტია?",
+    "question_en": "Data from 20 Georgian towns show that heart disease is less common in towns with more fitness clubs. A health official concludes that opening new fitness clubs will reduce heart disease.\n\nWhich statement, if true, most weakens this conclusion?",
+    "options": [
+      {
+        "ka": "ფიტნეს-კლუბები ძირითადად იმ ქალაქებში იხსნება, სადაც მოსახლეობა ახალგაზრდაა, ახალგაზრდებში კი გულის დაავადებები გაცილებით იშვიათია.",
+        "en": "Fitness clubs open mainly in towns with a young population, and heart disease is much rarer among young people."
+      },
+      {
+        "ka": "გასულ წელს ფიტნეს-კლუბის აბონემენტები გაიაფდა.",
+        "en": "Fitness club memberships became cheaper last year."
+      },
+      {
+        "ka": "გულის დაავადების მქონე ადამიანები ფიტნეს-კლუბში ხშირად ექიმის რჩევით ეწერებიან.",
+        "en": "People with heart disease often join fitness clubs on their doctor's advice."
+      },
+      {
+        "ka": "საქართველოში გულის დაავადებები სიკვდილის ერთ-ერთი მთავარი მიზეზია.",
+        "en": "Heart disease is one of the leading causes of death in Georgia."
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "მესამე ფაქტორი — მოსახლეობის ასაკი — შეიძლება ორივეს ხსნიდეს: სადაც მოსახლეობა ახალგაზრდაა, იქ მეტი ფიტნეს-კლუბია და გულის დაავადებაც ნაკლებია. ესე იგი, კლუბებს შეიძლება საერთოდ არ ჰქონდეს გავლენა. აბონემენტის ფასი და სიკვდილიანობის სტატისტიკა მიზეზს არ ეხება, ექიმის რჩევა კი კლუბებს უფრო სასარგებლოდაც კი წარმოაჩენს. ხაფანგი: ორ მაჩვენებელს შორის კავშირს თვლით დასტურად, რომ ერთი მეორეს იწვევს.",
+    "explanation_en": "A third factor — the age of the population — could produce both more fitness clubs and less heart disease, so the clubs may have no effect at all. Membership prices and death statistics do not touch the cause, and the doctor's advice, if anything, makes clubs look useful. Trap: treating a link between two numbers as proof that one drives the other."
+  },
+  {
+    "id": "CT-041",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "assumption",
+    "pattern_tag": "hidden_assumption",
+    "question_ka": "გასულ თვეს კომპანიამ მომხმარებელთა მხარდაჭერის ჩატი 9:00–18:00 გრაფიკიდან 24-საათიან რეჟიმზე გადაიყვანა. ნელ პასუხებზე საჩივრების რაოდენობა 40%-ით შემცირდა. მენეჯერი ასკვნის, რომ მომხმარებლები მხარდაჭერით ახლა საერთო ჯამში უფრო კმაყოფილები არიან.\n\nრომელ დაშვებას ეყრდნობა მენეჯერის დასკვნა?",
+    "question_en": "Last month the company switched its customer support chat from 9:00–18:00 to 24 hours a day. Complaints about slow replies fell by 40%. The manager concludes that customers are now more satisfied with support overall.\n\nWhich assumption does the manager's conclusion rely on?",
+    "options": [
+      {
+        "ka": "მომხმარებელთა უმეტესობა მხარდაჭერას ღამით მიმართავს.",
+        "en": "Most customers contact support at night."
+      },
+      {
+        "ka": "მხარდაჭერის გუნდმა ახალი თანამშრომლები აიყვანა.",
+        "en": "The support team hired new staff."
+      },
+      {
+        "ka": "მომხმარებლები ყველაზე ხშირად სწორედ ნელ პასუხებს უჩიოდნენ.",
+        "en": "Slow replies were what customers complained about most often."
+      },
+      {
+        "ka": "სხვა ტიპის საჩივრები ისე არ გაზრდილა, რომ ნელ პასუხებზე საჩივრების კლება გაებათილებინა.",
+        "en": "The drop in complaints about slow replies was not offset by a rise in other kinds of complaints."
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "მტკიცებულება მხოლოდ ერთი ტიპის საჩივარს ეხება, დასკვნა კი — საერთო კმაყოფილებას. დასკვნა მხოლოდ მაშინ დგას, თუ სხვა საჩივრები ისე არ გაზრდილა, რომ ეს კლება გაებათილებინა. თუ ამ დაშვებას უარყოფთ, დასკვნა ინგრევა. დანარჩენი პასუხები შეიძლება მართალი იყოს, მაგრამ მსჯელობას არ სჭირდება. ხაფანგი: ცვლილების სავარაუდო მიზეზს ირჩევთ და ვერ ამჩნევთ ხარვეზს „ნაკლებ საჩივარსა“ და „საერთო კმაყოფილებას“ შორის.",
+    "explanation_en": "The evidence covers only one kind of complaint, while the conclusion is about satisfaction overall. It holds only if other complaints did not grow enough to cancel the gain — negate that assumption and the conclusion falls. The other options may be true, but the argument does not need them. Trap: picking a likely cause of the change instead of the gap between \"fewer slow-reply complaints\" and \"more satisfied overall\"."
+  },
+  {
+    "id": "CT-042",
+    "module": "critical_thinking",
+    "difficulty": 1,
+    "format": "assumption",
+    "pattern_tag": "hidden_assumption",
+    "question_ka": "ელენემ 9:00-ის ავტობუსს ვერ მოუსწრო, ამიტომ 10:00-ზე დანიშნულ გასაუბრებაზე დააგვიანებს.\n\nრომელ დაშვებას ეყრდნობა ეს მსჯელობა?",
+    "question_en": "Elene missed the 9:00 bus, so she will be late for her interview at 10:00.\n\nWhich assumption does this argument rely on?",
+    "options": [
+      {
+        "ka": "ელენეს გასაუბრებაზე დროულად მისვლის სხვა გზა არ აქვს.",
+        "en": "Elene has no other way to get to the interview on time."
+      },
+      {
+        "ka": "გასაუბრება თბილისში მდებარე სამსახურზეა.",
+        "en": "The interview is for a job in Tbilisi."
+      },
+      {
+        "ka": "9:00-ის ავტობუსი ჩვეულებრივ დროულად დადის.",
+        "en": "The 9:00 bus usually runs on time."
+      },
+      {
+        "ka": "ელენეს აქამდეც დაუგვიანია.",
+        "en": "Elene has been late before."
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "ელენემ ერთ ავტობუსს ვერ მოუსწრო. ეს დაგვიანებას მხოლოდ მაშინ ნიშნავს, თუ დროულად მისვლის სხვა გზა არ არსებობს — არც შემდეგი ავტობუსი, არც ტაქსი, არც ვინმეს მანქანა. თუ ამ დაშვებას უარყოფთ, დასკვნა ინგრევა; დანარჩენ პასუხებს მნიშვნელობა არ აქვს. ხაფანგი: ირჩევთ დეტალს ავტობუსზე და არა გამოტოვებულ რგოლს.",
+    "explanation_en": "Missing one bus only makes her late if there is no other way to arrive in time — no later bus, no taxi, no lift. Negate that and the conclusion falls; the other options do not matter. Trap: picking a detail about the bus instead of the missing link."
+  },
+  {
+    "id": "CT-043",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "argument_flaw",
+    "pattern_tag": "denying_antecedent",
+    "question_ka": "კომპანიები, რომლებიც ღრუბლოვან სარეზერვო ასლებს იყენებენ, სერვერის გაფუჭების შემდეგ სწრაფად აღდგებიან. ჩვენი კომპანია ღრუბლოვან სარეზერვო ასლებს არ იყენებს, ამიტომ, თუ ჩვენი სერვერი გაფუჭდება, სწრაფად ვერ აღვდგებით.\n\nრა არის ამ მსჯელობის მთავარი ხარვეზი?",
+    "question_en": "Companies that use cloud backups recover quickly after a server failure. Our company does not use cloud backups, so if our server fails, we will not recover quickly.\n\nWhat is the main flaw in this reasoning?",
+    "options": [
+      {
+        "ka": "ის უშვებს, რომ სწრაფი აღდგენის ერთადერთი გზა ღრუბლოვანი სარეზერვო ასლებია.",
+        "en": "It assumes that cloud backups are the only way to recover quickly."
+      },
+      {
+        "ka": "ის უშვებს, რომ ღრუბლოვანი სარეზერვო ასლების მქონე ყველა კომპანია სწრაფად აღდგება.",
+        "en": "It assumes that every company with cloud backups recovers quickly."
+      },
+      {
+        "ka": "ის სხვა დარგის კომპანიების მაგალითს ეყრდნობა.",
+        "en": "It relies on examples from companies in a different industry."
+      },
+      {
+        "ka": "ის მიზეზსა და შედეგს ერთმანეთში ურევს.",
+        "en": "It confuses a cause with its effect."
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "წანამძღვარი ამბობს, რომ ღრუბლოვანი ასლები სწრაფ აღდგენას უზრუნველყოფს. ის არ ამბობს, რომ ეს ერთადერთი გზაა — შეიძლება ადგილობრივი ასლი ან სათადარიგო სერვერიც გამოდგეს. პასუხი „ის უშვებს, რომ ღრუბლოვანი ასლების მქონე ყველა კომპანია სწრაფად აღდგება“ ხარვეზი არ არის: ეს თავად წანამძღვარია, წანამძღვრები კი ჭეშმარიტად ითვლება. ხაფანგი: ასკვნით, რომ ღრუბლოვანი ასლების გარეშე სწრაფი აღდგენა შეუძლებელია — ეს პირობის უარყოფის შეცდომაა.",
+    "explanation_en": "The premise says cloud backups lead to quick recovery, not that they are the only way — local backups or a spare server might work too. \"No cloud backups → no quick recovery\" is the error of denying the antecedent. The option \"it assumes every company with cloud backups recovers quickly\" is not a flaw: it is the premise itself, and premises are accepted as true."
+  },
+  {
+    "id": "CT-044",
+    "module": "critical_thinking",
+    "difficulty": 1,
+    "format": "argument_flaw",
+    "pattern_tag": "sampling_bias",
+    "question_ka": "ლუკამ 3 მეგობარს ჰკითხა, მოსწონთ თუ არა ტელეფონის ახალი მოდელი, და ყველამ უპასუხა, რომ შესანიშნავია. ლუკამ დაასკვნა, რომ ეს მოდელი საქართველოში მყიდველთა უმეტესობას მოეწონება.\n\nრა არის ამ მსჯელობის მთავარი ხარვეზი?",
+    "question_en": "Luka asked 3 of his friends whether they liked the new phone model, and all of them said it was excellent. Luka concluded that most buyers in Georgia will like this model.\n\nWhat is the main flaw in this reasoning?",
+    "options": [
+      {
+        "ka": "ის უშვებს, რომ ტელეფონი ძვირია.",
+        "en": "It assumes that the phone is expensive."
+      },
+      {
+        "ka": "ის მიზეზსა და შედეგს ერთმანეთში ურევს.",
+        "en": "It confuses a cause with its effect."
+      },
+      {
+        "ka": "ის ზოგად დასკვნას ძალიან მცირე და, შესაძლოა, ერთგვაროვანი ჯგუფის აზრზე აფუძნებს.",
+        "en": "It bases a general conclusion on a very small and possibly similar group."
+      },
+      {
+        "ka": "ის ექსპერტის აზრს ეყრდნობა.",
+        "en": "It relies on an expert's opinion."
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "3 მეგობარი ძალიან ცოტაა იმისთვის, რომ ყველა მყიდველის აზრი გამოხატოს. ამასთან, მეგობრებს ხშირად მსგავსი გემოვნება აქვთ. ხაფანგი: მეგობრების აზრს ყველა მყიდველის აზრად თვლით.",
+    "explanation_en": "3 friends are far too few to speak for all buyers, and friends often share the same taste. Trap: generalising from the confident answer of a tiny, hand-picked group."
+  },
+  {
+    "id": "CT-045",
+    "module": "critical_thinking",
+    "difficulty": 1,
+    "format": "inference",
+    "pattern_tag": "outside_knowledge",
+    "question_ka": "თბილისის ერთ-ერთ სკოლაში მე-9 კლასის თითოეული მოსწავლე მეორე უცხო ენად ან გერმანულს სწავლობს, ან ფრანგულს — ორივეს ერთად არავინ. მარიამი მე-9 კლასშია და ფრანგულს არ სწავლობს.\n\nრომელი დებულებაა აუცილებლად ჭეშმარიტი?",
+    "question_en": "At a school in Tbilisi, every student in grade 9 takes either German or French as a second foreign language, but nobody takes both. Mariam is in grade 9 and does not take French.\n\nWhich statement must be true?",
+    "options": [
+      {
+        "ka": "მარიამმა ინგლისური კარგად იცის.",
+        "en": "Mariam speaks English well."
+      },
+      {
+        "ka": "მარიამი გერმანულს სწავლობს.",
+        "en": "Mariam takes German."
+      },
+      {
+        "ka": "სკოლაში გერმანული ფრანგულზე პოპულარულია.",
+        "en": "German is more popular than French at the school."
+      },
+      {
+        "ka": "მე-10 კლასში მარიამი ფრანგულს შეისწავლის.",
+        "en": "Mariam will study French in grade 10."
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "მე-9 კლასის თითოეული მოსწავლე ორი ენიდან ზუსტად ერთს სწავლობს. მარიამი ფრანგულს არ სწავლობს, ამიტომ გერმანულს სწავლობს. „მეორე უცხო ენაზე“ შეიძლება ინგლისური გაგახსენდეთ, მაგრამ ტექსტში მარიამის ინგლისურზე არაფერი წერია. ხაფანგი: ტექსტს საკუთარ ცოდნას უმატებთ.",
+    "explanation_en": "Every grade 9 student takes exactly one of the two languages; Mariam does not take French, so she takes German. \"Second foreign language\" may make you think of English, but the text says nothing about Mariam's English. Trap: adding outside knowledge to the text.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "G",
+        "F",
+        "E",
+        "P",
+        "L"
+      ],
+      "premises": [
+        "xor(G, F)",
+        "!F"
+      ],
+      "option_statements": [
+        "E",
+        "G",
+        "P",
+        "L"
+      ]
+    }
+  },
+  {
+    "id": "CT-046",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "inference",
+    "pattern_tag": "must_be_true_vs_likely",
+    "question_ka": "ქუთაისის ერთმა წიგნის მაღაზიამ სექტემბერში 400 წიგნი გაყიდა. მათგან 60% სახელმძღვანელო იყო. ოქტომბერში მაღაზიამ 500 წიგნი გაყიდა, მათგან 50% — სახელმძღვანელო.\n\nრომელი დებულებაა აუცილებლად ჭეშმარიტი?",
+    "question_en": "In September a bookshop in Kutaisi sold 400 books, and 60% of them were textbooks. In October it sold 500 books, and 50% of them were textbooks.\n\nWhich statement must be true?",
+    "options": [
+      {
+        "ka": "ოქტომბერში სახელმძღვანელოებზე მოთხოვნა შემცირდა, რადგან სასწავლო წელი უკვე დაწყებული იყო.",
+        "en": "In October demand for textbooks fell, because the school year had already started."
+      },
+      {
+        "ka": "ოქტომბერში მაღაზიის შემოსავალი სექტემბერზე მეტი იყო.",
+        "en": "In October the shop's revenue was higher than in September."
+      },
+      {
+        "ka": "ოქტომბერში მაღაზიამ სექტემბერზე მეტი სახელმძღვანელო გაყიდა.",
+        "en": "In October the shop sold more textbooks than in September."
+      },
+      {
+        "ka": "ოქტომბერში სხვა წიგნების გაყიდვები გაორმაგდა.",
+        "en": "In October sales of other books doubled."
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "სექტემბერი: 400-ის 60% = 240 სახელმძღვანელო. ოქტომბერი: 500-ის 50% = 250 სახელმძღვანელო. 250 მეტია 240-ზე, ესე იგი ოქტომბერში მეტი სახელმძღვანელო გაიყიდა, თუმცა მათი წილი შემცირდა. სხვა წიგნები 160-დან 250-მდე გაიზარდა — ეს გაორმაგება არ არის. ფასები ტექსტში არ წერია, ამიტომ შემოსავალზე ვერაფერს ვიტყვით. ხაფანგი: წილის კლებას (60%-დან 50%-მდე) გაყიდვების კლებად თვლით და მას დამაჯერებელ ახსნას უძებნით.",
+    "explanation_en": "September: 60% of 400 = 240 textbooks. October: 50% of 500 = 250 textbooks. 250 is more than 240, so more textbooks were sold in October, even though their share fell. Other books went from 160 to 250 — not a doubling. The text gives no prices, so nothing can be said about revenue. Trap: reading the falling share (60% to 50%) as falling sales and then finding a believable reason for it.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const sepText = 400 * 0.6, octText = 500 * 0.5; const sepOther = 400 - sepText, octOther = 500 - octText; const forced = [false, false, octText > sepText, octOther === 2 * sepOther]; const hits = forced.flatMap((v, i) => (v ? [i] : [])); return hits.length === 1 ? q.options[hits[0]].en : 'not unique'; }"
+    }
+  },
+  {
+    "id": "CT-047",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "inference",
+    "pattern_tag": "must_be_true_vs_likely",
+    "question_ka": "1 სექტემბერს თბილისის ერთ-ერთ ცეკვის სტუდიაში 80 მოსწავლე იყო. სასწავლო წლის განმავლობაში 30 ახალი მოსწავლე მოვიდა, ზოგიერთმა კი სტუდია დატოვა. ვინც დატოვა, აღარ დაბრუნებულა. წლის ბოლოს სტუდიაში 90 მოსწავლე იყო.\n\nრომელი დებულებაა აუცილებლად ჭეშმარიტი?",
+    "question_en": "On 1 September a dance studio in Tbilisi had 80 students. During the school year 30 new students joined, and some students left. Nobody who left came back. At the end of the year the studio had 90 students.\n\nWhich statement must be true?",
+    "options": [
+      {
+        "ka": "სექტემბრის 80 მოსწავლიდან სულ მცირე 60 წლის ბოლომდე დარჩა.",
+        "en": "Of the 80 students there in September, at least 60 stayed until the end of the year."
+      },
+      {
+        "ka": "სექტემბრის 80 მოსწავლიდან ზუსტად 20-მა დატოვა სტუდია.",
+        "en": "Of the 80 students there in September, exactly 20 left the studio."
+      },
+      {
+        "ka": "30 ახალი მოსწავლიდან უმეტესობა წლის ბოლომდე დარჩა.",
+        "en": "Most of the 30 new students stayed until the end of the year."
+      },
+      {
+        "ka": "წლის განმავლობაში სტუდია 20-ზე მეტმა მოსწავლემ დატოვა.",
+        "en": "More than 20 students left the studio during the year."
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "სულ სტუდია დატოვა 80 + 30 - 90 = 20 მოსწავლემ. ეს 20 შეიძლება ძველი მოსწავლეები იყვნენ, ახლები ან ორივე ერთად. თუნდაც 20-ივე ძველი იყოს, 80-დან მაინც 60 დარჩება. „ზუსტად 20 ძველი წავიდა“ მხოლოდ მაშინაა სწორი, თუ არცერთი ახალი მოსწავლე არ წასულა, ეს კი არსად წერია. ხაფანგი: ბუნებრივ ისტორიას ირჩევთ (ახლები დარჩნენ, ძველები წავიდნენ), თუმცა ციფრები მხოლოდ „სულ მცირე 60“-ს მოითხოვს.",
+    "explanation_en": "In total 80 + 30 - 90 = 20 students left. Those 20 could be old students, new ones, or a mix. Even if all 20 were old students, 60 of the 80 would still remain. \"Exactly 20 old students left\" is right only if no new student left, which the text never says. Trap: choosing the natural story (the new ones stayed, the old ones left) when the numbers only force \"at least 60\".",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const forced = [true, true, true, true]; for (let oldLeft = 0; oldLeft <= 80; oldLeft++) { const newLeft = 80 + 30 - 90 - oldLeft; if (newLeft < 0 || newLeft > 30) continue; const s = [80 - oldLeft >= 60, oldLeft === 20, 30 - newLeft > 15, oldLeft + newLeft > 20]; s.forEach((v, i) => { if (!v) forced[i] = false; }); } const hits = forced.flatMap((v, i) => (v ? [i] : [])); return hits.length === 1 ? q.options[hits[0]].en : 'not unique'; }"
+    }
+  },
+  {
+    "id": "CT-048",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "ordering_puzzle",
+    "pattern_tag": "must_be_true_vs_likely",
+    "question_ka": "ზუგდიდის 4-სართულიან სავაჭრო ცენტრში 4 ობიექტია, თითო სართულზე თითო: აფთიაქი, წიგნის მაღაზია, კაფე და ბანკი (1-ლი სართული ყველაზე დაბალია).\n• კაფე უშუალოდ წიგნის მაღაზიის ზემოთაა.\n• ბანკი აფთიაქზე მაღალ სართულზეა.\n• წიგნის მაღაზია 1-ელ სართულზე არ არის.\n\nრომელი დებულებაა აუცილებლად ჭეშმარიტი?",
+    "question_en": "A 4-storey shopping centre in Zugdidi has 4 businesses, one on each floor: a pharmacy, a bookshop, a café and a bank (floor 1 is the lowest).\n• The café is directly above the bookshop.\n• The bank is on a higher floor than the pharmacy.\n• The bookshop is not on floor 1.\n\nWhich statement must be true?",
+    "options": [
+      {
+        "ka": "ბანკი მე-4 სართულზეა.",
+        "en": "The bank is on floor 4."
+      },
+      {
+        "ka": "აფთიაქი 1-ელ სართულზეა.",
+        "en": "The pharmacy is on floor 1."
+      },
+      {
+        "ka": "კაფე მე-3 სართულზეა.",
+        "en": "The café is on floor 3."
+      },
+      {
+        "ka": "ბანკი უშუალოდ წიგნის მაღაზიის ქვემოთაა.",
+        "en": "The bank is directly below the bookshop."
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "წიგნის მაღაზია 1-ელ სართულზე ვერ იქნება, ამიტომ წიგნის მაღაზია და კაფე ან მე-2 და მე-3 სართულებზეა, ან მე-3 და მე-4 სართულებზე. 1-ლი განლაგება (ქვემოდან ზემოთ): აფთიაქი, წიგნის მაღაზია, კაფე, ბანკი. მე-2 განლაგება: აფთიაქი, ბანკი, წიგნის მაღაზია, კაფე. ორივე განლაგება ყველა პირობას აკმაყოფილებს. აფთიაქი ორივეში 1-ელ სართულზეა, ბანკი და კაფე კი სართულს იცვლის. ხაფანგი: პირველ განლაგებაში ბანკს მე-4 სართულზე ხედავთ და მეორე განლაგებას აღარ ამოწმებთ.",
+    "explanation_en": "The bookshop cannot be on floor 1, so the bookshop and the café are on floors 2 and 3 or on floors 3 and 4. Layout 1 (bottom to top): pharmacy, bookshop, café, bank. Layout 2: pharmacy, bank, bookshop, café. Both layouts fit every clue. The pharmacy is on floor 1 in both, while the bank and the café move. Trap: seeing the bank on floor 4 in the first layout and never checking the second one.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const perms = (a) => (a.length ? a.flatMap((x, i) => perms([...a.slice(0, i), ...a.slice(i + 1)]).map((p) => [x, ...p])) : [[]]); const stmts = [(p) => p.Bank === 3, (p) => p.Pharmacy === 0, (p) => p.Cafe === 2, (p) => p.Bank === p.Bookshop - 1]; const always = stmts.map(() => true); let layouts = 0; for (const order of perms(['Pharmacy', 'Bookshop', 'Cafe', 'Bank'])) { const p = {}; order.forEach((x, i) => { p[x] = i; }); if (!(p.Cafe === p.Bookshop + 1 && p.Bank > p.Pharmacy && p.Bookshop !== 0)) continue; layouts++; stmts.forEach((s, i) => { if (!s(p)) always[i] = false; }); } const hits = always.flatMap((v, i) => (v ? [i] : [])); return layouts === 2 && hits.length === 1 ? q.options[hits[0]].en : 'not unique'; }"
+    }
+  },
+  {
+    "id": "CT-049",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "ordering_puzzle",
+    "pattern_tag": "must_be_true_vs_likely",
+    "question_ka": "ოფისის 5-სართულიან შენობაში 5 თანამშრომელი მუშაობს — ირაკლი, სალომე, დათო, ქეთი და ზურა, თითოეული სხვადასხვა სართულზე (1-ლი სართული ყველაზე დაბალია).\n• სალომე მე-4 სართულზე მუშაობს.\n• ქეთი უშუალოდ დათოს ზემოთ მუშაობს.\n• ირაკლი ზურაზე დაბალ სართულზე მუშაობს.\n\nვინ მუშაობს მე-3 სართულზე?",
+    "question_en": "5 colleagues — Irakli, Salome, Dato, Keti and Zura — work in a 5-storey office building, each on a different floor (floor 1 is the lowest).\n• Salome works on floor 4.\n• Keti works directly above Dato.\n• Irakli works on a lower floor than Zura.\n\nWho works on floor 3?",
+    "options": [
+      {
+        "ka": "ირაკლი",
+        "en": "Irakli"
+      },
+      {
+        "ka": "ქეთი",
+        "en": "Keti"
+      },
+      {
+        "ka": "დათო",
+        "en": "Dato"
+      },
+      {
+        "ka": "ამის დადგენა შეუძლებელია",
+        "en": "Cannot be determined"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "სალომე მე-4 სართულზეა. დათო–ქეთის წყვილს ზედიზედ 2 სართული სჭირდება: 1-ლი და მე-2, ან მე-2 და მე-3. ზურა ორივე შემთხვევაში მე-5 სართულზე ხვდება, რადგან ირაკლიზე მაღლა უნდა იყოს. 1-ლი განლაგება (ქვემოდან ზემოთ): დათო, ქეთი, ირაკლი, სალომე, ზურა — მე-3 სართულზე ირაკლია. მე-2 განლაგება: ირაკლი, დათო, ქეთი, სალომე, ზურა — მე-3 სართულზე ქეთია. ორივე განლაგება ყველა პირობას აკმაყოფილებს, ამიტომ პასუხის დადგენა შეუძლებელია. ხაფანგი: პირველ განლაგებას პოულობთ, ირაკლის ირჩევთ და მეორე განლაგებას აღარ ამოწმებთ.",
+    "explanation_en": "Salome is on floor 4. The Dato–Keti pair needs 2 floors in a row: floors 1 and 2, or floors 2 and 3. In both cases Zura ends up on floor 5, because he must be above Irakli. Layout 1 (bottom to top): Dato, Keti, Irakli, Salome, Zura — Irakli is on floor 3. Layout 2: Irakli, Dato, Keti, Salome, Zura — Keti is on floor 3. Both layouts fit every clue, so the answer cannot be determined. Trap: finding the first layout, picking Irakli and never checking the second one.",
+    "verify": {
+      "type": "ordering",
+      "items": [
+        "Irakli",
+        "Salome",
+        "Dato",
+        "Keti",
+        "Zura"
+      ],
+      "constraints": [
+        "pos.Salome === 3",
+        "pos.Keti === pos.Dato + 1",
+        "pos.Irakli < pos.Zura"
+      ],
+      "ask": "(order) => order[2]",
+      "undetermined_option": 3
+    }
+  },
+  {
+    "id": "CT-050",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "ordering_puzzle",
+    "pattern_tag": "must_be_true_vs_likely",
+    "question_ka": "5 მეგობარი — ნატა, გიგა, ლიკა, ბექა და თეკლა — კინოში ერთ რიგში ზის, 1-დან 5-მდე დანომრილ ადგილებზე (1-ლი ადგილი ყველაზე მარცხნივაა).\n• ნატა შუაში, მე-3 ადგილზე ზის.\n• თეკლა უშუალოდ გიგას მარჯვნივ ზის.\n• ბექა სადღაც ლიკას მარცხნივ ზის (არა აუცილებლად გვერდით).\n\nრომელი დებულებაა აუცილებლად ჭეშმარიტი?",
+    "question_en": "5 friends — Nata, Giga, Lika, Beka and Tekla — sit in one row at the cinema, in seats numbered 1 to 5 (seat 1 is furthest left).\n• Nata sits in the middle, in seat 3.\n• Tekla sits directly to the right of Giga.\n• Beka sits somewhere to the left of Lika (not necessarily next to her).\n\nWhich statement must be true?",
+    "options": [
+      {
+        "ka": "ლიკა მე-5 ადგილზე ზის.",
+        "en": "Lika sits in seat 5."
+      },
+      {
+        "ka": "თეკლა ნატას გვერდით ზის.",
+        "en": "Tekla sits next to Nata."
+      },
+      {
+        "ka": "ბექა და ლიკა ერთმანეთის გვერდით სხედან.",
+        "en": "Beka and Lika sit next to each other."
+      },
+      {
+        "ka": "გიგა ბექას მარცხნივ ზის.",
+        "en": "Giga sits to the left of Beka."
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "ნატა მე-3 ადგილზეა. გიგა–თეკლას წყვილს ზედიზედ 2 ადგილი სჭირდება, ამიტომ ის ან 1-ელ და მე-2 ადგილებზე ზის, ან მე-4 და მე-5 ადგილებზე. ბექა და ლიკა ნატას მეორე მხარეს რჩებიან, ბექა — მარცხნივ. 1-ლი განლაგება: გიგა, თეკლა, ნატა, ბექა, ლიკა. მე-2 განლაგება: ბექა, ლიკა, ნატა, გიგა, თეკლა. ბექა და ლიკა ორივეში გვერდიგვერდ სხედან, დანარჩენი 3 დებულება კი მხოლოდ 1-ელ განლაგებაში სრულდება. ხაფანგი: პირველ განლაგებას პოულობთ, მის რომელიმე დეტალს ირჩევთ და მეორე განლაგებას აღარ ამოწმებთ.",
+    "explanation_en": "Nata is in seat 3. The Giga–Tekla pair needs 2 seats in a row, so it takes seats 1 and 2 or seats 4 and 5. Beka and Lika get the two seats on Nata's other side, Beka on the left. Layout 1: Giga, Tekla, Nata, Beka, Lika. Layout 2: Beka, Lika, Nata, Giga, Tekla. Beka and Lika sit side by side in both, while the other 3 statements hold only in layout 1. Trap: finding the first layout, picking one of its details and never checking the second one.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const perms = (a) => (a.length ? a.flatMap((x, i) => perms([...a.slice(0, i), ...a.slice(i + 1)]).map((p) => [x, ...p])) : [[]]); const stmts = [(p) => p.Lika === 4, (p) => Math.abs(p.Tekla - p.Nata) === 1, (p) => Math.abs(p.Beka - p.Lika) === 1, (p) => p.Giga < p.Beka]; const always = stmts.map(() => true); let layouts = 0; for (const order of perms(['Nata', 'Giga', 'Lika', 'Beka', 'Tekla'])) { const p = {}; order.forEach((x, i) => { p[x] = i; }); if (!(p.Nata === 2 && p.Tekla === p.Giga + 1 && p.Beka < p.Lika)) continue; layouts++; stmts.forEach((s, i) => { if (!s(p)) always[i] = false; }); } const hits = always.flatMap((v, i) => (v ? [i] : [])); return layouts === 2 && hits.length === 1 ? q.options[hits[0]].en : 'not unique'; }"
+    }
+  },
+  {
+    "id": "CT-051",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "conditional_logic",
+    "pattern_tag": "necessary_vs_sufficient",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• ბათუმში მანქანების გაქირავების ერთ-ერთი სააგენტო კლიენტს მანქანას აქირავებს მხოლოდ იმ შემთხვევაში, თუ მას მართვის მოწმობა სულ მცირე 2 წელია აქვს.\n• ნინომ ამ სააგენტოში მანქანა იქირავა.\n\nმხოლოდ ამ დებულებებზე დაყრდნობით, დასკვნა მართალია, მცდარია თუ ვერ ვიტყვით?\n**ნინოს მართვის მოწმობა სულ მცირე 2 წელია აქვს.**",
+    "question_en": "Assume the following statements are true:\n• A car rental agency in Batumi rents a car to a customer only if the customer has held a driving licence for at least 2 years.\n• Nino rented a car from this agency.\n\nBased only on these statements, is the conclusion True, False, or Cannot say?\n**Nino has held a driving licence for at least 2 years.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "„მხოლოდ იმ შემთხვევაში, თუ“ ნიშნავს: ვინც მანქანა იქირავა, მას მოწმობა აუცილებლად სულ მცირე 2 წელია აქვს (ქირაობა → მოწმობა). ნინომ მანქანა იქირავა, ესე იგი ეს პირობა მასზე სრულდება. ხაფანგი: „მხოლოდ თუ“-ს ხედავთ და „ვერ ვიტყვით“-ს ირჩევთ, თუმცა ამ მიმართულებით წესი ცალსახა პასუხს იძლევა.",
+    "explanation_en": "\"Only if\" means: anyone who rented a car must have held a licence for at least 2 years (rented → licence). Nino rented a car, so the condition holds for her. Trap: seeing \"only if\" and choosing Cannot say, even though in this direction the rule gives a clear answer.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "R",
+        "L"
+      ],
+      "premises": [
+        "imp(R, L)",
+        "R"
+      ],
+      "conclusion": "L"
+    }
+  },
+  {
+    "id": "CT-052",
+    "module": "critical_thinking",
+    "difficulty": 1,
+    "format": "conditional_logic",
+    "pattern_tag": "necessary_vs_sufficient",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• ტექნიკის მაღაზია გაფუჭებულ ტელეფონს უფასოდ შეაკეთებს მხოლოდ იმ შემთხვევაში, თუ მყიდველს ჩეკი შენახული აქვს.\n• დათოს ტელეფონი გაფუჭდა და ჩეკი შენახული აქვს.\n\nმხოლოდ ამ დებულებებზე დაყრდნობით, დასკვნა მართალია, მცდარია თუ ვერ ვიტყვით?\n**მაღაზია დათოს ტელეფონს უფასოდ შეაკეთებს.**",
+    "question_en": "Assume the following statements are true:\n• An electronics shop repairs a broken phone for free only if the buyer has kept the receipt.\n• Dato's phone broke, and he has kept the receipt.\n\nBased only on these statements, is the conclusion True, False, or Cannot say?\n**The shop will repair Dato's phone for free.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "ჩეკი აუცილებელი პირობაა და არა საკმარისი. წესი არ ამბობს, რომ ჩეკი უფასო შეკეთების გარანტიაა — შეიძლება საგარანტიო ვადა გასული იყოს ან ტელეფონი დათოს თავად ჰქონდეს დაზიანებული. ხაფანგი: „მხოლოდ იმ შემთხვევაში, თუ“-ს გარანტიად კითხულობთ.",
+    "explanation_en": "The receipt is a necessary condition, not a sufficient one. The rule never says that a receipt guarantees a free repair — the warranty may have expired, or Dato may have damaged the phone himself. Trap: reading \"only if\" as a guarantee.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "F",
+        "R"
+      ],
+      "premises": [
+        "imp(F, R)",
+        "R"
+      ],
+      "conclusion": "F"
+    }
+  },
+  {
+    "id": "CT-053",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "conditional_logic",
+    "pattern_tag": "necessary_vs_sufficient",
+    "question_ka": "ფესტივალის ორგანიზატორების წესი: „საღამოს კონცერტი ღია ცის ქვეშ გაიმართება მხოლოდ იმ შემთხვევაში, თუ წვიმა არ იქნება და სულ მცირე 300 ბილეთი გაიყიდება.“\n\nრომელი დებულებაა აუცილებლად ჭეშმარიტი, თუ წესი სრულდება?",
+    "question_en": "A rule set by the festival organisers: \"The evening concert will be held outdoors only if it does not rain and at least 300 tickets are sold.\"\n\nWhich statement must be true if the rule holds?",
+    "options": [
+      {
+        "ka": "თუ წვიმა არ იქნება და სულ მცირე 300 ბილეთი გაიყიდება, კონცერტი ღია ცის ქვეშ გაიმართება.",
+        "en": "If it does not rain and at least 300 tickets are sold, the concert will be held outdoors."
+      },
+      {
+        "ka": "თუ კონცერტი ღია ცის ქვეშ არ გაიმართა, ესე იგი იწვიმა ან 300-ზე ნაკლები ბილეთი გაიყიდა.",
+        "en": "If the concert is not held outdoors, then it rained or fewer than 300 tickets were sold."
+      },
+      {
+        "ka": "თუ 300-ზე ნაკლები ბილეთი გაიყიდება, კონცერტი ღია ცის ქვეშ არ გაიმართება.",
+        "en": "If fewer than 300 tickets are sold, the concert will not be held outdoors."
+      },
+      {
+        "ka": "თუ წვიმა არ იქნება, კონცერტი ღია ცის ქვეშ გაიმართება.",
+        "en": "If it does not rain, the concert will be held outdoors."
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "წესი ნიშნავს: ღია ცის ქვეშ → არ წვიმს და გაიყიდა სულ მცირე 300 ბილეთი. ორივე პირობა აუცილებელია. თუ 300-ზე ნაკლები ბილეთი გაიყიდა, ერთი აუცილებელი პირობა აკლია, ამიტომ კონცერტი ღია ცის ქვეშ ვერ გაიმართება. დანარჩენი პასუხები წესს გარანტიად კითხულობს: ორივე პირობა რომ შესრულდეს, ორგანიზატორებმა კონცერტი მაინც შეიძლება სხვა მიზეზით დარბაზში გადაიტანონ. ხაფანგი: „მხოლოდ იმ შემთხვევაში, თუ“-ს „მაშინ და მხოლოდ მაშინ“-ად კითხულობთ.",
+    "explanation_en": "The rule means: outdoors → no rain and at least 300 tickets sold. Both conditions are required. If fewer than 300 tickets are sold, one required condition is missing, so the concert cannot be held outdoors. The other options treat the rule as a guarantee: even with both conditions met, the organisers might still move the concert indoors for another reason. Trap: reading \"only if\" as \"if and only if\".",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "O",
+        "R",
+        "T"
+      ],
+      "premises": [
+        "imp(O, !R && T)"
+      ],
+      "option_statements": [
+        "imp(!R && T, O)",
+        "imp(!O, R || !T)",
+        "imp(!T, !O)",
+        "imp(!R, O)"
+      ]
+    }
+  },
+  {
+    "id": "CT-054",
+    "module": "critical_thinking",
+    "difficulty": 1,
+    "format": "conditional_logic",
+    "pattern_tag": "denying_antecedent",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• თუ მარიამი სამსახურს 18:00-მდე დაამთავრებს, საღამოს სპორტდარბაზში წავა.\n• დღეს მარიამმა სამსახური 18:00-მდე ვერ დაამთავრა.\n\nმხოლოდ ამ დებულებებზე დაყრდნობით, დასკვნა მართალია, მცდარია თუ ვერ ვიტყვით?\n**დღეს საღამოს მარიამი სპორტდარბაზში არ წავა.**",
+    "question_en": "Assume the following statements are true:\n• If Mariam finishes work before 18:00, she will go to the gym in the evening.\n• Today Mariam did not finish work before 18:00.\n\nBased only on these statements, is the conclusion True, False, or Cannot say?\n**Mariam will not go to the gym this evening.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "წესი მხოლოდ იმას ამბობს, რა მოხდება, თუ მარიამი სამსახურს ადრე დაამთავრებს. თუ ის გვიან დაამთავრებს, წესი არაფერს ამბობს — შეიძლება სპორტდარბაზში მაინც წავიდეს, უბრალოდ უფრო გვიან. ხაფანგი: პირობა არ შესრულდა და ასკვნით, რომ არც შედეგი იქნება.",
+    "explanation_en": "The rule only says what happens if Mariam finishes work early. If she finishes late, the rule says nothing — she may still go to the gym, just later. Trap: the condition failed, so you conclude the result will not happen either.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "W",
+        "G"
+      ],
+      "premises": [
+        "imp(W, G)",
+        "!W"
+      ],
+      "conclusion": "!G"
+    }
+  },
+  {
+    "id": "CT-055",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "conditional_logic",
+    "pattern_tag": "denying_antecedent",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• ონლაინ მაღაზიაში, თუ შეკვეთა 100 ლარზე მეტია, მიტანა უფასოა.\n• მაღაზიის კლუბის წევრებისთვის მიტანა ნებისმიერ შეკვეთაზე უფასოა.\n• თამარმა 60 ლარის ნივთები შეუკვეთა. ის კლუბის წევრია.\n\nმხოლოდ ამ დებულებებზე დაყრდნობით, დასკვნა მართალია, მცდარია თუ ვერ ვიტყვით?\n**თამარს მიტანის საფასურის გადახდა მოუწევს.**",
+    "question_en": "Assume the following statements are true:\n• In an online shop, if an order is over 100 GEL, delivery is free.\n• For members of the shop's club, delivery is free on any order.\n• Tamar ordered goods worth 60 GEL. She is a club member.\n\nBased only on these statements, is the conclusion True, False, or Cannot say?\n**Tamar will have to pay for delivery.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "60 ლარი 100-ზე ნაკლებია, ამიტომ პირველი წესით თამარს უფასო მიტანა არ ეკუთვნის. მაგრამ თამარი კლუბის წევრია, მეორე წესით კი წევრებს მიტანა ყოველთვის უფასოდ აქვთ. ესე იგი, თამარი მიტანაში არაფერს გადაიხდის და დებულება მცდარია. ხაფანგი: პირველი წესის პირობა არ შესრულდა და ასკვნით, რომ უფასო მიტანა გამორიცხულია.",
+    "explanation_en": "60 GEL is less than 100, so Tamar does not get free delivery under the first rule. But she is a club member, and under the second rule members always get free delivery. So Tamar pays nothing for delivery, and the statement is False. Trap: the first rule's condition failed, so you conclude that free delivery is ruled out.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "O",
+        "M",
+        "F"
+      ],
+      "premises": [
+        "imp(O, F)",
+        "imp(M, F)",
+        "!O",
+        "M"
+      ],
+      "conclusion": "!F"
+    }
+  },
+  {
+    "id": "CT-056",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "argument_flaw",
+    "pattern_tag": "denying_antecedent",
+    "question_ka": "„თუ ბავშვი ყოველდღე კითხულობს, მისი ლექსიკა მდიდრდება. ჩემი შვილი ყოველდღე არ კითხულობს, ამიტომ მისი ლექსიკა არ მდიდრდება.“\n\nრომელ მსჯელობაშია იგივე ლოგიკური შეცდომა?",
+    "question_en": "\"If a child reads every day, their vocabulary grows. My child does not read every day, so their vocabulary is not growing.\"\n\nWhich argument contains the same logical error?",
+    "options": [
+      {
+        "ka": "თუ ბატარეა დამჯდარია, ტელეფონი არ ირთვება. ჩემი ტელეფონი არ ირთვება, ესე იგი ბატარეა დამჯდარია.",
+        "en": "If the battery is flat, the phone will not turn on. My phone will not turn on, so the battery is flat."
+      },
+      {
+        "ka": "თუ მაღაზია ღიაა, შიგნით შუქი ანთია. მაღაზია ღია არ არის, ესე იგი შიგნით შუქი არ ანთია.",
+        "en": "If the shop is open, the lights inside are on. The shop is not open, so the lights inside are off."
+      },
+      {
+        "ka": "თუ მაღაზია ღიაა, შიგნით შუქი ანთია. შიგნით შუქი არ ანთია, ესე იგი მაღაზია ღია არ არის.",
+        "en": "If the shop is open, the lights inside are on. The lights inside are off, so the shop is not open."
+      },
+      {
+        "ka": "თუ რძეს ვადა გაუვიდა, ნანა მას გადააგდებს. რძეს ვადა გაუვიდა, ესე იგი ნანა მას გადააგდებს.",
+        "en": "If the milk is past its date, Nana will throw it away. The milk is past its date, so Nana will throw it away."
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "საწყისი მსჯელობა პირობის უარყოფიდან შედეგის უარყოფას ასკვნის: „ყოველდღე არ კითხულობს → ლექსიკა არ მდიდრდება“. ლექსიკა კი სხვა გზითაც შეიძლება გამდიდრდეს. მსჯელობა „მაღაზია ღია არ არის, ესე იგი შუქი არ ანთია“ იგივე შეცდომაა: დაკეტილ მაღაზიაში შუქი შეიძლება მაინც ანთოს, მაგალითად, დალაგებისას. „შუქი არ ანთია, ესე იგი მაღაზია ღია არ არის“ კონტრაპოზიციაა და სწორია; რძის მაგალითიც სწორია. ბატარეის მაგალითიც შეცდომაა, მაგრამ სხვა: ის შედეგიდან მიზეზს ასკვნის. ხაფანგი: ნებისმიერ მცდარ მსჯელობას ირჩევთ და არ ამოწმებთ, იგივე შეცდომაა თუ არა.",
+    "explanation_en": "The original argument goes from \"the condition is false\" to \"the result is false\": does not read every day → vocabulary not growing. But vocabulary can grow in other ways. The argument \"the shop is not open, so the lights are off\" makes the same error: a closed shop may still have its lights on, for example while staff tidy up. \"The lights are off, so the shop is not open\" is the contrapositive and is valid; the milk example is valid too. The battery example is also an error, but a different one: it reasons from the result back to the cause. Trap: picking any faulty argument without checking that it makes the same error."
+  },
+  {
+    "id": "CT-057",
+    "module": "critical_thinking",
+    "difficulty": 1,
+    "format": "conditional_logic",
+    "pattern_tag": "affirming_consequent",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• თუ ამანათი ექსპრეს-ფოსტით იგზავნება, ის ადრესატს მეორე დღესვე ჩაბარდება.\n• ნინომ ამანათი გააგზავნა და ის ადრესატს მეორე დღესვე ჩაბარდა.\n\nმხოლოდ ამ დებულებებზე დაყრდნობით, დასკვნა მართალია, მცდარია თუ ვერ ვიტყვით?\n**ნინომ ამანათი ექსპრეს-ფოსტით გააგზავნა.**",
+    "question_en": "Assume the following statements are true:\n• If a parcel is sent by express post, it is delivered the next day.\n• Nino sent a parcel, and it was delivered the next day.\n\nBased only on these statements, is the conclusion True, False, or Cannot say?\n**Nino sent the parcel by express post.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "წესი ამბობს, რომ ექსპრეს-ფოსტა ამანათს მეორე დღეს აბარებს. ის არ ამბობს, რომ მეორე დღეს მხოლოდ ექსპრეს-ფოსტა აბარებს — ახლო მანძილზე ჩვეულებრივი ფოსტითაც შეიძლება ამანათი სწრაფად მივიდეს. ხაფანგი: შედეგს (სწრაფად ჩაბარდა) მიზეზის (ექსპრეს-ფოსტის) დასტურად თვლით.",
+    "explanation_en": "The rule says express post delivers the next day. It does not say that only express post does — a parcel sent a short distance by ordinary post may also arrive quickly. Trap: treating the result (fast delivery) as proof of the cause (express post).",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "E",
+        "N"
+      ],
+      "premises": [
+        "imp(E, N)",
+        "N"
+      ],
+      "conclusion": "E"
+    }
+  },
+  {
+    "id": "CT-058",
+    "module": "critical_thinking",
+    "difficulty": 2,
+    "format": "conditional_logic",
+    "pattern_tag": "affirming_consequent",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• ყველა თანამშრომელი, ვინც უსაფრთხოების ტრენინგს გაივლის, მწვანე საშვს იღებს.\n• საწყობში შესვლა მხოლოდ მწვანე საშვით შეიძლება.\n• დავითი საწყობში შევიდა.\n\nრომელი დებულებაა აუცილებლად ჭეშმარიტი?",
+    "question_en": "Assume the following statements are true:\n• Every employee who completes the safety training receives a green pass.\n• Entry to the warehouse is allowed only with a green pass.\n• Davit entered the warehouse.\n\nWhich statement must be true?",
+    "options": [
+      {
+        "ka": "დავითს მწვანე საშვი აქვს.",
+        "en": "Davit has a green pass."
+      },
+      {
+        "ka": "დავითმა უსაფრთხოების ტრენინგი გაიარა.",
+        "en": "Davit completed the safety training."
+      },
+      {
+        "ka": "დავითს უსაფრთხოების ტრენინგი არ გაუვლია.",
+        "en": "Davit has not completed the safety training."
+      },
+      {
+        "ka": "ტრენინგის გარეშე დავითი საწყობში ვერ შევიდოდა.",
+        "en": "Without the training, Davit could not have entered the warehouse."
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "დავითი საწყობში შევიდა, შესვლა კი მხოლოდ მწვანე საშვით შეიძლება, ამიტომ საშვი მას აუცილებლად აქვს. ტრენინგი საშვის მიღების ერთ-ერთი გზაა, მაგრამ წესი არ ამბობს, რომ ერთადერთი. ამიტომ ვერ ვიტყვით, გაიარა თუ არა დავითმა ტრენინგი. ხაფანგი: საშვიდან (შედეგიდან) ტრენინგზე (მიზეზზე) ბრუნდებით.",
+    "explanation_en": "Davit entered the warehouse, and entry requires a green pass, so he must have one. The training is one way to get a pass, but the rules never say it is the only way. So it cannot be said whether Davit did the training. Trap: going back from the pass (the result) to the training (the cause).",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "T",
+        "G",
+        "W"
+      ],
+      "premises": [
+        "imp(T, G)",
+        "imp(W, G)",
+        "W"
+      ],
+      "option_statements": [
+        "G",
+        "T",
+        "!T",
+        "imp(!T, !W)"
+      ]
+    }
+  },
+  {
+    "id": "CT-059",
+    "module": "critical_thinking",
+    "difficulty": 1,
+    "format": "conditional_logic",
+    "pattern_tag": "contrapositive",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• თუ აფთიაქის თანამშრომელი შაბათს მუშაობს, მომდევნო ორშაბათს ის არ მუშაობს.\n• გიორგი აფთიაქის თანამშრომელია და ამ ორშაბათს იმუშავა.\n\nმხოლოდ ამ დებულებებზე დაყრდნობით, დასკვნა მართალია, მცდარია თუ ვერ ვიტყვით?\n**გიორგიმ ამ ორშაბათის წინა შაბათს იმუშავა.**",
+    "question_en": "Assume the following statements are true:\n• If a pharmacy employee works on a Saturday, they do not work on the following Monday.\n• Giorgi is a pharmacy employee, and he worked this Monday.\n\nBased only on these statements, is the conclusion True, False, or Cannot say?\n**Giorgi worked on the Saturday just before this Monday.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "წესი: შაბათს მუშაობს → ორშაბათს არ მუშაობს. კონტრაპოზიცია: ორშაბათს მუშაობს → შაბათს არ უმუშავია. გიორგიმ ორშაბათს იმუშავა, ესე იგი წინა შაბათს არ უმუშავია და დებულება მცდარია. ხაფანგი: „ვერ ვიტყვით“-ს ირჩევთ, რადგან ტექსტში გიორგის შაბათი პირდაპირ არ არის ნახსენები.",
+    "explanation_en": "Rule: works Saturday → does not work Monday. Contrapositive: works Monday → did not work Saturday. Giorgi worked on Monday, so he did not work the Saturday before, and the statement is False. Trap: choosing Cannot say because the text never mentions Giorgi's Saturday directly.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "S",
+        "M"
+      ],
+      "premises": [
+        "imp(S, !M)",
+        "M"
+      ],
+      "conclusion": "S"
+    }
+  },
+  {
+    "id": "CT-060",
+    "module": "critical_thinking",
+    "difficulty": 3,
+    "format": "conditional_logic",
+    "pattern_tag": "contrapositive",
+    "question_ka": "ჩათვალეთ, რომ შემდეგი დებულებები ჭეშმარიტია:\n• თუ ცენტრალური ხიდი დაკეტილია, 37-ე ავტობუსი შემოვლითი გზით მოძრაობს.\n• თუ 37-ე ავტობუსი შემოვლითი გზით მოძრაობს, ბოლო გაჩერებამდე მგზავრობას 40 წუთზე მეტი სჭირდება.\n• დღეს დილით 37-ე ავტობუსით ბოლო გაჩერებამდე მგზავრობას 35 წუთი დასჭირდა.\n\nმხოლოდ ამ დებულებებზე დაყრდნობით, დასკვნა მართალია, მცდარია თუ ვერ ვიტყვით?\n**დღეს დილით ცენტრალური ხიდი დაკეტილი არ იყო.**",
+    "question_en": "Assume the following statements are true:\n• If the central bridge is closed, bus 37 takes a detour.\n• If bus 37 takes a detour, the trip to the last stop takes more than 40 minutes.\n• This morning the trip on bus 37 to the last stop took 35 minutes.\n\nBased only on these statements, is the conclusion True, False, or Cannot say?\n**This morning the central bridge was not closed.**",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "35 წუთი 40-ზე ნაკლებია, ესე იგი მგზავრობა 40 წუთზე მეტხანს არ გაგრძელებულა. მე-2 დებულების კონტრაპოზიციით ავტობუსი შემოვლითი გზით არ წასულა. 1-ლი დებულების კონტრაპოზიციით ხიდი დაკეტილი არ ყოფილა. ორი კონტრაპოზიცია ზედიზედ დებულებას ადასტურებს, ამიტომ ის მართალია. ხაფანგი: „ვერ ვიტყვით“-ს ირჩევთ, რადგან ტექსტში დღევანდელ ხიდზე პირდაპირ არაფერი წერია.",
+    "explanation_en": "35 minutes is less than 40, so the trip did not take more than 40 minutes. By the contrapositive of the 2nd statement, the bus did not take the detour. By the contrapositive of the 1st statement, the bridge was not closed. Two contrapositives in a row confirm the statement, so it is True. Trap: choosing Cannot say because the text says nothing directly about the bridge today.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "C",
+        "D",
+        "L"
+      ],
+      "premises": [
+        "imp(C, D)",
+        "imp(D, L)",
+        "!L"
+      ],
+      "conclusion": "!C"
+    }
+  }
+]

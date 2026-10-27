@@ -1,0 +1,1638 @@
+[
+  {
+    "id": "QL-001",
+    "module": "quant_logical",
+    "difficulty": 1,
+    "format": "number_series",
+    "pattern_tag": "series_differences",
+    "question_ka": "რომელი რიცხვი უნდა ჩაიწეროს კითხვის ნიშნის ადგილას?\n\n83, 76, ?, 62, 55",
+    "question_en": "Which number should replace the question mark?\n\n83, 76, ?, 62, 55",
+    "options": [
+      "69",
+      "70",
+      "71",
+      "72"
+    ],
+    "correct": 0,
+    "explanation_ka": "ყოველი წევრი წინაზე 7-ით ნაკლებია: 83 − 7 = 76, 76 − 7 = 69, 69 − 7 = 62. ხაფანგი: ბიჯს მხოლოდ გამოტოვებულ წევრამდე ამოწმებთ, მის შემდეგ კი — არა.",
+    "explanation_en": "Each term is 7 less than the one before: 83 − 7 = 76, 76 − 7 = 69, 69 − 7 = 62. Check the step after the gap too, not only before it.",
+    "verify": {
+      "type": "series",
+      "terms": [
+        83,
+        76,
+        null,
+        62,
+        55
+      ],
+      "rule": "n => 90 - 7 * n"
+    }
+  },
+  {
+    "id": "QL-002",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "number_series",
+    "pattern_tag": "series_differences",
+    "question_ka": "რომელი რიცხვი აგრძელებს მიმდევრობას?\n\n3, 4, 7, 12, 19, 28, ?",
+    "question_en": "Which number comes next in the series?\n\n3, 4, 7, 12, 19, 28, ?",
+    "options": [
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "correct": 2,
+    "explanation_ka": "სხვაობებია 1, 3, 5, 7, 9 — ზედიზედ კენტი რიცხვები. ამიტომ შემდეგი სხვაობა 11-ია: 28 + 11 = 39. ხაფანგი: ბოლო სხვაობას იმეორებთ (28 + 9 = 37).",
+    "explanation_en": "The gaps are 1, 3, 5, 7, 9 — consecutive odd numbers — so the next gap is 11: 28 + 11 = 39. The trap is repeating the last gap (28 + 9 = 37).",
+    "verify": {
+      "type": "series",
+      "terms": [
+        3,
+        4,
+        7,
+        12,
+        19,
+        28,
+        null
+      ],
+      "rule": "n => (n - 1) * (n - 1) + 3"
+    }
+  },
+  {
+    "id": "QL-003",
+    "module": "quant_logical",
+    "difficulty": 3,
+    "format": "number_series",
+    "pattern_tag": "series_differences",
+    "question_ka": "იპოვეთ მიმდევრობის შემდეგი რიცხვი.\n\n2, 5, 11, 22, 40, ?",
+    "question_en": "Find the next number in the series.\n\n2, 5, 11, 22, 40, ?",
+    "options": [
+      "58",
+      "62",
+      "65",
+      "67"
+    ],
+    "correct": 3,
+    "explanation_ka": "სხვაობები: 3, 6, 11, 18. მათი სხვაობებია 3, 5, 7, ამიტომ შემდეგი იქნება 9. ესე იგი შემდეგი სხვაობაა 18 + 9 = 27, პასუხი კი — 40 + 27 = 67. ხაფანგი: სხვაობები უწესრიგო გეჩვენებათ და მათ სხვაობებს აღარ ითვლით.",
+    "explanation_en": "First gaps: 3, 6, 11, 18. Their differences are 3, 5, 7, so the next one is 9 and the next gap is 18 + 9 = 27: 40 + 27 = 67. When the gaps look irregular, take the differences once more.",
+    "verify": {
+      "type": "series",
+      "terms": [
+        2,
+        5,
+        11,
+        22,
+        40,
+        null
+      ],
+      "rec": "(t, i) => 2 * t[i - 1] - t[i - 2] + 2 * i - 1",
+      "seeds": 2
+    }
+  },
+  {
+    "id": "QL-004",
+    "module": "quant_logical",
+    "difficulty": 1,
+    "format": "number_series",
+    "pattern_tag": "series_multiplicative",
+    "question_ka": "რომელი რიცხვი აგრძელებს მიმდევრობას?\n\n5, 15, 45, 135, ?",
+    "question_en": "Which number comes next in the series?\n\n5, 15, 45, 135, ?",
+    "options": [
+      "270",
+      "405",
+      "540",
+      "1215"
+    ],
+    "correct": 1,
+    "explanation_ka": "ყოველი წევრი წინაზე 3-ჯერ მეტია: 135 × 3 = 405. 1215 კი პასუხის მომდევნო წევრია. ხაფანგი: 3-ის ნაცვლად 2-ზე ამრავლებთ და 270-ს იღებთ.",
+    "explanation_en": "Each term is 3 times the previous one: 135 × 3 = 405. Multiplying by 2 instead of 3 gives 270, and 1215 is the term after the next one.",
+    "verify": {
+      "type": "series",
+      "terms": [
+        5,
+        15,
+        45,
+        135,
+        null
+      ],
+      "rule": "n => 5 * 3 ** (n - 1)"
+    }
+  },
+  {
+    "id": "QL-005",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "number_series",
+    "pattern_tag": "series_multiplicative",
+    "question_ka": "რომელი რიცხვი აგრძელებს მიმდევრობას?\n\n4, 9, 19, 39, 79, ?",
+    "question_en": "Which number comes next in the series?\n\n4, 9, 19, 39, 79, ?",
+    "options": [
+      "119",
+      "157",
+      "158",
+      "159"
+    ],
+    "correct": 3,
+    "explanation_ka": "წინა წევრს აორმაგებთ და 1-ს უმატებთ — ასე მიიღება შემდეგი წევრი: 79 × 2 + 1 = 159. ხაფანგი: მხოლოდ აორმაგებთ (158) და წესს ყველა წყვილზე არ ამოწმებთ.",
+    "explanation_en": "Each term is doubled and then 1 is added: 79 × 2 + 1 = 159. Doubling alone gives 158 — test the rule on every pair, not just the first one.",
+    "verify": {
+      "type": "series",
+      "terms": [
+        4,
+        9,
+        19,
+        39,
+        79,
+        null
+      ],
+      "rule": "n => 5 * 2 ** (n - 1) - 1"
+    }
+  },
+  {
+    "id": "QL-006",
+    "module": "quant_logical",
+    "difficulty": 3,
+    "format": "number_series",
+    "pattern_tag": "series_multiplicative",
+    "question_ka": "იპოვეთ მიმდევრობის შემდეგი რიცხვი.\n\n3, 3, 6, 18, 72, ?",
+    "question_en": "Find the next number in the series.\n\n3, 3, 6, 18, 72, ?",
+    "options": [
+      "216",
+      "288",
+      "360",
+      "432"
+    ],
+    "correct": 2,
+    "explanation_ka": "მამრავლი ყოველ ნაბიჯზე 1-ით იზრდება: ×1, ×2, ×3, ×4. ამიტომ შემდეგი მამრავლია ×5: 72 × 5 = 360. ხაფანგი: ბოლო მამრავლს იმეორებთ (72 × 4 = 288).",
+    "explanation_en": "The multiplier grows by 1 at each step: ×1, ×2, ×3, ×4, so the next one is ×5: 72 × 5 = 360. The trap is repeating the last multiplier (72 × 4 = 288).",
+    "verify": {
+      "type": "series",
+      "terms": [
+        3,
+        3,
+        6,
+        18,
+        72,
+        null
+      ],
+      "rec": "(t, i) => t[i - 1] * i",
+      "seeds": 1
+    }
+  },
+  {
+    "id": "QL-007",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "number_series",
+    "pattern_tag": "series_alternating",
+    "question_ka": "რომელი რიცხვი აგრძელებს მიმდევრობას?\n\n2, 20, 4, 17, 6, 14, 8, ?",
+    "question_en": "Which number comes next in the series?\n\n2, 20, 4, 17, 6, 14, 8, ?",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "correct": 1,
+    "explanation_ka": "აქ ორი მიმდევრობა ერთმანეთს ენაცვლება. კენტ ადგილებზეა 2, 4, 6, 8 (+2), ლუწ ადგილებზე — 20, 17, 14 (−3). საძიებელი წევრი ლუწ ადგილზეა, ანუ მეორე მიმდევრობას ეკუთვნის: 14 − 3 = 11. ხაფანგი: პირველ მიმდევრობას აგრძელებთ და 10-ს იღებთ.",
+    "explanation_en": "Two series are interleaved: odd positions 2, 4, 6, 8 (+2) and even positions 20, 17, 14 (−3). The missing term belongs to the second series: 14 − 3 = 11. Answering 10 continues the wrong series.",
+    "verify": {
+      "type": "series",
+      "terms": [
+        2,
+        20,
+        4,
+        17,
+        6,
+        14,
+        8,
+        null
+      ],
+      "rule": "n => n % 2 ? n + 1 : 23 - 1.5 * n"
+    }
+  },
+  {
+    "id": "QL-008",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "number_series",
+    "pattern_tag": "series_alternating",
+    "question_ka": "რომელი რიცხვი აგრძელებს მიმდევრობას?\n\n5, 10, 7, 14, 11, 22, ?",
+    "question_en": "Which number comes next in the series?\n\n5, 10, 7, 14, 11, 22, ?",
+    "options": [
+      "19",
+      "25",
+      "33",
+      "44"
+    ],
+    "correct": 0,
+    "explanation_ka": "მოქმედებები მონაცვლეობს: ჯერ ×2, მერე −3. 22-ის შემდეგ −3-ის ჯერია: 22 − 3 = 19. ხაფანგი: მონაცვლეობას ვერ ამჩნევთ და ისევ აორმაგებთ (44).",
+    "explanation_en": "The operations take turns: ×2, then −3. After 22 it is the turn of −3: 22 − 3 = 19. Doubling again (44) ignores the alternation.",
+    "verify": {
+      "type": "series",
+      "terms": [
+        5,
+        10,
+        7,
+        14,
+        11,
+        22,
+        null
+      ],
+      "rec": "(t, i) => i % 2 ? t[i - 1] * 2 : t[i - 1] - 3",
+      "seeds": 1
+    }
+  },
+  {
+    "id": "QL-009",
+    "module": "quant_logical",
+    "difficulty": 1,
+    "format": "number_series",
+    "pattern_tag": "series_powers",
+    "question_ka": "რომელი რიცხვი აგრძელებს მიმდევრობას?\n\n2, 5, 10, 17, 26, ?",
+    "question_en": "Which number comes next in the series?\n\n2, 5, 10, 17, 26, ?",
+    "options": [
+      "35",
+      "36",
+      "37",
+      "38"
+    ],
+    "correct": 2,
+    "explanation_ka": "ყოველი წევრი რომელიმე რიცხვის კვადრატია, 1-ით გაზრდილი: 1² + 1, 2² + 1, …, 5² + 1 = 26. ამიტომ შემდეგია 6² + 1 = 37. ხაფანგი: +1-ს ივიწყებთ და 36-ს ირჩევთ.",
+    "explanation_en": "Each term is a square plus 1: 1² + 1, 2² + 1, …, 5² + 1 = 26, so the next one is 6² + 1 = 37. Answering 36 forgets the +1.",
+    "verify": {
+      "type": "series",
+      "terms": [
+        2,
+        5,
+        10,
+        17,
+        26,
+        null
+      ],
+      "rule": "n => n * n + 1"
+    }
+  },
+  {
+    "id": "QL-010",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "number_series",
+    "pattern_tag": "series_powers",
+    "question_ka": "რომელი რიცხვი უნდა ჩაიწეროს კითხვის ნიშნის ადგილას?\n\n0, 7, 26, ?, 124, 215",
+    "question_en": "Which number should replace the question mark?\n\n0, 7, 26, ?, 124, 215",
+    "options": [
+      "63",
+      "64",
+      "65",
+      "78"
+    ],
+    "correct": 0,
+    "explanation_ka": "ყოველი წევრი რომელიმე რიცხვის კუბია, 1-ით შემცირებული: 1 − 1, 8 − 1, 27 − 1. ამიტომ მე-4 წევრია 64 − 1 = 63, შემდეგი კი 125 − 1 = 124. ხაფანგი: −1-ს ივიწყებთ და თავად კუბს, 64-ს, ირჩევთ.",
+    "explanation_en": "The terms are cubes minus 1: 1 − 1, 8 − 1, 27 − 1, so the 4th term is 64 − 1 = 63 (then 125 − 1 = 124). 64 is the cube itself, without the −1.",
+    "verify": {
+      "type": "series",
+      "terms": [
+        0,
+        7,
+        26,
+        null,
+        124,
+        215
+      ],
+      "rule": "n => n ** 3 - 1"
+    }
+  },
+  {
+    "id": "QL-011",
+    "module": "quant_logical",
+    "difficulty": 3,
+    "format": "number_series",
+    "pattern_tag": "series_powers",
+    "question_ka": "იპოვეთ მიმდევრობის შემდეგი რიცხვი.\n\n10, 12, 15, 20, 27, 38, ?",
+    "question_en": "Find the next number in the series.\n\n10, 12, 15, 20, 27, 38, ?",
+    "options": [
+      "49",
+      "50",
+      "51",
+      "53"
+    ],
+    "correct": 2,
+    "explanation_ka": "სხვაობებია 2, 3, 5, 7, 11 — მარტივი რიცხვები რიგრიგობით. ამიტომ შემდეგი სხვაობა 13-ია: 38 + 13 = 51. ხაფანგი: სხვაობა 11-ს იმეორებთ და 49-ს იღებთ, თუმცა 11-ის შემდეგ მარტივი რიცხვი 13-ია და არა 12.",
+    "explanation_en": "The gaps are 2, 3, 5, 7, 11 — the prime numbers in order — so the next gap is 13: 38 + 13 = 51. Answering 49 repeats the gap 11; after 11 the next prime is 13, not 12.",
+    "verify": {
+      "type": "series",
+      "terms": [
+        10,
+        12,
+        15,
+        20,
+        27,
+        38,
+        null
+      ],
+      "rec": "(t, i) => t[i - 1] + [2, 3, 5, 7, 11, 13][i - 1]",
+      "seeds": 1
+    }
+  },
+  {
+    "id": "QL-012",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "number_series",
+    "pattern_tag": "series_recursive",
+    "question_ka": "რომელი რიცხვი აგრძელებს მიმდევრობას?\n\n3, 4, 7, 11, 18, 29, ?",
+    "question_en": "Which number comes next in the series?\n\n3, 4, 7, 11, 18, 29, ?",
+    "options": [
+      "40",
+      "47",
+      "58",
+      "76"
+    ],
+    "correct": 1,
+    "explanation_ka": "ყოველი წევრი წინა ორი წევრის ჯამია: 11 + 18 = 29, ამიტომ შემდეგია 18 + 29 = 47. ხაფანგი: ბოლო სხვაობას ისევ უმატებთ (29 + 11 = 40) და ვერ ამჩნევთ, რომ სხვაობებიც იზრდება.",
+    "explanation_en": "Each term is the sum of the two before it: 11 + 18 = 29, so the next one is 18 + 29 = 47. Adding the last gap again (29 + 11 = 40) misses that the gaps keep growing too.",
+    "verify": {
+      "type": "series",
+      "terms": [
+        3,
+        4,
+        7,
+        11,
+        18,
+        29,
+        null
+      ],
+      "rec": "(t, i) => t[i - 1] + t[i - 2]",
+      "seeds": 2
+    }
+  },
+  {
+    "id": "QL-013",
+    "module": "quant_logical",
+    "difficulty": 3,
+    "format": "number_series",
+    "pattern_tag": "series_recursive",
+    "question_ka": "იპოვეთ მიმდევრობის შემდეგი რიცხვი.\n\n1, 2, 2, 4, 8, 32, ?",
+    "question_en": "Find the next number in the series.\n\n1, 2, 2, 4, 8, 32, ?",
+    "options": [
+      "40",
+      "64",
+      "128",
+      "256"
+    ],
+    "correct": 3,
+    "explanation_ka": "ყოველი წევრი წინა ორი წევრის ნამრავლია: 2 × 4 = 8, 4 × 8 = 32, ამიტომ შემდეგია 8 × 32 = 256. ხაფანგი: აორმაგებთ (64) ან კრებთ (8 + 32 = 40). გაორმაგება მხოლოდ ზოგ ნაბიჯს ერგება, შეკრება კი — მხოლოდ ერთს (2 + 2 = 4).",
+    "explanation_en": "Each term is the product of the two before it: 2 × 4 = 8, 4 × 8 = 32, so the next one is 8 × 32 = 256. Doubling (64) fits only some steps, and adding (8 + 32 = 40) fits just one (2 + 2 = 4).",
+    "verify": {
+      "type": "series",
+      "terms": [
+        1,
+        2,
+        2,
+        4,
+        8,
+        32,
+        null
+      ],
+      "rec": "(t, i) => t[i - 1] * t[i - 2]",
+      "seeds": 2
+    }
+  },
+  {
+    "id": "QL-014",
+    "module": "quant_logical",
+    "difficulty": 1,
+    "format": "letter_series",
+    "pattern_tag": "letter_series_skip",
+    "question_ka": "ქვემოთ მოცემული ასოები ერთ წესს მიჰყვება, რომელიც ინგლისურ ანბანს ეყრდნობა. რომელი ასოა შემდეგი?\n\nC, F, I, L, O, ?",
+    "question_en": "The letters below follow a rule based on the English alphabet. Which letter comes next?\n\nC, F, I, L, O, ?",
+    "options": [
+      "R",
+      "Q",
+      "S",
+      "U"
+    ],
+    "correct": 0,
+    "explanation_ka": "ანბანში ყოველი ასო წინა ასოდან 3 პოზიციით არის დაშორებული, ანუ შუაში ორი ასო გამოტოვებულია: O → P, Q, R. ხაფანგი: ბიჯის ნაცვლად გამოტოვებულ ასოებს ითვლით და Q-ს იღებთ.",
+    "explanation_en": "Each letter is 3 places after the previous one (two letters are skipped in between): O → P, Q, R. Counting the skipped letters instead of the step gives Q.",
+    "verify": {
+      "type": "series",
+      "terms": [
+        "C",
+        "F",
+        "I",
+        "L",
+        "O",
+        null
+      ],
+      "alphabet": "latin",
+      "rule": "n => 3 * n"
+    }
+  },
+  {
+    "id": "QL-015",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "letter_series",
+    "pattern_tag": "letter_series_skip",
+    "question_ka": "ქვემოთ მოცემული ასოები ერთ წესს მიჰყვება, რომელიც ინგლისურ ანბანს ეყრდნობა. რომელი ასოა შემდეგი?\n\nB, C, E, H, L, ?",
+    "question_en": "The letters below follow a rule based on the English alphabet. Which letter comes next?\n\nB, C, E, H, L, ?",
+    "options": [
+      "P",
+      "O",
+      "R",
+      "Q"
+    ],
+    "correct": 3,
+    "explanation_ka": "ბიჯი ყოველ ჯერზე ერთით იზრდება: +1, +2, +3, +4. ამიტომ შემდეგი ბიჯია +5: L → M, N, O, P, Q. ხაფანგი: +4-ს იმეორებთ და P-ს იღებთ.",
+    "explanation_en": "The step grows by one each time: +1, +2, +3, +4, so the next step is +5: L → M, N, O, P, Q. Repeating +4 gives P.",
+    "verify": {
+      "type": "series",
+      "terms": [
+        "B",
+        "C",
+        "E",
+        "H",
+        "L",
+        null
+      ],
+      "alphabet": "latin",
+      "rule": "n => 2 + n * (n - 1) / 2"
+    }
+  },
+  {
+    "id": "QL-016",
+    "module": "quant_logical",
+    "difficulty": 3,
+    "format": "letter_series",
+    "pattern_tag": "letter_series_skip",
+    "question_ka": "ქვემოთ მოცემული ასოები ერთ წესს მიჰყვება, რომელიც ინგლისურ ანბანს ეყრდნობა. რომელი ასოა შემდეგი?\n\nP, T, X, B, F, ?",
+    "question_en": "The letters below follow a rule based on the English alphabet. Which letter comes next?\n\nP, T, X, B, F, ?",
+    "options": [
+      "I",
+      "J",
+      "K",
+      "H"
+    ],
+    "correct": 1,
+    "explanation_ka": "ყოველი ბიჯი +4 ასოა. Z-ის შემდეგ თვლა ისევ A-დან იწყება: X → Y, Z, A, B. ამიტომ F + 4 = J. ხაფანგი: X-დან B-ზე „უკან ნახტომს“ წესის შეცვლად თვლით, თუმცა ეს მხოლოდ ანბანის თავიდან დაწყებაა.",
+    "explanation_en": "Every step is +4 letters, and after Z the count starts again from A: X → Y, Z, A, B. So F + 4 = J. The apparent jump back from X to B is just the wrap-around, not a change of rule.",
+    "verify": {
+      "type": "series",
+      "terms": [
+        "P",
+        "T",
+        "X",
+        "B",
+        "F",
+        null
+      ],
+      "alphabet": "latin",
+      "rule": "n => 4 * n + 12"
+    }
+  },
+  {
+    "id": "QL-017",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "letter_series",
+    "pattern_tag": "series_alternating",
+    "question_ka": "ქვემოთ მოცემული ასოები ერთ წესს მიჰყვება, რომელიც ინგლისურ ანბანს ეყრდნობა. რომელი ასოა შემდეგი?\n\nA, Z, C, X, E, V, G, ?",
+    "question_en": "The letters below follow a rule based on the English alphabet. Which letter comes next?\n\nA, Z, C, X, E, V, G, ?",
+    "options": [
+      "H",
+      "I",
+      "U",
+      "T"
+    ],
+    "correct": 3,
+    "explanation_ka": "აქ ორი მიმდევრობა მონაცვლეობს: A, C, E, G (+2, ანბანის დასაწყისიდან) და Z, X, V (−2, ანბანის ბოლოდან). მე-8 წევრი მეორე მიმდევრობას ეკუთვნის: V − 2 = T. ხაფანგი: პირველ მიმდევრობას აგრძელებთ და I-ს იღებთ.",
+    "explanation_en": "Two series take turns: A, C, E, G (+2, from the start of the alphabet) and Z, X, V (−2, from the end). The 8th term belongs to the second series: V − 2 = T. Answering I continues the wrong series.",
+    "verify": {
+      "type": "series",
+      "terms": [
+        "A",
+        "Z",
+        "C",
+        "X",
+        "E",
+        "V",
+        "G",
+        null
+      ],
+      "alphabet": "latin",
+      "rule": "n => n % 2 ? n : 28 - n"
+    }
+  },
+  {
+    "id": "QL-018",
+    "module": "quant_logical",
+    "difficulty": 3,
+    "format": "letter_series",
+    "pattern_tag": "series_recursive",
+    "question_ka": "ქვემოთ მოცემული ასოები ერთ წესს მიჰყვება, რომელიც ინგლისურ ანბანს ეყრდნობა. რომელი ასოა შემდეგი?\n\nA, B, C, E, H, M, ?",
+    "question_en": "The letters below follow a rule based on the English alphabet. Which letter comes next?\n\nA, B, C, E, H, M, ?",
+    "options": [
+      "U",
+      "R",
+      "S",
+      "T"
+    ],
+    "correct": 0,
+    "explanation_ka": "ასოები პოზიციებით ჩაწერეთ: A = 1, B = 2, C = 3, E = 5, H = 8, M = 13. ყოველი რიცხვი წინა ორის ჯამია, ამიტომ შემდეგია 8 + 13 = 21, ანუ U. ხაფანგი: ბოლო სხვაობას ისევ უმატებთ (13 + 5 = 18, ანუ R).",
+    "explanation_en": "As positions: A = 1, B = 2, C = 3, E = 5, H = 8, M = 13. Each is the sum of the two before it, so next is 8 + 13 = 21, which is U. The trap is adding the last gap again (13 + 5 = 18, which is R).",
+    "verify": {
+      "type": "series",
+      "terms": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "H",
+        "M",
+        null
+      ],
+      "alphabet": "latin",
+      "rec": "(t, i) => t[i - 1] + t[i - 2]",
+      "seeds": 2
+    }
+  },
+  {
+    "id": "QL-019",
+    "module": "quant_logical",
+    "difficulty": 1,
+    "format": "ordering_puzzle",
+    "pattern_tag": "ordering_relative",
+    "question_ka": "ნიკა საბაზე მაღალია. საბა ლევანზე მაღალია. თამარი ლევანზე დაბალია.\n\nოთხივე სიმაღლის მიხედვით დადგა რიგში: ყველაზე მაღალი — თავში, ყველაზე დაბალი — ბოლოში. ვინ დგას ბოლოდან მეორე?",
+    "question_en": "Nika is taller than Saba. Saba is taller than Levani. Tamar is shorter than Levani.\n\nIf the four are lined up from tallest to shortest, who is second from the end?",
+    "options": [
+      {
+        "ka": "საბა",
+        "en": "Saba"
+      },
+      {
+        "ka": "თამარი",
+        "en": "Tamar"
+      },
+      {
+        "ka": "ლევანი",
+        "en": "Levani"
+      },
+      {
+        "ka": "ნიკა",
+        "en": "Nika"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "რიგი თავიდან ბოლომდე: ნიკა, საბა, ლევანი, თამარი. ბოლოდან მეორე ლევანია. ხაფანგი: თავიდან ითვლით და საბას ირჩევთ — ის თავიდან მეორეა.",
+    "explanation_en": "From tallest to shortest: Nika, Saba, Levani, Tamar. Second from the end is Levani. Saba is second from the top, which is the trap.",
+    "verify": {
+      "type": "ordering",
+      "items": [
+        "Nika",
+        "Saba",
+        "Levani",
+        "Tamar"
+      ],
+      "constraints": [
+        "pos.Nika < pos.Saba",
+        "pos.Saba < pos.Levani",
+        "pos.Tamar > pos.Levani"
+      ],
+      "ask": "(order, pos) => order[2]"
+    }
+  },
+  {
+    "id": "QL-020",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "ordering_puzzle",
+    "pattern_tag": "ordering_relative",
+    "question_ka": "ანა, დავითი, ელენე, მარიამი და საბა 5-სართულიან სახლში ცხოვრობენ, თითო სართულზე — თითო ადამიანი. 1-ლი სართული ყველაზე ქვედაა.\n• ელენე ყველაზე ზედა სართულზე ცხოვრობს.\n• დავითი უშუალოდ მარიამის ქვემოთ ცხოვრობს.\n• ანა საბაზე დაბლა ცხოვრობს.\n• საბა უშუალოდ ელენეს ქვემოთ არ ცხოვრობს.\n\nვინ ცხოვრობს მე-3 სართულზე?",
+    "question_en": "Ana, Davit, Elene, Mariam and Saba live in a 5-storey building, one person per floor; floor 1 is the lowest.\n• Elene lives on the top floor.\n• Davit lives directly below Mariam.\n• Ana lives lower than Saba.\n• Saba does not live directly below Elene.\n\nWho lives on floor 3?",
+    "options": [
+      {
+        "ka": "მარიამი",
+        "en": "Mariam"
+      },
+      {
+        "ka": "დავითი",
+        "en": "Davit"
+      },
+      {
+        "ka": "საბა",
+        "en": "Saba"
+      },
+      {
+        "ka": "დადგენა შეუძლებელია",
+        "en": "Cannot be determined"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "ელენე მე-5 სართულზეა, ამიტომ საბა მე-4-ზე ვერ იქნება. საბა ანაზე მაღლა ცხოვრობს, ანუ ის მე-2 ან მე-3 სართულზეა. თუ საბა მე-3-ზე იქნებოდა, დავითსა და მარიამს ორი მეზობელი თავისუფალი სართული აღარ დარჩებოდა. ესე იგი: ანა — 1, საბა — 2, დავითი — 3, მარიამი — 4.",
+    "explanation_en": "Elene is on 5, so Saba cannot be on 4; Saba is above Ana, so Saba is on 2 or 3. If Saba were on 3, Davit and Mariam would have no two adjacent free floors left. So Ana 1, Saba 2, Davit 3, Mariam 4.",
+    "verify": {
+      "type": "ordering",
+      "items": [
+        "Ana",
+        "Davit",
+        "Elene",
+        "Mariam",
+        "Saba"
+      ],
+      "constraints": [
+        "pos.Elene === 4",
+        "pos.Mariam - pos.Davit === 1",
+        "pos.Ana < pos.Saba",
+        "pos.Elene - pos.Saba !== 1"
+      ],
+      "ask": "(order, pos) => order[2]"
+    }
+  },
+  {
+    "id": "QL-021",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "ordering_puzzle",
+    "pattern_tag": "ordering_relative",
+    "question_ka": "ხუთმა კოლეგამ ერთი თვის გაყიდვები შეადარა. ყველას განსხვავებული შედეგი ჰქონდა. გიორგიმ ნინოზეც მეტი გაყიდა და თამარზეც. თამარმა ლუკაზე მეტი გაყიდა. ანამ ლუკაზე ნაკლები გაყიდა.\n\nვინ არის გაყიდვებით მეორე ადგილზე?",
+    "question_en": "Five colleagues compared their monthly sales; no two had the same result. Giorgi sold more than Nino and more than Tamar. Tamar sold more than Luka. Ana sold less than Luka.\n\nWho is second in sales?",
+    "options": [
+      {
+        "ka": "თამარი",
+        "en": "Tamar"
+      },
+      {
+        "ka": "ნინო",
+        "en": "Nino"
+      },
+      {
+        "ka": "ლუკა",
+        "en": "Luka"
+      },
+      {
+        "ka": "დადგენა შეუძლებელია",
+        "en": "Cannot be determined"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "გიორგი პირველ ადგილზეა, ხოლო თამარი > ლუკა > ანა ერთი ჯაჭვია. ნინოზე მხოლოდ ის არის ცნობილი, რომ გიორგიზე ნაკლები გაყიდა. ამიტომ მეორე შეიძლება იყოს როგორც ნინო, ისე თამარი. ხაფანგი: თამარს ირჩევთ და ვარაუდობთ, რომ ნინო თამარზე ქვემოთაა, თუმცა პირობები ამას არ ამბობს.",
+    "explanation_en": "Giorgi is on top, and Tamar > Luka > Ana is one chain. About Nino we only know that she sold less than Giorgi, so either Nino or Tamar can be second. Choosing Tamar assumes Nino is below Tamar, which the clues never say.",
+    "verify": {
+      "type": "ordering",
+      "items": [
+        "Giorgi",
+        "Nino",
+        "Tamar",
+        "Luka",
+        "Ana"
+      ],
+      "constraints": [
+        "pos.Giorgi < pos.Nino",
+        "pos.Giorgi < pos.Tamar",
+        "pos.Tamar < pos.Luka",
+        "pos.Luka < pos.Ana"
+      ],
+      "ask": "(order, pos) => order[1]",
+      "undetermined_option": 3
+    }
+  },
+  {
+    "id": "QL-022",
+    "module": "quant_logical",
+    "difficulty": 1,
+    "format": "ordering_puzzle",
+    "pattern_tag": "seating_arrangement",
+    "question_ka": "ანა, დავითი, გიორგი, ლუკა და ნინო ერთ რიგში სხედან. ადგილები მარცხნიდან მარჯვნივ 1-დან 5-მდეა დანომრილი.\n• ანა 1-ელ ადგილზე ზის.\n• ლუკა უშუალოდ ანას მარჯვნივ ზის.\n• ნინო მე-5 ადგილზე ზის.\n• გიორგი ნინოს გვერდით არ ზის.\n\nვინ ზის მე-4 ადგილზე?",
+    "question_en": "Ana, Davit, Giorgi, Luka and Nino sit in a row of seats numbered 1 to 5 from left to right.\n• Ana sits in seat 1.\n• Luka sits immediately to Ana's right.\n• Nino sits in seat 5.\n• Giorgi does not sit next to Nino.\n\nWho sits in seat 4?",
+    "options": [
+      {
+        "ka": "დავითი",
+        "en": "Davit"
+      },
+      {
+        "ka": "გიორგი",
+        "en": "Giorgi"
+      },
+      {
+        "ka": "ლუკა",
+        "en": "Luka"
+      },
+      {
+        "ka": "ნინო",
+        "en": "Nino"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "ანა — 1, ლუკა — 2, ნინო — 5; მე-3 და მე-4 ადგილები გიორგისა და დავითს რჩება. მე-4 ადგილი ნინოს გვერდითაა, ამიტომ გიორგი მე-3-ზე ზის, დავითი კი — მე-4-ზე.",
+    "explanation_en": "Ana 1, Luka 2 and Nino 5 leave seats 3 and 4 for Giorgi and Davit. Seat 4 is next to Nino, so Giorgi takes 3 and Davit takes 4.",
+    "verify": {
+      "type": "ordering",
+      "items": [
+        "Ana",
+        "Davit",
+        "Giorgi",
+        "Luka",
+        "Nino"
+      ],
+      "constraints": [
+        "pos.Ana === 0",
+        "pos.Luka === pos.Ana + 1",
+        "pos.Nino === 4",
+        "Math.abs(pos.Giorgi - pos.Nino) !== 1"
+      ],
+      "ask": "(order, pos) => order[3]"
+    }
+  },
+  {
+    "id": "QL-023",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "ordering_puzzle",
+    "pattern_tag": "seating_arrangement",
+    "question_ka": "ელენე, ქეთევანი, მარიამი, საბა და თამარი ერთ რიგში სხედან. ადგილები მარცხნიდან მარჯვნივ 1-დან 5-მდეა დანომრილი.\n• მარიამი შუა ადგილზე ზის.\n• საბა მარიამის გვერდით ზის.\n• ელენე რიგის ერთ-ერთ კიდეზე ზის.\n• თამარი უშუალოდ ქეთევანის მარცხნივ ზის.\n\nვინ ზის მე-5 ადგილზე?",
+    "question_en": "Elene, Ketevan, Mariam, Saba and Tamar sit in a row of seats numbered 1 to 5 from left to right.\n• Mariam sits in the middle seat.\n• Saba sits next to Mariam.\n• Elene sits at one end of the row.\n• Tamar sits immediately to the left of Ketevan.\n\nWho sits in seat 5?",
+    "options": [
+      {
+        "ka": "ქეთევანი",
+        "en": "Ketevan"
+      },
+      {
+        "ka": "ელენე",
+        "en": "Elene"
+      },
+      {
+        "ka": "საბა",
+        "en": "Saba"
+      },
+      {
+        "ka": "დადგენა შეუძლებელია",
+        "en": "Cannot be determined"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "ყველა პირობას ორი განლაგება აკმაყოფილებს. პირველი: ელენე, საბა, მარიამი, თამარი, ქეთევანი. მეორე: თამარი, ქეთევანი, მარიამი, საბა, ელენე. მე-5 ადგილზე ერთ შემთხვევაში ქეთევანი ზის, მეორეში — ელენე, ამიტომ პასუხი ვერ დადგინდება. ხაფანგი: პირველივე შესაფერის განლაგებას პოულობთ და იქვე ჩერდებით.",
+    "explanation_en": "Two seatings fit every clue: Elene, Saba, Mariam, Tamar, Ketevan, and also Tamar, Ketevan, Mariam, Saba, Elene. Seat 5 is Ketevan in one and Elene in the other, so it cannot be determined. The trap is stopping at the first seating that works.",
+    "verify": {
+      "type": "ordering",
+      "items": [
+        "Elene",
+        "Ketevan",
+        "Mariam",
+        "Saba",
+        "Tamar"
+      ],
+      "constraints": [
+        "pos.Mariam === 2",
+        "Math.abs(pos.Saba - pos.Mariam) === 1",
+        "pos.Elene === 0 || pos.Elene === 4",
+        "pos.Ketevan - pos.Tamar === 1"
+      ],
+      "ask": "(order, pos) => order[4]",
+      "undetermined_option": 3
+    }
+  },
+  {
+    "id": "QL-024",
+    "module": "quant_logical",
+    "difficulty": 3,
+    "format": "ordering_puzzle",
+    "pattern_tag": "seating_arrangement",
+    "question_ka": "ანა, დავითი, გიორგი, ლევანი, ნიკა და თამარი ერთ რიგში სხედან. ადგილები მარცხნიდან მარჯვნივ 1-დან 6-მდეა დანომრილი.\n• ლევანი რიგის ერთ კიდეზე ზის, ანა კი — მეორეზე.\n• დავითი უშუალოდ თამარის მარჯვნივ ზის.\n• ანასა და ნიკას შორის ზუსტად ერთი ადამიანი ზის.\n• ნიკა დავითის მარჯვნივ ზის (არა აუცილებლად გვერდით).\n\nვინ ზის მე-5 ადგილზე?",
+    "question_en": "Ana, Davit, Giorgi, Levani, Nika and Tamar sit in a row of seats numbered 1 to 6 from left to right.\n• Levani sits at one end of the row and Ana at the other.\n• Davit sits immediately to the right of Tamar.\n• Exactly one person sits between Ana and Nika.\n• Nika sits to the right of Davit (not necessarily next to him).\n\nWho sits in seat 5?",
+    "options": [
+      {
+        "ka": "დავითი",
+        "en": "Davit"
+      },
+      {
+        "ka": "ნიკა",
+        "en": "Nika"
+      },
+      {
+        "ka": "გიორგი",
+        "en": "Giorgi"
+      },
+      {
+        "ka": "დადგენა შეუძლებელია",
+        "en": "Cannot be determined"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "თუ ანა 1-ელ ადგილზე ზის, ნიკა მე-3-ზეა. მაშინ თამარსა და დავითს მხოლოდ მე-4 და მე-5 ადგილები რჩება. დავითი ნიკას მარჯვნივ აღმოჩნდება, რაც დაუშვებელია. ესე იგი: ლევანი — 1, ანა — 6, ნიკა — 4, თამარი — 2, დავითი — 3, გიორგი კი მე-5 ადგილზეა. ხაფანგი: ბოლო პირობას არ ამოწმებთ და „დავითს“ ირჩევთ.",
+    "explanation_en": "If Ana were in seat 1, Nika would be in 3 and Tamar and Davit would have to take 4 and 5, putting Davit to the right of Nika, which is not allowed. So Levani 1, Ana 6, Nika 4, Tamar 2, Davit 3, and Giorgi is in seat 5. Answering Davit comes from not checking the last clue.",
+    "verify": {
+      "type": "ordering",
+      "items": [
+        "Ana",
+        "Davit",
+        "Giorgi",
+        "Levani",
+        "Nika",
+        "Tamar"
+      ],
+      "constraints": [
+        "(pos.Levani === 0 && pos.Ana === 5) || (pos.Levani === 5 && pos.Ana === 0)",
+        "pos.Davit === pos.Tamar + 1",
+        "Math.abs(pos.Ana - pos.Nika) === 2",
+        "pos.Nika > pos.Davit"
+      ],
+      "ask": "(order, pos) => order[4]"
+    }
+  },
+  {
+    "id": "QL-025",
+    "module": "quant_logical",
+    "difficulty": 1,
+    "format": "ordering_puzzle",
+    "pattern_tag": "logic_grid",
+    "question_ka": "ნინოს, ლუკასა და მარიამს თითო შინაური ცხოველი ჰყავთ: კატა, ძაღლი ან თუთიყუში — ყველას განსხვავებული.\n• მარიამს არც კატა ჰყავს და არც ძაღლი.\n• ლუკას კატა არ ჰყავს.\n\nრომელი ცხოველი ჰყავს ნინოს?",
+    "question_en": "Nino, Luka and Mariam each have one pet: a cat, a dog or a parrot, and no two have the same one.\n• Mariam has neither the cat nor the dog.\n• Luka does not have the cat.\n\nWhich pet does Nino have?",
+    "options": [
+      {
+        "ka": "ძაღლი",
+        "en": "Dog"
+      },
+      {
+        "ka": "თუთიყუში",
+        "en": "Parrot"
+      },
+      {
+        "ka": "კატა",
+        "en": "Cat"
+      },
+      {
+        "ka": "დადგენა შეუძლებელია",
+        "en": "Cannot be determined"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "მარიამს მხოლოდ თუთიყუში შეიძლება ჰყავდეს. მაშინ ლუკას ძაღლი ჰყავს, რადგან კატა არ ჰყავს. ნინოს კი კატა რჩება. ხაფანგი: ნინო პირობებში არ არის ნახსენები და ფიქრობთ, რომ პასუხი ვერ დადგინდება, თუმცა გამორიცხვით ის მაინც დგინდება.",
+    "explanation_en": "Mariam can only have the parrot. Then Luka, who has no cat, has the dog, and the cat is left for Nino. Nino is never mentioned in the clues, but elimination still settles the answer.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const pets = ['Cat', 'Dog', 'Parrot']; const perms = a => a.length < 2 ? [a] : a.flatMap((x, i) => perms(a.filter((_, j) => j !== i)).map(p => [x, ...p])); const found = new Set(); for (const [nino, luka, mariam] of perms(pets)) { if (mariam === 'Cat' || mariam === 'Dog') continue; if (luka === 'Cat') continue; found.add(nino); } return found.size === 1 ? [...found][0] : 'Cannot be determined'; }"
+    }
+  },
+  {
+    "id": "QL-026",
+    "module": "quant_logical",
+    "difficulty": 3,
+    "format": "ordering_puzzle",
+    "pattern_tag": "logic_grid",
+    "question_ka": "ანა, დავითი, ელენე და საბა ოთხ სხვადასხვა ქალაქში ცხოვრობენ — თბილისში, ბათუმში, ქუთაისსა და თელავში. ყველას განსხვავებული პროფესია აქვს: ექიმი, მასწავლებელი, ინჟინერი ან დიზაინერი.\n• ექიმი ბათუმში ცხოვრობს.\n• მასწავლებელი თბილისში ცხოვრობს.\n• ანა ინჟინერია და თბილისში არ ცხოვრობს.\n• დავითი ქუთაისში ცხოვრობს.\n• ელენე ექიმი არ არის და თელავში არ ცხოვრობს.\n\nვინ არის დიზაინერი?",
+    "question_en": "Ana, Davit, Elene and Saba live in four different cities: Tbilisi, Batumi, Kutaisi and Telavi. Each has a different job: doctor, teacher, engineer or designer.\n• The doctor lives in Batumi.\n• The teacher lives in Tbilisi.\n• Ana is the engineer and does not live in Tbilisi.\n• Davit lives in Kutaisi.\n• Elene is not the doctor and does not live in Telavi.\n\nWho is the designer?",
+    "options": [
+      {
+        "ka": "დავითი",
+        "en": "Davit"
+      },
+      {
+        "ka": "საბა",
+        "en": "Saba"
+      },
+      {
+        "ka": "ელენე",
+        "en": "Elene"
+      },
+      {
+        "ka": "დადგენა შეუძლებელია",
+        "en": "Cannot be determined"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "ანა ინჟინერია, ამიტომ ის ვერც თბილისში იქნება (იქ მასწავლებელი ცხოვრობს), ვერც ბათუმში (იქ ექიმი ცხოვრობს). ქუთაისში დავითი ცხოვრობს, ესე იგი ანა თელავშია. მაშინ ელენე თბილისში ან ბათუმშია. ის ექიმი არ არის, ამიტომ თბილისშია და მასწავლებელია. საბა ბათუმშია და ექიმია. დარჩენილი პროფესია — დიზაინერი — დავითს რჩება.",
+    "explanation_en": "Ana, the engineer, can't live in Tbilisi (teacher) or Batumi (doctor), and Kutaisi is Davit's, so Ana lives in Telavi. Elene is then in Tbilisi or Batumi; she isn't the doctor, so she is in Tbilisi and is the teacher. Saba lives in Batumi and is the doctor, so the remaining job, designer, is Davit's.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const perms = a => a.length < 2 ? [a] : a.flatMap((x, i) => perms(a.filter((_, j) => j !== i)).map(p => [x, ...p])); const people = ['Ana', 'Davit', 'Elene', 'Saba']; const found = new Set(); for (const c of perms(['Tbilisi', 'Batumi', 'Kutaisi', 'Telavi'])) for (const j of perms(['doctor', 'teacher', 'engineer', 'designer'])) { const city = Object.fromEntries(people.map((p, i) => [p, c[i]])); const job = Object.fromEntries(people.map((p, i) => [p, j[i]])); const ok = people.every(p => (job[p] !== 'doctor' || city[p] === 'Batumi') && (job[p] !== 'teacher' || city[p] === 'Tbilisi')) && job.Ana === 'engineer' && city.Ana !== 'Tbilisi' && city.Davit === 'Kutaisi' && job.Elene !== 'doctor' && city.Elene !== 'Telavi'; if (ok) found.add(people.find(p => job[p] === 'designer')); } return found.size === 1 ? [...found][0] : 'Cannot be determined'; }"
+    }
+  },
+  {
+    "id": "QL-027",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "ordering_puzzle",
+    "pattern_tag": "logic_grid",
+    "question_ka": "გიორგი, ქეთევანი, ლუკა და თამარი თითო კურსზე დარეგისტრირდნენ — ყველა სხვადასხვაზე: Python, Excel, დიზაინი ან ინგლისური ენა.\n• ქეთევანმა არც Python აირჩია და არც დიზაინი.\n• ლუკამ ან Excel აირჩია, ან ინგლისური ენა.\n• თამარს Python არ აურჩევია.\n\nრომელი კურსი აირჩია გიორგიმ?",
+    "question_en": "Giorgi, Ketevan, Luka and Tamar each signed up for a different course: Python, Excel, Design or English.\n• Ketevan chose neither Python nor Design.\n• Luka chose either Excel or English.\n• Tamar did not choose Python.\n\nWhich course did Giorgi choose?",
+    "options": [
+      "Python",
+      {
+        "ka": "დიზაინი",
+        "en": "Design"
+      },
+      "Excel",
+      {
+        "ka": "დადგენა შეუძლებელია",
+        "en": "Cannot be determined"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "ქეთევანსაც და ლუკასაც მხოლოდ Excel ან ინგლისური ენა შეიძლება ჰქონდეთ, ანუ ეს ორი კურსი მათ შორის ნაწილდება. Python და დიზაინი გიორგისა და თამარს რჩება. თამარს Python არ აურჩევია, ამიტომ Python გიორგიმ აირჩია. ხაფანგი: გიორგი პირობებში არ არის ნახსენები და „დადგენა შეუძლებელია“-ს ირჩევთ, თუმცა გამორიცხვა პასუხს იძლევა.",
+    "explanation_en": "Ketevan and Luka can each only have Excel or English, so those two courses go to them. Python and Design are left for Giorgi and Tamar, and since Tamar didn't pick Python, Giorgi did. No clue names Giorgi, yet elimination settles it, so 'Cannot be determined' is the trap.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const perms = a => a.length < 2 ? [a] : a.flatMap((x, i) => perms(a.filter((_, j) => j !== i)).map(p => [x, ...p])); const found = new Set(); for (const [giorgi, ketevan, luka, tamar] of perms(['Python', 'Excel', 'Design', 'English'])) { if (ketevan === 'Python' || ketevan === 'Design') continue; if (luka !== 'Excel' && luka !== 'English') continue; if (tamar === 'Python') continue; found.add(giorgi); } return found.size === 1 ? [...found][0] : 'Cannot be determined'; }"
+    }
+  },
+  {
+    "id": "QL-028",
+    "module": "quant_logical",
+    "difficulty": 1,
+    "format": "data_table",
+    "pattern_tag": "table_reading",
+    "question_ka": "ცხრილში ნაჩვენებია, რამდენი ვიზიტორი ჰყავდა ბიბლიოთეკის ოთხ ფილიალს.\n\nრომელ ფილიალში მცირდებოდა ვიზიტორების რიცხვი ყოველ თვე, მარტიდან მაისამდე?",
+    "question_en": "The table shows the number of visitors at four library branches.\n\nIn which branch did the number of visitors fall every month from March to May?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        {
+          "ka": "ფილიალი",
+          "en": "Branch"
+        },
+        {
+          "ka": "მარტი",
+          "en": "March"
+        },
+        {
+          "ka": "აპრილი",
+          "en": "April"
+        },
+        {
+          "ka": "მაისი",
+          "en": "May"
+        }
+      ],
+      "rows": [
+        [
+          "L-1",
+          "420",
+          "380",
+          "510"
+        ],
+        [
+          "L-2",
+          "300",
+          "360",
+          "390"
+        ],
+        [
+          "L-3",
+          "510",
+          "470",
+          "450"
+        ],
+        [
+          "L-4",
+          "280",
+          "310",
+          "290"
+        ]
+      ]
+    },
+    "options": [
+      "L-1",
+      "L-2",
+      "L-3",
+      "L-4"
+    ],
+    "correct": 2,
+    "explanation_ka": "მხოლოდ L-3-ში მცირდება რიცხვი ორივეჯერ: 510 → 470 → 450. L-1-ში აპრილში კლებაა, მაისში კი — ზრდა. L-4-ში ჯერ ზრდაა, მერე — კლება. ხაფანგი: ერთ კლებას „ყოველ თვე“ კლებად თვლით.",
+    "explanation_en": "Only L-3 goes down both times: 510 → 470 → 450. L-1 drops in April but rises in May, and L-4 rises first and then drops; one fall is not 'every month'.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const hits = q.visual.rows.filter(r => +r[1] > +r[2] && +r[2] > +r[3]).map(r => r[0]); return hits.length === 1 ? hits[0] : 'none'; }"
+    }
+  },
+  {
+    "id": "QL-029",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "data_table",
+    "pattern_tag": "table_reading",
+    "question_ka": "ცხრილში ნაჩვენებია ონლაინ მაღაზიის შეკვეთები და დაბრუნებები წლების მიხედვით.\n\nრამდენი პროცენტით გაიზარდა შეკვეთების რაოდენობა 2023 წლიდან 2024 წლამდე?",
+    "question_en": "The table shows an online shop's orders and returns by year.\n\nBy what percentage did the number of orders grow from 2023 to 2024?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        {
+          "ka": "წელი",
+          "en": "Year"
+        },
+        {
+          "ka": "შეკვეთები",
+          "en": "Orders"
+        },
+        {
+          "ka": "დაბრუნებები",
+          "en": "Returns"
+        }
+      ],
+      "rows": [
+        [
+          "2022",
+          "1200",
+          "96"
+        ],
+        [
+          "2023",
+          "1500",
+          "105"
+        ],
+        [
+          "2024",
+          "1800",
+          "162"
+        ]
+      ]
+    },
+    "options": [
+      "16.7%",
+      "20%",
+      "25%",
+      "50%"
+    ],
+    "correct": 1,
+    "explanation_ka": "ზრდა = (1800 − 1500) ÷ 1500 = 300 ÷ 1500 = 20%. 25% კი 2022 წლიდან 2023 წლამდე ზრდაა. ხაფანგი: ახალ რიცხვზე ყოფთ (300 ÷ 1800 ≈ 16.7%), თუმცა ძველზე უნდა გაყოთ.",
+    "explanation_en": "Growth = (1800 − 1500) ÷ 1500 = 300 ÷ 1500 = 20%. Dividing by the new value (300 ÷ 1800 ≈ 16.7%) uses the wrong base, and 25% is the growth from 2022 to 2023.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const r = Object.fromEntries(q.visual.rows.map(x => [x[0], +x[1]])); return (r['2024'] - r['2023']) / r['2023'] * 100; }"
+    }
+  },
+  {
+    "id": "QL-030",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "data_table",
+    "pattern_tag": "table_reading",
+    "question_ka": "ცხრილში ნაჩვენებია, ოთხი პროდუქტიდან თითოეული რამდენი ცალი გაიყიდა.\n\nრომელი პროდუქტის გაყიდვები გაიზარდა იანვრიდან თებერვლამდე პროცენტულად ყველაზე მეტად?",
+    "question_en": "The table shows how many units of four products were sold.\n\nWhich product's sales grew the most in percentage terms from January to February?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        {
+          "ka": "პროდუქტი",
+          "en": "Product"
+        },
+        {
+          "ka": "იანვარი",
+          "en": "January"
+        },
+        {
+          "ka": "თებერვალი",
+          "en": "February"
+        }
+      ],
+      "rows": [
+        [
+          "K-10",
+          "200",
+          "250"
+        ],
+        [
+          "K-20",
+          "80",
+          "120"
+        ],
+        [
+          "K-30",
+          "500",
+          "560"
+        ],
+        [
+          "K-40",
+          "150",
+          "195"
+        ]
+      ]
+    },
+    "options": [
+      "K-10",
+      "K-20",
+      "K-30",
+      "K-40"
+    ],
+    "correct": 1,
+    "explanation_ka": "ზრდა: K-10 — 50 ÷ 200 = 25%, K-20 — 40 ÷ 80 = 50%, K-30 — 60 ÷ 500 = 12%, K-40 — 45 ÷ 150 = 30%. ხაფანგი: K-30-ს ირჩევთ, რადგან ცალებში ის ყველაზე მეტად (60-ით) გაიზარდა. პროცენტულად კი მისი ზრდა მცირეა, რადგან დიდი რიცხვიდან იწყება.",
+    "explanation_en": "Increases: K-10 50 ÷ 200 = 25%, K-20 40 ÷ 80 = 50%, K-30 60 ÷ 500 = 12%, K-40 45 ÷ 150 = 30%. K-30 has the biggest rise in units (60) but a small one in percent, because it starts from a large base.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { let best = null, bestV = -Infinity; for (const r of q.visual.rows) { const v = (+r[2] - +r[1]) / +r[1]; if (v > bestV) { bestV = v; best = r[0]; } } return best; }"
+    }
+  },
+  {
+    "id": "QL-031",
+    "module": "quant_logical",
+    "difficulty": 3,
+    "format": "data_table",
+    "pattern_tag": "table_reading",
+    "question_ka": "ცხრილში მოცემულია ოთხი ფილიალის თანამშრომლების რაოდენობა და წლიური შემოსავალი.\n\nრომელ ფილიალში მოდის ერთ თანამშრომელზე ყველაზე მეტი შემოსავალი?",
+    "question_en": "The table shows the number of employees and the yearly revenue of four branches.\n\nWhich branch has the highest revenue per employee?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        {
+          "ka": "ფილიალი",
+          "en": "Branch"
+        },
+        {
+          "ka": "თანამშრომლები",
+          "en": "Employees"
+        },
+        {
+          "ka": "შემოსავალი (ათასი ლარი)",
+          "en": "Revenue (thousand GEL)"
+        }
+      ],
+      "rows": [
+        [
+          "F-1",
+          "12",
+          "540"
+        ],
+        [
+          "F-2",
+          "20",
+          "820"
+        ],
+        [
+          "F-3",
+          "8",
+          "384"
+        ],
+        [
+          "F-4",
+          "15",
+          "705"
+        ]
+      ]
+    },
+    "options": [
+      "F-1",
+      "F-2",
+      "F-3",
+      "F-4"
+    ],
+    "correct": 2,
+    "explanation_ka": "შემოსავალი ÷ თანამშრომლების რიცხვი: F-1 — 540 ÷ 12 = 45, F-2 — 820 ÷ 20 = 41, F-3 — 384 ÷ 8 = 48, F-4 — 705 ÷ 15 = 47. ხაფანგი: F-2-ს ირჩევთ, რადგან მისი ჯამური შემოსავალი ყველაზე დიდია, თუმცა ერთ თანამშრომელზე ის ყველაზე დაბალია.",
+    "explanation_en": "Revenue ÷ employees: F-1 540 ÷ 12 = 45, F-2 820 ÷ 20 = 41, F-3 384 ÷ 8 = 48, F-4 705 ÷ 15 = 47. F-2 has the largest total revenue but the lowest revenue per employee.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { let best = null, bestV = -Infinity; for (const r of q.visual.rows) { const v = +r[2] / +r[1]; if (v > bestV) { bestV = v; best = r[0]; } } return best; }"
+    }
+  },
+  {
+    "id": "QL-032",
+    "module": "quant_logical",
+    "difficulty": 1,
+    "format": "data_table",
+    "pattern_tag": "table_reading",
+    "question_ka": "ქოლ-ცენტრმა ყოველი კვირისთვის ზარების რაოდენობა დაგეგმა. ცხრილში ნაჩვენებია გეგმა და ფაქტობრივი შედეგი.\n\nრამდენ კვირაში იყო ზარების ფაქტობრივი რაოდენობა დაგეგმილზე მეტი?",
+    "question_en": "A call centre planned a number of calls for each week. The table shows the plan and the actual result.\n\nIn how many weeks was the actual number of calls higher than planned?",
+    "visual": {
+      "type": "table",
+      "columns": [
+        {
+          "ka": "კვირა",
+          "en": "Week"
+        },
+        {
+          "ka": "გეგმა",
+          "en": "Plan"
+        },
+        {
+          "ka": "ფაქტი",
+          "en": "Actual"
+        }
+      ],
+      "rows": [
+        [
+          "1",
+          "100",
+          "108"
+        ],
+        [
+          "2",
+          "120",
+          "115"
+        ],
+        [
+          "3",
+          "110",
+          "110"
+        ],
+        [
+          "4",
+          "130",
+          "142"
+        ],
+        [
+          "5",
+          "125",
+          "131"
+        ]
+      ]
+    },
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "correct": 1,
+    "explanation_ka": "ფაქტი გეგმაზე მეტია 1-ელ (108 > 100), მე-4 (142 > 130) და მე-5 (131 > 125) კვირაში — სულ 3 კვირა. ხაფანგი: მე-3 კვირასაც ითვლით, თუმცა იქ შედეგი გეგმის ტოლია (110) და არა მეტი.",
+    "explanation_en": "Actual is above plan in weeks 1 (108 > 100), 4 (142 > 130) and 5 (131 > 125): 3 weeks in total. In week 3 the result equals the plan (110), which is not 'higher'.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => q.visual.rows.filter(r => +r[2] > +r[1]).length"
+    }
+  },
+  {
+    "id": "QL-033",
+    "module": "quant_logical",
+    "difficulty": 1,
+    "format": "coding_decoding",
+    "pattern_tag": "coding_patterns",
+    "question_ka": "გარკვეულ კოდში სიტყვა CAT ასე იწერება: DBU. როგორ ჩაიწერება იმავე კოდით სიტყვა DOG? (გამოიყენება ინგლისური ანბანი.)",
+    "question_en": "In a certain code, the word CAT is written as DBU. How is the word DOG written in the same code? (The English alphabet is used.)",
+    "options": [
+      "CNF",
+      "EPG",
+      "FQI",
+      "EPH"
+    ],
+    "correct": 3,
+    "explanation_ka": "ყოველი ასო ანბანში ერთი პოზიციით წინ იწევს: C → D, A → B, T → U. ამიტომ D → E, O → P, G → H: EPH. ხაფანგი: ასოებს უკან წევთ და CNF-ს იღებთ.",
+    "explanation_en": "Each letter moves one place forward in the alphabet: C → D, A → B, T → U. So D → E, O → P, G → H: EPH. CNF moves the letters backwards.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const enc = w => w.split('').map(c => String.fromCharCode((c.charCodeAt(0) - 64) % 26 + 65)).join(''); if (enc('CAT') !== 'DBU') return 'rule mismatch'; return enc('DOG'); }"
+    }
+  },
+  {
+    "id": "QL-034",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "coding_decoding",
+    "pattern_tag": "coding_patterns",
+    "question_ka": "გარკვეულ კოდში სიტყვა MOUSE ასე იწერება: PRXVH. იმავე კოდში რომელ სიტყვას შეესაბამება FDW? (გამოიყენება ინგლისური ანბანი.)",
+    "question_en": "In a certain code, the word MOUSE is written as PRXVH. Which word is written as FDW in the same code? (The English alphabet is used.)",
+    "options": [
+      "BAT",
+      "IGZ",
+      "COT",
+      "CAT"
+    ],
+    "correct": 3,
+    "explanation_ka": "ყოველი ასო 3 პოზიციით წინ იწევს: M → P, O → R, U → X. გასაშიფრად ყოველი ასო 3 პოზიციით უკან გადაწიეთ: F → C, D → A, W → T, ანუ CAT. ხაფანგი: ასოებს უკან კი არა, ისევ წინ წევთ და IGZ-ს იღებთ.",
+    "explanation_en": "Each letter moves 3 places forward: M → P, O → R, U → X. To decode, move 3 places back: F → C, D → A, W → T, giving CAT. IGZ comes from shifting forward again instead of back.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const shift = (w, k) => w.split('').map(c => String.fromCharCode(((c.charCodeAt(0) - 65 + k) % 26 + 26) % 26 + 65)).join(''); if (shift('MOUSE', 3) !== 'PRXVH') return 'rule mismatch'; return shift('FDW', -3); }"
+    }
+  },
+  {
+    "id": "QL-035",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "coding_decoding",
+    "pattern_tag": "coding_patterns",
+    "question_ka": "გარკვეულ კოდში სიტყვა PLAN ასე იწერება: OBMQ. როგორ ჩაიწერება იმავე კოდით სიტყვა CODE? (გამოიყენება ინგლისური ანბანი.)",
+    "question_en": "In a certain code, the word PLAN is written as OBMQ. How is the word CODE written in the same code? (The English alphabet is used.)",
+    "options": [
+      "DPEF",
+      "EDOC",
+      "DCNB",
+      "FEPD"
+    ],
+    "correct": 3,
+    "explanation_ka": "სიტყვა ჯერ უკუღმა იწერება (PLAN → NALP), შემდეგ კი ყოველი ასო ერთი პოზიციით წინ იწევს (NALP → OBMQ). CODE → EDOC → FEPD. ხაფანგი: ასოებს წევთ, მაგრამ სიტყვას უკუღმა აღარ წერთ და DPEF-ს იღებთ.",
+    "explanation_en": "The word is first written backwards (PLAN → NALP), then each letter moves one place forward (NALP → OBMQ). CODE → EDOC → FEPD. DPEF shifts the letters but forgets to reverse the word.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const enc = w => w.split('').reverse().map(c => String.fromCharCode((c.charCodeAt(0) - 64) % 26 + 65)).join(''); if (enc('PLAN') !== 'OBMQ') return 'rule mismatch'; return enc('CODE'); }"
+    }
+  },
+  {
+    "id": "QL-036",
+    "module": "quant_logical",
+    "difficulty": 3,
+    "format": "coding_decoding",
+    "pattern_tag": "coding_patterns",
+    "question_ka": "გარკვეულ კოდში სიტყვა GIRL ასე იწერება: TRIO. როგორ ჩაიწერება იმავე კოდით სიტყვა BOOK? (გამოიყენება ინგლისური ანბანი.)",
+    "question_en": "In a certain code, the word GIRL is written as TRIO. How is the word BOOK written in the same code? (The English alphabet is used.)",
+    "options": [
+      "YLLP",
+      "XKKO",
+      "OBBX",
+      "YMMP"
+    ],
+    "correct": 0,
+    "explanation_ka": "ყოველი ასო თავისი „სარკისებური“ ასოთი იცვლება: A ↔ Z, B ↔ Y და ა.შ. ასეთი ორი ასოს პოზიციების ჯამი 27-ია: G (7) ↔ T (20), L (12) ↔ O (15). ამიტომ B → Y, O → L, K → P: YLLP. ხაფანგი: მხოლოდ G → T-ს (+13) ამჩნევთ, დანარჩენ ასოებს არ ამოწმებთ და OBBX-ს იღებთ.",
+    "explanation_en": "Each letter is swapped with its mirror in the alphabet: A ↔ Z, B ↔ Y and so on (the two positions add up to 27): G (7) ↔ T (20), L (12) ↔ O (15). So B → Y, O → L, K → P: YLLP. OBBX comes from noticing only G → T (+13) and not checking the other letters.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const enc = w => w.split('').map(c => String.fromCharCode(155 - c.charCodeAt(0))).join(''); if (enc('GIRL') !== 'TRIO') return 'rule mismatch'; return enc('BOOK'); }"
+    }
+  },
+  {
+    "id": "QL-037",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "word_problem",
+    "pattern_tag": "calendar_clock",
+    "question_ka": "2028 წლის 1 მარტი ოთხშაბათია, 2028 წელი კი ნაკიანია.\n\nკვირის რომელი დღეა 2028 წლის 1 თებერვალი?",
+    "question_en": "1 March 2028 is a Wednesday, and 2028 is a leap year.\n\nWhat day of the week is 1 February 2028?",
+    "options": [
+      {
+        "ka": "ორშაბათი",
+        "en": "Monday"
+      },
+      {
+        "ka": "სამშაბათი",
+        "en": "Tuesday"
+      },
+      {
+        "ka": "ოთხშაბათი",
+        "en": "Wednesday"
+      },
+      {
+        "ka": "ხუთშაბათი",
+        "en": "Thursday"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "2028 წლის თებერვალში 29 დღეა, ამიტომ 1 თებერვალი 1 მარტზე 29 დღით ადრეა. 29 = 4 კვირა + 1 დღე, ანუ კვირის დღე ერთით უკან იწევს: სამშაბათი. ხაფანგი: თებერვალს 28-დღიანად თვლით და ოთხშაბათს იღებთ.",
+    "explanation_en": "In 2028 February has 29 days, so 1 February is 29 days before 1 March. 29 = 4 weeks + 1 day, so the weekday moves back by one: Tuesday. Assuming 28 days gives Wednesday.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const names = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']; const day = (y, m, d) => names[new Date(Date.UTC(y, m - 1, d)).getUTCDay()]; if (day(2028, 3, 1) !== 'Wednesday') return 'premise mismatch'; return day(2028, 2, 1); }"
+    }
+  },
+  {
+    "id": "QL-038",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "word_problem",
+    "pattern_tag": "calendar_clock",
+    "question_ka": "საათი 3:40-ს აჩვენებს. რამდენი გრადუსია საათისა და წუთის ისრებს შორის უფრო მცირე კუთხე?",
+    "question_en": "A clock shows 3:40. What is the smaller angle between the hour hand and the minute hand?",
+    "options": [
+      "110°",
+      "120°",
+      "130°",
+      "150°"
+    ],
+    "correct": 2,
+    "explanation_ka": "წუთის ისარი 40 × 6° = 240°-ზეა. საათის ისარი 3-ს გასცდა: 3 × 30° + 40 × 0.5° = 110°. კუთხე = 240° − 110° = 130°. ხაფანგი: საათის ისარს 3-ზე (90°) ტოვებთ და 150°-ს იღებთ.",
+    "explanation_en": "The minute hand is at 40 × 6° = 240°. The hour hand has moved past 3: 3 × 30° + 40 × 0.5° = 110°. The angle is 240° − 110° = 130°. Leaving the hour hand on 3 (90°) gives the trap answer 150°.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { const h = 3, m = 40; const d = Math.abs(30 * h + 0.5 * m - 6 * m); return Math.min(d, 360 - d); }"
+    }
+  },
+  {
+    "id": "QL-039",
+    "module": "quant_logical",
+    "difficulty": 3,
+    "format": "word_problem",
+    "pattern_tag": "calendar_clock",
+    "question_ka": "თვითმფრინავი თბილისიდან ადგილობრივი დროით 22:40-ზე გაფრინდა. ფრენა 5 საათსა და 35 წუთს გრძელდება. ლონდონის დრო თბილისისას 4 საათით ჩამორჩება.\n\nლონდონის დროით რომელ საათზე დაჯდება თვითმფრინავი?",
+    "question_en": "A plane leaves Tbilisi at 22:40 local time; the flight takes 5 hours 35 minutes. London time is 4 hours behind Tbilisi time.\n\nWhat is the local time in London when the plane lands?",
+    "options": [
+      "00:15",
+      "04:15",
+      "08:15",
+      "23:15"
+    ],
+    "correct": 0,
+    "explanation_ka": "თბილისის დროით თვითმფრინავი მეორე დილით დაჯდება: 22:40 + 5:35 = 04:15. ლონდონი 4 საათით ჩამორჩება, ამიტომ იქ 00:15 იქნება. ხაფანგი: 4 საათს კი არ აკლებთ, არამედ უმატებთ და 08:15-ს იღებთ.",
+    "explanation_en": "In Tbilisi time the plane lands at 22:40 + 5:35 = 04:15 the next morning. London is 4 hours behind, so it is 00:15 there. Adding the 4 hours instead of subtracting them gives 08:15.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { let t = (22 * 60 + 40) + (5 * 60 + 35) - 4 * 60; t = ((t % 1440) + 1440) % 1440; return String(Math.floor(t / 60)).padStart(2, '0') + ':' + String(t % 60).padStart(2, '0'); }"
+    }
+  },
+  {
+    "id": "QL-040",
+    "module": "quant_logical",
+    "difficulty": 1,
+    "format": "word_problem",
+    "pattern_tag": "counting_cases",
+    "question_ka": "საჭადრაკო ტურნირში 7 მოთამაშიდან თითოეული ყველა დანარჩენს ზუსტად ერთხელ ეთამაშება.\n\nსულ რამდენი პარტია გაიმართება?",
+    "question_en": "In a chess tournament, each of the 7 players plays every other player exactly once.\n\nHow many games are played in total?",
+    "options": [
+      "14",
+      "21",
+      "42",
+      "49"
+    ],
+    "correct": 1,
+    "explanation_ka": "7 მოთამაშიდან თითოეული 6 პარტიას თამაშობს: 7 × 6 = 42. მაგრამ ასე ყოველი პარტია ორჯერ ითვლება — თითოეული მოთამაშისთვის ცალკე. ამიტომ 42 ÷ 2 = 21. ხაფანგი: ორზე აღარ ყოფთ და 42-ს იღებთ.",
+    "explanation_en": "Each of the 7 players plays 6 games: 7 × 6 = 42, but every game is counted twice (once for each player): 42 ÷ 2 = 21. Forgetting to halve gives 42.",
+    "verify": {
+      "type": "numeric",
+      "expr": "7 * 6 / 2"
+    }
+  },
+  {
+    "id": "QL-041",
+    "module": "quant_logical",
+    "difficulty": 3,
+    "format": "probability",
+    "pattern_tag": "counting_cases",
+    "question_ka": "ორ ჩვეულებრივ კამათელს ერთდროულად აგორებენ.\n\nრისი ტოლია ალბათობა, რომ მოსული რიცხვების ჯამი 8 იქნება?",
+    "question_en": "Two ordinary dice are rolled together.\n\nWhat is the probability that the two numbers add up to 8?",
+    "options": [
+      "1/12",
+      "1/11",
+      "5/36",
+      "1/6"
+    ],
+    "correct": 2,
+    "explanation_ka": "სულ 6 × 6 = 36 თანაბრად სავარაუდო შედეგია. მათგან ჯამს 8-ს 5 შედეგი იძლევა: 2+6, 3+5, 4+4, 5+3, 6+2. ალბათობა 5/36-ია. ხაფანგი: 11 შესაძლო ჯამს (2-დან 12-მდე) თანაბრად სავარაუდოდ თვლით (1/11) ან 2+6-სა და 6+2-ს ერთ შედეგად თვლით (1/12).",
+    "explanation_en": "There are 6 × 6 = 36 equally likely outcomes, and 5 of them give 8: 2+6, 3+5, 4+4, 5+3, 6+2, so the probability is 5/36. 1/11 treats the 11 possible sums (2 to 12) as equally likely, and 1/12 counts 2+6 and 6+2 as one outcome.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { let n = 0; for (let a = 1; a <= 6; a++) for (let b = 1; b <= 6; b++) if (a + b === 8) n++; return n / 36; }",
+      "option_values": [
+        0.0833,
+        0.0909,
+        0.1389,
+        0.1667
+      ],
+      "round": 4
+    }
+  },
+  {
+    "id": "QL-042",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "word_problem",
+    "pattern_tag": "counting_cases",
+    "question_ka": "1-დან 100-მდე (ჩათვლით) რამდენი მთელი რიცხვი იყოფა 3-ზე ან 5-ზე (ან ორივეზე)?",
+    "question_en": "How many whole numbers from 1 to 100 (inclusive) are divisible by 3 or by 5 (or by both)?",
+    "options": [
+      "41",
+      "47",
+      "53",
+      "60"
+    ],
+    "correct": 1,
+    "explanation_ka": "3-ის ჯერადი 33 რიცხვია, 5-ის ჯერადი — 20. 15-ის ჯერადები (6 ცალი) ორივე სიაშია, ამიტომ ისინი ერთხელ უნდა დაითვალოთ: 33 + 20 − 6 = 47. ხაფანგი: უბრალოდ კრებთ და 53-ს იღებთ — ასე 15, 30, … ორჯერ ითვლება.",
+    "explanation_en": "Multiples of 3: 33; multiples of 5: 20. The multiples of 15 (6 of them) are in both lists, so count them once: 33 + 20 − 6 = 47. Simply adding gives 53, which counts 15, 30, … twice.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => { let n = 0; for (let i = 1; i <= 100; i++) if (i % 3 === 0 || i % 5 === 0) n++; return n; }"
+    }
+  },
+  {
+    "id": "QL-043",
+    "module": "quant_logical",
+    "difficulty": 1,
+    "format": "conditional_logic",
+    "pattern_tag": "contrapositive",
+    "question_ka": "ოფისის წესი: თუ სიგნალიზაცია ჩართულია, მთავარი კარი ჩაკეტილია. ამ დილით მთავარი კარი ჩაკეტილი არ იყო.\n\nრომელი დებულებაა აუცილებლად ჭეშმარიტი?",
+    "question_en": "Office rule: if the alarm is on, the main door is locked. This morning the main door was not locked.\n\nWhich statement must be true?",
+    "options": [
+      {
+        "ka": "ამ დილით სიგნალიზაცია გამორთული იყო.",
+        "en": "The alarm was off this morning."
+      },
+      {
+        "ka": "ამ დილით სიგნალიზაცია ჩართული იყო.",
+        "en": "The alarm was on this morning."
+      },
+      {
+        "ka": "ამ დილით სიგნალიზაცია ჩართული იყო და კარი ჩაკეტილი არ იყო.",
+        "en": "This morning the alarm was on and the door was not locked."
+      },
+      {
+        "ka": "არცერთი მათგანი არ არის აუცილებლად ჭეშმარიტი.",
+        "en": "None of these must be true."
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "„თუ სიგნალიზაცია ჩართულია, კარი ჩაკეტილია“ იმასაც ნიშნავს, რომ „თუ კარი ჩაკეტილი არ არის, სიგნალიზაცია ჩართული არ არის“. კარი ჩაკეტილი არ იყო, ესე იგი სიგნალიზაცია გამორთული იყო. ჩართული სიგნალიზაცია და ჩაუკეტავი კარი ერთად წესს დაარღვევდა.",
+    "explanation_en": "'If the alarm is on, the door is locked' also means 'if the door is not locked, the alarm is not on'. The door was not locked, so the alarm was off. An alarm that is on together with an unlocked door would break the rule.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "A",
+        "L"
+      ],
+      "premises": [
+        "imp(A, L)",
+        "!L"
+      ],
+      "option_statements": [
+        "!A",
+        "A",
+        "A && !L",
+        null
+      ]
+    }
+  },
+  {
+    "id": "QL-044",
+    "module": "quant_logical",
+    "difficulty": 2,
+    "format": "conditional_logic",
+    "pattern_tag": "contrapositive",
+    "question_ka": "თუ გიორგი გამოცდას ჩააბარებს, სტიპენდიას მიიღებს. თუ სტიპენდიას მიიღებს, საცხოვრებლად თბილისში გადავა. საბოლოოდ გიორგი თბილისში არ გადასულა.\n\nრომელი დებულებაა აუცილებლად ჭეშმარიტი?",
+    "question_en": "If Giorgi passes the exam, he will get a scholarship. If he gets a scholarship, he will move to Tbilisi. In the end, Giorgi did not move to Tbilisi.\n\nWhich statement must be true?",
+    "options": [
+      {
+        "ka": "გიორგიმ სტიპენდია მიიღო, მაგრამ დარჩა.",
+        "en": "Giorgi got the scholarship but stayed."
+      },
+      {
+        "ka": "გიორგიმ გამოცდა ჩააბარა.",
+        "en": "Giorgi passed the exam."
+      },
+      {
+        "ka": "გიორგის არც სტიპენდია მიუღია და არც გამოცდა ჩაუბარებია.",
+        "en": "Giorgi neither got the scholarship nor passed the exam."
+      },
+      {
+        "ka": "გიორგიმ გამოცდა ჩააბარა, მაგრამ სტიპენდია არ მიუღია.",
+        "en": "Giorgi passed the exam but did not get the scholarship."
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "კონტრაპოზიციით უკუღმა იმსჯელეთ: არ გადავიდა → სტიპენდია არ მიუღია → გამოცდა არ ჩაუბარებია. ესე იგი, გიორგის არც სტიპენდია მიუღია და არც გამოცდა ჩაუბარებია. ნებისმიერ ვარიანტში, სადაც მან გამოცდა ჩააბარა ან სტიპენდია მიიღო, ის თბილისში გადავიდოდა.",
+    "explanation_en": "Work backwards with the contrapositive: no move → no scholarship → no pass. So Giorgi neither got the scholarship nor passed the exam. In any option where he passed or got the scholarship, he would have moved to Tbilisi.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "P",
+        "S",
+        "M"
+      ],
+      "premises": [
+        "imp(P, S)",
+        "imp(S, M)",
+        "!M"
+      ],
+      "option_statements": [
+        "S && !M",
+        "P",
+        "!S && !P",
+        "P && !S"
+      ]
+    }
+  },
+  {
+    "id": "QL-045",
+    "module": "quant_logical",
+    "difficulty": 3,
+    "format": "conditional_logic",
+    "pattern_tag": "contrapositive",
+    "question_ka": "თუ მარიამმა კურსი გაიარა, მაშინ გამოცდაზეც გავიდა. თუ მარიამი გამოცდაზე არ გასულა, დაწინაურებაზე განაცხადს ვერ შეიტანდა. მარიამმა დაწინაურებაზე განაცხადი შეიტანა.\n\nრომელი დებულებაა აუცილებლად ჭეშმარიტი?",
+    "question_en": "If Mariam took the course, then she also sat the exam. If Mariam did not sit the exam, she could not apply for promotion. Mariam applied for promotion.\n\nWhich statement must be true?",
+    "options": [
+      {
+        "ka": "მარიამმა კურსი გაიარა.",
+        "en": "Mariam took the course."
+      },
+      {
+        "ka": "მარიამს კურსი არ გაუვლია.",
+        "en": "Mariam did not take the course."
+      },
+      {
+        "ka": "მარიამს არც კურსი გაუვლია და არც გამოცდაზე გასულა.",
+        "en": "Mariam neither took the course nor sat the exam."
+      },
+      {
+        "ka": "მარიამი გამოცდაზე გავიდა.",
+        "en": "Mariam sat the exam."
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "მეორე წესი კონტრაპოზიციით ასე იკითხება: თუ განაცხადი შეიტანა, გამოცდაზე გავიდა. მარიამმა განაცხადი შეიტანა, ესე იგი გამოცდაზე გავიდა. კურსი გაიარა თუ არა, უცნობია: გამოცდაზე კურსის გარეშეც შეიძლება გასვლა. ხაფანგი: პირველ წესს უკუღმა კითხულობთ და ასკვნით, რომ მარიამმა კურსი გაიარა.",
+    "explanation_en": "The second rule, flipped by the contrapositive, reads: if she applied, she sat the exam. Mariam applied, so she sat the exam. Whether she took the course stays open: the exam can be sat without it, so 'she took the course' reads the first rule backwards.",
+    "verify": {
+      "type": "propositional",
+      "vars": [
+        "C",
+        "E",
+        "A"
+      ],
+      "premises": [
+        "imp(C, E)",
+        "imp(!E, !A)",
+        "A"
+      ],
+      "option_statements": [
+        "C",
+        "!C",
+        "!C && !E",
+        "E"
+      ]
+    }
+  }
+]

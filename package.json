@@ -1,0 +1,14 @@
+{
+  "name": "exam-trainer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local practice app for a TestGorilla-style admission exam (Georgian / English).",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "validate": "node scripts/validate.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

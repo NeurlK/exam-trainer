@@ -1,0 +1,1304 @@
+[
+  {
+    "id": "VR-001",
+    "module": "verbal_reasoning",
+    "difficulty": 1,
+    "format": "tfc_passage",
+    "pattern_tag": "cannot_say_vs_false",
+    "question_ka": "თბილისურმა IT კომპანიამ თავისი 40 დეველოპერისთვის 4-დღიანი სამუშაო კვირა 6-თვიანი საცდელი ვადით შემოიღო. ამ პერიოდში თვეში შესრულებული ამოცანების რაოდენობა თითქმის არ შეცვლილა, ავადმყოფობის გამო გაცდენილი დღეები კი 30%-ით შემცირდა. ხელმძღვანელობამ განაცხადა, რომ შედეგებს იანვარში განიხილავს და მხოლოდ ამის შემდეგ გადაწყვეტს, დატოვებს თუ არა ახალ განრიგს.\n\n**დებულება:** „საცდელი ვადის დასრულების შემდეგ კომპანია 4-დღიან სამუშაო კვირას შეინარჩუნებს.“",
+    "question_en": "A Tbilisi IT company introduced a 4-day working week for its 40 developers as a 6-month trial. During this period, the number of tasks completed per month hardly changed, while sick days fell by 30%. Management has announced that it will review the results in January and only then decide whether to keep the new schedule.\n\n**Statement:** \"After the trial ends, the company will keep the 4-day working week.\"",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "ტექსტის მიხედვით, გადაწყვეტილება ჯერ არ არის მიღებული — ის იანვრის განხილვის შემდეგ მიიღება. კარგი შედეგები „მართალია“-სკენ გიბიძგებს, გადაუწყვეტელი საკითხი კი „მცდარია“-სკენ, მაგრამ ტექსტი არც ერთს არ ადასტურებს.",
+    "explanation_en": "The passage says the decision has not been made yet; it will come after the January review. The good results tempt you towards True and the open decision towards False, but the text settles neither."
+  },
+  {
+    "id": "VR-002",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "tfc_passage",
+    "pattern_tag": "qualifier_words",
+    "question_ka": "ქუთაისის ერთ-ერთმა ბიზნესასოციაციამ გაზაფხულზე 500 მცირე ბიზნესი გამოკითხა. მფლობელების უმეტესობამ განაცხადა, რომ ონლაინგაყიდვები მათი შემოსავლის ნახევარზე მეტს შეადგენს. მთავარი გამონაკლისი კაფეები და სარემონტო სახელოსნოები იყო: მათი შემოსავლის უდიდესი ნაწილი ისევ იმ მომხმარებლებზე მოდის, რომლებიც ადგილზე მიდიან.\n\n**დებულება:** „ყველა გამოკითხული ბიზნესის შემოსავლის ნახევარზე მეტი ონლაინგაყიდვებიდან მოდის.“",
+    "question_en": "In spring, a Kutaisi business association surveyed 500 small businesses. Most owners said that online sales make up more than half of their revenue. The main exception was cafés and repair shops: most of their income still comes from customers who walk in.\n\n**Statement:** \"Every surveyed business earns more than half of its revenue from online sales.\"",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "ტექსტი ამბობს „უმეტესობა“ და გამონაკლისებსაც ასახელებს — კაფეებსა და სახელოსნოებს, რომელთა შემოსავლის უდიდესი ნაწილი ადგილზე მისულ მომხმარებლებზე მოდის. ეს „ყველას“ პირდაპირ ეწინააღმდეგება, ამიტომ პასუხია „მცდარია“ და არა „ვერ ვიტყვით“.",
+    "explanation_en": "The passage says \"most\" and even names exceptions: cafés and repair shops earn most of their income from walk-in customers. That directly contradicts \"every\", so the answer is False, not Cannot say."
+  },
+  {
+    "id": "VR-003",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "tfc_passage",
+    "pattern_tag": "outside_knowledge",
+    "question_ka": "ქვევრი დიდი თიხის ჭურჭელია, რომელიც მიწაშია ჩაფლული და რომელშიც ღვინო დუღს და ინახება. კახეთის ერთი საოჯახო მარანი ქვევრს თეთრი ღვინისთვის იყენებს და ღვინოს ყურძნის კანთან ერთად 6 თვემდე აჩერებს. ამის გამო ღვინო ქარვისფერი ხდება და უფრო მძაფრი გემო აქვს. მარანი პროდუქციის უმეტეს ნაწილს თბილისის რესტორნებს ყიდის.\n\n**დებულება:** „ქვევრში ღვინის დაყენების ტრადიციული მეთოდი იუნესკოს არამატერიალური კულტურული მემკვიდრეობის სიაშია შეტანილი.“",
+    "question_en": "A qvevri is a large clay vessel buried in the ground, in which wine ferments and is stored. A family winery in Kakheti uses qvevri for its white wines and leaves the wine in contact with the grape skins for up to 6 months. This gives the wine an amber colour and a stronger taste. The winery sells most of its production to restaurants in Tbilisi.\n\n**Statement:** \"The traditional qvevri winemaking method is on UNESCO's list of Intangible Cultural Heritage.\"",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "რეალურ ცხოვრებაში ეს მართლაც ასეა, მაგრამ ტექსტში იუნესკო საერთოდ არ არის ნახსენები. ამ ტიპის დავალებაში მხოლოდ ტექსტი ითვლება, ამიტომ პასუხია „ვერ ვიტყვით“.",
+    "explanation_en": "In real life this is true, but the passage never mentions UNESCO. In this type of task only the text counts, so the answer is Cannot say."
+  },
+  {
+    "id": "VR-004",
+    "module": "verbal_reasoning",
+    "difficulty": 1,
+    "format": "tfc_passage",
+    "pattern_tag": "text_supported_inference",
+    "question_ka": "სექტემბრიდან რეგიონული უნივერსიტეტის ბიბლიოთეკამ სამუშაო საათები შეცვალა. სამუშაო დღეებში ის ახლა 8:00-ის ნაცვლად 9:00-ზე იღება, მაგრამ 20:00-ის ნაცვლად 22:00-ზე იკეტება. შაბათ-კვირის განრიგი არ შეცვლილა. ცვლილება სტუდენტების გამოკითხვის შემდეგ გადაწყდა: აღმოჩნდა, რომ დილით ადრე ბიბლიოთეკა თითქმის ცარიელი იყო, საღამოს კი — გადატვირთული.\n\n**დებულება:** „სამუშაო დღეებში ბიბლიოთეკა ახლა დღეში უფრო მეტ ხანს არის ღია, ვიდრე ადრე.“",
+    "question_en": "In September, a regional university library changed its opening hours. On weekdays it now opens at 9:00 instead of 8:00, but closes at 22:00 instead of 20:00. Weekend hours did not change. The change followed a student survey, which showed that the library was almost empty early in the morning but crowded in the evening.\n\n**Statement:** \"On weekdays, the library is now open for more hours per day than before.\"",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "ადრე: 8:00–20:00, ანუ 12 საათი; ახლა: 9:00–22:00, ანუ 13 საათი. დებულება ტექსტიდან პირდაპირ გამომდინარეობს, ამიტომ მართალია. ხაფანგი ისაა, რომ „გვიან იღება“ შეიძლება „ნაკლებ ხანს მუშაობს“-ად აღიქვა.",
+    "explanation_en": "Before: 8:00–20:00 = 12 hours; now: 9:00–22:00 = 13 hours. The statement follows strictly from the text, so it is True. The trap is reading \"opens later\" as \"open for less time\".",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => ((22 - 9) > (20 - 8) ? 'True' : 'False')"
+    }
+  },
+  {
+    "id": "VR-005",
+    "module": "verbal_reasoning",
+    "difficulty": 3,
+    "format": "tfc_passage",
+    "pattern_tag": "cannot_say_vs_false",
+    "question_ka": "რუსთავის ერთ-ერთმა დიდმა კომპანიამ წელს საზაფხულო სტაჟირების პროგრამაზე 1200 განაცხადი მიიღო, შარშან კი — 800. ბიუჯეტი მხოლოდ 60 ადგილის საშუალებას იძლევა, ამიტომ კომპანიამ შერჩევის პირველ ეტაპად ონლაინტესტი შემოიღო. ტესტის წარმატებით გამვლელებს გასაუბრებაზე მიიწვევენ. შარშან გასაუბრებაზე ყველა კანდიდატი მიიწვიეს.\n\n**დებულება:** „წელს გასაუბრებაზე 800-ზე ნაკლებ კანდიდატს მიიწვევენ.“",
+    "question_en": "A large company in Rustavi received 1200 applications for its summer internship programme this year, compared with 800 last year. The budget allows only 60 places, so the company has introduced an online test as the first selection stage. Applicants who pass the test will be invited to an interview. Last year, every applicant was invited to an interview.\n\n**Statement:** \"This year, fewer than 800 applicants will be invited to an interview.\"",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "გასაუბრებაზე მიიწვევენ ყველას, ვინც ტესტს გაივლის, მაგრამ ტექსტში არ წერია, რამდენი გაივლის — შეიძლება 100, შეიძლება 900. 60 ადგილი ზღუდავს, ვის მიიღებენ, და არა იმას, ვის მიიწვევენ გასაუბრებაზე. ამიტომ პასუხია „ვერ ვიტყვით“.",
+    "explanation_en": "Everyone who passes the test is invited, but the text does not say how many will pass: it could be 100 or 900. The 60 places limit who is accepted, not who is interviewed. So the answer is Cannot say."
+  },
+  {
+    "id": "VR-006",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "reading_comprehension",
+    "pattern_tag": "main_idea_vs_detail",
+    "question_ka": "ბევრი კომპანია თანამშრომლის პროდუქტიულობას სამუშაო მაგიდასთან გატარებული საათებით ზომავს. თუმცა ინტელექტუალური შრომის შესახებ ჩატარებული კვლევები აჩვენებს, რომ შედეგი გაცილებით მეტად უწყვეტ კონცენტრაციაზეა დამოკიდებული, ვიდრე ნამუშევარი საათების რაოდენობაზე. პროგრამისტს, რომელსაც ყოველ 15 წუთში აწყვეტინებენ, ღრმა კონცენტრაციის აღსადგენად ყოველ ჯერზე 20 წუთამდე შეიძლება დასჭირდეს. ამიტომ ზოგიერთმა ფირმამ „მშვიდი დილა“ შემოიღო: შუადღემდე არც შეხვედრები იმართება და არც შეტყობინებები იგზავნება. პირველი შედეგები აჩვენებს, რომ შეცდომები შემცირდა, რთული ამოცანები კი უფრო სწრაფად სრულდება.\n\nრომელი დებულება გამოხატავს ტექსტის მთავარ აზრს ყველაზე ზუსტად?",
+    "question_en": "Many companies measure employee productivity by the hours spent at the desk. However, research on knowledge work shows that output depends far more on uninterrupted focus than on the number of hours worked. A programmer who is interrupted every 15 minutes may need up to 20 minutes each time to get back into deep concentration. Some firms have therefore introduced \"quiet mornings\": no meetings and no messages before noon. Early results show fewer errors and faster completion of complex tasks.\n\nWhich statement best expresses the main idea of the passage?",
+    "options": [
+      {
+        "ka": "შეწყვეტის შემდეგ პროგრამისტს კონცენტრაციის აღსადგენად 20 წუთამდე სჭირდება.",
+        "en": "After an interruption, a programmer needs up to 20 minutes to regain concentration."
+      },
+      {
+        "ka": "ინტელექტუალური შრომის შედეგისთვის უწყვეტი კონცენტრაცია უფრო მნიშვნელოვანია, ვიდრე ნამუშევარი საათები.",
+        "en": "For knowledge work, uninterrupted focus matters more for output than the hours worked."
+      },
+      {
+        "ka": "ყველა კომპანიამ შუადღემდე შეხვედრები უნდა აკრძალოს.",
+        "en": "All companies should ban meetings before noon."
+      },
+      {
+        "ka": "საათების დათვლა პროდუქტიულობის გაზომვის ყველაზე გავრცელებული მეთოდია.",
+        "en": "Counting hours is the most common way to measure productivity."
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "20 წუთის შესახებ ფრაზა მხოლოდ მაგალითია, რომელიც მთავარ აზრს ამყარებს — ეს დეტალია. მთავარი აზრი ისაა, რომ შედეგს უწყვეტი კონცენტრაცია განსაზღვრავს და არა საათები. „ყველა კომპანიამ უნდა აკრძალოს“ ტექსტზე შორს მიდის: ტექსტი მხოლოდ „ზოგიერთ ფირმაზე“ საუბრობს.",
+    "explanation_en": "The 20-minute figure is a detail: an example that supports the main point. The main idea is that output depends on uninterrupted focus rather than on hours. \"All companies should ban…\" goes beyond the text, which only mentions \"some firms\"."
+  },
+  {
+    "id": "VR-007",
+    "module": "verbal_reasoning",
+    "difficulty": 1,
+    "format": "reading_comprehension",
+    "pattern_tag": "author_purpose",
+    "question_ka": "ქირავნობის ხელშეკრულების ხელმოწერამდე ყურადღებით წაიკითხეთ დეპოზიტის შესახებ პუნქტი. გადაამოწმეთ, რა თანხა ინახება დეპოზიტად, რა პირობებით დაგიბრუნდებათ და ბინის დატოვებიდან რამდენ დღეში არის მეპატრონე ვალდებული, ის დაგიბრუნოთ. შესვლის დღესვე ყველა ოთახი გადაიღეთ თარიღის მითითებით და ფოტოები მეპატრონეს ელფოსტით გაუგზავნეთ. თუ მოგვიანებით დავა წარმოიშვა, ეს ჩანაწერი თქვენი ყველაზე ძლიერი მტკიცებულება იქნება.\n\nრა არის ავტორის მთავარი მიზანი?",
+    "question_en": "Before you sign a rental agreement, read the section on the deposit carefully. Check how much is held as a deposit, under what conditions it will be returned, and within how many days of moving out the landlord must return it. On the day you move in, take dated photos of every room and email them to the landlord. If a dispute arises later, this record will be your strongest evidence.\n\nWhat is the author's main purpose?",
+    "options": [
+      {
+        "ka": "გააფრთხილოს მკითხველი, რომ მეპატრონეების უმეტესობა დეპოზიტს უსამართლოდ იტოვებს",
+        "en": "To warn readers that most landlords keep deposits unfairly"
+      },
+      {
+        "ka": "აუხსნას მკითხველს, როგორ ყალიბდება ქირის ფასი",
+        "en": "To explain how rent prices are set"
+      },
+      {
+        "ka": "პრაქტიკული რჩევა მისცეს მკითხველს, როგორ დაიცვას დეპოზიტი",
+        "en": "To give practical advice on protecting a rental deposit"
+      },
+      {
+        "ka": "შეადაროს ქირავნობის ხელშეკრულებების სხვადასხვა ტიპი",
+        "en": "To compare different types of rental agreements"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "ტექსტი ბრძანებითი ფორმებითაა დაწერილი („წაიკითხეთ“, „გადაამოწმეთ“, „გადაიღეთ“) — ეს რჩევის ნიშანია. ტექსტი არსად ამბობს, რომ მეპატრონეების უმეტესობა უსამართლოდ იქცევა; „გაფრთხილების“ ვარიანტი ტექსტს ისეთ მტკიცებას ამატებს, რომელიც მასში არ არის.",
+    "explanation_en": "The text is a series of instructions (\"read\", \"check\", \"take photos\"), which signals advice. It never claims that most landlords act unfairly; the \"warning\" option adds a claim that is not in the text."
+  },
+  {
+    "id": "VR-008",
+    "module": "verbal_reasoning",
+    "difficulty": 3,
+    "format": "reading_comprehension",
+    "pattern_tag": "text_supported_inference",
+    "question_ka": "2019 წელს ერთ-ერთმა ქართულმა მობილურმა ოპერატორმა 30 წლამდე აბონენტებისთვის ქაღალდის ანგარიშების ბეჭდვა შეწყვიტა, თუ აბონენტი თავად არ მოითხოვდა მას. 2022 წლისთვის 30 წლამდე აბონენტების 85% მხოლოდ ელექტრონულ ანგარიშს იღებდა, 60 წელს გადაცილებულ აბონენტებში კი ეს მაჩვენებელი 20% იყო. ოპერატორის შეფასებით, ერთი ქაღალდის ანგარიშის დაბეჭდვა და გაგზავნა 1.5 ლარი უჯდება. ამ წესის უფროსი ასაკის აბონენტებზე გავრცელება ჯერ გადაწყვეტილი არ არის.\n\nრომელ დებულებას ამყარებს ტექსტი ყველაზე მეტად?",
+    "question_en": "In 2019, a Georgian mobile operator stopped printing paper bills for customers under 30, unless a customer asked for one. By 2022, 85% of customers under 30 received only electronic bills, while among customers over 60 the figure was 20%. The operator estimates that printing and posting one paper bill costs it 1.5 GEL. It has not yet decided whether to extend the rule to older customers.\n\nWhich statement is best supported by the passage?",
+    "options": [
+      {
+        "ka": "ამ წესის პირობებშიც 30 წლამდე აბონენტს შეეძლო ქაღალდის ანგარიშის მიღება, თუ მოითხოვდა.",
+        "en": "Under the rule, a customer under 30 could still get a paper bill by asking for one."
+      },
+      {
+        "ka": "60 წელს გადაცილებული აბონენტები ქაღალდის ანგარიშს ამჯობინებენ, რადგან ელექტრონულ გადახდებს არ ენდობიან.",
+        "en": "Customers over 60 prefer paper bills because they distrust electronic payments."
+      },
+      {
+        "ka": "2022 წელს ოპერატორმა ანგარიშებზე 2019 წელთან შედარებით ნაკლები დახარჯა.",
+        "en": "In 2022 the operator spent less on bills than in 2019."
+      },
+      {
+        "ka": "2025 წლისთვის ეს წესი ყველა აბონენტზე გავრცელდება.",
+        "en": "By 2025 the rule will apply to all customers."
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "„თუ თავად არ მოითხოვდა“ ნიშნავს, რომ მოთხოვნის შემთხვევაში ქაღალდის ანგარიში მაინც იბეჭდებოდა — ეს ტექსტში პირდაპირ წერია. დანაზოგი დამაჯერებლად ჟღერს, მაგრამ ტექსტი არაფერს ამბობს აბონენტების რაოდენობის ან სხვა ხარჯების ცვლილებაზე; უფროსი ასაკის აბონენტების ნდობაზეც არაფერია ნათქვამი.",
+    "explanation_en": "\"Unless a customer asked for one\" means a paper bill was still printed on request; the text states this directly. The savings claim sounds likely, but the text says nothing about how customer numbers or other costs changed, and nothing about older customers' trust."
+  },
+  {
+    "id": "VR-009",
+    "module": "verbal_reasoning",
+    "difficulty": 1,
+    "format": "analogy",
+    "pattern_tag": "analogy_relation",
+    "question_ka": "აირჩიეთ სიტყვა, რომელიც ანალოგიას ასრულებს:\n\n**თერმომეტრი : ტემპერატურა = ? : წონა**",
+    "question_en": "Choose the word that completes the analogy:\n\n**Thermometer : temperature = ? : weight**",
+    "options": [
+      {
+        "ka": "კილოგრამი",
+        "en": "Kilogram"
+      },
+      {
+        "ka": "ბარომეტრი",
+        "en": "Barometer"
+      },
+      {
+        "ka": "სიმძიმე",
+        "en": "Heaviness"
+      },
+      {
+        "ka": "სასწორი",
+        "en": "Scale"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "თერმომეტრი ხელსაწყოა, რომელიც ტემპერატურას ზომავს; წონას ზომავს სასწორი. კილოგრამი წონის ერთეულია და არა საზომი ხელსაწყო — ეს ყველაზე გავრცელებული ხაფანგია.",
+    "explanation_en": "A thermometer is the instrument that measures temperature; the instrument that measures weight is a scale. A kilogram is a unit of weight, not an instrument, which is the most common trap."
+  },
+  {
+    "id": "VR-010",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "analogy",
+    "pattern_tag": "analogy_relation",
+    "question_ka": "აირჩიეთ სიტყვა, რომელიც ანალოგიას ასრულებს:\n\n**პროლოგი : რომანი = უვერტიურა : ?**",
+    "question_en": "Choose the word that completes the analogy:\n\n**Prologue : novel = overture : ?**",
+    "options": [
+      {
+        "ka": "ოპერა",
+        "en": "Opera"
+      },
+      {
+        "ka": "კომპოზიტორი",
+        "en": "Composer"
+      },
+      {
+        "ka": "დირიჟორი",
+        "en": "Conductor"
+      },
+      {
+        "ka": "ფინალი",
+        "en": "Finale"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "პროლოგი რომანის შესავალი ნაწილია; უვერტიურა ოპერის შესავალი ნაწილია. კომპოზიტორი ნაწარმოების ავტორია — ეს სხვა მიმართებაა (ავტორი, და არა „ნაწილი — მთელი“). ფინალიც ნაწილია, მაგრამ ის თავად ნაწილია და არა მთელი.",
+    "explanation_en": "A prologue is the opening part of a novel; an overture is the opening part of an opera. A composer is the creator, which is a different relation (author, not part to whole). A finale is also a part, not the whole."
+  },
+  {
+    "id": "VR-011",
+    "module": "verbal_reasoning",
+    "difficulty": 1,
+    "format": "vocabulary",
+    "pattern_tag": "synonym_precision",
+    "question_ka": "რომელი სიტყვაა მნიშვნელობით ყველაზე ახლოს სიტყვასთან „დროებითი“?",
+    "question_en": "Which word is closest in meaning to \"temporary\"?",
+    "options": [
+      {
+        "ka": "მუდმივი",
+        "en": "Permanent"
+      },
+      {
+        "ka": "ხანმოკლე",
+        "en": "Short-lived"
+      },
+      {
+        "ka": "იშვიათი",
+        "en": "Rare"
+      },
+      {
+        "ka": "უეცარი",
+        "en": "Sudden"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "„დროებითი“ ნიშნავს იმას, რაც მხოლოდ გარკვეული დროით გრძელდება, ანუ ხანმოკლეა. „უეცარიც“ დროს უკავშირდება, მაგრამ იმას აღნიშნავს, რამდენად მოულოდნელად იწყება რამე, და არა იმას, რამდენ ხანს გრძელდება; „მუდმივი“ კი საპირისპირო მნიშვნელობისაა.",
+    "explanation_en": "\"Temporary\" means lasting only for a limited time, i.e. short-lived. \"Sudden\" is also about time, but about how unexpectedly something starts, not how long it lasts; \"permanent\" is the opposite."
+  },
+  {
+    "id": "VR-012",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "vocabulary",
+    "pattern_tag": "antonym_precision",
+    "question_ka": "რომელი სიტყვაა მნიშვნელობით ყველაზე მეტად საპირისპირო სიტყვისა „მწირი“?",
+    "question_en": "Which word is most nearly OPPOSITE in meaning to \"scarce\"?",
+    "options": [
+      {
+        "ka": "იშვიათი",
+        "en": "Rare"
+      },
+      {
+        "ka": "ძვირფასი",
+        "en": "Valuable"
+      },
+      {
+        "ka": "უხვი",
+        "en": "Abundant"
+      },
+      {
+        "ka": "არასაკმარისი",
+        "en": "Insufficient"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "„მწირი“ ნიშნავს, რომ რაღაც ცოტაა, საჭიროზე ნაკლები; საპირისპიროა „უხვი“. „იშვიათი“ და „არასაკმარისი“ მსგავსი მნიშვნელობისაა — ანტონიმის ძებნისას სინონიმის არჩევა ყველაზე გავრცელებული ხაფანგია. „ძვირფასი“ მხოლოდ ასოციაციაა.",
+    "explanation_en": "\"Scarce\" means there is little of something, less than needed; the opposite is \"abundant\". \"Rare\" and \"insufficient\" are near-synonyms: picking a synonym in an antonym question is the classic trap. \"Valuable\" is only an association."
+  },
+  {
+    "id": "VR-013",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "vocabulary",
+    "pattern_tag": "word_in_context",
+    "question_ka": "წინადადებაში „გასულ კვარტალში საწვავის ფასი მკვეთრად გაიზარდა“ რას ნიშნავს სიტყვა „მკვეთრად“?",
+    "question_en": "In the sentence \"Last quarter, fuel prices rose sharply\", what does \"sharply\" mean?",
+    "options": [
+      {
+        "ka": "მკაფიოდ და გარკვევით",
+        "en": "Clearly and distinctly"
+      },
+      {
+        "ka": "უხეშად",
+        "en": "Rudely"
+      },
+      {
+        "ka": "მტკივნეულად",
+        "en": "Painfully"
+      },
+      {
+        "ka": "სწრაფად და დიდი ოდენობით",
+        "en": "Quickly and by a large amount"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "ფასის ცვლილებაზე საუბრისას „მკვეთრად“ ნიშნავს სწრაფად და დიდი ოდენობით. „მკაფიოდ“ ამ სიტყვის მნიშვნელობაა გამოსახულებასთან მიმართებით („მკვეთრი ფოტო“), „უხეშად“ — საუბართან მიმართებით („მკვეთრად უპასუხა“). რომელი მნიშვნელობაა სწორი, კონტექსტი განსაზღვრავს.",
+    "explanation_en": "When describing a price change, \"sharply\" means quickly and by a large amount. \"Clearly\" is its meaning for images (a sharp photo) and \"rudely\" for speech (answered sharply). The context decides which meaning applies."
+  },
+  {
+    "id": "VR-014",
+    "module": "verbal_reasoning",
+    "difficulty": 1,
+    "format": "odd_one_out",
+    "pattern_tag": "category_odd_one_out",
+    "question_ka": "რომელი სიტყვა არ ერგება დანარჩენებს?",
+    "question_en": "Which word does not belong with the others?",
+    "options": [
+      {
+        "ka": "ლიტრი",
+        "en": "Litre"
+      },
+      {
+        "ka": "მილი",
+        "en": "Mile"
+      },
+      {
+        "ka": "დუიმი",
+        "en": "Inch"
+      },
+      {
+        "ka": "კილომეტრი",
+        "en": "Kilometre"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "მილი, დუიმი და კილომეტრი სიგრძის ერთეულებია, ლიტრი კი — მოცულობის. „მეტრული თუ არამეტრული“ ნიშნით დაყოფა ორ-ორ წყვილს იძლევა, ამიტომ ის ერთ სიტყვას ვერ გამოყოფს.",
+    "explanation_en": "Mile, inch and kilometre measure length; litre measures volume. Splitting by metric vs non-metric gives two and two, so it cannot single out one word."
+  },
+  {
+    "id": "VR-015",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "sentence_completion",
+    "pattern_tag": "logical_connectors",
+    "question_ka": "ახალმა პროგრამამ დოკუმენტების დამუშავების დრო 40%-ით შეამცირა. ____ რამდენიმე თანამშრომელმა ძველ სისტემაზე დაბრუნება მოითხოვა, რადგან ახალი ინტერფეისი უფრო რთული აღმოჩნდა.\n\nრომელი სიტყვა ან ფრაზა ჯდება გამოტოვებულ ადგილას ყველაზე უკეთ?",
+    "question_en": "The new software cut document processing time by 40%. ____ several employees asked to return to the old system because the new interface was harder to use.\n\nWhich word or phrase best fills the gap?",
+    "options": [
+      {
+        "ka": "ამიტომ",
+        "en": "Therefore,"
+      },
+      {
+        "ka": "მიუხედავად ამისა,",
+        "en": "Nevertheless,"
+      },
+      {
+        "ka": "მაგალითად,",
+        "en": "For example,"
+      },
+      {
+        "ka": "გარდა ამისა,",
+        "en": "In addition,"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "პირველი წინადადება სარგებელს აღწერს, მეორე — მოულოდნელ უკმაყოფილებას. ასეთ კონტრასტს „მიუხედავად ამისა“ გამოხატავს. „ამიტომ“ ნიშნავდა, რომ ძველი სისტემა სწორედ დროის შემცირების გამო მოითხოვეს, რაც აზრს მოკლებულია.",
+    "explanation_en": "The first sentence describes a benefit, the second an unexpected complaint. That contrast needs \"Nevertheless\". \"Therefore\" would claim people wanted the old system because processing got faster, which makes no sense."
+  },
+  {
+    "id": "VR-016",
+    "module": "verbal_reasoning",
+    "difficulty": 3,
+    "format": "tfc_passage",
+    "pattern_tag": "qualifier_words",
+    "question_ka": "საქართველოში 2000 ზრდასრულზე ჩატარებულმა კვლევამ აჩვენა, რომ ადამიანები, რომლებიც დღეში სულ მცირე 7000 ნაბიჯს დადიან, უკეთეს ძილს აღნიშნავენ, ვიდრე ისინი, ვინც ნაკლებს დადის. მკვლევრების თქმით, 65 წელს გადაცილებულ ადამიანებში ეს კავშირი უფრო სუსტი იყო. მათ ისიც აღნიშნეს, რომ კვლევა მხოლოდ ჩვევებს აკვირდებოდა და ვერ აჩვენებს, სიარული აუმჯობესებს ძილს თუ კარგად გამოძინებულ ადამიანებს უბრალოდ მეტი ენერგია აქვთ სასიარულოდ.\n\n**დებულება:** „სიარულსა და ძილს შორის კავშირი მხოლოდ 65 წლამდე ადამიანებში გამოვლინდა.“",
+    "question_en": "A study of 2000 adults in Georgia found that people who walk at least 7000 steps a day report better sleep than those who walk less. The researchers said that among people over 65 this link was weaker. They also noted that the study only observed habits and cannot show whether walking improves sleep or whether people who sleep well simply have more energy to walk.\n\n**Statement:** \"The link between walking and sleep was found only among people under 65.\"",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "ტექსტის მიხედვით, 65 წელს გადაცილებულ ადამიანებში კავშირი „უფრო სუსტი“ იყო — ანუ ის არსებობდა. „მხოლოდ 65 წლამდე“ ამას ეწინააღმდეგება, ამიტომ პასუხია „მცდარია“. ხაფანგი ისაა, რომ „უფრო სუსტი“ „არ არსებობს“-ად აღიქვა.",
+    "explanation_en": "The passage says the link was \"weaker\" among people over 65, so it did exist there. \"Only among people under 65\" contradicts this, so the answer is False. The trap is reading \"weaker\" as \"absent\"."
+  },
+  {
+    "id": "VR-017",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "tfc_passage",
+    "pattern_tag": "cannot_say_vs_false",
+    "question_ka": "გასულ წელს საქართველოში ელექტრომობილების იმპორტი წინა წელთან შედარებით 40%-ით გაიზარდა. შემოტანილი მანქანების უმეტესობა მეორადი იყო და ამერიკის შეერთებული შტატებიდან და სამხრეთ კორეიდან შემოვიდა. იმპორტიორების თქმით, ზრდის მთავარი მიზეზი ელექტრომობილებზე დაწესებული დაბალი საბაჟო მოსაკრებელი იყო.\n\n**დებულება:** „გასულ წელს საქართველოში ბენზინზე მომუშავე მანქანები წინა წელთან შედარებით ნაკლები შემოიტანეს.“",
+    "question_en": "Last year, imports of electric cars into Georgia rose by 40% compared with the year before. Most of the imported cars were used vehicles from the United States and South Korea. Importers say the main reason for the growth was the low customs fee on electric vehicles.\n\n**Statement:** \"Last year, Georgia imported fewer petrol cars than the year before.\"",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "ტექსტი მხოლოდ ელექტრომობილებზე საუბრობს. შეიძლება მოგეჩვენოს, რომ ელექტრომობილების ზრდა ბენზინიანი მანქანების შემცირებას ნიშნავს, მაგრამ შესაძლოა ორივე ერთდროულად გაზრდილიყო. ტექსტი ამას არც ადასტურებს და არც უარყოფს — „ვერ ვიტყვით“.",
+    "explanation_en": "The passage is only about electric cars. It may seem that more electric cars means fewer petrol cars, but both could have grown at the same time. The text neither confirms nor denies it: Cannot say."
+  },
+  {
+    "id": "VR-018",
+    "module": "verbal_reasoning",
+    "difficulty": 1,
+    "format": "tfc_passage",
+    "pattern_tag": "outside_knowledge",
+    "question_ka": "თაფლის ფუტკრები ერთმანეთს საკვების ადგილმდებარეობას ე.წ. „რხევითი ცეკვით“ ატყობინებენ. სკაში დაბრუნებული ფუტკარი მარყუჟისებური ტრაექტორიით მოძრაობს: ცეკვის სწორი მონაკვეთის მიმართულება მზესთან მიმართებით საკვების მიმართულებას აჩვენებს, ცეკვის ხანგრძლივობა კი — მანძილს. სხვა ფუტკრები მოცეკვავეს მიჰყვებიან, შემდეგ კი საკვების წყაროსკენ მიფრინავენ.\n\n**დებულება:** „თაფლის ფუტკრები ერთმანეთთან ურთიერთობისთვის სუნსაც იყენებენ.“",
+    "question_en": "Honey bees tell each other where food is by means of the so-called \"waggle dance\". A bee returning to the hive moves in a looping pattern: the direction of the straight part of the dance, relative to the sun, shows the direction of the food, and the length of the dance shows the distance. Other bees follow the dancer and then fly to the food source.\n\n**Statement:** \"Honey bees also use scent to communicate with each other.\"",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "ცოცხალ ბუნებაში ფუტკრები სურნელოვან ნივთიერებებსაც იყენებენ, მაგრამ ტექსტი მხოლოდ ცეკვაზე საუბრობს. ცოდნა, რომელიც ტექსტში არ არის, აქ არ ითვლება — „ვერ ვიტყვით“.",
+    "explanation_en": "In real life bees do use scents, but the passage only describes the dance. Knowledge from outside the text does not count here: Cannot say."
+  },
+  {
+    "id": "VR-019",
+    "module": "verbal_reasoning",
+    "difficulty": 1,
+    "format": "tfc_passage",
+    "pattern_tag": "qualifier_words",
+    "question_ka": "თბილისურმა საცხობების ქსელმა გამოსცადა მობილური აპლიკაცია, რომლითაც მომხმარებელს შეკვეთის წინასწარ გაკეთება შეუძლია. 3 საცდელ ფილიალში ლოდინის საშუალო დრო 9 წუთიდან 4 წუთამდე შემცირდა, გაყიდვები კი მათგან 2-ში გაიზარდა. მესამე ფილიალში გაყიდვები არ შეცვლილა. ქსელი მომავალ წელს აპლიკაციის ყველა 18 ფილიალში ამოქმედებას გეგმავს.\n\n**დებულება:** „გაყიდვები ყველა იმ ფილიალში გაიზარდა, სადაც აპლიკაცია გამოსცადეს.“",
+    "question_en": "A Tbilisi bakery chain tested a mobile app that lets customers order ahead. In the 3 test branches, the average waiting time fell from 9 minutes to 4 minutes, and sales rose in 2 of them. In the third branch, sales did not change. The chain plans to launch the app in all 18 branches next year.\n\n**Statement:** \"Sales rose in every branch where the app was tested.\"",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "აპლიკაცია 3 ფილიალში გამოსცადეს, გაყიდვები კი მხოლოდ 2-ში გაიზარდა — მესამეში არ შეცვლილა. „ყველა“ ტექსტს პირდაპირ ეწინააღმდეგება. ლოდინის დრო კი ყველა ფილიალში შემცირდა, რაც ადვილად შეიძლება გაყიდვებში აგერიოს.",
+    "explanation_en": "The app was tested in 3 branches and sales rose in only 2; in the third they did not change. \"Every\" directly contradicts the text. It was the waiting time that fell in all branches, which is easy to confuse with sales."
+  },
+  {
+    "id": "VR-020",
+    "module": "verbal_reasoning",
+    "difficulty": 3,
+    "format": "tfc_passage",
+    "pattern_tag": "cannot_say_vs_false",
+    "question_ka": "ნინომ, გიორგიმ და ანამ ერთსა და იმავე ვაკანსიაზე — მონაცემთა ანალიტიკოსის პოზიციაზე — შეიტანეს განაცხადი. კომპანია ორ მოთხოვნას აყენებს: უმაღლესი განათლება და SQL-თან მუშაობის სულ მცირე 2-წლიანი გამოცდილება. ნინოს SQL-თან მუშაობის 3-წლიანი გამოცდილება აქვს. გიორგის მაგისტრის ხარისხი აქვს, მაგრამ SQL-ს მხოლოდ 1 წელია იყენებს. ანას უმაღლესი განათლებაც აქვს და SQL-თან მუშაობის 4-წლიანი გამოცდილებაც.\n\n**დებულება:** „ორივე მოთხოვნას მხოლოდ ანა აკმაყოფილებს.“",
+    "question_en": "Nino, Giorgi and Ana have applied for the same job, a data analyst position. The company has two requirements: a university degree and at least 2 years of experience with SQL. Nino has 3 years of SQL experience. Giorgi has a master's degree but has used SQL for only 1 year. Ana has a university degree and 4 years of SQL experience.\n\n**Statement:** \"Only Ana meets both requirements.\"",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "გიორგი მოთხოვნას ვერ აკმაყოფილებს (1 წელი 2-ზე ნაკლებია), ანა კი აკმაყოფილებს. ნინოს განათლებაზე ტექსტი არაფერს ამბობს: ის, რომ რაღაც არ არის ნახსენები, არ ნიშნავს, რომ ის არ არსებობს. თუ ნინოს უმაღლესი განათლება აქვს, ისიც აკმაყოფილებს ორივე მოთხოვნას, ამიტომ პასუხია „ვერ ვიტყვით“.",
+    "explanation_en": "Giorgi fails (1 year is less than 2) and Ana qualifies. But the text says nothing about Nino's education, and \"not mentioned\" does not mean \"does not have\". If Nino has a degree, she qualifies too, so the answer is Cannot say."
+  },
+  {
+    "id": "VR-021",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "reading_comprehension",
+    "pattern_tag": "main_idea_vs_detail",
+    "question_ka": "ქალაქებში ტემპერატურა ხშირად რამდენიმე გრადუსით მაღალია, ვიდრე მიმდებარე სოფლებში. ასფალტი და ბეტონი დღისით მზის სითბოს შთანთქავს და ღამით გამოყოფს, ხეების სიმცირე კი ნაკლებ ჩრდილსა და აორთქლებით ნაკლებ გაგრილებას ნიშნავს. თბილისის ცენტრში ზაფხულის ღამის ტემპერატურა ახლომდებარე სოფლებთან შედარებით 4 გრადუსით მაღალიც კი შეიძლება იყოს. ამ მოვლენის შესამცირებლად ყველაზე ეფექტიან საშუალებებს შორისაა ხეების დარგვა, ღია ფერის სახურავები და მეტი მწვანე სივრცე.\n\nრომელი სათაური შეეფერება ტექსტს ყველაზე მეტად?",
+    "question_en": "Cities are often several degrees warmer than the surrounding countryside. Asphalt and concrete absorb the sun's heat during the day and release it at night, while fewer trees mean less shade and less cooling through evaporation. In central Tbilisi, summer night temperatures can be as much as 4 degrees higher than in nearby villages. Planting trees, using light-coloured roofs and creating more green space are among the most effective ways to reduce the effect.\n\nWhich title best fits the passage?",
+    "options": [
+      {
+        "ka": "თბილისის ზაფხულის რეკორდული ტემპერატურები",
+        "en": "Tbilisi's record summer temperatures"
+      },
+      {
+        "ka": "ღია ფერის სახურავების უპირატესობები",
+        "en": "The advantages of light-coloured roofs"
+      },
+      {
+        "ka": "რატომ ცხელა ქალაქებში მეტად და როგორ შევამციროთ სიცხე",
+        "en": "Why cities are hotter and how to cool them"
+      },
+      {
+        "ka": "როგორ მზადდება ასფალტი",
+        "en": "How asphalt is made"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "ტექსტი ორ კითხვას პასუხობს: რატომ ცხელა ქალაქში უფრო მეტად და როგორ შევამციროთ ეს ეფექტი. თბილისი მხოლოდ მაგალითია (რეკორდებზე ტექსტი არც საუბრობს), სახურავები კი ერთ-ერთი გამოსავალია — ორივე დეტალია და არა მთავარი თემა.",
+    "explanation_en": "The passage answers two questions: why cities are hotter and how to reduce the effect. Tbilisi is only an example (records are not even mentioned), and roofs are just one of the solutions: both are details, not the main topic."
+  },
+  {
+    "id": "VR-022",
+    "module": "verbal_reasoning",
+    "difficulty": 3,
+    "format": "reading_comprehension",
+    "pattern_tag": "author_purpose",
+    "question_ka": "ზოგი ამტკიცებს, რომ თვითმომსახურების სალაროები მყიდველებს დროს უზოგავს. თუმცა ერთ-ერთი სუპერმარკეტების ქსელის საკუთარმა ცდამ აჩვენა, რომ თვითმომსახურების სალაროსთან ანგარიშსწორებას საშუალოდ 30 წამით მეტი დრო სჭირდებოდა, ვიდრე მოლარესთან — ძირითადად სკანირების შეცდომებისა და ალკოჰოლის ყიდვისას ასაკის შემოწმების გამო. მყიდველები უკმაყოფილებასაც უფრო ხშირად გამოთქვამდნენ. სანამ მაღაზიები მოლარეების კიდევ უფრო მეტ ნაწილს ჩაანაცვლებენ, მათ ყურადღებით უნდა შეამოწმონ, ამართლებს თუ არა ეს აპარატები მოლოდინს.\n\nრა არის ავტორის მთავარი მიზანი?",
+    "question_en": "Some argue that self-checkout tills save shoppers time. Yet a supermarket chain's own trial found that paying at a self-checkout took on average 30 seconds longer than at a staffed till, mostly because of scanning errors and age checks for alcohol. Shoppers also complained more often. Before replacing even more cashiers, retailers should check carefully whether these machines live up to expectations.\n\nWhat is the author's main purpose?",
+    "options": [
+      {
+        "ka": "მიუკერძოებლად, საკუთარი პოზიციის გარეშე გადმოსცეს ცდის შედეგები",
+        "en": "To report the results of a trial neutrally, without taking a position"
+      },
+      {
+        "ka": "დაამტკიცოს, რომ თვითმომსახურების სალაროები უნდა აიკრძალოს",
+        "en": "To prove that self-checkouts should be banned"
+      },
+      {
+        "ka": "აღწეროს, როგორ მუშაობს თვითმომსახურების სალარო",
+        "en": "To describe how a self-checkout works"
+      },
+      {
+        "ka": "დაარწმუნოს მაღაზიები, რომ მოლარეების თვითმომსახურების სალაროებით ჩანაცვლებისას სიფრთხილე გამოიჩინონ",
+        "en": "To persuade retailers to be cautious about replacing cashiers with self-checkouts"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "ტექსტი მონაცემებს გვაწვდის, მაგრამ რეკომენდაციით მთავრდება („უნდა შეამოწმონ“) — ავტორს პოზიცია აქვს, ამიტომ „მიუკერძოებელი ანგარიში“ სწორი არ არის. ამავე დროს ის მხოლოდ სიფრთხილისკენ მოუწოდებს და აკრძალვას არ ითხოვს.",
+    "explanation_en": "The passage gives data but ends with a recommendation (\"should check carefully\"), so the author does take a position and \"neutral report\" is wrong. At the same time it only urges caution; it does not call for a ban."
+  },
+  {
+    "id": "VR-023",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "reading_comprehension",
+    "pattern_tag": "text_supported_inference",
+    "question_ka": "ბათუმელმა პროგრამისტების გუნდმა განახლებების თვეში ერთხელ გამოშვებიდან ყოველკვირეულ მცირე განახლებებზე გადაინაცვლა. ცვლილების შემდეგ პირველ კვარტალში მომხმარებლების მიერ შეტყობინებული ხარვეზების რაოდენობა 25%-ით შემცირდა, ავტომატური ტესტების წერაზე დახარჯული დრო კი გაორმაგდა. გუნდის ხელმძღვანელის თქმით, ტესტირებაზე დახარჯული დამატებითი დრო ხშირი გამოშვების ფასია, და ის მიიჩნევს, რომ ეს ფასი გამართლებულია.\n\nრომელ დებულებას ამყარებს ტექსტი ყველაზე მეტად?",
+    "question_en": "A software team in Batumi switched from releasing updates once a month to releasing small updates every week. In the first quarter after the change, the number of bugs reported by customers fell by 25%, while the time spent writing automated tests doubled. The team lead says the extra testing time is the price of releasing more often, and she considers it a price worth paying.\n\nWhich statement is best supported by the passage?",
+    "options": [
+      {
+        "ka": "ხელმძღვანელი მიიჩნევს, რომ ყოველკვირეული გამოშვების სარგებელი ტესტირების დამატებით შრომას აჭარბებს.",
+        "en": "The team lead believes the benefits of weekly releases outweigh the extra testing effort."
+      },
+      {
+        "ka": "ხარვეზების შემცირება ყოველკვირეულმა გამოშვებებმა გამოიწვია.",
+        "en": "The weekly releases caused the drop in bug reports."
+      },
+      {
+        "ka": "გუნდის დეველოპერები დროის უმეტეს ნაწილს ტესტების წერას ახმარენ.",
+        "en": "The team's developers spend most of their time writing tests."
+      },
+      {
+        "ka": "გუნდი თვეში ერთხელ გამოშვებას დაუბრუნდება.",
+        "en": "The team will go back to monthly releases."
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "„ფასი გამართლებულია“ ნიშნავს, რომ ხელმძღვანელისთვის სარგებელი დანახარჯზე მეტია — ეს ტექსტის პერიფრაზია. ხარვეზების შემცირება დროში ემთხვევა ცვლილებას, მაგრამ ტექსტი არ ამტკიცებს, რომ სწორედ ის იყო მიზეზი; „გაორმაგდა“ კი არ ნიშნავს „დროის უმეტეს ნაწილს“.",
+    "explanation_en": "\"A price worth paying\" means that, for the team lead, the benefit exceeds the cost; this is a paraphrase of the text. The drop in bugs coincides with the change, but the text does not establish it as the cause, and \"doubled\" does not mean \"most of their time\"."
+  },
+  {
+    "id": "VR-024",
+    "module": "verbal_reasoning",
+    "difficulty": 3,
+    "format": "analogy",
+    "pattern_tag": "analogy_relation",
+    "question_ka": "აირჩიეთ სიტყვა, რომელიც ანალოგიას ასრულებს:\n\n**კარტოგრაფი : რუკა = ? : ლექსიკონი**",
+    "question_en": "Choose the word that completes the analogy:\n\n**Cartographer : map = ? : dictionary**",
+    "options": [
+      {
+        "ka": "ლინგვისტი",
+        "en": "Linguist"
+      },
+      {
+        "ka": "ლექსიკოგრაფი",
+        "en": "Lexicographer"
+      },
+      {
+        "ka": "მთარგმნელი",
+        "en": "Translator"
+      },
+      {
+        "ka": "ბიბლიოთეკარი",
+        "en": "Librarian"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "კარტოგრაფი რუკებს ადგენს; ლექსიკონებს ადგენს ლექსიკოგრაფი. ლინგვისტი ენას სწავლობს, მთარგმნელი კი ლექსიკონით სარგებლობს — ორივე ლექსიკონთან არის დაკავშირებული, მაგრამ არც ერთი არ არის „ის, ვინც მას ქმნის“.",
+    "explanation_en": "A cartographer compiles maps; a lexicographer compiles dictionaries. A linguist studies language and a translator uses dictionaries: both are related to dictionaries, but neither is \"the one who makes it\"."
+  },
+  {
+    "id": "VR-025",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "analogy",
+    "pattern_tag": "analogy_relation",
+    "question_ka": "აირჩიეთ სიტყვა, რომელიც ანალოგიას ასრულებს:\n\n**თბილი : ცხელი = ჟინჟღილი : ?**",
+    "question_en": "Choose the word that completes the analogy:\n\n**Warm : hot = drizzle : ?**",
+    "options": [
+      {
+        "ka": "ღრუბელი",
+        "en": "Cloud"
+      },
+      {
+        "ka": "ქოლგა",
+        "en": "Umbrella"
+      },
+      {
+        "ka": "თავსხმა",
+        "en": "Downpour"
+      },
+      {
+        "ka": "გუბე",
+        "en": "Puddle"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "„ცხელი“ იგივე ნიშანია, რაც „თბილი“, ოღონდ გაცილებით ძლიერი. ჟინჟღილის (წვრილი, სუსტი წვიმის) ძლიერი ფორმა თავსხმაა. ღრუბელი წვიმის წყაროა, ქოლგა და გუბე კი მასთან მხოლოდ ასოცირდება — ეს სხვა მიმართებებია.",
+    "explanation_en": "\"Hot\" is the same quality as \"warm\", only much stronger. The strong form of a drizzle (light rain) is a downpour. A cloud is the source of rain, and an umbrella and a puddle are mere associations: different relations."
+  },
+  {
+    "id": "VR-026",
+    "module": "verbal_reasoning",
+    "difficulty": 1,
+    "format": "vocabulary",
+    "pattern_tag": "synonym_precision",
+    "question_ka": "რომელი სიტყვაა მნიშვნელობით ყველაზე ახლოს სიტყვასთან „ფრთხილი“?",
+    "question_en": "Which word is closest in meaning to \"cautious\"?",
+    "options": [
+      {
+        "ka": "მშიშარა",
+        "en": "Cowardly"
+      },
+      {
+        "ka": "ნელი",
+        "en": "Slow"
+      },
+      {
+        "ka": "მორცხვი",
+        "en": "Shy"
+      },
+      {
+        "ka": "წინდახედული",
+        "en": "Prudent"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "ფრთხილი ადამიანი რისკს წინასწარ ითვალისწინებს და მას თავს არიდებს, ანუ წინდახედულია. „მშიშარა“ შიშს უსვამს ხაზს და უარყოფითი შეფასებაა: ფრთხილი ადამიანი სულაც არ არის აუცილებლად მშიშარა.",
+    "explanation_en": "A cautious person thinks ahead and avoids risks, i.e. is prudent. \"Cowardly\" stresses fear and is a negative judgement: a cautious person is not necessarily a coward."
+  },
+  {
+    "id": "VR-027",
+    "module": "verbal_reasoning",
+    "difficulty": 3,
+    "format": "vocabulary",
+    "pattern_tag": "antonym_precision",
+    "question_ka": "წინადადებაში „ის მოკრძალებული ადამიანია და თავის მიღწევებზე იშვიათად საუბრობს“ რომელი სიტყვაა „მოკრძალებულის“ ყველაზე ზუსტი ანტონიმი?",
+    "question_en": "In the sentence \"She is a modest person and rarely talks about her achievements\", which word is the most precise antonym of \"modest\"?",
+    "options": [
+      {
+        "ka": "ტრაბახა",
+        "en": "Boastful"
+      },
+      {
+        "ka": "მორცხვი",
+        "en": "Shy"
+      },
+      {
+        "ka": "დიდი",
+        "en": "Large"
+      },
+      {
+        "ka": "თავაზიანი",
+        "en": "Polite"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "აქ „მოკრძალებული“ ნიშნავს ადამიანს, რომელიც თავს არ იქებს; საპირისპიროა „ტრაბახა“. „დიდი“ ამ სიტყვის სხვა მნიშვნელობის საპირისპიროა („მოკრძალებული ხელფასი“), რომელიც ამ წინადადებას არ ეხება; „მორცხვი“ კი თითქმის სინონიმია.",
+    "explanation_en": "Here \"modest\" means someone who does not praise themselves; the opposite is \"boastful\". \"Large\" is the opposite of a different sense (\"a modest salary\"), which does not apply in this sentence, and \"shy\" is close to a synonym."
+  },
+  {
+    "id": "VR-028",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "vocabulary",
+    "pattern_tag": "word_in_context",
+    "question_ka": "წინადადებაში „სასამართლომ მას მსუბუქი სასჯელი შეუფარდა, რადგან ეს მისი პირველი დანაშაული იყო“ რას ნიშნავს სიტყვა „მსუბუქი“?",
+    "question_en": "In the sentence \"The court gave him a light sentence because it was his first offence\", what does \"light\" mean?",
+    "options": [
+      {
+        "ka": "მცირე წონის",
+        "en": "Low in weight"
+      },
+      {
+        "ka": "არამკაცრი",
+        "en": "Not severe"
+      },
+      {
+        "ka": "ადვილად საკითხავი",
+        "en": "Easy to read"
+      },
+      {
+        "ka": "თხელი და ჰაეროვანი",
+        "en": "Thin and airy"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "სასჯელზე საუბრისას „მსუბუქი“ ნიშნავს არამკაცრს. დანარჩენი ვარიანტებიც ამ სიტყვის მნიშვნელობებია, ოღონდ სხვა კონტექსტში: ტვირთის (წონა), წიგნის (ადვილად საკითხავი) და ქსოვილის (ჰაეროვანი).",
+    "explanation_en": "For a punishment, \"light\" means not severe. The other options are also meanings of the word, but in other contexts: a load (weight), a book (easy reading) and a fabric (airy)."
+  },
+  {
+    "id": "VR-029",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "odd_one_out",
+    "pattern_tag": "category_odd_one_out",
+    "question_ka": "რომელი სიტყვა არ ერგება დანარჩენებს?",
+    "question_en": "Which word does not fit with the others?",
+    "options": [
+      {
+        "ka": "შეშფოთებული",
+        "en": "Worried"
+      },
+      {
+        "ka": "დაძაბული",
+        "en": "Tense"
+      },
+      {
+        "ka": "ნერვიული",
+        "en": "Nervous"
+      },
+      {
+        "ka": "ცნობისმოყვარე",
+        "en": "Curious"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "შეშფოთებული, დაძაბული და ნერვიული შფოთვის, მოუსვენრობის მდგომარეობას აღწერს. ცნობისმოყვარე ადამიანს რაღაცის გაგება სურს — ეს ინტერესია და არა შფოთვა.",
+    "explanation_en": "Worried, tense and nervous all describe a state of unease. A curious person wants to find something out: that is interest, not unease."
+  },
+  {
+    "id": "VR-030",
+    "module": "verbal_reasoning",
+    "difficulty": 3,
+    "format": "sentence_completion",
+    "pattern_tag": "logical_connectors",
+    "question_ka": "ახალმა წესმა კომპანიის ხარჯები შეამცირა; ____ თანამშრომლებში ის არაპოპულარული აღმოჩნდა, ____ ხელმძღვანელობამ მისი გადახედვა გადაწყვიტა.\n\nრომელი წყვილი ავსებს გამოტოვებულ ადგილებს ყველაზე უკეთ?",
+    "question_en": "The new policy reduced the company's costs; ____ it proved unpopular with staff, ____ management decided to revise it.\n\nWhich pair best fills the gaps?",
+    "options": [
+      {
+        "ka": "ამიტომ … თუმცა",
+        "en": "therefore … although"
+      },
+      {
+        "ka": "გარდა ამისა … რადგან",
+        "en": "moreover … because"
+      },
+      {
+        "ka": "თუმცა … ამიტომ",
+        "en": "however … so"
+      },
+      {
+        "ka": "თუმცა … მიუხედავად იმისა, რომ",
+        "en": "however … even though"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "ხარჯების შემცირება დადებითია, არაპოპულარობა — უარყოფითი, ამიტომ პირველ ადგილას კონტრასტი სჭირდება („თუმცა“). წესის გადახედვა არაპოპულარობის შედეგია, ამიტომ მეორე ადგილას შედეგის აღმნიშვნელი სიტყვაა საჭირო („ამიტომ“). „რადგან“ მიზეზსა და შედეგს ადგილს უცვლის: გამოდის, რომ წესი იმიტომ იყო არაპოპულარული, რომ მისი გადახედვა გადაწყვიტეს.",
+    "explanation_en": "Lower costs are positive and unpopularity is negative, so the first gap needs contrast (\"however\"). Revising the policy is a result of its unpopularity, so the second gap needs a result word (\"so\"). \"Because\" swaps cause and effect: it would mean the policy was unpopular because management decided to revise it."
+  },
+  {
+    "id": "VR-031",
+    "module": "verbal_reasoning",
+    "difficulty": 3,
+    "format": "tfc_passage",
+    "pattern_tag": "outside_knowledge",
+    "question_ka": "რეგიონული დასაქმების შესახებ ანგარიში საკუთარ განმარტებებს იყენებს. ანგარიშში „მცირე ბიზნესად“ ითვლება კომპანია, რომელსაც 10-ზე ნაკლები თანამშრომელი ჰყავს და რომლის წლიური ბრუნვა 500000 ლარზე ნაკლებია; ყველა სხვა კომპანია „საშუალო ან მსხვილი“ ბიზნესის კატეგორიაში ხვდება. ანგარიშის მიხედვით, გასულ წელს რეგიონში შექმნილი ყოველი 5 ახალი სამუშაო ადგილიდან 3 მცირე ბიზნესზე მოდიოდა.\n\n**დებულება:** „ამ ანგარიშში კომპანია, რომელსაც 25 თანამშრომელი ჰყავს და რომლის წლიური ბრუნვა 300000 ლარია, მცირე ბიზნესად ითვლება.“",
+    "question_en": "A report on regional employment uses its own definitions. In the report, a \"small business\" is a company with fewer than 10 employees and an annual turnover below 500000 GEL; every other company is classed as a \"medium or large\" business. According to the report, small businesses accounted for 3 of every 5 new jobs created in the region last year.\n\n**Statement:** \"In this report, a company with 25 employees and an annual turnover of 300000 GEL counts as a small business.\"",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "ანგარიშის განმარტებით, ორივე პირობა ერთად უნდა სრულდებოდეს. ბრუნვა (300000 ლარი) პირობას აკმაყოფილებს, მაგრამ 25 თანამშრომელი 10-ზე მეტია, ამიტომ კომპანია „საშუალო ან მსხვილია“ — დებულება მცდარია. ხაფანგია სხვა წყაროდან ცნობილი განმარტება, რომლითაც 25-კაციანი კომპანია შეიძლება მცირე ბიზნესად ჩაითვალოს.",
+    "explanation_en": "The report's definition needs both conditions. The turnover (300000 GEL) qualifies, but 25 employees is more than 10, so the company is \"medium or large\": the statement is False. The trap is an official definition from elsewhere, under which a 25-person company may count as small.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => ((25 < 10 && 300000 < 500000) ? 'True' : 'False')"
+    }
+  },
+  {
+    "id": "VR-032",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "tfc_passage",
+    "pattern_tag": "qualifier_words",
+    "question_ka": "მცხეთაში 300 ვიზიტორის გამოკითხვამ აჩვენა, რომ მათი უმეტესობა თბილისიდან ერთდღიანი მოგზაურობით ჩამოვიდა, დანარჩენებმა კი ღამე ქალაქში ან მის მახლობლად გაათიეს. ღამით დარჩენილი ვიზიტორები საშუალოდ 3-ჯერ მეტს ხარჯავდნენ, ვიდრე ერთდღიანი ვიზიტორები. ადგილობრივ ტურისტულ ოფისს ახლა სურს, საღამოს ღონისძიებების პოპულარიზაციით სტუმრები უფრო დიდხანს დაიტოვოს.\n\n**დებულება:** „გამოკითხულ ვიზიტორთაგან ზოგიერთი თბილისიდან ერთდღიანი მოგზაურობით ჩამოვიდა.“",
+    "question_en": "A survey of 300 visitors to Mtskheta found that most of them came on a day trip from Tbilisi, while the rest stayed overnight in the town or nearby. Visitors who stayed overnight spent on average 3 times as much as day-trippers. The local tourism office now wants to encourage longer stays by promoting evening events.\n\n**Statement:** \"Some of the surveyed visitors came on a day trip from Tbilisi.\"",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "„უმეტესობა“ აუცილებლად მოიცავს „ზოგიერთს“: თუ 300-დან ნახევარზე მეტი ერთდღიანი მოგზაურობით ჩამოვიდა, ზოგიერთი მათგანი ნამდვილად ასე ჩამოვიდა. ხაფანგი ისაა, რომ „ზოგიერთი“ „უმეტესობაზე“ სუსტად ჟღერს და თითქოს მას ეწინააღმდეგება. სუსტი მტკიცება, რომელიც ძლიერიდან გამომდინარეობს, მართალია.",
+    "explanation_en": "\"Most\" necessarily includes \"some\": if more than half of the 300 came on a day trip, then some of them certainly did. The trap is that \"some\" sounds weaker than \"most\" and seems to contradict it. A weaker claim that follows from a stronger one is True."
+  },
+  {
+    "id": "VR-033",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "tfc_passage",
+    "pattern_tag": "text_supported_inference",
+    "question_ka": "თბილისსა და ბათუმს შორის ღამის მატარებელი დადის. ზაფხულში მას დამატებით ვაგონებს აბამენ, რადგან მგზავრების რაოდენობა მკვეთრად იზრდება. ბილეთის ყიდვა ონლაინ ან სადგურის სალაროშია შესაძლებელი; ონლაინბილეთი 5%-ით იაფია. 5 წლამდე ბავშვები უფასოდ მგზავრობენ, თუ ცალკე ადგილს არ იკავებენ.\n\n**დებულება:** „ზაფხულის გარდა წლის სხვა დროს ღამის მატარებელს ნაკლები ვაგონი აქვს, ვიდრე ზაფხულში.“",
+    "question_en": "A night train runs between Tbilisi and Batumi. In summer, extra carriages are added because passenger numbers rise sharply. Tickets can be bought online or at the station ticket office; online tickets are 5% cheaper. Children under 5 travel free if they do not occupy a separate seat.\n\n**Statement:** \"Outside the summer, the night train has fewer carriages than in summer.\"",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "თუ ზაფხულში ვაგონებს დამატებით აბამენ, მაშინ წლის დანარჩენ დროს მატარებელს ნაკლები ვაგონი აქვს — ეს ტექსტიდან უშუალოდ გამომდინარეობს. სხვა სეზონები სიტყვასიტყვით არ არის ნახსენები, მაგრამ „ვერ ვიტყვით“ აქ არასწორია: დებულება იგივე ტექსტია, სხვა სიტყვებით ნათქვამი.",
+    "explanation_en": "If extra carriages are added in summer, then for the rest of the year the train has fewer: this follows directly from the text. Other seasons are not named, but Cannot say is wrong here: the statement is the text in other words."
+  },
+  {
+    "id": "VR-034",
+    "module": "verbal_reasoning",
+    "difficulty": 3,
+    "format": "tfc_passage",
+    "pattern_tag": "text_supported_inference",
+    "question_ka": "ახალი საგადასახადო წესი ეხება ფრილანსერებს, რომელთა წლიური შემოსავალი 30000 ლარს აღემატება. დანარჩენი ფრილანსერები გადასახადს ისევ ძველი წესით იხდიან. ლევანმა, რომელიც ფრილანსერი დიზაინერია, გასულ წელს ზუსტად 30000 ლარი გამოიმუშავა. წლევანდელი შემოსავალიც, სავარაუდოდ, მსგავსი იქნება.\n\n**დებულება:** „გასული წლის შემოსავლის მიხედვით, ლევანზე ახალი წესი არ ვრცელდება.“",
+    "question_en": "A new tax rule applies to freelancers whose annual income exceeds 30000 GEL. All other freelancers continue to pay under the old rule. Levani, a freelance designer, earned exactly 30000 GEL last year, and his income this year is expected to be similar.\n\n**Statement:** \"Based on last year's income, the new rule does not apply to Levani.\"",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "ახალი წესი მხოლოდ მაშინ მოქმედებს, როცა შემოსავალი 30000 ლარს „აღემატება“. ზუსტად 30000 ლარი ზღვარს არ აღემატება, ამიტომ ლევანზე ახალი წესი არ ვრცელდება — დებულება მართალია. ხაფანგია ზღვრული მნიშვნელობის „აღემატება“-დ აღქმა ან წლევანდელი გაურკვევლობის გამო „ვერ ვიტყვით“-ის არჩევა, თუმცა დებულება მხოლოდ გასულ წელს ეხება.",
+    "explanation_en": "The new rule applies only when income \"exceeds\" 30000 GEL. Exactly 30000 GEL does not exceed it, so the new rule does not apply to Levani: True. The traps are treating the boundary value as \"exceeding\", or picking Cannot say because of this year's uncertainty, although the statement is only about last year.",
+    "verify": {
+      "type": "compute",
+      "fn": "(q) => (30000 > 30000 ? 'False' : 'True')"
+    }
+  },
+  {
+    "id": "VR-035",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "tfc_passage",
+    "pattern_tag": "cannot_say_vs_false",
+    "question_ka": "მარკეტინგულ სააგენტოს ოფისები თბილისსა და ბათუმში აქვს. თითოეული თანამშრომელი ზუსტად ერთ გუნდშია: დიზაინის, კონტენტის ან გაყიდვების. დიზაინის გუნდის ყველა წევრი თბილისის ოფისში მუშაობს, კონტენტისა და გაყიდვების გუნდები კი ორ ქალაქს შორისაა გადანაწილებული. ანა ბათუმის ოფისში მუშაობს და კლიენტებთან შესახვედრად ხშირად მოგზაურობს.\n\n**დებულება:** „ანა დიზაინის გუნდის წევრია.“",
+    "question_en": "A marketing agency has offices in Tbilisi and Batumi. Each employee belongs to exactly one team: design, content or sales. All members of the design team work in the Tbilisi office, while the content and sales teams are split between the two cities. Ana works in the Batumi office and often travels to meet clients.\n\n**Statement:** \"Ana is a member of the design team.\"",
+    "options": [
+      {
+        "ka": "მართალია",
+        "en": "True"
+      },
+      {
+        "ka": "მცდარია",
+        "en": "False"
+      },
+      {
+        "ka": "ვერ ვიტყვით",
+        "en": "Cannot say"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "დიზაინის გუნდის ყველა წევრი თბილისში მუშაობს, ანა კი ბათუმში — მაშასადამე, ის დიზაინის გუნდში ვერ იქნება. ანას გუნდი ტექსტში პირდაპირ არ არის დასახელებული, ამიტომ ბევრი „ვერ ვიტყვით“-ს ირჩევს, მაგრამ ორი წინადადების შეჯერება დებულებას გამორიცხავს — „მცდარია“.",
+    "explanation_en": "All design team members work in Tbilisi and Ana works in Batumi, so she cannot be in the design team. Her team is never named, so many pick Cannot say, but combining two sentences rules the statement out: False."
+  },
+  {
+    "id": "VR-036",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "reading_comprehension",
+    "pattern_tag": "main_idea_vs_detail",
+    "question_ka": "ათწლეულების განმავლობაში ბიბლიოთეკებს ძირითადად მათი ფონდის სიდიდით აფასებდნენ. დღეს ბევრი ბიბლიოთეკა საკუთარ როლს ახლებურად განსაზღვრავს. წიგნების გაცემის გარდა, ისინი გვთავაზობენ უფასო ინტერნეტს, პროგრამირების წრეებს მოზარდებისთვის, დახმარებას სამსახურისთვის განაცხადის მომზადებაში და მშვიდ სივრცეს დისტანციურად მომუშავეთათვის. მაგალითად, თელავის ერთ-ერთი მუნიციპალური ბიბლიოთეკა ახლა ერთ თვეში უფრო მეტ ღონისძიებას მასპინძლობს, ვიდრე 10 წლის წინ მთელი წლის განმავლობაში. ასეთი ბიბლიოთეკები წარმატებას ნაკლებად წიგნების რაოდენობით ზომავს და უფრო მეტად — იმით, თუ რამდენ ადამიანს ემსახურება.\n\nრომელი დებულება აჯამებს ტექსტს ყველაზე ზუსტად?",
+    "question_en": "For decades, libraries were judged mainly by the size of their collections. Today, many libraries are redefining their role. Besides lending books, they offer free internet access, coding clubs for teenagers, help with job applications and quiet space for remote workers. A municipal library in Telavi, for example, now hosts more events in a month than it did in a whole year 10 years ago. Such libraries measure success less by how many books they hold and more by how many people they serve.\n\nWhich statement best summarises the passage?",
+    "options": [
+      {
+        "ka": "თელავის ბიბლიოთეკა საქართველოში ყველაზე მეტ ღონისძიებას მასპინძლობს.",
+        "en": "The Telavi library hosts more events than any other library in Georgia."
+      },
+      {
+        "ka": "ბიბლიოთეკებმა წიგნების გაცემა შეწყვიტეს.",
+        "en": "Libraries have stopped lending books."
+      },
+      {
+        "ka": "თანამედროვე ბიბლიოთეკების მთავარი მომხმარებლები დისტანციურად მომუშავეები არიან.",
+        "en": "Remote workers are the main users of modern libraries."
+      },
+      {
+        "ka": "ბიბლიოთეკებს სულ უფრო მეტად აფასებენ იმით, თუ რა მომსახურებას სთავაზობენ ადამიანებს, და არა ფონდის სიდიდით.",
+        "en": "Libraries are increasingly judged by the services they offer people rather than by the size of their collections."
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "ტექსტის დასაწყისი და დასასრული ერთსა და იმავე აზრს გამოხატავს: წარმატების საზომი ფონდის სიდიდიდან ადამიანებისთვის გაწეულ მომსახურებაზე გადაინაცვლა. თელავი და დისტანციურად მომუშავეები მხოლოდ მაგალითები და დეტალებია, წიგნების გაცემა კი, ტექსტის თანახმად, კვლავ გრძელდება.",
+    "explanation_en": "The first and last sentences make the same point: success is now measured by service to people, not by collection size. Telavi and remote workers are only examples and details, and according to the text, book lending continues."
+  },
+  {
+    "id": "VR-037",
+    "module": "verbal_reasoning",
+    "difficulty": 3,
+    "format": "reading_comprehension",
+    "pattern_tag": "author_purpose",
+    "question_ka": "ელექტროსკუტერები თბილისში თითქმის ერთ ღამეში გახდა პოპულარული. მომხრეები მათ მოკლე მანძილზე გადაადგილების იაფ და სუფთა საშუალებად მიიჩნევენ. კრიტიკოსები ტროტუარებზე მიტოვებულ სკუტერებსა და მსუბუქი ტრავმების ზრდაზე მიუთითებენ. სხვა ქალაქში ჩატარებულმა კვლევამ აჩვენა, რომ სკუტერით ყოველი 3 მგზავრობიდან 1 მანქანით მგზავრობას კი არა, ფეხით სიარულს ანაცვლებდა. თუ აქაც ასეა, გარემოსთვის სარგებელი შეიძლება იმაზე ნაკლები იყოს, ვიდრე ერთი შეხედვით ჩანს.\n\nრატომ ახსენებს ავტორი სხვა ქალაქში ჩატარებულ კვლევას?",
+    "question_en": "Electric scooters became popular in Tbilisi almost overnight. Supporters see them as a cheap, clean way to travel short distances. Critics point to scooters left on pavements and to a rise in minor injuries. A study in another city found that 1 in every 3 scooter trips replaced a walk rather than a car journey. If the same is true here, the environmental benefit may be smaller than it first appears.\n\nWhy does the author mention the study from another city?",
+    "options": [
+      {
+        "ka": "იმის დასამტკიცებლად, რომ სკუტერები საშიშია",
+        "en": "To prove that scooters are dangerous"
+      },
+      {
+        "ka": "იმის საჩვენებლად, რომ სკუტერების ეკოლოგიური სარგებელი შეიძლება გადაჭარბებით იყოს შეფასებული",
+        "en": "To suggest that the environmental benefit of scooters may be overstated"
+      },
+      {
+        "ka": "იმის საჩვენებლად, რომ თბილისში სხვა ქალაქებზე მეტი სკუტერია",
+        "en": "To show that Tbilisi has more scooters than other cities"
+      },
+      {
+        "ka": "იმის დასასაბუთებლად, რომ სკუტერებმა ფეხით სიარული უნდა ჩაანაცვლოს",
+        "en": "To argue that scooters should replace walking"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "კვლევის მომდევნო წინადადება პირდაპირ ამბობს, რისთვის არის ის მოყვანილი: თუ სკუტერი ფეხით სიარულს ანაცვლებს და არა მანქანას, ეკოლოგიური სარგებელი ნაკლებია. ტრავმები კრიტიკოსების ცალკე არგუმენტია და კვლევას არ უკავშირდება.",
+    "explanation_en": "The sentence right after the study states why it is there: if scooters replace walks rather than car trips, the environmental benefit is smaller. Injuries are a separate point made by critics and are not linked to the study."
+  },
+  {
+    "id": "VR-038",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "analogy",
+    "pattern_tag": "analogy_relation",
+    "question_ka": "აირჩიეთ სიტყვა, რომელიც ანალოგიას ასრულებს:\n\n**თესლი : ხე = ? : პეპელა**",
+    "question_en": "Choose the word that completes the analogy:\n\n**Seed : tree = ? : butterfly**",
+    "options": [
+      {
+        "ka": "მუხლუხო",
+        "en": "Caterpillar"
+      },
+      {
+        "ka": "ფრთა",
+        "en": "Wing"
+      },
+      {
+        "ka": "ყვავილი",
+        "en": "Flower"
+      },
+      {
+        "ka": "ნექტარი",
+        "en": "Nectar"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "თესლი ხის განვითარების ადრეული სტადიაა; პეპელას ადრეული სტადია მუხლუხოა. ფრთა პეპელას ნაწილია („ნაწილი — მთელი“ მიმართება), ყვავილი და ნექტარი კი პეპელასთან მხოლოდ ასოცირდება.",
+    "explanation_en": "A seed is an early stage in the development of a tree; an early stage of a butterfly is a caterpillar. A wing is a part of a butterfly (a part–whole relation), and a flower and nectar are mere associations."
+  },
+  {
+    "id": "VR-039",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "vocabulary",
+    "pattern_tag": "synonym_precision",
+    "question_ka": "რომელი სიტყვაა მნიშვნელობით ყველაზე ახლოს სიტყვასთან „საიმედო“?",
+    "question_en": "Which word is closest in meaning to \"reliable\"?",
+    "options": [
+      {
+        "ka": "მტკიცე",
+        "en": "Sturdy"
+      },
+      {
+        "ka": "ერთგული",
+        "en": "Loyal"
+      },
+      {
+        "ka": "სანდო",
+        "en": "Trustworthy"
+      },
+      {
+        "ka": "ცნობილი",
+        "en": "Well-known"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "საიმედო ის არის, რისი ან ვისი იმედიც შეიძლება გქონდეს, ანუ სანდოა. „ერთგული“ ახლოს ჟღერს, მაგრამ ადამიანისადმი ან იდეისადმი ერთგულებას აღნიშნავს, „მტკიცე“ კი — ფიზიკურ სიმყარეს. ინფორმაციაც შეიძლება იყოს საიმედო, თუმცა ის არც ერთგულია და არც მტკიცე.",
+    "explanation_en": "Reliable means something or someone you can depend on, i.e. trustworthy. \"Loyal\" sounds close but means faithful to a person or cause, and \"sturdy\" means physically strong. Information can be reliable, yet it is neither loyal nor sturdy."
+  },
+  {
+    "id": "VR-040",
+    "module": "verbal_reasoning",
+    "difficulty": 3,
+    "format": "vocabulary",
+    "pattern_tag": "antonym_precision",
+    "question_ka": "რომელი სიტყვაა მნიშვნელობით ყველაზე ზუსტად საპირისპირო სიტყვისა „გულუხვი“?",
+    "question_en": "Which word is the most precise opposite of \"generous\"?",
+    "options": [
+      {
+        "ka": "ეგოისტური",
+        "en": "Selfish"
+      },
+      {
+        "ka": "ღარიბი",
+        "en": "Poor"
+      },
+      {
+        "ka": "მკაცრი",
+        "en": "Strict"
+      },
+      {
+        "ka": "ძუნწი",
+        "en": "Stingy"
+      }
+    ],
+    "correct": 3,
+    "explanation_ka": "გულუხვი ადამიანი სხვებს თავისას ხალისით უწილადებს; საპირისპიროა ის, ვისაც გაცემა ენანება — ძუნწი. „ეგოისტური“ უფრო ფართო ცნებაა (საკუთარ ინტერესებზე ზრუნვა) და ზუსტი ანტონიმი არ არის, „ღარიბი“ კი ქონებას აღწერს და არა ხასიათს — ღარიბი ადამიანიც შეიძლება გულუხვი იყოს.",
+    "explanation_en": "A generous person shares willingly; the opposite is someone who hates to give: stingy. \"Selfish\" is broader (putting one's own interests first) and not the precise antonym, while \"poor\" describes wealth, not character: a poor person can be generous."
+  },
+  {
+    "id": "VR-041",
+    "module": "verbal_reasoning",
+    "difficulty": 1,
+    "format": "vocabulary",
+    "pattern_tag": "word_in_context",
+    "question_ka": "წინადადებაში „ოპერაციის შემდეგ პაციენტის მდგომარეობა კვლავ კრიტიკულია“ რას ნიშნავს სიტყვა „კრიტიკული“?",
+    "question_en": "In the sentence \"After the operation, the patient's condition is still critical\", what does \"critical\" mean?",
+    "options": [
+      {
+        "ka": "ძალიან მძიმე, სიცოცხლისთვის საშიში",
+        "en": "Very serious, life-threatening"
+      },
+      {
+        "ka": "უარყოფითი შეფასების გამომხატველი",
+        "en": "Expressing disapproval"
+      },
+      {
+        "ka": "გულდასმით ანალიზზე დაფუძნებული",
+        "en": "Based on careful analysis"
+      },
+      {
+        "ka": "უცვლელი",
+        "en": "Unchanged"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "მდგომარეობაზე საუბრისას „კრიტიკული“ ნიშნავს ძალიან მძიმეს, საშიშს. „უარყოფითი შეფასება“ („კრიტიკული სტატია“) და „ანალიზზე დაფუძნებული“ („კრიტიკული აზროვნება“) ამ სიტყვის სხვა მნიშვნელობებია, „უცვლელი“ კი სიტყვა „კვლავ“-იდან მოდის და არა „კრიტიკული“-დან.",
+    "explanation_en": "For a medical condition, \"critical\" means very serious and dangerous. \"Expressing disapproval\" (a critical article) and \"based on analysis\" (critical thinking) are other meanings of the word, and \"unchanged\" comes from the word \"still\", not from \"critical\"."
+  },
+  {
+    "id": "VR-042",
+    "module": "verbal_reasoning",
+    "difficulty": 2,
+    "format": "odd_one_out",
+    "pattern_tag": "category_odd_one_out",
+    "question_ka": "რომელი სიტყვა არ ერგება დანარჩენებს?",
+    "question_en": "Which word is the odd one out?",
+    "options": [
+      {
+        "ka": "მწერალი",
+        "en": "Writer"
+      },
+      {
+        "ka": "კრიტიკოსი",
+        "en": "Critic"
+      },
+      {
+        "ka": "მხატვარი",
+        "en": "Painter"
+      },
+      {
+        "ka": "კომპოზიტორი",
+        "en": "Composer"
+      }
+    ],
+    "correct": 1,
+    "explanation_ka": "მწერალი, მხატვარი და კომპოზიტორი ნაწარმოებს ქმნიან, კრიტიკოსი კი სხვის ნაწარმოებს აფასებს. ხელოვნების დარგის მიხედვით დაჯგუფება (ლიტერატურა, ფერწერა, მუსიკა) ერთ სიტყვას ვერ გამოყოფს, რადგან ოთხივე სხვადასხვა დარგს შეიძლება ეკუთვნოდეს.",
+    "explanation_en": "Writer, painter and composer create works; a critic evaluates other people's works. Grouping by art form (literature, painting, music) cannot single out one word, because each of the four may belong to a different field."
+  },
+  {
+    "id": "VR-043",
+    "module": "verbal_reasoning",
+    "difficulty": 1,
+    "format": "odd_one_out",
+    "pattern_tag": "category_odd_one_out",
+    "question_ka": "რომელი წყვილი განსხვავდება დანარჩენებისგან?",
+    "question_en": "Which pair is different from the others?",
+    "options": [
+      {
+        "ka": "ექიმი — საავადმყოფო",
+        "en": "Doctor – hospital"
+      },
+      {
+        "ka": "მასწავლებელი — სკოლა",
+        "en": "Teacher – school"
+      },
+      {
+        "ka": "პილოტი — მგზავრი",
+        "en": "Pilot – passenger"
+      },
+      {
+        "ka": "მზარეული — სამზარეულო",
+        "en": "Chef – kitchen"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "სამ წყვილში პროფესიას მისი სამუშაო ადგილი მოსდევს. „პილოტი — მგზავრი“ ადამიანისა და იმ ადამიანის წყვილია, ვისაც ის ემსახურება; ამ წესით პილოტის წყვილი თვითმფრინავი იქნებოდა.",
+    "explanation_en": "In three pairs a profession is followed by its workplace. \"Pilot – passenger\" pairs a person with the person they serve; by the same rule, the pilot's pair would be the plane."
+  },
+  {
+    "id": "VR-044",
+    "module": "verbal_reasoning",
+    "difficulty": 1,
+    "format": "sentence_completion",
+    "pattern_tag": "logical_connectors",
+    "question_ka": "____ ამინდის პროგნოზით ძლიერი წვიმა იყო მოსალოდნელი, ბათუმში ღია ცის ქვეშ კონცერტი დაგეგმილისამებრ ჩატარდა და მას უამრავი მაყურებელი დაესწრო.\n\nრომელი სიტყვა ან ფრაზა ჯდება გამოტოვებულ ადგილას ყველაზე უკეთ?",
+    "question_en": "____ the weather forecast predicted heavy rain, the open-air concert in Batumi went ahead as planned and drew a large crowd.\n\nWhich word or phrase best fills the gap?",
+    "options": [
+      {
+        "ka": "მიუხედავად იმისა, რომ",
+        "en": "Although"
+      },
+      {
+        "ka": "რადგან",
+        "en": "Because"
+      },
+      {
+        "ka": "თუ",
+        "en": "If"
+      },
+      {
+        "ka": "იმისათვის, რომ",
+        "en": "So that"
+      }
+    ],
+    "correct": 0,
+    "explanation_ka": "წვიმის პროგნოზი და კონცერტის ჩატარება ერთმანეთის საწინააღმდეგოდ მოქმედებს: მოულოდნელია, რომ ცუდი პროგნოზის მიუხედავად ღონისძიება მაინც ჩატარდა. ამ დათმობას „მიუხედავად იმისა, რომ“ გამოხატავს; „რადგან“ ნიშნავდა, რომ კონცერტი სწორედ წვიმის პროგნოზის გამო ჩატარდა.",
+    "explanation_en": "A rain forecast and the concert going ahead pull in opposite directions: it is surprising that the event took place despite the forecast. That concession needs \"Although\"; \"Because\" would mean the concert went ahead because of the rain forecast."
+  },
+  {
+    "id": "VR-045",
+    "module": "verbal_reasoning",
+    "difficulty": 3,
+    "format": "sentence_completion",
+    "pattern_tag": "logical_connectors",
+    "question_ka": "კომისიისთვის წარდგენილი მტკიცებულებები ____ იყო, ____ კომისიამ საბოლოო გადაწყვეტილების მიღება გადადო.\n\nრომელი წყვილი ავსებს გამოტოვებულ ადგილებს ყველაზე უკეთ?",
+    "question_en": "The evidence presented to the committee was ____, ____ the committee postponed its final decision.\n\nWhich pair best fills the gaps?",
+    "options": [
+      {
+        "ka": "დამაჯერებელი … ამიტომ",
+        "en": "convincing … so"
+      },
+      {
+        "ka": "არადამაჯერებელი … თუმცა",
+        "en": "unconvincing … although"
+      },
+      {
+        "ka": "არადამაჯერებელი … ამიტომ",
+        "en": "unconvincing … so"
+      },
+      {
+        "ka": "დამაჯერებელი … რადგან",
+        "en": "convincing … because"
+      }
+    ],
+    "correct": 2,
+    "explanation_ka": "გადაწყვეტილების გადადება ლოგიკური შედეგია, როცა მტკიცებულებები საკმარისად დამაჯერებელი არ არის, შედეგს კი „ამიტომ“ გამოხატავს. „დამაჯერებელი … ამიტომ“ ალოგიკურია: დამაჯერებელი მტკიცებულება გადადების მიზეზი არ არის. „არადამაჯერებელი … თუმცა“ კონტრასტს გულისხმობს იქ, სადაც შედეგი სწორედ მოსალოდნელია.",
+    "explanation_en": "Postponing the decision is the natural result of evidence that is not convincing, and a result is introduced by \"so\". \"Convincing … so\" is illogical: convincing evidence is no reason to postpone. \"Unconvincing … although\" signals a contrast where the outcome is exactly what you would expect."
+  }
+]
